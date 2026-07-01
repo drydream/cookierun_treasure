@@ -1,0 +1,1829 @@
+{{main|Evolve Treasures}}
+{{for|the list of treasure categories|Treasure Categories}}
+
+==S-grade Evolve Treasures==
+{| border="0" cellpadding="1" cellspacing="1" class="article-table article-table-selected sortable" style="width: 700px;"
+|-
+! scope="col" |Evolved Treasure
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Blessed Effect
+|-
+|[[Glistening Green Leaves]]
+|[[File:Glistening Green Leaves.png|thumb|left|75px]]
+|With upgrades gives 2-4 extra jumps
+|With upgrades gives 4-6 extra jumps
+|-
+|[[Steel Spike Horse Hoof]]
+|[[File:Steel Spike Horse Hoof.png|thumb|left|75px]]
+|
+*10% extra Blast Jelly speed
+*With upgrades 130-230 extra points for all Jellies during Blasts
+|
+*10% extra Blast Jelly speed
+*With upgrades ??? extra points for all Jellies during Blasts
+|-
+|[[Burn Some Rubber Tire]]
+|[[File:Burn Some Rubber Tire.png|thumb|left|75px]]
+|
+*With upgrades 3-5% higher base speed
+*Revives with 10 Energy 2 times
+|
+*With upgrades ???% higher base speed
+*Revives with ??? Energy ??? times
+|-
+|[[Angel Cookie's Rainbow Feather]]
+|[[File:Angel Cookie's Rainbow Feather.png|thumb|left|75px]]
+|
+*With upgrades the power of this mini magnet increases
+*With upgrades get 5-15 extra points for all jellies
+|
+*With upgrades the power of this mini magnet increases
+*With upgrades get 10-30 extra points for all jellies
+|-
+|[[Full Power Protein Powder]]
+|[[File:Full Power Protein Powder.png|thumb|left|75px]]
+|
+*With upgrades, 1000-2500 points for a destroyed obstacle
+*With upgrades, 5-10% faster during Blasts
+|
+*With upgrades, ??? points for a destroyed obstacle
+*With upgrades, ???% faster during Blasts
+|-
+|[[Revival Boots with Guts]]
+|[[File:Skärmavbild_2015-01-25_kl._10.46.05.png|thumb|left|75px]]
+|With upgrades, revive 3 times with 10-20 energy
+|With upgrades, revive 3 times with ??? energy
+|-
+|[[Glossy Blueberry Sherbet]]
+|[[File:Glossy Blueberry Sherbet.png|thumb|left|75px]]
+|With upgrades, Rookie Performance points Intermediate Lv.1~10
+|With upgrades, Rookie Performance points Advanced Lv.1~10
+|-
+|[[Extremely Dense Mint Candy]]
+|[[File:Extrmely Dense Mint Candy.png|thumb|left|75px]]
+|With upgrades, Energy drain 5-6% slower
+|With upgrades, Energy drain 6-7% slower
+|-
+|[[10 Octave Pink Megaphone]]
+|[[File:Skärmavbild_2015-01-28_kl._17.33.47.png|thumb|left|75px]]
+|
+* With upgrades, 50-110 extra Energy during Cookie Relay
+* With upgrades, 50-100 extra points for all Jellies during Cookie Relay
+|
+* With upgrades, ??? extra Energy during Cookie Relay
+* With upgrades, ??? extra points for all Jellies during Cookie Relay
+|-
+|[[Water-proof Chocolate Camouflage]]
+|[[File:Water-proof Chocolate Camouflage.png|thumb|left|75px]]
+|With upgrades, 1700-3200 extra points for destroying an obstacle
+|With upgrades, ??? extra points for destroying an obstacle
+|-
+|[[Pointy Tailed Compass]]
+|[[File:Pointy Tailed Compass.png|thumb|left|75px]]
+|
+* With upgrades, 300-800 extra points for Pink Bear Jelly
+* With upgrades, 100-200 extra points for all Bear Jellies
+|
+* With upgrades, ??? extra points for Pink Bear Jelly
+* With upgrades, ??? extra points for all Bear Jellies
+|-
+|[[Medium Rare Red Pudding]]
+|[[File:Medium Rare Red Pudding.png|thumb|left|75px]]
+|
+* With upgrades, 200-300 extra points for all Jellies while in Giant Mode
+* Giant Jelly last 5% longer
+|
+* With upgrades, ??? extra points for all Jellies while in Giant Mode
+* Giant Jelly last ??? % longer
+|-
+|[[Gold Dust Ice Cream Sundae]]
+|[[File:Gold Dust Ice Cream Sundae.png|thumb|left|75px]]
+|With upgrades 2-5 Coins for destroying an obstacle
+|With upgrades 3-6 Coins for destroying an obstacle
+|-
+|[[Premium Green Tea Roll Cake]]
+|[[File:Premium Green Tea Roll Cake.png|thumb|left|75px]]
+|With upgrades get 60-120 extra energy during Cookie Relay
+|With upgrades get ??? extra energy during Cookie Relay
+|-
+|[[Guitar Pick Pendant]]
+|[[File:Guitar Pick Pendant.png|thumb|left|75px]]
+|
+* With upgrades, Energy drain 3-4% slower
+* With upgrades, 4-6% more Energy recovery
+|
+* With upgrades, Energy drain ??? % slower
+* With upgrades, ??? % more Energy recovery
+|-
+|[[Heartfelt Birthday Cake]]
+|[[File:Heartfelt Birthday Cake.png|thumb|left|75px]]
+|With upgrades, 1700-3200 extra points for destroying an obstacle
+|With upgrades, ??? extra points for destroying an obstacle
+|-
+|[[Bling Bling Christmas Tree]]
+|[[File:Bling Bling Christmas Tree.png|thumb|left|75px]]
+|With upgrades, 40-90 extra points for all Jellies
+|With upgrades, ??? extra points for all Jellies
+|-
+|[[Colorful Snowflake Shaved Ice]]
+|[[File:Colorful Snowflake Shaved Ice.png|thumb|left|75px]]
+|
+* With upgrades, 40-100 extra Energy during Cookie Relay
+* Lifts from a hole 2 times
+|
+* With upgrades, ??? extra Energy during Cookie Relay
+* Lifts from a hole ??? times
+|-
+|[[Special Chocolate for the Elderly]]
+|[[File:Special Chocolate for the Elderly.png|thumb|left|75px]]
+|
+*With upgrades, 300-800 extra points for Pink Bear Jelly
+*With upgrades, 100-200 extra points for Bear Jelly
+|
+*With upgrades, ??? extra points for Pink Bear Jelly
+*With upgrades, ??? extra points for Bear Jelly
+|-
+|[[Indestructible Holy Grail]]
+|[[File:Indestructible Holy Grail.png|thumb|left|75px]]
+|
+*With upgrades, revive with 10-30 Energy 3 times during Cookie Relay
+*With upgrades, 20-40 extra points for all Jellies during Cookie Relay
+|
+*With upgrades, revive with ??? Energy 3 times during Cookie Relay
+*With upgrades, ??? extra points for all Jellies during Cookie Relay
+|-
+|[[Atomic Model of a Grape Brooch]]
+|[[File:Atomic Model of a Grape Brooch.png|thumb|left|75px]]
+|
+* With upgrades, 15-25% chance of getting a Gold Coins from Coin Magic
+* With upgrades, 4-6% Coin Bonus
+|
+* With upgrades, ??? % chance of getting a Gold Coins from Coin Magic
+* With upgrades, ??? % Coin Bonus
+|-
+|[[Devilish Revival Grape Juice]]
+|[[File:Devilish Revival Grape Juice.png|thumb|left|75px]]
+|
+* With upgrades, Energy drain 3-4% slower
+* With upgrades, revive with 30-65 Energy
+|
+* With upgrades, Energy drain ??? % slower
+* With upgrades, revive with ??? Energy
+|-
+|[[Fruit Embellished Headband]]
+|[[File:Fruit Embellished Headband.png|thumb|left|75px]]
+|
+*2 seconds extra Bonus Time
+*With upgrades, 13-15% extra points during Bonus Time
+|
+*2 seconds extra Bonus Time
+*With upgrades, 15-17% extra points during Bonus Time
+|-
+|[[Golden Syrup Filled Piece of Cake]]
+|[[File:Golden Syrup Filled Piece of Cake.png|thumb|left|75px]]
+|
+*With upgrades, 5-6% Base speed increase
+*With upgrades Coin Bonus 8-10%
+|
+*With upgrades, 6-7% Base speed increase
+*With upgrades Coin Bonus 9-11%
+|-
+|[[Melt-in-your-mouth Cinnamon Rope]]
+|[[File:Melt-in-your-mouth Cinnamon Rope.png|thumb|left|75px]]
+|
+*With upgrades get 10-14% extra XP
+*With upgrades Coin Bonus 8-10%
+|
+*With upgrades get 11-15% extra XP
+*With upgrades Coin Bonus 8-10%
+|-
+|[[Gentle Wave Flavored Soda Cocktail]]
+|[[File:Gentle Wave Flavored Soda Cocktail.png|thumb|left|75px]]
+|
+*With upgrades, 3-4% Base speed increase
+*With upgrades, 240-440 extra points for Bubble Jellies
+|
+*With upgrades, ??? % Base speed increase
+*With upgrades, ??? extra points for Bubble Jellies
+|-
+|[[Syrup Dripping Blackberry Hat]]
+|[[File:Syrup Dripping Blackberry Hat.png|thumb|left|75px]]
+|
+*With upgrades, 2-6% more Energy recovery
+*With upgrades, revives with 30-70 Energy
+|
+*With upgrades, ??? % more Energy recovery
+*With upgrades, revives with ??? Energy
+|-
+|[[Vroom Vroom Gold Kiwi Key]]
+|[[File:Vroom Vroom Gold Kiwi Key.png|thumb|left|75px]]
+|
+*With upgrades, 3-6% Base speed increase
+*With upgrades, revives with 30-60 Energy
+|
+*With upgrades, 4-7% Base speed increase
+*With upgrades, revives with 60-80 Energy
+|-
+|[[Strengthened Precious Necklace]]
+|[[File:Strengthened Precious Necklace.png|thumb|left|75px]]
+|With upgrades, lifts from hole OR revives with 25 Energy 1-3 time(s) during Cookie Relay
+|With upgrades, lifts from hole OR revives with 30 Energy 1-3 time(s) during Cookie Relay
+|-
+|[[Choco Dipped Marshmallow]]
+|[[File:Choco Dipped Marshmallow.png|thumb|left|75px]]
+|
+*With upgrades, 150-350 extra points for all Jellies while riding
+*With upgrades, revive with 25-55 Energy
+|
+*With upgrades, 200-400 extra points for all Jellies while riding
+*With upgrades, revive with 30-60 Energy
+|-
+|[[Gold Coin Filled Violin Case]]
+|[[File:Gold Coin Filled Violin Case.png|thumb|left|75px]]
+|
+*Energy Drain 3-4% slower
+*With upgrades 3-5% chance of generating a Coin Flower
+|
+*Energy Drain 4-5% slower
+*With upgrades 4-6% chance of generating a Coin Flower
+|-
+|[[Tricolor Hairband of Iron-will]]
+|[[File:Tricolor Hairband of Iron-will.png|thumb|left|75px]]
+|
+*With upgrades, revive with 30-80 Energy
+*With upgrades, 500-1000 extra points for destroying an obstacle
+|
+*With upgrades, revive with ??? Energy
+*With upgrades, ??? extra points for destroying an obstacle
+|-
+|[[Sugar Powder Cream Sandwich]]
+|[[File:Sugar Powder Cream Sandwich.png|thumb|left|75px]]
+|
+*With upgrades, 60-123 extra points for all Jellies
+*Miniscule Magnetic Aura
+|
+*With upgrades, 70-133 extra points for all Jellies
+*Miniscule Magnetic Aura
+|-
+|[[About-to-Blow Time Bomb]]
+|[[File:About-to-Blow Time Bomb.png|thumb|left|75px]]
+|With upgrades, 1200-2100 extra points for Gumball Shots
+|With upgrades, ??? extra points for Gumball Shots
+|-
+|[[Lemon Zest Smartphone]]
+|[[File:Lemon Zest Smartphone.png|thumb|left|75px]]
+|With upgrades, 2000-3000 extra points for destroyed obstacles during Lightning Blast
+|With upgrades, ??? extra points for destroyed obstacles during Lightning Blast
+|-
+|[[Frozen Solid Orange Drink]]
+|[[File:Frozen Solid Orange Drink.png|thumb|left|75px]]
+|
+*With upgrades, 10-15% faster during Blasts
+*With upgrades, 0.3-0.8 second of Blast after taking a Potion
+|
+*With upgrades, 10-15% faster during Blasts
+*With upgrades, 0.5-1 second of Blast after taking a Potion
+|-
+|[[Lime Scented Eye Makeup Remover]]
+|[[File:Lime Scented Eye Makeup Remover.png|thumb|left|75px]]
+|
+*Giant Jelly lasts 10% longer
+*With upgrades, Giant landing makes Jelly sprout from the ground - Intermediate Lv. 1-10
+|
+*Giant Jelly lasts 10% longer
+*With upgrades, Giant landing makes Jelly sprout from the ground - Advanced Lv. 1-10
+|-
+|[[Macaron Cookie's Blusher Brush]]
+|[[File:Macaron Cookie's Blusher Brush.png|left|thumb|75x75px]]
+|
+*With upgrades gives 500-1000 extra points for Macaron Parade Jelly
+*With upgrades revives once with 50-68 energy
+|
+*With upgrades gives 500-1000 extra points for Macaron Parade Jelly
+*With upgrades revives once with 60-78 energy
+|-
+|[[Ginger Ghost's Magnificent Memory]]
+|[[File:Ginger Ghost's Magnificent Memory.png|thumb|left|75px]]
+|
+* With upgrades, 1-3 lifts from a hole
+* Revive with 10 Energy 1-2 time(s)
+|
+* With upgrades, 1-3 lifts from a hole
+* Revive with ??? Energy 1-2 time(s)
+|-
+|[[Pirate's Bomb's Transplutonium]]
+|[[File:Pirate's Bomb's Transplutonium.png|thumb|left|75px]]
+|
+* With upgrades 15-25% of getting a Gold Coins Boost
+* With upgrades, 6-8% Coin Bonus
+|
+* With upgrades 15-25% of getting a Gold Coins Boost
+* With upgrades, ??? % Coin Bonus
+|-
+|[[Bling Bling Tiny Accessory]]
+|[[File:Bling Bling Tiny Accessor.png|thumb|left|75px]]
+|
+* With upgrades 5-6% more Energy from Potions
+* With upgrades 100-300 extra points for Pink Bear Jellies
+|
+* With upgrades 5-6% more Energy from Potions
+* With upgrades 200-400 extra points for Pink Bear Jellies
+|-
+|[[Gold Auspicious Cloth]]
+|[[File:Gold Auspicious Cloth.png|thumb|left|75px]]
+|
+* With upgrades, 15-25 extra Energy
+* With upgrades, revive with 10-20 Energy 2 times
+|
+* With upgrades, ??? extra Energy
+* With upgrades, revive with ??? Energy ??? times
+|-
+|[[Ice Sculpture with the Starry Sky]]
+|[[File:Ice Sculpture with the Starry Sky.png|thumb|left|75px]]
+|
+* With upgrades 25-30% chance of an Ice Bridge forming
+* With {{det|uprages|This is intended, as the typo shown in Treasure Book}}, Amateur Performance Points Basic Lv.1~10
+|
+* With upgrades ??? % chance of an Ice Bridge forming
+* With {{det|uprages|This is intended, as the typo shown in Treasure Book}}, Amateur Performance Points ??? Lv.1~10
+|-
+|[[Valiant Firecracker Jelly]]
+|[[File:Valiant Firecracker Jelly.png|thumb|left|75px]]
+|
+*5% chance of a Jellyco Missile falling
+* With upgrades, 500-800 extra points for a destroyed obstacle
+|
+*5% chance of a Jellyco Missile falling
+* With upgrades, 1000-1300 extra points for a destroyed obstacle
+|-
+|[[Random Colored Jelly Scrub]]
+|[[File:Random Colored Jelly Scrub.png|thumb|left|75px]]
+|
+* With upgrades, 400-900 extra points for Gold Coins
+* With upgrades, 200-500 extra points for Silver Coins
+|
+* With upgrades, ??? extra points for Gold Coins
+* With upgrades, ??? extra points for Silver Coins
+|-
+|[[Cutting-Edge Caramel Helmet]]
+|[[File:Cutting Edge Caramel Helmet.png|thumb|left|75px]]
+|
+*With upgrades, Power Jellies last 5-10% longer
+*With upgrades, 100-300 extra points for Jellies during Giant Mode
+|
+*With upgrades, Power Jellies last 5-10% longer
+*With upgrades, ??? extra points for Jellies during Giant Mode
+|-
+|[[Firebat's Undying Flame]]
+|[[File:Firebat's Undying Flame.png|thumb|left|75px]]
+|With upgrades 1300-2800 extra points for going through obstacles
+|With upgrades ??? extra points for going through Obstacles
+|-
+|[[Gold Medal of Luxury]]
+|[[File:Gold Medal of Luxury.png|thumb|left|75px]]
+|
+*With upgrades, 8-10% Coin Bonus
+*With upgrades, 20-30 extra Energy
+|
+* With upgrades, 9-11% Coin Bonus
+* With upgrades 30-40 extra Energy
+|-
+|[[Red Glowing Fox Heart Bead]]
+|[[File:Red Glowing Fox Heart Bead.png|thumb|left|75px]]
+|With upgrades, 40-100 extra Energy
+|With upgrades, 60-120 extra Energy
+|-
+|[[Sorcerer's Vanity Pictures]]
+|[[File:Sorcerer's Vanity Pictures.png|thumb|left|75px]]
+|
+*With upgrades, 3-8% Base speed increase
+*Lifts from hole 1 time
+|
+*With upgrades, ??? % Base speed increase
+*Lifts from hole ??? time
+|-
+|[[Smooth Rainbow Colored Petals]]
+|[[File:Smooth Rainbow Colored Petals.png|thumb|left|75px]]
+|
+*2 extra second in Bonus Time
+*With upgrades 10-15% points bonus during Bonus Time
+|
+* 2 extra second in Bonus Time
+* With upgrades 15-17% points bonus during Bonus Time
+|-
+|[[Super Amber Vanilla UV Light]]
+|[[File:Super Amber Vanilla UV Light.png|thumb|left|75px]]
+|
+*With upgrades 7-12% extra XP
+*With upgrades 7-9% Coin Bonus
+|
+* With upgrades ???-???% extra XP
+* With upgrades ???-???% Coin Bonus
+|-
+|[[Burning Fireworks Balloon Gum]]
+|[[File:Burning Fireworks Balloon Gum.png|thumb|left|75px]]
+|
+*With upgrades 4-6% increased base speed
+*With upgrades 1-2% slower Energy drain
+|
+* With upgrades ???-???% increased base speed
+* With upgrades ???-???% slower Energy drain
+|-
+|[[2.5 Slices of Extravagant Christmas Cake]]
+|[[File:2.5 Slices of Extravagant Christmas Cake.png|thumb|left|75px]]
+|
+*With upgrades 400-600 extra points for Yellow Bear Jellies
+*With upgrades 100-150 extra points for Pink Bear Jellies
+|
+* With upgrades ???-??? extra points for Yellow Bear Jellies
+* With upgrades ???-??? extra points for Pink Bear Jellies
+|-
+|[[Colorful Candy Shell]]
+|[[File:Colorful Candy Shell.png|thumb|left|75px]]
+|
+*With upgrades 300-700 extra points for Pink Bear Jellies
+*With upgrades 1200-2100 extra points for a destroyed obstacle
+|
+* With upgrades ???-??? extra points for Pink Bear Jellies
+* With upgrades ???-??? extra points for a destroyed obstacle
+|-
+|[[Lilac Wax Rose]]
+|[[File:Lilac Wax Rose.png|thumb|left|75px]]
+|
+*With upgrades 1700-3200 extra points for going through obstacles
+|
+*With upgrades ???-??? extra points for going through obstacles
+|-
+|[[Colorful Pistachio Shell]]
+|[[File:Colorful Pistachio Shell.png|thumb|left|75px]]
+|
+*With upgrades 200-400 extra points for Jellies gotten during Blast Speed
+*Blasts last 10% longer
+|
+* With upgrades ???-??? extra points for Jellies gotten during Blast Speed
+* Blasts last ???% longer
+|-
+|[[Plate Overflowing with Jellies]]
+|[[File:Plate_Overflowing_with_Jellies.png|left|75px]]
+|
+*With upgrades 3-4% increased base speed
+*With upgrades 60-123 extra points for Jellies
+|
+* With upgrades ???-???% increased base speed
+* With upgrades ???-??? extra points for Jellies
+|-
+|[[Plate Overflowing with Coins]]
+|[[File:Plate_Overflowing_with_Coins.png|left|75px]]
+|
+*With upgrades 2-5% chance a Coin Flower will appear
+*With upgrades 7-9% Coin Bonus
+|
+* With upgrades ???-???% chance a Coin Flower will appear
+* With upgrades ???-???% Coin Bonus
+|-
+|[[Oak Barrel's Strong Glass Faucet]]
+|[[File:Oak Barrel's Strong Glass Faucet.png|left|75px]]
+|
+*With upgrades 3-4% increased base speed
+*With upgrades 3-4% slower Energy Drain
+|
+* With upgrades ???-???% increased base speed
+* With upgrades ???-???% slower Energy Drain
+|-
+|[[Young Girly Apple]]
+|[[File:Young Girly Apple.png|thumb|left|75px]]
+|
+*With upgrades, 3-4% Base Speed Increase
+*With upgrades 25-55 extra Energy during Cookie Relays
+|
+*With upgrades, ???-???% Base Speed Increase
+*With upgrades ???-??? extra Energy during Cookie Relays
+|-
+|[[Super Cheesy Hairball]]
+|[[File:Super Cheesy Hairball.png|thumb|left|75px]]
+|
+*Energy Drain 2-4% slower
+*With upgrades 8-10% Coin Bonus
+|
+*Energy Drain ???-???% slower
+*With upgrades ???-???% Coin Bonus
+|-
+|[[Rainbow Heart Keychain]]
+|[[File:Rainbow Heart Keychain.png|thumb|left|75px]]
+|
+*With upgrades 400-600 extra points for all bear jellies
+*With upgrades Power Jellies last 5-10% longer
+|
+*With upgrades 500-700 extra points for all bear jellies
+*With upgrades Power Jellies last 5-10% longer
+|-
+|[[Sweet and Sour Lemonade]]
+|[[File:Sweet and Sour Lemonade.png|thumb|left|75px]]
+|
+*With upgrades 3-5% more Energy from Potions
+*With upgrades 260-360 extra points for Bubble jellies
+|
+*With upgrades ???-???% more Energy from Potions
+*With upgrades ???-??? extra points for Bubble jellies
+|-
+|[[The Perfect Scheduling Kit]]
+|[[File:The Perfect Scheduling Kit.png|thumb|left|75px]]
+|
+*With upgrades 3-5% more Energy from Potions
+*60-123 extra points for all Jellies
+|
+*With upgrades ???-???% more Energy from Potions
+*???-??? extra points for all Jellies
+|-
+|[[Two Pieces of Delightful Kiwi]]
+|[[File:Two Pieces of Delightful Kiwi.png|thumb|left|75px]]
+|
+*With upgrades get 200-300 extra points for all Jellies while in Giant mode
+*With upgrades Base Speed 5-10% higher in Giant Mode
+|
+*With upgrades get ???-??? extra points for all Jellies while in Giant mode
+*With upgrades Base Speed ???-???% higher in Giant Mode
+|-
+|[[Yellow Seed Sprouts]]
+|[[File:Yellow Seed Sprouts.png|thumb|left|75px]]
+|
+*With upgrades 5-6% chance of generating a Coin Flower
+*With upgrades 6-8% Coin Bonus
+|
+*With upgrades 6-7% chance of generating a Coin Flower
+*With upgrades 7-9% Coin Bonus
+|-
+|[[Savory Sunflower Seeds]]
+|[[File:Savory Sunflower Seeds.png|thumb|left|75px]]
+|
+*With upgrades 0.3-0.8 seconds of Blast after taking a Potion
+*With upgrades 5-10% extra points for Jellies collected by pet
+|
+* With upgrades 0.5-1.0 seconds of Blast after taking a Potion
+* With upgrades 10-15% extra points for Jellies collected by pet
+|-
+|[[Fancy Lace Ribbon]]
+|[[File:Fancy Lace Ribbon.png|thumb|left|75px]]
+|
+*With upgrades 250-350 extra points from Colorful Star Jellies
+*With upgrades get 3-6% more energy from potions
+|
+*With upgrades ???-??? extra points from Colorful Star Jellies
+*With upgrades get ???-???% more energy from potions
+|-
+|[[Bling Bling Top Hat]]
+|[[File:Bling Bling Top Hat.png|thumb|left|75px]]
+|
+*Revives twice with 25-35 Energy
+*With upgrades 5-7% Coin Bonus
+|
+*Revives twice with 30-40 Energy
+*With upgrades 6-8% Coin Bonus
+|-
+|[[Majestic Acorn Hat]]
+|[[File:Majestic Acorn Hat.png|thumb|left|75px]]
+|
+*With upgrades, 500-700 extra points for Yellow Bear Jelly
+|
+*With upgrades, 600-800 extra points for Yellow Bear Jelly
+|-
+|[[Reunited Bolt & Nut Set]]
+|[[File:Reunited Bolt and Nut Set.png|thumb|left|75px]]
+|
+*With upgrades, 2500-3500 extra points for Dark Moon Jelly
+*With upgrades, revives with 40-60 Energy
+|
+*With upgrades, 3500-4500 extra points for Dark Moon Jelly
+*With upgrades, revives with 50-70 Energy
+|-
+|[[Full Bloom Floral Teaspoon]]
+|[[File:Full Bloom Floral Teaspoon.png|thumb|left|75px]]
+|
+*With upgrades, 40-60% chance of triggering a Pink Bear Party
+*With upgrades, 200-300 extra points for Pink Bear Jelly
+|
+*With upgrades, 40-60% chance of triggering a Pink Bear Party
+*With upgrades, 300-400 extra points for Pink Bear Jelly
+|-
+|[[Radiant Illumination Lemon LED]]
+|[[File:Radiant Illumination Lemon LED.png|thumb|left|75px]]
+|
+*With upgrades, Blast Jelly lasts 10-15% longer
+*With upgrades, 400-500 extra points for Yellow Bear Jelly
+|
+*With upgrades, Blast Jelly lasts 10-15% longer
+*With upgrades, 500-600 extra points for Yellow Bear Jelly
+|-
+|[[Orange Peel Treadmill]]
+|[[File:Orange Peel Treadmill.png|thumb|left|75px]]
+|
+*With upgrades, 15-25% slower Energy drain while in Blast Mode
+*With upgrades, Energy drain 3-4% slower
+|
+*With upgrades, 15-25% slower Energy drain while in Blast Mode
+*With upgrades, Energy drain 4-5% slower
+|-
+|[[Neon Lime Life Jacket]]
+|[[File:Neon Lime Life Jacket.png|thumb|left|75px]]
+|
+*With upgrades, 40-70 extra Energy during Cookie Relay
+*With upgrades, lifts from hole OR revives with 28-40 Energy 2-3 times
+|
+*With upgrades, 50-80 extra Energy during Cookie Relay
+*With upgrades, lifts from hole OR revives with 31-45 Energy 2-3 times
+|-
+|[[Onion Fish's Onion Scale Slice]]
+|[[File:Onion Fish's Onion Scale Slice.png|left|thumb|75x75px]]
+|
+*With upgrades, 2800-3800 extra points for Tear Jelly
+*With upgrades, revives once with 50-70 energy
+|
+|-
+|[[How to Become a Celebrity Book]]
+|[[File:How_to_Become_a_Celebrity_Book.png|thumb|left|75px]]
+|
+*With upgrades extra performance points
+*With upgrades 2-4% slower Energy drain
+|
+* With upgrades extra performance points
+* With upgrades 4-6% slower Energy drain
+|-
+|[[500 Year Old Premium Ginseng Root Liquor]]
+|[[File:500_Year_Old_Premium_Ginseng_Root_Liquor.png|thumb|left|75px]]
+|
+*With upgrades 500-700 extra points for Yellow Bear Jellies
+*With upgrades All-Bear Jelly Parties last 5-10% longer
+|
+* With upgrades 600-800 extra points for Yellow Bear Jellies
+* With upgrades All-Bear Jelly Parties last 5-10% longer
+|-
+|[[Pitch Black Sword]]
+|[[File:Pitch_Black_Sword.png|thumb|left|75px]]
+|
+*With upgrades All-Bear Jelly Parties last 10-20% longer
+*With upgrades 100-150 extra points for Yellow Bear Jellies
+|
+* With upgrades All-Bear Jelly Parties last 10-20% longer
+* With upgrades 150-200 extra points for Yellow Bear Jellies
+|-
+|[[Honey Strawberry Ice Cream]]
+|[[File:Honey Strawberry Ice Cream.png|thumb|left|75px]]
+|
+*With upgrades 200-400 extra points for Pink Bear Jellies
+*With upgrades 100-150 extra points for Yellow Bear Jellies
+|
+* With upgrades 200-400 extra points for Pink Bear Jellies
+* With upgrades 150-200 extra points for Yellow Bear Jellies
+|-
+|[[Lustrous Choco Hair Wax]]
+|[[File:Lustrous_Choco_Hair_Wax.png|thumb|left|75px]]
+|
+*With upgrades All-Bear Jelly Parties last 10-20% longer
+*With upgrades 60-100 extra points for Yellow Bear Jellies
+|
+* With upgrades All-Bear Jelly Parties last 10-20% longer
+* With upgrades 100-150 extra points for Yellow Bear Jellies
+|-
+|[[Silver Cookie Juice Cap]]
+|[[File:Silver_Cookie_Juice_Cap.png|thumb|left|75px]]
+|
+*With upgrades 6-8% Coin Bonus
+*With upgrades 6-8% extra XP
+|
+* With upgrades 8-10% Coin Bonus
+* With upgrades 8-10% extra XP
+|-
+|[[Famous Honey Cookie]]
+|[[File:Famous Honey Cookie.png|thumb|left|75px]]
+|
+*With upgrades 100-150 extra points for Yellow Bear Jellies
+|
+*With upgrades 150-200 extra points for Yellow Bear Jellies
+|-
+|[[Cookie Box 1440 Controller]]
+|[[File:Cookie Box 1440 Controller.png|thumb|left|75px]]
+|
+*With upgrades stronger Mini Magnetic Aura
+*1 lift from a hole
+|
+* With upgrades stronger Mini Magnetic Aura
+* 2 lifts from a hole
+|-
+|[[Extraordinary Limited Edition Cookie Comics]]
+|[[File:Extraordinary Limited Edition Cookie Comics.png|thumb|left|75px]]
+|
+*With upgrades 13-18% extra XP
+*With upgrades 2-3% slower Energy drain
+|
+* With upgrades 15-20% extra XP
+* With upgrades 4-5% slower Energy drain
+|-
+|[[1000 Year Old Premium Ginseng Root Liquor]]
+|[[File:1000 Year Old Premium Ginseng Root Liquor.png|thumb|left|75px]]
+|
+*With upgrades 800-1000 extra points for Pink Bear Jellies
+*Power Jellies last 5-10% longer
+|
+* With upgrades 1000-1200 extra points for Pink Bear Jellies
+* Power Jellies last 5-10% longer
+|-
+|[[Mythical Stone Hammer]]
+|[[File:Mythical Stone Hammer.png|thumb|left|75px]]
+|
+*With upgrades 1000-2000 extra points for destroying Obstacles
+|
+*With upgrades 2000-3000 extra points for destroying Obstacles
+|-
+|[[Rose Life Ice Cream]]
+|[[File:Rose Life Ice Cream.png|thumb|left|75px]]
+|
+*With upgrades 9-13% XP Bonus
+*With upgrades 2-4% slower Energy drain
+|
+* With upgrades 10-14% XP Bonus
+* With upgrades 4-6% slower Energy drain
+|-
+|[[Veteran Movie Director's Sunglasses]]
+|[[File:Veteran Movie DIrector's Sunglasses.png|thumb|left|75px]]
+|
+*With upgrades extra Amateur Performance Points
+*1 lift from a hole
+|
+* With upgrades extra Amateur Performance Points
+* 2 lifts from a hole
+|-
+|[[Speed of Light Glass Horse]]
+|[[File:Speed of Light Glass Horse.png|thumb|left|75px]]
+|
+*With upgrades 3-7% increased Blast speed
+*With upgrades 150-200 extra points for Jellies gotten during Blasts
+|
+* With upgrades 3-7% increased Blast speed
+* With upgrades 200-250 extra points for Jellies gotten during Blasts
+|-
+|[[Merchant's Mini Safe]]
+|[[File:Merchant's Mini Safe.png|left|75px]]
+|
+*With upgrades extra 8-13% Coin Bonus
+*With upgrades 2-3% less energy loss from hitting obstacles
+|
+* With upgrades extra 10-15% Coin Bonus
+* With upgrades 4-6% less energy loss from hitting obstacles
+|-
+|[[Shiny Platinum Pearl Ring Size 7]]
+|[[File:Shiny Platinum Pearl Ring Size 7.png|thumb|left|75px]]
+|
+*With upgrades extra 400-600 points for Star Candy Parties
+|
+* Mini Magnetic Aura
+* With upgrades extra 210-400 points for Star Candy Parties
+|-
+|[[Honey Dipped Gingseng Root]]
+|[[File:Honey Dipped Gingseng Root.png|thumb|left|75px]]
+|
+*With upgrades 400-600 extra points for all bear jellies
+*With upgrades 5-10% extra energy from potions
+|
+* With upgrades 500-700 extra points for all bear jellies
+* With upgrades 5-10% extra energy from potions
+|-
+|[[Femme Fatale Perfume No. 10]]
+|[[File:Femme Fatale Perfume No. 10.png|thumb|left|75px]]
+|
+*With upgrades extra 500-800 points while in Giant Mode
+*With upgrades Giant Mode lasts 5-10% longer
+|
+* With upgrades extra 800-1000 points while in Giant Mode
+* With upgrades Giant Mode lasts 5-10% longer
+|-
+|[[Unrivalled Hot Dog]]
+|[[File:Unrivalled Hot Dog.png|thumb|left|75px]]
+|
+*With upgrades extra 3000-4000 points for a destroyed obstacle
+|
+*With upgrades extra 4000-5000 points for a destroyed obstacle
+|-
+|[[Brain Freeze Iced Choco Biscuit]]
+|[[File:Brain Freeze Iced CHoco Biscuit.png|thumb|left|75px]]
+|
+*With upgrades base speed increased 7-9%
+*With upgrades 4-5% slower Energy drain
+|
+* With upgrades base speed increased 7-9%
+* With upgrades 6-7% slower Energy drain
+|-
+|[[Very Hot Lava Choco Bar]]
+|[[File:Very Hot Lava Choco Bar.png|thumb|left|75px]]
+|
+*With upgrades during Cookie Relays revive once with 65-110 Energy
+*With upgrades 1-2 extra Jumps
+|
+* With upgrades during Cookie Relays revive once with 65-110 Energy
+* With upgrades 2-3 extra Jumps
+|-
+|[[Ultra Power Double Rainbow Carrot]]
+|[[File:Ultra Power Double Rainbow Carrot.png|thumb|left|75px]]
+|
+*With upgrades extra 120-170 points for Jellies
+*With upgrades 4-6% slower Energy drain
+|
+* With upgrades extra 170-220 points for Jellies
+* With upgrades 5-7% slower Energy drain
+|-
+|[[Darkness Absorbing Transparent Lantern]]
+|[[File:Darkness Absorbing Transparent Lantern.png|thumb|left|75px]]
+|
+*With upgrades extra 2000-3000 points for going through Obstacles
+|
+*With upgrades extra 3000-4000 points for going through Obstacles
+|-
+|[[Sticky Jazz Jellies]]
+|[[File:Sticky Jazz Jellies.png|thumb|left|75px]]
+|
+*With upgrades extra 400-600 points for Music Jellies
+|
+* Mini Magnetic Aura
+* With upgrades extra 400-600 points for Music Jellies
+|-
+|[[Stoic Piece of the Moon]]
+|[[File:Stoic Piece of the Moon.png|thumb|left|75px]]
+|
+*With upgrades 9-11% extra XP
+*With upgrades 9-11% Coin Bonus
+|
+* With upgrades 10-12% extra XP
+* With upgrades 10-12% Coin Bonus
+|-
+|[[Miner's Gold Dynamite]]
+|[[File:Miner's Gold Dynamite.png|thumb|left|75px]]
+|
+*With upgrades 3-6 extra Coins for a destroyed obstacle
+*With upgrades 1-3% Coin Bonus
+|
+* With upgrades 3-6 extra Coins for a destroyed obstacle
+* With upgrades 3-5% Coin Bonus
+|-
+|[[Golden Magic Flower Pot]]
+|[[File:Golden Magic Flower Pot.png|thumb|left|75px]]
+|
+*With upgrades 3-6% chance of a Coin Flower appearing
+*With upgrades 6-10% Coin Bonus
+|
+* With upgrades 3-6% chance of a Coin Flower appearing
+* With upgrades 7-12% Coin Bonus
+|-
+|[[Strong 8 Colored Rainbow Cake]]
+|[[File:Strong 8 Colored Rainbow Cake.png|thumb|left|75px]]
+|
+*With upgrades extra 1000-1500 points for a destroyed obstacle
+*With upgrades 20-30 extra points for Jellies
+|
+* With upgrades extra 1000-1500 points for a destroyed obstacle
+* With upgrades 30-40 extra points for Jellies
+|-
+|[[Sneakers for the Perfect Sprint]]
+|[[File:Sneakers for the Perfect Sprint.png|thumb|left|75px]]
+|
+*With upgrades 800-1000 points extra for all Jellies during Blasts
+*With upgrades blast lasts 5-10% longer
+|
+* With upgrades 1000-1200 points extra for all Jellies during Blasts
+* With upgrades blast lasts 5-10% longer
+|-
+|[[Honey Fondant Kebabs]]
+|[[File:Honey Fondant Kebabs.png|thumb|left|75px]]
+|
+*With upgrades during Cookie Relays revive once with 45-90 Energy
+*With upgrades 3-4% slower Energy drain
+|
+* With upgrades during Cookie Relays revive once with 45-90 Energy
+* With upgrades 4-6% slower Energy drain
+|-
+|[[Magnetic Energy Recovery Drink]]
+|[[File:Magnetic Energy Recovery Drink.png|thumb|left|75px]]
+|
+*Mini Magnetic Aura
+*With upgrades 5-7% slower Energy Drain
+|
+*Mini Magnetic Aura
+* With upgrades 6-8% slower Energy Drain
+|-
+|[[Sweet Revival Donut]]
+|[[File:Sweet Revival Donut.png|thumb|left|75px]]
+|
+*With upgrades 1-2 lifts for a hole
+*With upgrades revive 1-3 times with 25 Energy
+|
+* With upgrades 1-3 lifts for a hole
+* With upgrades revive 1-3 times with 30 Energy
+|-
+|[[Limited Edition Colorful Jelly Crown]]
+|[[File:Limited Edition Colorful Jelly Crown.png|thumb|left|75px]]
+|
+*With upgrades 800-1100 extra points for Colorful Star Jellies
+|
+* Mini Magnetic Aura
+* With upgrades 800-1100 extra points for Colorful Star Jellies
+|-
+|[[Rainbow Black Hole Drink]]
+|[[File:Rainbow Black Hole Drink.png|thumb|left|75px]]
+|
+*Minute Magnetic Aura
+*With upgrades 120-170 extra points for Jellies
+|
+* Minute Magnetic Aura
+* With upgrades 170-220 extra points for Jellies
+|-
+|[[Royal Jelly Soft Cream]]
+|[[File:Royal Jelly Soft Cream.png|thumb|left|75px]]
+|
+*With upgrades during Cookie Relays revive once with 80-180 Energy
+|
+*With upgrades during Cookie Relays revive once with 100-200 Energy
+|-
+|[[Specially made Flaming Cocktail]]
+|[[File:Specially made Flaming Cocktail.png|thumb|left|75px]]
+|
+*With upgrades 5-10% slower Energy drain
+*With upgrades revive once with 20-40 Energy
+|
+* With upgrades 5-10% slower Energy drain
+* With upgrades revive once with 30-50 Energy
+|-
+|[[Eye-watering Wasabi Balm]]
+|[[File:Eye-watering Wasabi Balm.png|thumb|left|75px]]
+|
+*Extra 13-23% XP
+*With upgrades revive with 20-30 Energy 2 times
+|
+* Extra 14% XP
+* With upgrades revive once with 50-100 Energy
+|-
+|[[Yellow Bear Jelly Choco Cake]]
+|[[File:Yellow Bear Jelly Choco Cake.png|thumb|left|75px]]
+|
+*With upgrades 1300-1800 extra points for Yellow Jelly Bears during Cookie Relay.
+*With upgrades 1-2 lifts from holes during Cookie Relay.
+|
+*With upgrades 1500-2000 extra points for Yellow Jelly Bears during Cookie Relay.
+*With upgrades 1-2 lifts from holes during Cookie Relay.
+|-
+|[[Muscle Blast Energy Drink]]
+|[[File:Muscle Blast Energy Drink.png|thumb|left|75px]]
+|
+*Mini Magnetic Aura
+*With upgrades 50-100 extra Energy during Cookie Relays
+|
+*Mini Magnetic Aura
+*With upgrades 60-110 extra Energy during Cookie Relays
+|-
+|[[Mom's Loving Lunch Box]]
+|[[File:Mom's Loving Lunch Box.png|thumb|left|75px]]
+|
+*With upgrades Potions restore 8-13% more
+*With upgrades 400-700 extra points for all Jellies during Giant Mode
+|
+* With upgrades Potions restore 10-15% more
+* With upgrades 500-800 extra points for all Jellies during Giant Mode
+|-
+|[[Chocolate Hardcover Workbook]]
+|[[File:Chocolate Hardcover Workbook.png|thumb|left|75px]]
+|
+*With upgrades 1-2% slower Energy drain
+*With upgrades 15-25% extra XP
+|
+* With upgrades 3-4% slower Energy drain
+* With upgrades 20-30% extra XP
+|-
+|[[Grand Revival Donut]]
+|[[File:Grand_Revival_Donut.png|thumb|left|75px]]
+|
+*With upgrades Revives/Lifts from a hole 2-4 times with (40 Energy)
+|
+*With upgrades Revives/Lifts from a hole 2-4 times with (45 Energy)
+|-
+|[[Gold Lotus Blossom Wisdom Ring]]
+|[[File:Gold Lotus Blossom Wisdom Ring.png|thumb|left|75px]]
+|
+*Additional damage from hitting Obstacles
+*With upgrades 11-14% Coin Bonus
+|
+* Additional damage from hitting Obstacles
+* With upgrades 12-15% Coin Bonus
+|-
+|[[Doll Lurking with Burning Chocolate]]
+|[[File:Doll Lurking with Burning Chocolate.png|thumb|left|75px]]
+|
+*Additional damage from hitting Obstacles
+*With upgrades 110-210 extra Energy during Cookie Relay
+|
+* Additional damage from hitting Obstacles
+* With upgrades 130-230 extra Energy during Cookie Relay
+|-
+|[[Titanium Demagnetizing Helmet]]
+|[[File:Titanium Demagnetizing Helmet.png|thumb|left|75px]]
+|
+*Magnetic Aura Blocker
+*With upgrades 300-400 extra points for Jellies
+|
+* Magnetic Aura Blocker
+* With upgrades 400-500 extra points for Jellies
+|-
+|[[Miracle Toy Ambulance]]
+|[[File:Miracle Toy Ambulance.png|thumb|left|75px]]
+|
+*The higher the Energy, the faster you run
+*With upgrades revive 1-3 times with 25 Energy
+|
+* The higher the Energy, the faster you run
+* With upgrades revive 1-3 times with 30 Energy
+|-
+|[[Super Spicy Red Hot Chili Drink]]
+|[[File:Super Spicy Red Hot Chili Drink.png|thumb|left|75px]]
+|
+*Mini Magnetic Aura
+*With upgrades 5-9% increased base speed
+|
+* Mini Magnetic Aura
+* With upgrades 6-10% increased base speed
+|-
+|[[Boatman's Burning Gold Sword]]
+|[[File:Boatman's Burning Gold Sword.png|thumb|left|75px]]
+|
+*With upgrades revive 3 times with 20-30 Energy
+*With upgrades 6-8% Coin Bonus
+|
+* With upgrades revive 3 times with 30-40 Energy
+* With upgrades 6-8% Coin Bonus
+|-
+|[[Stuffed Elephant Money Box]]
+|[[File:Stuffed Elephant Money Box.png|thumb|left|75px]]
+|
+*With upgrades, extra 2000-2500 points for Gold Coins
+*With upgrades 950-1450 points for Coins
+|
+* With upgrades, extra 2000-2500 points for Gold Coins
+* With upgrades 1200-1700 points for Coins
+|-
+|[[Soda Flavor Twin Ice Pops]]
+|[[File:Soda Flavor Twin Ice Pops.png|thumb|left|75px]]
+|
+*With upgrades 10-15% extra Energy
+*With upgrades 1500-2500 extra points for Bubble Jellies
+|
+* With upgrades 10-15% extra Energy
+* With upgrades 2000-3000 extra points for Bubble Jellies
+|-
+|[[Supremely Yummy Monster Muffin]]
+|[[File:Supremely Yummy Monster Muffin.png|thumb|left|75px]]
+|
+*Energy Drain 5-7% slower
+*With upgrades revive once with 40-90 Energy
+|
+* Energy Drain 5-7% slower
+* With upgrades revive once with 60-110 Energy
+|-
+|[[Very Wet Drink]]
+|[[File:Very Wet Drink.png|thumb|left|75px]]
+|
+*Miniscule Magnetic Aura
+*Lifts from hole OR revives with 22-32 Energy 2-3 times
+|
+*Miniscule Magnetic Aura
+*Lifts from hole OR revives with 25-35 Energy 2-3 times
+|-
+|[[Rich Black Coffee]]
+|[[File:Rich Black Coffee.png|thumb|left|75px]]
+|
+*Miniscule Magnetic Aura
+*With upgrades 8-13% more Energy from Potions
+|
+* Miniscule Magnetic Aura
+* With upgrades 10-15% more Energy from Potions
+|-
+|[[Royal Bear Jelly Saddle]]
+|[[File:Royal Bear Jelly Saddle.png|thumb|left|75px]]
+|
+*With upgrades 1000-1300 extra points for Jellies when on your Ride
+*With upgrades 4-9% slower Energy drain
+|
+*With upgrades 1200-1500 extra points for Jellies when on your Ride
+*With upgrades 5-10% slower Energy drain
+|-
+|[[Flaming High Protein Milk]]
+|[[File:Flaming High Protein Milk.png|thumb|left|75px]]
+|
+*With upgrades, 300-600 extra points for all Jellies in Giant Mode
+*With upgrades revive once with 30-80 Energy
+|
+* With upgrades, 400-700 extra points for all Jellies in Giant Mode
+* With upgrades revive once with 50-100 Energy
+|-
+|[[Honey Dipped Sweet Pretzel Donut]]
+|[[File:Honey Dipped Sweet Pretzel Donut.png|thumb|left|75px]]
+|
+*Lifts from hole OR revives with 40-55 Energy 2-3 times during Cookie Relay
+|
+*Lifts from hole OR revives with 44-60 Energy 2-3 times during Cookie Relay
+|-
+|[[Mysteriously Magical Star Brooch]]
+|[[File:Mysteriously Magical Star Brooch.png|thumb|left|75px]]
+|
+*With upgrades 9000-11000 extra points from Blackberry Jellies
+*With upgrades 400-600 extra points from Colorful Star Jellies
+|
+*With upgrades 10000-12000 extra points from Blackberry Jellies
+*With upgrades 500-700 extra points from Colorful Star Jellies
+|-
+|[[Double Pink Bear Jelly Party Hat]]
+|[[File:Double Pink Bear Jelly Party Hat.png|thumb|left|75px]]
+|
+*With upgrades 60-80% more chance of triggering an All-Pink Bear party
+*With upgrades 300-400 more points for Pink Bear Jellies
+|
+* With upgrades 60-80% more chance of triggering an All-Pink Bear party
+* With upgrades 400-500 more points for Pink Bear Jellies
+|-
+|[[Candy Inline Skates]]
+|[[File:Candy Inline Skates.png|thumb|left|75px]]
+|
+*With upgrades 1 - 1.5 seconds of Blast after taking a Potion
+*With upgrades Energy drains 3-4% slower
+|
+*With upgrades 1 - 1.5 seconds of Blast after taking a Potion
+*With upgrades Energy drains 4-5% slower
+|-
+|[[Mouth-watering Golden Kiwi Bread]]
+|[[File:Mouth-watering Golden Kiwi Bread.png|thumb|left|75px]]
+|
+*With upgrades Base Speed 10-15% higher in Giant Mode
+*With upgrades 2000-2500 extra points from Kiwi Jellies
+|
+* With upgrades Base Speed 10-15% higher in Giant Mode
+* With upgrades 2500-3000 extra points from Kiwi Jellies
+|-
+|[[Triple Peanut Butter Sandwich]]
+|[[File:Triple Peanut Butter Sandwich.png|thumb|left|75px]]
+|
+*With upgrades Energy drains 30-40% slower in Giant Mode
+*With upgrades 120-170 extra points for all Jellies
+|
+* With upgrades Energy drains 30-40% slower in Giant Mode
+* With upgrades 170-220 extra points for all Jellies
+|-
+|[[99.9% Gold Energy Drink]]
+|[[File:99.9 Gold Energy Drink.png|thumb|left|75px]]
+|
+*Mini Magnetic Aura
+*With upgrades 5-6% chance of generating a Coin Flower
+|
+*Mini Magnetic Aura
+*With upgrades 6-7% chance of generating a Coin Flower
+|-
+|[[Burning Heat Infused Jellyco]]
+|[[File:Burning Heat Infused Jellyco.png|thumb|left|75px]]
+|
+*With upgrades 5-10% chance of a Jellyco missile falling
+*Energy drains 4-6% slower
+|
+*With upgrades 5-10% chance of a Jellyco missile falling
+*Energy drains 5-7% slower
+|-
+|[[Extra Topping Nightsky Crepe]]
+|[[File:Extra Topping Nightsky Crepe.png|thumb|left|75px]]
+|
+*With upgrades 2000-4000 extra points for Dark Moon Jellies
+*With upgrades revive once with 40-90 Energy
+|
+*With upgrades 3000-5000 extra points for Dark Moon Jellies
+*With upgrades revive once with 50-100 Energy
+|-
+|[[Honeymoon Cocktail of Full Moonlight]]
+|[[File:Honeymoon Cocktail of Full Moonlight.png|thumb|left|75px]]
+|
+*Energy drains 7-10% slower
+*2 lifts from a hole
+|
+*Energy drains 7-10% slower
+*3 lifts from a hole
+|-
+|[[Fatal Double Stick Icicle]]
+|[[File:Fatal Double Stick Icicle.png|thumb|left|75px]]
+|
+*With upgrades 7-9% higher base speed
+*With upgrades 13-18% extra XP
+|
+*With upgrades 8-10% higher base speed
+*With upgrades 15-20% extra XP
+|-
+|[[Sacred Prosperity Bracelet of Earth]]
+|[[File:Sacred Prosperity Bracelet of Earth.png|thumb|left|75px]]
+|
+*With upgrades Giant landing make coins sprout from the ground Intermediate Lv.1~10
+|
+*With upgrades Giant landing make coins sprout from the ground - Advanced Lv.1~10
+|-
+|[[Sacred Protection Ring of Fire]]
+|[[File:Sacred Protection Ring of Fire.png|thumb|left|75px]]
+|
+*Eliminates all obstacles 2 times prior to collision
+*With upgrades 5-8% slower Energy drain
+|
+*Eliminates all obstacles 2 times prior to collision
+*With upgrades 7-10% slower Energy drain
+|-
+|[[Sacred Galloping Earring of Wind]]
+|[[File:Sacred Galloping Earring of Wind.png|thumb|left|75px]]
+|
+*Goes through obstacles during Blast Speed
+*With upgrades 0.9-1.3 seconds of Blast after taking a Potion
+|
+*Goes through obstacles during Blast Speed
+*With upgrades 1.0-1.5 seconds of Blast after taking a Potion
+|-
+|[[Sacred Restoration Pendant of Water]]
+|[[File:Sacred Restoration Pendant of Water.png|thumb|left|75px]]
+|
+*Recovers Energy 2 times when colliding with an obstacle
+*With upgrades extra 8-13% Coin Bonus
+|
+*Recovers Energy 2 times when colliding with an obstacle
+*With upgrades extra 10-15% Coin Bonus
+|-
+|[[Electrifying C Battery Baton]]
+|[[File:Electrifying C Battery Baton.png|thumb|left|75px]]
+|
+*With upgrades, Magnetic Aura increases during Cookie Relay
+*With upgrades, 240-290 extra points for all Jellies
+|
+*With upgrades, Magnetic Aura increases during Cookie Relay
+*With upgrades, 270-320 extra points for all Jellies
+|-
+|[[Coma Inducing Choco Croissant]]
+|[[File:Coma Inducing Choco Croissant.png|thumb|left|75px]]
+|
+*With upgrades, Energy drain 4-7% slower
+*With upgrades, 8-13% more Energy recovery
+|
+*With upgrades, Energy drain 4-7% slower
+*With upgrades, 10-15% more Energy recovery
+|-
+|[[Mini Gumball Soda Engine Rocket]]
+|[[File:Mini Gumball Soda Engine Rocket.png|thumb|left|75px]]
+|
+*With upgrades, 15000~20000 extra points for Gumball Shots
+*With upgrades, Revives with 40~80 Energy
+|
+*With upgrades, 17000~22000 extra points for Gumball Shots
+*With upgrades, Revives with 50~90 Energy
+|-
+|[[Slippery Golden Banana Peel]]
+|[[File:Slippery Golden Banana Peel.png|thumb|left|75px]]
+|
+*With upgrades, 7-9% Base speed increase
+*With upgrades, 10-12% Coin Bonus
+|
+*With upgrades, 8-10% Base speed increase
+*With upgrades, 11-13% Coin Bonus
+|-
+|[[10g Ankle Weights for Experts]]
+|[[File:10g Ankle Weights for Experts.png|thumb|left|75px]]
+|
+*10% Base speed decrease during Cookie Relay
+*With upgrades, Energy drain 7-9% slower
+|
+*10% Base speed decrease during Cookie Relay
+*With upgrades, Energy drain 8-10% slower
+|-
+|[[Expert's Baking Powder]]
+|[[File:Expert's Baking Powder.png|thumb|left|75px]]
+|
+*With upgrades 2~3 seconds of Giant mode after taking a Potion
+*With upgrades, 8~13% more Energy recovery
+|
+*With upgrades 2~3 seconds of Giant mode after taking a Potion
+*With upgrades, 10~15% more Energy recovery
+|-
+|[[Jumpy Jelly Bouncy Ride]]
+|[[File:Jumpy Jelly Bouncy Ride.png|thumb|left|75px]]
+|
+*Miniscule Magnetic Aura
+*With upgrades, Giant landing makes Jelly sprout from ground - Intermediate Lv.1-10
+|
+*Miniscule Magnetic Aura
+*With upgrades, Giant landing makes Jelly sprout from ground - Expert Lv.1-10
+|-
+|[[Full Bloom Cotton Candy]]
+|[[File:Full Bloom Cotton Candy.png|thumb|left|75px]]
+|
+*With upgrades, 3200-4200 extra points for Cherry Blossom Jelly
+*3% Base speed increase
+|
+*With upgrades, 3700-4700 extra points for Cherry Blossom Jelly
+*3% Base speed increase
+|-
+|[[Ice Swirl Popsicle]]
+|[[File:Ice Swirl Popsicle.png|thumb|left|75px]]
+|
+*With upgrades, 6600-8600 extra points for Bubble Jelly
+*With upgrades, Energy drain 5-7% slower
+|
+*With upgrades, 7300-9300 extra points for Bubble Jelly
+*With upgrades, Energy drain 6-8% slower
+|-
+|[[Iced Sparkling Water Drink]]
+|[[File:Iced Sparkling Water Drink.png|thumb|left|75px]]
+|
+*Miniscule Magnetic Aura
+*With upgrades, revives with 60-100 Energy 1 time
+|
+*Miniscule Magnetic Aura
+*With upgrades, revives with 70-110 Energy 1 time
+|-
+|[[Honey Coated Jujube Flower Rice Cake]]
+|[[File:Honey Coated Jujube Flower Rice Cake.png|thumb|left|75px]]
+|
+*With upgrades, 6180~8340 extra points for Jujube Slice Jelly
+*With upgrades, revives with 70-100 Energy
+|
+*With upgrades, 6700~8860 extra points for Jujube Slice Jelly
+*With upgrades, revives with 80-110 Energy
+|-
+|[[Bamboo Scented Five-Grain Rice]]
+|[[File:Bamboo Scented Five-Grain Rice.png|thumb|left|75px]]
+|
+*With upgrades, 16000~19000 extra points for Bamboo Leaf Jelly
+*With upgrades, revives with 60-90 Energy
+|
+* With upgrades, 17000~20000 extra points for Bamboo Leaf Jelly
+* With upgrades, revives with 70-100 Energy
+|-
+|[[Perfectly Waterproof Icy Glass Boots]]
+|[[File:Perfectly Waterproof Icy Glass Boots.png|thumb|left|75px]]
+|
+*With upgrades, 20-30% chance of forming an Ice Bridge
+*With upgrades, energy drain 7-9% slower
+|
+*With upgrades, 20-30% chance of forming an Ice Bridge
+*With upgrades, energy drain 8-10% slower
+|-
+|[[Splendidly Shiny Golden Mace]]
+|[[File:Splendidly Shiny Golden Mace.png|thumb|left|75px]]
+|
+*With upgrades, 30-80% chances of creating winged Coins for destroying an obstacle
+*With upgrades, 5-6% Coin Bonus
+|
+*With upgrades, 30-80% chances of creating winged Coins for destroying an obstacle
+*With upgrades, 6-7% Coin Bonus
+|-
+|[[Super Fruity Orange-Lime Smoothie]]
+|[[File:Super Fruity Orange-Lime Smoothie.png|thumb|left|75px]]
+|
+*With upgrades, Energy drain 4-5% slower
+*With upgrades, 250-450 extra points for all Citrus Jellies
+|
+*''With upgrades, Energy drain 5-6% slower''
+*''With upgrades, 300-500 extra points for all Citrus Jellies''
+|-
+|[[Strawberry & Cream Eclair Baton]]
+|[[File:Strawberry & Cream Eclair Baton.png|thumb|left|75px]]
+|
+*With upgrades, Energy drain 4-5% slower
+*With upgrades, revives with 50-68 Energy 1 time during Cookie Relay
+|
+*''With upgrades, Energy drain 5-6% slower''
+*''With upgrades, revives with 70-88 Energy 1 time during Cookie Relay''
+|-
+|[[Shiny Double Spring Jelly Shoes]]
+|[[File:Shiny Double Spring Jelly Shoes.png|thumb|left|75px]]
+|
+*With upgrades, lifts from hole OR revives with 25 Energy 2-4 times
+*Jumps 2 times more
+|
+*''With upgrades, lifts from hole OR revives with 27 Energy 2-4 times''
+*''Jumps 2 times more''
+|}
+
+<!--
+
+
+
+
+
+
+
+
+This is intentionally blank, so editors can find the end of S-grade list easily.
+
+
+
+
+
+
+
+-->
+
+==A-grade Evolve Treasures==
+{| border="0" cellpadding="1" cellspacing="1" class="article-table article-table-selected sortable" style="width: 700px;"
+|-
+! scope="col" |Evolved Treasure
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Blessed Effect
+|-
+|[[Brave Cookie's Skeleton Necklace]]
+|[[File:Brave Cookie's Skeleton Necklace.png|thumb|left|75px]]
+|
+*With upgrades get 10-30 extra energy
+*With upgrades revive once with 15-25% energy
+|
+*With upgrades get 20-40 extra energy
+*With upgrades revive once with 20-30% energy
+|-
+|[[Gleaming Choco Ring]]
+|[[File:Gleaming Choco Ring.png|thumb|left|75px]]
+|
+*With upgrades 5-6% less energy lost when hitting obstacles
+*With upgrades 3-4% more energy from Potions
+|
+*With upgrades 5-6% less energy lost when hitting obstacles
+*With upgrades 5-6% more energy from Potions
+|-
+|[[Miraculous Café Latte]]
+|[[File:Miraculous Café Latte.png|thumb|left|75px]]
+|
+*With upgrades 5-6% more energy from Potions
+*With upgrades makes energy drain 2-3% slower
+|
+*With upgrades 5-6% more energy from Potions
+*With upgrades makes energy drain 3-4% slower
+|-
+|[[Wiggly Zombie Cell]]
+|[[File:Wiggly Zombie Cell.png|thumb|left|75px]]
+|
+*With upgrades revives twice with 10-20 Energy
+|
+*With upgrades revives 3 times with 10-20 Energy
+|-
+|[[Cream Cookie's Midnight Snack]]
+|[[File:Cream Cookie's Midnight Snack.png|thumb|left|75px]]
+|
+*With upgrades makes energy drain 4-5% slower
+|
+*With upgrades makes energy drain 5-6% slower
+|-
+|[[Flowercopter's Sudden Mutation]]
+|[[File:Flowercopter's Sudden Mutation.png|thumb|left|75px]]
+|
+*With upgrades 5-10% higher base speed during Bonus Time
+*1 second extra in Bonus Time
+|
+*With upgrades 5-10% higher base speed during Bonus Time
+*2 seconds extra in Bonus Time
+|-
+|[[Clumsy Cylindrical Dies]]
+|[[File:Clumsy Cylindrical Dies.png|thumb|left|75px]]
+|
+*With upgrades items last 5-7% longer
+*With upgrades 70-100 extra points for Jellies during Giant Mode
+|
+*With upgrades items last 5-7% longer
+*With upgrades 100-130 extra points for Jellies during Giant Mode
+|-
+|[[Dragon's Tail Sushi]]
+|[[File:Dragon's Tail Sushi.png|thumb|left|75px]]
+|
+*With upgrades 6-11% longer Blasts
+*With upgrades Giant Jellies last 6-11% longer
+|
+*With upgrades 7-12% longer Blasts
+*With upgrades Giant Jellies last 7-12% longer
+|-
+|[[Brain Gum's Chewing Gum]]
+|[[File:Brain Gum's Chewing Gum.png|thumb|left|75px]]
+|
+*With upgrades crashing takes 5-6% less Energy
+*With upgrades 2-3% slower Energy drain
+|
+*With upgrades crashing takes 5-6% less Energy
+*With upgrades 3-4% slower Energy drain
+|-
+|[[Unbeaten Chess Piece]]
+|[[File:Unbeaten Chess Piece.png|thumb|left|75px]]
+|
+*With upgrades 300-500 extra points for Alphabet Jellies
+*With upgrades 2-3% slower Energy drain
+|
+*With upgrades 500-1000 extra points for Alphabet Jellies
+*With upgrades 3-4% slower Energy drain
+|-
+|[[Waterproof Deep Sea Watch]]
+|[[File:Waterproof Deep Sea Watch.png|thumb|left|75px]]
+|
+*1 second extra in Bonus Time
+*With upgrades 5-10% points bonus during Bonus Time
+|
+*2 second extra in Bonus Time
+*With upgrades 10-15% points bonus during Bonus Time
+|-
+|[[Deep Sea Murex Shell Earrings]]
+|[[File:Deep Sea Murex Shell Earrings.png|thumb|left|75px]]
+|
+*With upgrades extra 500-700 points for Coins
+|
+*With upgrades extra 800-1000 points for Coins
+|-
+|[[High Calorie Cranberry Cereal]]
+|[[File:High Calorie Cranberry Cereal.png|thumb|left|75px]]
+|
+*With upgrades 100-200 extra points for Pink Bear Jellies
+*With upgrades 80-100 extra points for Yellow Bear Jellies
+|
+*With upgrades 200-300 extra points for Pink Bear Jellies
+*With upgrades 100-150 extra points for Yellow Bear Jellies
+|-
+|[[Comb over's Hair Cream]]
+|[[File:Comb over's Hair Cream.png|thumb|left|75px]]
+|
+*With upgrades 300-500 extra points for Gold Coins
+*With upgrades 200-400 extra points for Coins
+|
+*With upgrades 500-1000 extra points for Gold Coins
+*With upgrades 300-500 extra points for Coins
+|-
+|[[Olive Oil Sunscreen]]
+|[[File:Olive Oil Suncreen.png|thumb|left|75px]]
+|
+*With upgrades 5-10% increased base speed
+*With upgrades Power Jellies last 5-7% longer
+|
+*With upgrades 5-10% increased base speed
+*With upgrades Power Jellies last 8-10% longer
+|-
+|[[Crispy Syrup Cracker]]
+|[[File:Crispy Syrup Cracker.png|thumb|left|75px]]
+|
+*With upgrades 10-30 extra Energy
+|
+*With upgrades 20-40 extra Energy
+|-
+|[[5-color Peanut Butter]]
+|[[File:5-color Peanut Butter.png|thumb|left|75px]]
+|
+*With upgrades 80-100 points extra for Yellow Bear Jellies
+|
+*With upgrades 100-120 points extra for Yellow Bear Jellies
+|-
+|[[Macaron Hamburger]]
+|[[File:Macaroon Hamburger.png|thumb|left|75px]]
+|
+*With upgrades Power Jellies last 5-7% longer
+*With upgrades 40-60 extra points for Jellies during Giant Mode
+|
+*With upgrades Power Jellies last 5-7% longer
+*With upgrades 60-80 extra points for Jellies during Giant Mode
+|-
+|[[Full Stomach Piggy Bank]]
+|[[File:Full Stomach Piggy Bank.png|thumb|left|75px]]
+|
+*With upgrades 300-500 extra points with Coins
+*With upgrades 500-1000 extra points for Gold Coins
+|
+*With upgrades 500-1000 extra points with Coins
+*With upgrades 1000-1500 extra points for Gold Coins
+|}
+
+==B-grade Evolve Treasures==
+{| border="0" cellpadding="1" cellspacing="1" class="article-table article-table-selected sortable" style="width: 700px;"
+|-
+! scope="col" |Evolved Treasure
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Blessed Effect
+|-
+|[[Sweet Strawberry Tart]]
+|[[File:Sweet Strawberry Tart.png|thumb|left|75px]]
+|
+*With upgrades gives 1 extra second in Bonus Time
+*With upgrades get 5-10% extra Bonus Time points
+|
+*With upgrades gives 2 extra seconds in Bonus Time
+*With upgrades get 10-15% extra Bonus Time points
+|-
+|[[Cloud Cookie's Double Rainbow Candy]]
+|[[File:Cloud Cookie's Double Rainbow Candy.png|thumb|left|75px]]
+|
+*With upgrades Power Jellies last 5-6% longer
+*With upgrades 50-70 extra points for all jellies during blasts
+|
+*With upgrades Power Jellies last 5-6% longer
+*With upgrades 70-100 extra points for all jellies during blasts
+|-
+|[[Buttercream Choco Pancake]]
+|[[File:Buttercream Choco Pancake.png|thumb|left|75px]]
+|
+*With upgrades 4-5% Coin Bonus
+|
+*With upgrades 6-7% Coin Bonus
+|-
+|[[Scrumptious Piece of Chocolate]]
+|[[File:Scrumptious Piece of Chocolate.png|thumb|left|75px]]
+|
+*With upgrades 30-50 extra points for all Jellies
+|
+*With upgrades 50-70 extra points for all Jellies
+|-
+|[[Flavor Filled Cheese]]
+|[[File:Flavor Filled Cheese.png|thumb|left|75px]]
+|
+*With upgrades 80-150 extra points for Pink Bear Jellies
+*With upgrades 50-70 points extra for Yellow Bear Jellies
+|
+*With upgrades 150-200 extra points for Pink Bear Jellies
+*With upgrades 70-100 points extra for Yellow Bear Jellies
+|-
+|[[Silky Earplug]]
+|[[File:Silky Earplug.png|thumb|left|75px]]
+|
+*With upgrades 200-400 extra points for Gold Coins
+*With upgrades 100-300 extra points for Coins
+|
+*With upgrades 300-500 extra points for Gold Coins
+*With upgrades 200-400 extra points for Coins
+|-
+|[[Santa Hat's Sparkly Pom-Poms]]
+|[[File:Santa Hat's Sparkly Pom-Poms.png|thumb|left|75px]]
+|
+*With upgrades 400-600 extra points for Coins
+|
+*With upgrades 600-800 extra points for Coins
+|-
+|[[Explosive Lightning]]
+|[[File:Explosive Lightning.png|thumb|left|75px]]
+|
+*With upgrades Magnet Jelly lasts 10-20% longer
+*With upgrades 5-10% bonus for points scored by Pets
+|
+*With upgrades Magnet Jelly lasts 10-20% longer
+*With upgrades 10-15% bonus for points scored by Pets
+|-
+|[[Peculiar Garlic Peel Sauce]]
+|[[File:Peculiar Garlic Peel Sauce.png|thumb|left|75px]]
+|
+*10% longer Blasts
+*With upgrades 50-150 extra points during Blasts
+|
+*10% longer Blasts
+*With upgrades 150-200 extra points during Blasts
+|-
+|[[Fluffy Yarn Spinning Machine]]
+|[[File:Fluffy Yarn Spinning Machine.png|thumb|left|75px]]
+|
+*With upgrades 1-2 seconds extra in Bonus Time
+*With upgrades 5-10% increased speed during Bonus Time
+|
+*With upgrades 1-2 seconds extra in Bonus Time
+*With upgrades 10-15% increased speed during Bonus Time
+|-
+|[[Cream Beard]]
+|[[File:Cream Beard.png|thumb|left|75px]]
+|
+*With upgrades 100-150 extra points for Alphabet Jellies
+*With upgrades 300-500 extra points for Coins
+|
+*With upgrades 100-150 extra points for Alphabet Jellies
+*With upgrades 500-700 extra points for Coins
+|-
+|[[Witty Dumbbell's Perspiration]]
+|[[File:Witty Dumbbell's Perspiration.png|thumb|left|75px]]
+|
+*With upgrades Giant Mode lasts 5-10% longer
+*With upgrades 40-60 extra points for Jellies during Giant Mode
+|
+*With upgrades Giant Mode lasts 10-15% longer
+*With upgrades 60-80 extra points for Jellies during Giant Mode
+|-
+|[[Face of Arrogance Mask]]
+|[[File:Face of Arrogance Mask.png|thumb|left|75px]]
+|
+*With upgrades 5-8% extra XP
+|
+*With upgrades 7-10% extra XP
+|-
+|[[Super Effective Multivitamin]]
+|[[File:Super Effective Multivitamin.png|thumb|left|75px]]
+|
+*With upgrades 5-10% increased Blast speed
+*40 extra Energy
+|
+*With upgrades 5-10% increased Blast speed
+*60 extra Energy
+|-
+|[[Bouncy Marshmallow Pie]]
+|[[File:Bouncy Marshmallow Pie.png|thumb|left|75px]]
+|
+*With upgrades 200-400 extra points for Alphabet Jellies
+|
+*With upgrades 400-600 extra points for Alphabet Jellies
+|-
+|[[Silver Arrowhead]]
+|[[File:Silver Arrowhead.png|thumb|left|75px]]
+|
+*With upgrades 400-600 extra points for Coins
+|
+*With upgrades 600-800 extra points for Coins
+|-
+|[[Sweet Syrupy Cherry]]
+|[[File:Sweet Syrupy Cherry.png|thumb|left|75px]]
+|
+*With upgrades 100-200 extra points for Pink Bear Jellies
+|
+*With upgrades 200-300 extra points for Pink Bear Jellies
+|-
+|[[Sugar-packed Organic Flour]]
+|[[File:Sugar-packed Organic Flour.png|thumb|left|75px]]
+|
+*With upgrades 200-400 points extra for Alphabet Jellies
+|
+*With upgrades 400-600 points extra for Alphabet Jellies
+|}
+
+==C-grade Evolve Treasures==
+{| border="0" cellpadding="1" cellspacing="1" class="article-table article-table-selected sortable" style="width: 700px;"
+|-
+! scope="col" |Evolved Treasure
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Blessed Effect
+|-
+|[[Sugar Covered Lollipop Shard]]
+|[[File:Sugar Covered Lollipop Shard.png|thumb|left|75px]]
+|
+*With upgrades get 5-10% extra XP
+*With upgrades get 3-5% Coin Bonus
+|
+*With upgrades get 7-12% extra XP
+*With upgrades get 6-8% Coin Bonus
+|-
+|[[Springy Cheese Ball]]
+|[[File:Springy Cheese Ball.png|thumb|left|75px]]
+|
+*With upgrades All-Bear Jelly Parties last 10-15% longer
+*With upgrades 20-40 points extra for Yellow Bear Jellies
+|
+*With upgrades All-Bear Jelly Parties last 10-15% longer
+*With upgrades 40-60 points extra for Yellow Bear Jellies
+|-
+|[[Multicolored Spiky Candy]]
+|[[File:Multicolored Spiky Candy.png|thumb|left|75px]]
+|
+*With upgrades, Pet grows 1.5-2.5x bigger during Bonus Time
+*With upgrades 5-10% extra points during Bonus Time
+|
+*With upgrades, Pet grows 1.5-2.5x bigger during Bonus Time
+*With upgrades 7-12% extra points during Bonus Time
+|-
+|[[Santa Sock's Red Thread]]
+|[[File:Santa Sock's Red Thread.png|thumb|left|75px]]
+|
+*With upgrades 4-9% higher base speed
+|
+*With upgrades 5-10% higher base speed
+|-
+|[[Not So Pointy Thumb Tack]]
+|[[File:Not So Pointy Thumb Tack.png|thumb|left|75px]]
+|
+*With upgrades Magnetic Jelly lasts 10-20% longer
+*With upgrades 3-7% bonus for points scored by Pets
+|
+*With upgrades Magnetic Jelly lasts 10-20% longer
+*With upgrades 6-10% bonus for points scored by Pets
+|-
+|[[Flawless Wheat]]
+|[[File:Flawless Wheat.png|thumb|left|75px]]
+|
+*With upgrades extra 300-500 points for Gold Coins
+|
+*With upgrades extra 500-700 points for Gold Coins
+|-
+|[[Stretched Acorn]]
+|[[File:Stretched Acorn.png|thumb|left|75px]]
+|
+*1 extra second in Bonus Time
+*With upgrades 5-10% points bonus during Bonus Time
+|
+*2 extra seconds in Bonus Time
+*With upgrades 8-12% points bonus during Bonus Time
+|}
+
+==References==
+Most of the statistics on this page was sourced from Alex at [http://cookierunline.weebly.com/treasure-list-pc.html Cookie Run Weebly].
+
+{{Navbox/Mechanics}}
+[[Category:Treasures]]
+[[Category:Evolve Treasures]]
+[[Category:C-grade evolve treasures]]
+[[Category:B-grade evolve treasures]]
+[[Category:A-grade evolve treasures]]
+[[Category:S-grade evolve treasures]]

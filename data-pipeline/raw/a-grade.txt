@@ -1,0 +1,385 @@
+== Equip Treasures ==
+===Obtainable from Upgrading Cookies and Pets===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Cookie/Pet
+|-
+|[[Princess Cookie's Ruby Ring]]
+|[[File:Princess Cookie's Ruby Ring.png|75px|link=]]
+|With upgrades 5-6% less energy lost when hitting obstacles
+|[[Princess Cookie]]
+|-
+|[[Knight Cookie's Lucky Horseshoe]]
+|[[File:Knight Cookie's Lucky Horseshoe.png|75px|link=]]
+|With upgrades gives 5-10% extra blast speed
+|[[Knight Cookie]]
+|-
+|[[Coffee Cookie's Coffee Bean]]
+|[[File:Coffee Cookie's Coffee Bean.png|75px|link=]]
+|With upgrades gives 5-6% more energy from Potions
+|[[Coffee Cookie]]
+|-
+|[[Boarder Cookie's Quick Wheels]]
+|[[File:Boarder Cookie's Quick Wheels.png|75px|link=]]
+|With upgrades gives 5-10% extra base speed
+|[[Boarder Cookie]]
+|-
+|[[Zombie Cookie's Blood Cell]]
+|[[File:Zombie Cookie's Blood Cell.png|75px|link=]]
+|With upgrades revives once with 10-20% energy
+|[[Zombie Cookie]]
+|-
+|[[Muscle Cookie's Protein Powder]]
+|[[File:Muscle Cookie's Protein Powder.png|75px|link=]]
+|With upgrades get 500-600 points for a destroyed obstacle
+|[[Muscle Cookie]]
+|-
+|[[A Seed of Flowercopter]]
+|[[File:A Seed of Flowercopter.png|75px|link=]]
+|With upgrades speeds up during Bonus Time by 10-15%
+|[[Flowercopter]]
+|-
+|[[Lucky Dice's Lil' Bro]]
+|[[File:Lucky Dice's Lil' Bro.png|75px|link=]]
+|With upgrades Power Jellies last 5-7% longer
+|[[Lucky Dice]]
+|-
+|[[Skin of Dragon's Tail]]
+|[[File:Skin of Dragon's Tail.png|75px|link=]]
+|
+*With upgrades Blast Jellies last 5-10% longer
+*With upgrades Giant Jellies last 5-10% longer
+|[[Dragon's Tail]]
+|-
+|[[A Piece of Brain Gum]]
+|[[File:A Piece of Brain Gum.png|75px|link=]]
+|With upgrades 5-6% less energy lost when hitting obstacles
+|[[Brain Gum]]
+|-
+|[[Wishing Star Dust]]
+|[[File:Wishing Star Dust.png|75px|link=]]
+|With upgrades get 15-25 extra energy
+|[[Wishing Star]]
+|-
+|[[Luck-o'-Lantern's Pie Slice]]
+|[[File:LuckO.png|75px|link=]]
+|With upgrades Power Jellies last 5-7% longer
+|[[Luck-o'-Lantern]]
+|-
+|[[Brown Balloon Brown Jelly]]
+|[[File:Brown Balloon Brown Jelly.png|75px|link=]]
+|Pink Bear Jellies give an extra 150-250 points
+|[[Brown Balloon]]
+|-
+|[[Cony Balloon Cony Jelly]]
+|[[File:Cony Balloon Cony Jelly.png|75px|link=]]
+|Yellow Bear Jellies give an extra 30-60 points
+|[[Cony Balloon]]
+|}
+
+===Obtainable from [[Great Treasure Chest]] and [[Supreme Treasure Chest]]===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+|-
+|[[Mystery Meteor Chip]]
+|[[File:Mystery Meteor Chip.png|75px|link=]]
+|With upgrades All-Bear Jelly parties last 10-20% longer
+|-
+|[[Champion Chess Piece]]
+|[[File:Champion Chess Piece.png|75px|link=]]
+|With upgrades 100-300 extra points for Alphabet Jellies
+|-
+|[[Homemade Strawberry Jam]]
+|[[File:Homemade Strawberry Jam.png|75px|link=]]
+|With upgrades 100-300 extra points for Pink Bear Jellies
+|-
+|[[Dark Choco Hair Gel]]
+|[[File:Dark Choco Hair Gel.png|75px|link=]]
+|With upgrades 50-100 extra points for Yellow Bear Jellies
+|-
+|[[Waterproof Superwatch]]
+|[[File:Waterproof Superwatch.png|75px|link=]]
+|1-3 extra seconds in Bonus Time
+|-
+|[[Cookie Juice Bottle Cap]]
+|[[File:Cookie Juice Bottle Cap.png|75px|link=]]
+|3-5% Coin Bonus
+|-
+|[[Macaron Burger]]
+|[[File:Macaron Burger.png|75px|link=]]
+|Power Jellies last 5-7% longer
+|-
+|[[Mythical Soft Hammer]]
+|[[File:Mythical Soft Hammer.png|75px|link=]]
+|500-600 points for a destroyed obstacle
+|-
+|[[Energizing Ice Cream]]
+|[[File:Energizing Ice Cream.png|75px|link=]]
+|5-10% extra XP
+|-
+|[[Always Hungry Piggy Bank]]
+|[[File:Always Hungry Piggy Bank.png|75px|link=]]
+|40-60 points for Silver Coins
+|-
+|[[Director's Clapboard]]
+|[[File:Director's Clipboard.png|75px|link=]]
+|Extra Performance Points
+|-
+|[[Missing Party Pinata]]
+|[[File:Missing Party Pinata.png|75px|link=]]
+|Blast Speed 5-10% higher
+|}
+
+==Power+ Treasures==
+===Obtainable from Upgrading Cookies and Pets===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Passive Effect
+! scope="col" |Cookie/Pet
+|-
+|[[Santa Cookie's Gift Bag]]
+|[[File:Santabag.PNG|75px|link=]]
+|30~50% Chance to get 100 Gift Points on your first login of the day
+|[[Ginger Claus]]
+|}
+
+===Obtainable from [[Great Treasure Chest]] and [[Supreme Treasure Chest]]===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+|-
+|[[Crystal Pearl Earring]]
+|[[File:Crystal Pearl Earring.png|75px|link=]]
+|5-50% chance of getting 1 Crystal on your first login of the day
+|-
+|[[Flaring Slice of Sun]]
+|[[File:Flaring Slice of Sun.png|75px|link=]]
+|5-50% chance of getting 1500 Coins on your first login of the day
+|-
+|[[Purple Ribbon Bow]]
+|[[File:Purple Ribbon Bow.png|75px|link=]]
+|5-50% chance of getting 100 gift points on your first login of the day
+|-
+|[[Speedy Lollipop]]
+|[[File:Speedy Lollipop.png|75px|link=]]
+|10-40% more chance of getting a Fast Start in your first login of the day
+|-
+|[[Surreal Clock]]
+|[[File:Surreal Clock.png|75px|link=]]
+|10-40% chance of getting a Power Jelly Boost in your first login of the day
+|-
+|[[Pumped up Pork Pie]]
+|[[File:Pumped_up_Pork_Pie.png|75px|link=]]
+|10-40% chance of getting an Energy Boost in your first login of the day
+|-
+|[[Choco Dip Sticks]]
+|[[File:Choco_Dip_Sticks.png|75px|link=]]
+|10-40% chance of getting a Cookie Relay in your first login of the day
+|-
+|[[Star Lamp]]
+|[[File:Star_Lamp.png|75px|link=]]
+|10-40% chance of getting a Double XP in your first login of the day
+|}
+
+===Obtainable from Completing Cookie Army===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Passive Effect
+! scope="col" |Collection Method
+|-
+|[[Cookies' 1st Freedom Frame]]
+|[[File:Cookies' 1st Freedom Frame.png|75px|link=]]
+|30-50% chance of obtaining 190 Gift Points upon first login of the day
+|Completing the 1st Cookie Army
+|-
+|[[Cookies' 2nd Freedom Frame]]
+|[[File:Cookies' 2nd Freedom Frame.png|75px|link=]]
+|30-50% chance of obtaining 190 Gift Points upon first login of the day
+|Completing the 2nd Cookie Army
+|-
+|[[Cookies' 3rd Freedom Frame]]
+|[[File:Cookies' 3rd Freedom Frame.png|75px|link=]]
+|30-50% chance of obtaining 190 Gift Points upon first login of the day
+|Completing the 3rd Cookie Army
+|-
+|[[Cookies' 4th Freedom Frame]]
+|[[File:Cookies' 4th Freedom Frame.png|75px|link=]]
+|30-50% chance of obtaining 190 Gift Points upon first login of the day
+|Completing the 4th Cookie Army
+|-
+|[[Cookies' 5th Freedom Frame]]
+|[[File:Cookies' 5th Freedom Frame.png|75px|link=]]
+|30-50% chance of obtaining 190 Gift Points upon first login of the day
+|Completing the 5th Cookie Army
+|-
+|[[Cookies' 6th Freedom Frame]]
+|[[File:Cookies' 6th Freedom Frame.png|75px|link=]]
+|30-50% chance of obtaining 190 Gift Points upon first login of the day
+|Completing the 6th Cookie Army
+|-
+|[[Cookies' 7th Freedom Frame]]
+|[[File:Cookies' 7th Freedom Frame.png|75px|link=]]
+|30-50% chance of obtaining 190 Gift Points upon first login of the day
+|Completing the 7th Cookie Army
+|}
+
+==Obtainable from Limited Time Events==
+===Non-Power+ Treasures===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Name
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Event
+|-
+|[[10 Million Champion Belt]]
+|[[File:10mil.png|75px|link=]]
+|5-10% Coin Bonus
+|10 Million Downloads Event
+|-
+|[[Happy Rainbow Drop]]
+|[[File:Happy_Rainbow_Drop_Bag.png|75px|link=]]
+|11-14% extra XP
+|[[Happy Drop Event (2014 event)|Happy Drop Event]]
+|-
+|[[LINE GAME 2nd Anniversary Coin]]
+|[[File:LineGame_2nd_Anniversary_Coin.png|75px|link=]]
+|You can sell it for 5000-74000 Coins.
+|LINE GAME 2nd Anniversary Event
+|-
+|[[Reverse Valentine's Day Coin Candy]]
+|[[File:Reverse Valentine's Day Coin Candy.png|75px|link=]]
+|Can be sold for 5000-74000 Coins
+|[[Coin Candy Treasures! (event)|Coin Candy Treasures!]]
+|-
+|[[Mini Diamond Cookie Cutter]]
+|[[File:Mini Diamond Cookie Cutter.png|75px|link=]]
+|Cookies become smaller
+|April Fool's Day 2015
+|-
+|[[Dreaming Choco Donut of Life]]
+|[[File:Dreaming Choco Donut of Life.png|75px|link=]]
+|
+*Mini Magnetic Aura
+*Revives/Lifts from holes OR revives with 50 energy once
+|Episode 4 Launch Event
+|-
+|[[Valentine's Day Handmade Magic Chocolate]]
+|[[File:Valentine's Day Handmade Magic Chocolate.png|75px|link=]]
+|Obtain 190-1430 Magic Powder upon extraction
+|[[Valentine's Day Event]]
+|-
+|[[Somewhat Strange Handmade Magic Chocolate]]
+|[[File:Somewhat Strange Handmade Magic Chocolate.png|75px|link=]]
+|Obtain 190-1430 Magic Powder upon extraction
+|[[Valentine's Day Event]]
+|-
+|[[Mega Giant Rice Puff Cannon]]
+|[[File:Mega Giant Rice Puff Cannon.png|75px|link=]]
+|Cookie becomes bigger upon Giant Mode
+|April Fool's Day 2016
+|-
+|[[Savory Banana Choco Dessert]]
+|[[File:Savory Banana Choco Dessert.png|75px|link=]]
+|
+*With upgrades, 4-5% Base speed increase
+*With upgrades, 10-11% Coin Bonus
+|[[Collect Items#9. Collect Bananas for Banana Cookie|Collect Bananas for Banana Cookie]]
+|}
+
+===Power+ Treasures===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Name
+! scope="col" |Picture
+! scope="col" |Passive Effect
+! scope="col" |Event
+|-
+|[[Halloween Witch's Hat]]
+|[[File:HallWitchHat.png|75px|link=]]
+|40-60% chance of getting 1031 Coins on your first login of the day (until October 31, 2015)
+|[[Halloween Candy Event]]
+|-
+|[[Brave Cookie's Water Gun]]
+|[[File:Brave Cookie's Water Gun.png|75px|link=]]
+|15-35% chance of receiving a Boost Set on your first login of the day
+|[[Happy Drop Event]]
+|-
+|[[Gumball Cookie's Jawbreaker Gumball]]
+|[[File:Gumball Cookie's Jawbreaker Gumball.png|75px|link=]]
+|7-12% chance of obtaining 10,000 Coins upon first login of the day
+|[[Collect Gumball Coins]]
+|-
+|[[Mysterious Moon Lantern]]
+|[[File:Mysterious Moon Lantern.png|75px|link=]]
+|6-11% chance of obtaining 11,000 Coins upon first login of the day
+|[[Collect Moonlight Pieces]]
+|-
+|[[2015 Halloween Party Group Photo]]
+|[[File:2015 Halloween Party Group Photo.png|75px|link=]]
+|7-12% chance of obtaining 10,310 Coins upon login (Till Oct 31, 2016)
+|[[Collect Halloween Photo Event!]]
+|-
+|[[Hot Hot Sweet Potato]]
+|[[File:Hot Hot Sweet Potato.png|75px|link=]]
+|30-50% chance of obtaining 5 Energy Boosts upon first login of the day
+|[[Collect Sweet Potatoes]]
+|-
+|[[Snowman's Family Portrait]]
+|[[File:Snowman's Family Portrait.png|75px|link=]]
+|20-50% chance of obtaining 100 Gift Points upon first login of the day
+|[[Want to Make a Snowman?]]
+|-
+|[[Carafe of Happiness]]
+|[[File:Carafe of Happiness.png|75px|link=]]
+|5-10% chance of getting 15,000 Coins on your first login of the day
+|[[Collect Water Drops]]
+|-
+|[[Cherry Choco Ice Cream Cake]]
+|[[File:Cherry Choco Ice Cream Cake.png|75px|link=]]
+|40-60% chance of obtaining 1 Cookie Relay upon first login of the day (Till Aug 31, 2016)
+|[[Make an Ice Cream Cake]]
+|-
+|[[Trusty Golden Compass]]
+|[[File:Trusty Golden Compass.png|75px|link=]]
+|7-12% chance of getting 20,000 Coins on your first login of the day
+|[[Collect Maps]]
+|}
+
+==Obtainable from [[Package Deals]]==
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Name
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Package Deal
+|-
+|[[Lavish Golden Lace Parasol]]
+|[[File:Lavish Golden Lace Parasol.png|75px|link=]]
+|Giant landing makes coins sprout from the ground beginner Lv. 1~9
+|Value Package
+|-
+|[[Dreaming Strawberry Choco Donut]]
+|[[File:Dreaming Strawberry Choco Donut.png|75px|link=]]
+|
+*Revives with 40-50 Energy
+*8-10% Coin/XP Bonus
+|Intermediate Package
+|-
+|[[Rich Rich Chocolate Gold Coin]]
+|[[File:Rich Rich Chocolate Gold Coin.png|75px|link=]]
+|2-4% Coin Bonus
+|Rich Rich Package (limited-time only)
+|}

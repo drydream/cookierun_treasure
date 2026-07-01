@@ -1,0 +1,133 @@
+==Equip Treasures==
+===Obtainable from Upgrading Cookies and Pets===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Cookie/Pet
+|-
+|[[Strawberry Cookie's Sweet Strawberry]]
+|[[File:Strawberry Cookie's Sweet Strawberry.png|75px|link=]]
+|With upgrades gives 1-2 extra seconds in Bonus Time
+|[[Strawberry Cookie]]
+|-
+|[[Cloud Cookie's Rainbow Candy]]
+|[[File:Cloud Cookie's Rainbow Candy.png|75px|link=]]
+|With upgrades Power Jellies last 5-6% longer
+|[[Cloud Cookie]]
+|-
+|[[Buttercream Choco Cookie's Butter]]
+|[[File:Buttercream Choco Cookie's Butter.png|75px|link=]]
+|With upgrades gives 3-4% extra Coin Bonus
+|[[Buttercream Choco Cookie]]
+|-
+|[[Cream Cookie's Afternoon Snack]]
+|[[File:Cream Cookie's Afternoon Snack.png|75px|link=]]
+|With upgrades makes energy drain 3-4% slower
+|[[Cream Cookie]]
+|-
+|[[Dust Unicorn's Warm Hat]]
+|[[File:Dust Unicorn's Warm Hat.png|75px|link=]]
+|With upgrades 100-120 extra points for Gold Coins
+|[[Dust Unicorn]]
+|-
+|[[Santa Hat's Pom-Pom]]
+|[[File:Hat of Santa's Pom-Pom.png|75px|link=]]
+|With upgrades gives 10-20 points for Coins
+|[[Hat of Santa]]
+|-
+|[[Electric Beat's Energy]]
+|[[File:Electric Beat's Energy.png|75px|link=]]
+|With upgrades Magnet Jellies last 10-20% longer
+|[[Electric Beat]]
+|-
+|[[A Piece of Rare Garlic]]
+|[[File:A Piece of Rare Garlic.png|75px|link=]]
+|With upgrades Blast Jellies last 10-19% longer
+|[[Rare Garlic]]
+|-
+|[[Cozy Yarn's Knitting Needles]]
+|[[File:Cozy Yarn's Knitting Needles.png|75px|link=]]
+|With upgrades get 1-2 extra seconds in Bonus Time
+|[[Cozy Yarn]]
+|-
+|[[Mocha Delight's Whipped Cream]]
+|[[File:Mocha Delight's Whipped Cream.png|75px|link=]]
+|With upgrades 100-150 extra points for Alphabet Jellies
+|[[Mocha Delight]]
+|-
+|[[Witty Dumbbell's Sweat Drop]]
+|[[File:Witty Dumbbell's Sweat Drop.png|75px|link=]]
+|With upgrades Giant Jellies last 5-6% longer
+|[[Witty Dumbbell]]
+|}
+
+===Obtainable from [[Good Treasure Chest]] and [[Great Treasure Chest]]===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+|-
+|[[Deep Sea Murex Shell]]
+|[[File:Deep Sea Murex Shell.png|75px|link=]]
+|20--30 extra points for Coins
+|-
+|[[Smiling Carnival Mask]]
+|[[File:Smiling_Carnival_Mask.png|75px|link=]]
+|2-7% XP Bonus
+|-
+|[[Famous Choco Chip Cookie]]
+|[[File:Famous_ChocoChip_Cookie.png|75px|link=]]
+|20-70 extra points for Yellow Bear Jellies
+|-
+|[[Empowering Vitamin C Pill]]
+|[[File:Empowering Vitamin C Pill.png|75px|link=]]
+|Blast speed increased by 5-10%
+|-
+|[[Nutritious Cranberry]]
+|[[File:Nutritious Cranberry.png|75px|link=]]
+|50-150 extra points for Pink Bear Jellies
+|-
+|[[Gro-Back Cream]]
+|[[File:Hair_Shine_Gel.png|75px|link=]]
+|Extra 100~120 points for Gold Coins
+|-
+|[[Kitty Paw Marshmallow]]
+|[[File:Kitty Paw Marshmallow.png|75px|link=]]
+|50-150 extra points for Alphabet Jellies
+|-
+|[[First Harvest Olive Oil]]
+|[[File:First_Harvest_Olive_Oil.png|75px|link=]]
+|Base speed increased by 5-10%
+|}
+
+==Power+ Treasures==
+===Obtainable from [[Good Treasure Chest]] and [[Great Treasure Chest]]===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Passive Effect
+|-
+|[[Cookie First-Aid Kit]]
+|[[File:Cookie First-Aid Kit.png|75px|link=]]
+|4-22% chance of getting a Relay Boost on your first login of the day
+|-
+|[[Roof Whirligig]]
+|[[File:Roof Whirligig.png|75px|link=]]
+|4-22% chance of getting a Fast Start on your first login of the day
+|-
+|[[Grilled Sausage]]
+|[[File:Grilled Sausage.png|75px|link=]]
+|4-22% chance of getting an Energy Boost on your first login of the day
+|-
+|[[Lucky 5-Leaf Clover]]
+|[[File:Lucky 5-Leaf Clover.png|75px|link=]]
+|4-22% chance of getting a Power Jellies Boost on your first login of the day
+|-
+|[[Blue Dragon's Tooth]]
+|[[File:Blue Dragon's Tooth.png|75px|link=]]
+|4-22% chance of getting a Double XP on your first login of the day
+|}

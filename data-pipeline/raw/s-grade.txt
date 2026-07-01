@@ -1,0 +1,1466 @@
+[[File:Treasure Portal Icon.png|150px|right]]
+{{main|Treasures}}
+{{for|the list of S-grade Evolve Treasures|List of Evolve Treasures#S-grade Evolve Treasures}}
+Here is the complete list of S-grade Treasures. If you like to view and compare treasures by their functionality, be sure to visit [[:Category:Treasure categories|the treasure categories page]].
+
+Cookie Run also have a Treasure Draw Season, in which some treasures have been pre-selected so they cannot be obtained during a certain time. Below is the list of treasure seasons:
+
+(I) [[User blog:Tricoro/December 2015 Treasure Draw Season - List of Unobtainable Treasures|27 November - 23 December 2015]], extended until 24 February 2016<br />
+(II) [[User blog:Tricoro/March Treasure Draw Season - What's Changed?|25 February 2016 - 4 March 2016]], extended until 14 October 2016<br />
+(III) [[User_blog:Clubdcfdtl/October_Treasure_Draw_Season!|14 October 2016]] - until 22 December 2016
+
+==Equip Treasures==
+===Obtained from upgrading Cookies and Pets===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Cookie/Pet
+|-
+|[[Ninja Cookie's Tree Leaf]]
+|[[File:Ninja Cookie's Tree Leaf.png|75px|link=]]
+|With upgrades gives 1-3 extra jumps
+|[[Ninja Cookie]]
+|-
+|[[Angel Cookie's Holy Feather]]
+|[[File:Angel Cookie's Holy Feather.png|75px|link=]]
+|With upgrades the power of this mini magnet increases
+|[[Angel Cookie]]
+|-
+|[[Pirate Cookie's Revival Boots]]
+|[[File:Pirate Cookie's Revival Boots.png|75px|link=]]
+|With upgrades revives 2 times with 10-20 Energy
+|[[Pirate Cookie]]
+|-
+|[[Skating Queen Cookie's Hairpin]]
+|[[File:Skating Queen Cookie's Hairpin.png|75px|link=]]
+|With {{det|uprages|The typo is intended as shown in the Treasure Book.}}, Mini Performance points Basic Lv1~10
+|[[Skating Queen Cookie]]
+|-
+|[[Hero Cookie's Mint Candy]]
+|[[File:Hero Cookie's Mint Candy.png|75px|link=]]
+|With upgrades, Energy drains 4-5% slower
+|[[Hero Cookie]]
+|-
+|[[Cheerleader Cookie's Pink Megaphone]]
+|[[File:Cheerleader_Cookie's_Pink_Megaphone.jpg|75px|link=]]
+|With upgrades, gives 40-90 extra Energy for Cookie Relay
+|[[Cheerleader Cookie]]
+|-
+|[[Special Force Cookie's Face Paint]]
+|[[File:Special_Force_Cookie's_Face_Paint.jpg|75px|link=]]
+|With upgrades get 700-1000 points for a destroyed obstacle
+|[[Special Force Cookie]]
+|-
+|[[Rebel Cookie's Copy Doll]]
+|[[File: Rebel Cookie's Copy Doll.png|75px|link=]]
+|With upgrades get 500-1000 points for double or higher jumps
+|[[Rebel Cookie]]
+|-
+|[[Devil Cookie's Tail Compass]]
+|[[File:Devil_Cookie's_Tail_Compass.jpg|75px|link=]]
+|With upgrades gives 200-400 extra points for Pink Bear Jellies
+|[[Devil Cookie]]
+|-
+|[[Ninetales Cookie's Fresh Pudding]]
+|[[File:Ninetales_Cookie's_Fresh_Pudding.jpg|75px|link=]]
+|With upgrades gives 100-150 extra points for jellies while in giant mode
+|[[Ninetales Cookie]]
+|-
+|[[Wizard Cookie's Cone of Ice Cream]]
+|[[File:Wizard_Cookie's_Cone_of_Ice_Cream.jpg|75px|link=]]
+|With upgrades get 1-4 Coins for a destroyed obstacle
+|[[Wizard Cookie]]
+|-
+|[[Fairy Cookie's Green Tea Cake]]
+|[[File:Fairy_Cookie's_Green_Tea_Cake.jpg|75px|link=]]
+|With upgrades gives 50-100 extra energy for Relay
+|[[Fairy Cookie]]
+|-
+|[[Rockstar Cookie's Guitar Pick]]
+|[[File:Rockstar_Cookie_Guitar_Pick.png|75px|link=]]
+|
+*With upgrades, Energy drains 2-3% slower
+*With upgrades get 4-5% more energy from Potions
+|[[Rockstar Cookie]]
+|-
+|[[Cherry Cookie's Party Cupcake]]
+|[[File:Cherry Cookie's Party Cupcake.png|75px|link=]]
+|With upgrades get 700-1000 points for a destroyed obstacle
+|[[Cherry Cookie]]
+|-
+|[[Carol Cookie's Christmas Tree Cookie]]
+|[[File:Carol Cookie's Christmas Tree Cookie.png|75px|link=]]
+|With upgrades 10-30 extra points for all jellies
+|[[Carol Cookie]]
+|-
+|[[Snow Sugar Cookie's Snow Parfait]]
+|[[File:Snow Sugar Cookie's Snow Parfait.png|75px|link=]]
+|
+*With upgrades gives 25-70 extra energy for Relay
+*With upgrades get 1-2 lifts from holes
+|[[Snow Sugar Cookie]]
+|-
+|[[Pink Choco Cookie's Handmade Chocolate Set]]
+|[[File:Pink Choco Cookie's Handmade Chocolate Set.png|75px|link=]]
+|With upgrades 300-500 extra points for Pink Bear Jellies
+|[[Pink Choco Cookie]]
+|-
+|[[Pistachio Cookie's Chalice]]
+|[[File:Pistachio_Cookie_Chalice.png|75px|link=]]
+|With upgrades Relay Cookie revives 1-3 times with 25 Energy
+|[[Pistachio Cookie]]
+|-
+|[[Alchemist Cookie's Beaded Brooch]]
+|[[File:Alchemist_Cookie_beaded_brooch.png|75px|link=]]
+|With upgrades 15-25% chance of getting Gold Coins from Coin Magic
+|[[Alchemist Cookie]]
+|-
+|[[Vampire Cookie's Rejuvenating Grape Juice]]
+|[[File:Vampire Cookie Rejuvenating Grape Juice.png|75px|link=]]
+|
+*With upgrades, revives with 30-65 Energy
+*With upgrades 6-10% less energy loss from hitting obstacles
+|[[Vampire Cookie]]
+|-
+|[[Apple Cookie's Apple Hairpin]]
+|[[File:Apple Cookie's Apple Hairpin.png|75px|link=]]
+|With upgrades, 5-10% more points in Bonus Time
+|[[Apple Cookie]]
+|-
+|[[Cheesecake Cookie's Piece of Cake]]
+|[[File:Cheesecake_Cookie's_piece_of_cake.png|75px|link=]]
+|
+*Base speed increased by 5%
+*With upgrades 6-8% extra Coin Bonus
+|[[Cheesecake Cookie]]
+|-
+|[[Adventurer Cookie's Cinnamon Rope]]
+|[[File:Adventurer Cookie's Cinnamon Rope.png|75px|link=]]
+|
+*With upgrades 7-9% extra XP
+*With upgrades 7-9% extra Coin Bonus
+|[[Adventurer Cookie]]
+|-
+|[[Soda Cookie's Soda Wave]]
+|[[File:Soda Cookie's Soda Wave.png|75px|link=]]
+|
+*Base speed increased by 3-4%
+*With upgrades 1000-1500 extra points for a destroyed obstacle
+|[[Soda Cookie]]
+|-
+|[[Tiger Lily Cookie's Jelly Flower Hairpin]]
+|[[File:Tiger Jelly Flower Hairpin.png|75px|link=]]
+|With upgrades gives 450-650 extra points for jellies while on your Ride
+|[[Tiger Lily Cookie]]
+|-
+|[[Fire Spirit Cookie's Flame Ball]]
+|[[File:Fire Spirit Cookie's Flame Ball.png|75px|link=]]
+|With upgrades, lifts from holes OR revives with 20 Energy 2-4 times
+|[[Fire Spirit Cookie]]
+|-
+|[[Blackberry Cookie's Blackberry Hat]]
+|[[File:Blackberry Cookie's Blackberry Hat.png|75px|link=]]
+|
+*With upgrades 1-5% extra Energy recovery
+*With upgrades revive once with 30-60 Energy
+|[[Blackberry Cookie]]
+|-
+|[[Kiwi Biker Cookie's Key]]
+|[[File:Kiwi Biker Cookie's Key.png|75px|link=]]
+|
+*With upgrades gives 3-5% higher base speed
+*With upgrades revives once with 30-50 Energy
+|[[Kiwi Biker Cookie]]
+|-
+|[[Werewolf Cookie's Precious Necklace]]
+|[[File:Werewolf Cookie's Precious Necklace.png|75px|link=]]
+|With upgrades, lifts from hole OR revives with 20 Energy 1-3 time(s) during Cookie Relay
+|[[Werewolf Cookie]]
+|-
+|[[Cocoa Cookie's Marshmallow Hat]]
+|[[File:Cocoa Cookie's Marshmallow Hat.png|75px|link=]]
+|With upgrades, 150-350 extra points for Jellies while riding
+|[[Cocoa Cookie]]
+|-
+|[[Mint Choco Cookie's Violin Case]]
+|[[File:Mint Choco Cookie's Violin Case.png|75px|link=]]
+|
+*With upgrades Energy drains 2-3% slower
+*With upgrades 2-3% chance of generating a Coin Flower
+|[[Mint Choco Cookie]]
+|-
+|[[Muay Thai Cookie's Super Tight Hair Tie]]
+|[[File:Super Tight Hair Tie.png|75px|link=]]
+|
+*With upgrades, revives with 30-70 Energy
+*With upgrades, 400-800 points for destroying an obstacle
+|[[Muay Thai Cookie]]
+|-
+|[[Cream Puff Cookie's Creamy Hat]]
+|[[File:Cream Puff Cookie's Creamy Hat.png|75px|link=]]
+|With upgrades 30~80 extra points for all Jellies
+|[[Cream Puff Cookie]]
+|-
+|[[Moonlight Cookie's Dream Bottle]]
+|[[File:Moonlight Cookie's Dream Bottle.png|75px|link=]]
+|
+*With upgrades, lifts from hole OR revives with 25 Energy 1-3 time(s)
+*With upgrades 300~500 extra points for Stardust Jellies
+|[[Moonlight Cookie]]
+|-
+|[[Gumball Cookie's Gumball Grenade]]
+|[[File:Gumball Cookie's Gumball Grenade.png|75px|link=]]
+|With upgrades, 1000~2000 extra points for Gumball Shots
+|[[Gumball Cookie]]
+|-
+|[[Lemon Cookie's Lemon mp3 Player]]
+|[[File:Lemon Cookie's Lemon mp3 Player.png|75px|link=]]
+|With upgrades 1000~2000 extra points for a destroyed obstacle during Lightning Blast
+|[[Lemon Cookie]]
+|-
+|[[Orange Cookie's Sports Bottle]]
+|[[File:Orange Cookie's Sports Bottle.png|75px|link=]]
+|
+*With upgrades, Blast Jelly lasts 10-15% longer
+*With upgrades, 10-15% faster during Blasts
+|[[Orange Cookie]]
+|-
+|[[Lime Cookie's Waterproof Mascara]]
+|[[File:Lime Cookie's Waterproof Mascara.png|75px|link=]]
+|
+*With upgrades, Giant Jelly lasts 5-10% longer
+*With upgrades, 5-10% faster in Giant Mode
+|[[Lime Cookie]]
+|-
+|[[Peppermint Cookie's Message in a Bottle]]
+|[[File:Peppermint Cookie's Message in a Bottle.png|75px|link=]]
+|With upgrades, 400-600 extra points for all Jellies while riding
+|[[Peppermint Cookie]]
+|-
+|[[Peach Cookie's Martial Arts Book]]
+|[[File:Peach Cookie's Martial Arts Book.png|75px|link=]]
+|
+*Jumps 1 more time
+*With upgrades, lifts from hole 1-3 times
+|[[Peach Cookie]]
+|-
+|[[General Jujube Cookie's Immaculate Comb]]
+|[[File:General Jujube Cookie's Immaculate Comb.png|75px|link=]]
+|With upgrades, 1~2 seconds of Giant mode after taking a Potion
+|[[General Jujube Cookie]]
+|-
+|[[Onion Cookie's Tear-full Pillow]]
+|[[File:Onion Cookie's Tear-full Pillow.png|75px|link=]]
+|
+*Goes through obstacles during Blast
+*With upgrades, 500-1000 extra points for going through an obstacle
+|[[Onion Cookie]]
+|-
+|[[Macaron Cookie's Puff Blusher]]
+|[[File:Macaron Cookie's Puff Blusher.png|75px|link=]]
+|With upgrades, 500-1000 extra points for Macaron Parade Jelly
+|[[Macaron Cookie]]
+|-
+|[[Cinnamon Cookie's Card Case]]
+|[[File:Cinnamon Cookie's Card Case.png|75px|link=]]
+|With upgrades, 500-1000 extra points for Card Jelly
+|[[Cinnamon Cookie]]
+|-
+|[[Red Bean Cookie's Cozy Blankets]]
+|[[File:Red Bean Cookie's Cozy Blankets.png|75px|link=]]
+|With upgrades, Energy drain 5-6% slower
+|[[Red Bean Cookie]]
+|-
+|[[White Choco Cookie's White Rose Bouquet]]
+|[[File:White Choco Cookie's White Rose Bouquet.png|75px|link=]]
+|With upgrades, 500-1000 extra points for White Choco Jelly
+|[[White Choco Cookie]]
+|-
+|[[Herb Cookie's Herb Seeds]]
+|[[File:Herb Cookie's Herb Seeds.png|75px|link=]]
+|
+* 2 seconds of Blast after taking Sun Jelly
+* With upgrades, revives with 30-70 Energy
+|[[Herb Cookie]]
+|-
+|[[Dino-Sour Cookie's Jelly Dinosaur Fossil]]
+|[[File:Dino-Sour Cookie's Jelly Dinosaur Fossil.png|75px|link=]]
+|With upgrades, 500-1000 extra points for Dino-Foot Jelly
+|[[Dino-Sour Cookie]]
+|-
+|[[Sea Fairy Cookie's Coral Shellfish Tray]]
+|[[File:Sea Fairy Cookie's Coral Shellfish Tray.png|75px|link=]]
+|With upgrades, 500-100 extra points for Sea Crystal Jelly
+|[[Sea Fairy Cookie]]
+|-
+|[[Cotton Candy Cookie's Fall-in-Love Pen]]
+|[[File:Cotton Candy Cookie's Fall-in-Love Pen.png|75px|link=]]
+|With upgrades, 30-80 extra points for all Jellies
+|[[Cotton Candy Cookie]]
+|-
+|[[Roll Cake Cookie's Mini Roll Goggles]]
+|[[File:Roll Cake Cookie's Mini Roll Goggles.png|75px|link=]]
+|
+*With upgrades, 400-800 extra points for destroying an obstacle
+*With upgrades, 3-5% Base speed increase
+|[[Roll Cake Cookie]]
+|-
+|[[Banana Cookie's Banana Baby Bottle]]
+|[[File:Banana Cookie's Banana Baby Bottle.png|75px|link=]]
+|
+*With upgrades, revives with 30-40 energy
+*With upgrades, 3-5% Coin Bonus
+|[[Banana Cookie]]
+|-
+|[[Pancake Cookie's Mini Pancake Backpack]]
+|[[File:Pancake Cookie's Mini Pancake Backpack.png|75px|link=]]
+|With upgrades, 500-1000 extra points for Sunflower Seed Jelly
+|[[Pancake Cookie]]
+|-
+|[[Wind Archer's Arrow Feather of Life]]
+|[[File:Wind Archer's Arrow Feather of Life.png|75px|link=]]
+|
+*With upgrades, 2300-2800 extra points for Wind Feather Jelly
+*With upgrades, lifts from hole OR revives with 22-32 Energy 3 times
+|[[Wind Archer Cookie]]
+|-
+|[[Ginger Ghost's Sorrow]]
+|[[File:GingerGhost's Sorrow.png|75px|link=]]
+|With upgrades lifts cookies from holes 1-3 times
+|[[Ginger Ghost]]
+|-
+|[[Rare Gunpowder of Pirate's Bomb]]
+|[[File:Rare Gunpowder of Pirate's Bomb.png|75px|link=]]
+|With upgrades 25-35% chance of hit obstacles being destroyed or turning into Coins!
+|[[Pirate's Bomb]]
+|-
+|[[Enchanted Locket's Locket]]
+|[[File:Enchanted Locket's Locket.png|75px|link=]]
+|With upgrades 5-6% more Energy from Potions
+|[[Enchanted Locket]]
+|-
+|[[Snow Blossom's Sparkling Crust]]
+|[[File:Snow Blossom's Sparkling Crust.png|75px|link=]]
+|With upgrades creates Ice Bridges over 20-30% of holes
+|[[Snow Blossom]]
+|-
+|[[Jellyco Cube's Lost Jellyco]]
+|[[File:Jellyco Cube's Lost Jellyco.png|75px|link=]]
+|With upgrades 5-10% chance of a Jellyco Missile dropping
+|[[Jellyco Cube]]
+|-
+|[[Star Jelly from Glitter Ball]]
+|[[File:Star Jelly from Glitter Ball.png|75px|link=]]
+|With upgrades get 130-150 points for Gold Coins
+|[[Glitter Ball]]
+|-
+|[[AWOL Cracker's Headset]]
+|[[File:AWOL Cracker's Headset.png|75px|link=]]
+|With upgrades Power Jellies last 5-15% longer
+|[[AWOL Cracker]]
+|-
+|[[Flame Bat's Eternal Flame]]
+|[[File:Flame Bat's Eternal Flame.png|75px|link=]]
+|With upgrades get 500-700 extra points for passing an obstacle
+|[[Flame Bat]]
+|-
+|[[Gold Drop's Pure Gold Bar]]
+|[[File:Gold Drop's Pure Gold Bar.png|75px|link=]]
+|With upgrades gives 6-9% extra Coin Bonus
+|[[Gold Drop]]
+|-
+|[[Windy's Ice Candy]]
+|[[File:Windy's Ice Candy.png|75px|link=]]
+|With upgrades 3-8% extra points for Jellies collected by Pet
+|[[Windy]]
+|-
+|[[Foxy Bead's Heart]]
+|[[File:Foxy Bead's Heart.png|75px|link=]]
+|With upgrades get 20-40 extra Energy
+|[[Foxy Bead]]
+|-
+|[[A Page from Book of Wizdom]]
+|[[File:A_Page_from_Book_of_Wizdom.png|75px|link=]]
+|With upgrades, Base speed increased by 2-6%
+|[[Book of Wizdom]]
+|-
+|[[Magic Pod's Fragile Petal]]
+|[[File:Magic_Pod's_Fragile_Petal.png|75px|link=]]
+|With upgrades, get 0.5-1 extra seconds in Bonus Time
+|[[Magic Pod]]
+|-
+|[[Spotlight Vanilla Bulb]]
+|[[File:Spotlight_Vanilla_Bulb.png|75px|link=]]
+|
+*With upgrades get 6-8% extra XP
+*With upgrades get a 6-8% extra Coin Bonus
+|[[Spotlight Fan]]
+|-
+|[[Rocket Firecracker's Extra Tongue Gum]]
+|[[File:Rocket Firecracker's Extra Tongue Gum.png|75px|link=]]
+|
+*With upgrades, gives 2-3% higher base speed
+*With upgrades, Energy drains 1-2% slower
+|[[Rocket Firecracker]]
+|-
+|[[Hefty Slice of Roll Cake]]
+|[[File:Hefty Slice of Roll Cake.png|75px|link=]]
+|
+*With upgrades 50-100 extra points for Yellow Bear Jellies
+*With upgrades 50-100 extra points for Pink Bear Jellies
+|[[Yule Log Cake]]
+|-
+|[[Pink Candy Wrapping]]
+|[[File:Pink Candy Wrapping.png|75px|link=]]
+|
+*With upgrades 200-300 extra points for Pink Bear Jellies
+*With upgrades get 500-1000 points for a destroyed obstacle
+|[[Pink Candy]]
+|-
+|[[Purple Candle Wax]]
+|[[File:Purple_Candle_Wax.png|75px|link=]]
+|With upgrades get 500-1500 bonus points for passing an obstacle
+|[[Purple Candle]]
+|-
+|[[Pistachio Firefly's shell]]
+|[[File:Pistachio_Firefly_Shell.png|75px|link=]]
+|With upgrades get 100-200 extra points for all Jellies during Blasts
+|[[Pistachio Firefly]]
+|-
+|[[Jelly-filled Jelly Scale plate]]
+|[[File:Jelly_Scale_plate.png|75px|link=]]
+|
+*With upgrades, 3-4% Base speed increase
+*With upgrades 10-20 extra points for all jellies
+|[[Jelly Scale]]
+|-
+|[[Coin-filled Coin Scale plate]]
+|[[File:Coin_Scale_plate.png|75px|link=]]
+|With upgrades Flower Coin production chance increased by 2-5%
+|[[Coin Scale]]
+|-
+|[[Oak Barrel Tap]]
+|[[File:Wooden Barrel Tap.png|75px|link=]]
+|
+*With upgrades, 3-4% Base speed increase
+*With upgrades, 6-10% less energy lost when hitting obstacles
+|[[Oak Barrel]]
+|-
+|[[Green Apple Rabbit's Parent Apple]]
+|[[File:Green Apple Rabbit's Parent Apple.png|75px|link=]]
+|
+*With upgrades, 3-4% Base speed increase
+*With upgrades, gives 10-40 extra Energy for Cookie Relay
+|[[Green Apple Rabbit]]
+|-
+|[[Fluffy Cheese Cat's Hairball]]
+|[[File:Fluffy_Cheese_Cat's_Hairball.png|75px|link=]]
+|
+*With upgrades, Energy drains 2-4% slower
+*With upgrades get a 6-8% extra Coin Bonus
+|[[Fluffy Cheese Cat]]
+|-
+|[[Backpacky's Heart Key Ring]]
+|[[File:Backpacky's Heart Key Ring.png|75px|link=]]
+|With upgrades get 300-500 extra points for all Bear Jellies
+|[[Backpacky]]
+|-
+|[[Fresh Lemon Segment]]
+|[[File:Fresh Lemon Segment.png|75px|link=]]
+|
+*With upgrades, 3-5% more Energy recovery
+*1000-1500 points for a destroyed obstacle
+|[[Lemon Slice]]
+|-
+|[[Ghost Butler's Planner]]
+|[[File:Ghost Butler's Planner.png|75px|link=]]
+|
+*With upgrades, 3-5% more Energy recovery
+*Power Jellies last 5-10% longer
+|[[Ghost Butler]]
+|-
+|[[Kiwi Bird's Chunk of Kiwi]]
+|[[File:Kiwi Bird's Chunk of Kiwi.png|75px|link=]]
+|
+*With upgrades, 100-300 extra points for all Jellies while in Giant Mode
+*Base Speed 5% higher in Giant Mode
+|[[Kiwi Bird]]
+|-
+|[[Paprika Punching Bag's Yellow Seeds]]
+|[[File:PPB Yellow Seeds.png|75px|link=]]
+|
+*3-4% chance of generating a Coin Flower
+*With upgrades, 4-6% Coin Bonus
+|[[Paprika Punching Bag]]
+|-
+|[[Marshmallow Hamster's Chocolate Sunflower Seed]]
+|[[File:Marshmallow Hamster's Chocolate Sunflower.png|75px|link=]]
+|With upgrades, 0.3-0.8 second of Blast after taking a Potion
+|[[Marshmallow Hamster]]
+|-
+|[[Ms. Do-Re-Mi's Brown Ribbon]]
+|[[File:Ms. Do-Re-Mi's Brown Ribbon.png|75px|link=]]
+|
+*With upgrades, 200-300 extra points from Colorful Star Jellies
+*With upgrades, 3-5% more Energy from Potions
+|[[Ms. Do-Re-Mi]]
+|-
+|[[Mr. Fa-Sol-La-Si's Top Hat]]
+|[[File:Mr. Fa-Sol-La-Si's Top Hat.png|75px|link=]]
+|
+*With upgrades revives 2 times with 10-20 Energy
+*With upgrades Coin Bonus 3-5%
+|[[Mr. Fa-Sol-La-Si]]
+|-
+|[[Owlcorn's Acorn Hat]]
+|[[File:Owlcorn's Acorn Hat.png|75px|link=]]
+|Yellow Bear Jellies give an extra 100~300 points
+|[[Owlcorn]]
+|-
+|[[Mini Jackson No.2's Colorful Screw]]
+|[[File:Mini Jackson No. 2's Colorful Screw.png|75px|link=]]
+|With upgrades, 300-800 extra points for Dark Moon Jellies
+|[[Mini Jackson No. 2]]
+|-
+|[[Tea Cup's Cherry Blossom Teaspoon]]
+|[[File:Tea Cup's Cherry Blossom Teaspoon.png|75px|link=]]
+|With upgrades 40-60% more chance of triggering an All-Pink Bear party
+|[[Tea Cup]]
+|-
+|[[Bean Drop Duo's Storming Bean Missiles]]
+|[[File:Bean Drop Duo's Storming Bean Missiles.png|75px|link=]]
+|With upgrades 5~7% chance of Jelly Bean Missiles falling
+|[[Bean Drop Duo]]
+|-
+|[[Electro Lemon's Lemon Yellow LED]]
+|[[File:Electro Lemon's Lemon Yellow LED.png|75px|link=]]
+|
+*Blast Speed 5-10% higher with upgrades
+*Yellow Bear Jellies give an extra 300-400 points with upgrades
+|[[Electro Lemon]]
+|-
+|[[Mini Orange Mouse's Orange Peel Wheel]]
+|[[File:Mini Orange Mouse's Orange Peel Wheel.png|75px|link=]]
+|With upgrades, 10-15% slower Energy drain during Blast
+|[[Mini Orange Mouse]]
+|-
+|[[White Gold Drop's Pure Gold Bar]]
+|[[File:White Gold Drop's Pure Gold Bar.png|75px|link=]]
+|With upgrades, 8-13% Coin Bonus
+|[[White Gold Drop]]
+|-
+|[[Mr. Limeguard's Citrus Life Preserver]]
+|[[File:Mr. Limeguard's Citrus Life Preserver.png|75px|link=]]
+|With upgrades, lifts from hole OR revives with 10-20 Energy 3 times
+|[[Mr. Limeguard]]
+|-
+|[[Paper Boat Sailor's Origami Anchor]]
+|[[File:Paper Boat Sailor's Origami Anchor.png|75px|link=]]
+|With upgrades, 300-500 extra points for Sea Bubble Jelly
+|[[Paper Boat Sailor]]
+|-
+|[[Frozen Wave Drop's Precious Mini Coral]]
+|[[File:Frozen Wave Drop's Precious Mini Coral.png|75px|link=]]
+|
+*With upgrades, 20-30% chance of forming an Ice Bridge
+*With upgrades, lifts from hole OR revives with 38 Energy 2-4 times
+|[[Frozen Wave Drop]]
+|-
+|[[Panda Dumpling's Fresh Bamboo Shoot]]
+|[[File:Panda Dumpling's Fresh Bamboo Shoot.png|75px|link=]]
+|With upgrades, 1000-1500 extra points for Bamboo Leaf Jelly
+|[[Panda Dumpling]]
+|-
+|[[Uncooling Teacup's Golden Jujube Tea Bag]]
+|[[File:Uncooling Teacup's Golden Jujube Tea Bag.png|75px|link=]]
+|With upgrades, 20-60% chances of creating winged Coins for destroying an obstacle
+|[[Uncooling Teacup]]
+|-
+|[[Onion Fish's Onion Scale]]
+|[[File:Onion Fish's Onion Scale.png|75px|link=]]
+|With upgrades, 500-1000 extra points for Tear Jelly
+|[[Onion Fish]]
+|-
+|[[Castanets' Metronome]]
+|[[File:Castanets' Metronome.png|75px|link=]]
+|
+*With upgrades, 4-6% more Energy recovery
+*With upgrades, lifts from hole 1-2 times
+|[[Castanets]]
+|-
+|[[Cinnamon Bunny's Cinnamon Stick]]
+|[[File:Cinnamon Bunny's Cinnamon Stick.png|75px|link=]]
+|With upgrades, 500-1000 extra points for Cinnamon Bun Jelly
+|[[Cinnamon Bunny]]
+|-
+|[[Sweet Rice Seal's Canned Red Beans]]
+|[[File:Sweet Rice Seal's Canned Red Beans.png|75px|link=]]
+|With upgrades, 40-90 extra points for all Jellies
+|[[Sweet Rice Seal]]
+|-
+|[[Pocket Watch Referee's Old Watch Cover]]
+|[[File:Pocket Watch Referee's Old Watch Cover.png|75px|link=]]
+|
+*With upgrades, 5-10% faster during Blasts
+*With upgrades, 100-300 extra points for all Jellies during Blast
+|[[Pocket Watch Referee]]
+|-
+|[[Herb Teapot's Shower Head]]
+|[[File:Herb Teapot's Shower Head.png|75px|link=]]
+|With upgrades, 2-5% chance of generating Coin Flower
+|[[Herb Teapot]]
+|-
+|[[Dino-Egg's X-Ray Photo]]
+|[[File:Dino-Egg's X-Ray Photo.png|75px|link=]]
+|With upgrades, 100-300 extra points for Jellies while in Giant Mode
+|[[Dino-Egg]]
+|-
+|[[Cotton Candy Birdie's Mail Bag]]
+|[[File:Cotton Candy Birdie's Mail Bag.png|75px|link=]]
+|With upgrades, 5-10% faster in Bonus Time
+|[[Cotton Candy Birdie]]
+|-
+|[[Light Bros' Baby Bro Yellow]]
+|[[File:Light Bros' Baby Bro Yellow.png|75px|link=]]
+|
+*With upgrades, 100-200 extra points for all Jellies during Blast
+*With upgrades, Energy drain 2-3% slower
+|[[Light Bros]]
+|-
+|[[Savannahna Lion's Fallen Tail]]
+|[[File:Savannahna Lion's Fallen Tail.png|75px|link=]]
+|
+*With upgrades, Revives with 30-40 energy
+*With upgrades, 1-4 extra Coins for destroying an obstacle
+|[[Savannahna Lion]]
+|-
+|[[Pancake Frisbee's Sticky Maple Syrup]]
+|[[File:Pancake Frisbee's Sticky Maple Syrup.png|75px|link=]]
+|With upgrades, 500-1000 extra points for Maple Syrup Jelly
+|[[Pancake Frisbee]]
+|}
+
+===Obtainable from [[Supreme Treasure Chest]]===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+|-
+|[[Book of Action Secrets]]
+|[[File:Book of Action Secrets.png|75px|link=]]
+|With upgrades, Mini Performance points Basic Lv1~10
+|-
+|[[500 Year Old Ginseng Root]]
+|[[File:500 Year Old Ginseng Root.png|75px|link=]]
+|With upgrades, 300-500 extra points for Yellow Bear Jelly
+|-
+|[[Cookiebox 720 Controller]]
+|[[File:Cookiebox 720 Controller.png|75px|link=]]
+|Mini Magnetic Aura
+|-
+|[[Limited Edition Cookie Comics]]
+|[[File:Limited Edition Cookie Comics.png|75px|link=]]
+|10-15% extra XP
+|-
+|[[1000 Year Old Red Ginseng]]
+|[[File:1000 Year Old Red Ginseng.png|75px|link=]]
+|With upgrades, 200-600 extra points for Pink Bear Jelly
+|-
+|[[Treasure Merchant's Safe]]
+|[[File:Treasure Merchant's Safe box.png|75px|link=]]
+|7-12% extra Coins
+|-
+|[[No.3 Glossy Pink Lipstick]]
+|[[File:Glossy Pink Lipstick.png|75px|link=]]
+|300-500 extra points for Star Candy Parties
+|-
+|[[Finally Discovered Wild Ginseng]]
+|[[File:Finally Discovered Wild Ginseng.png|75px|link=]]
+|With upgrades, 200-400 extra points for all {{det|Jellies|Bear Jellies}}
+|-
+|[[Temptation No.9 Perfume]]
+|[[File:Temptation9Perfume.png|75px|link=]]
+|With upgrades, 100-300 extra points for Jellies while in Giant Mode
+|-
+|[[Rocky Hot Dog]]
+|[[File:RockyHotdog.png|75px|link=]]
+|1500-2000 extra points for a destroyed obstacle
+|-
+|[[Frozen Cracker]]
+|[[File:Frozen Cracker.png|75px|link=]]
+|
+*With upgrades, 3-5% Base speed increase
+*Energy Drain 3-4% slower
+|-
+|[[Caramel Chocolate Energy Bar]]
+|[[File:Caramel Chocolate Energy Bar.png|75px|link=]]
+|
+*With upgrades, 40-90 extra Energy when during Cookie Relay
+*1-2 extra jumps
+|-
+|[[Ultra Power Rainbow Ginseng]]
+|[[File:Ultra Power Rainbow Ginseng.png|75px|link=]]
+|With upgrades, 50-100 extra points for all Jellies
+|-
+|[[Flame Bat Camping Lantern]]
+|[[File:Flame Bat Camping Lantern.png|75px|link=]]
+|1000-2000 extra points for passing through obstacles
+|-
+|[[Sour Note Jelly]]
+|[[File:Sour Note Jelly.png|75px|link=]]
+|With upgrades, 100-600 extra points for Music Jelly
+|-
+|[[Moon Rock]]
+|[[File:MoonRock.png|75px|link=]]
+|
+*8-10% extra XP
+*8-10% extra Coins
+|-
+|[[Mining Dynamite]]
+|[[File:Mining_Dynamite.png|75px|link=]]
+|3-6 coins for destroying obstacles
+|-
+|[[Antique Magic Pot]]
+|[[File:Antique Magic Pot.png|75px|link=]]
+|3-6% chance of generating a Coin Flower
+|-
+|[[Bouncy Rainbow Rice Cake]]
+|[[File:Bouncy Rainbow Rice Cake.png|75px|link=]]
+|
+*With upgrades, 500-1000 extra points for destroying an obstacle
+*15-25 extra points for all Jellies
+|-
+|[[Lovely Lady's Lost Shoe]]
+|[[File:Hermes_Shoes.png|75px|link=]]
+|With upgrades, 100-300 extra points from all Jellies during Blast
+|-
+|[[Honey-dipped String Cheese]]
+|[[File:Honey_Flavored_Rice_Skewers.png|75px|link=]]
+|
+*With upgrades, 20-40 extra Energy during Cookie Relay
+*With upgrades, Energy drain 2-3% slower
+|-
+|[[Magnetobuff Energy Drink]]
+|[[File:Magnetobuff_Energy_Drink.png|75px|link=]]
+|
+*Minute Magnetic Aura
+*With upgrades, Energy drain 2-4% slower
+|-
+|[[Heavenly Sweet Donut]]
+|[[File:Heavenly Sweet Donuts.png|75px|link=]]
+|
+*Lifts you 1 or 2 times
+*Revives you 1-3 times with 20 Energy
+|-
+|[[Limited Edition Colorful Star Jelly Pendant]]
+|[[File:Limited Edition Colorful Star Jelly Pendant.png|75px|link=]]
+|With upgrades, 100-300 extra points from Colorful Star Jelly
+|-
+|[[Magnetic Rainbow Drink]]
+|[[File:Magnetic Rainbow Drink.png|75px|link=]]
+|
+*Minute Magnetic Aura
+*With upgrades, 50-100 extra points for all Jellies
+|-
+|[[Princess Bee's Royal Jelly]]
+|[[File:Princess Bee's Royal Jelly.png|75px|link=]]
+|With upgrades, 50-100 extra energy during Cookie Relays
+|-
+|[[Secret Admirer's Fresh Vegetable Juice]]
+|[[File:Secret Admirer's Fresh Vegetable Juice.png|75px|link=]]
+|With upgrades, Energy drain 4-7% slower
+|-
+|[[Pick-Me-Up Wasabi Lip Balm]]
+|[[File:Pick-Me-Up Wasabi Lip Balm.png|75px|link=]]
+|
+*10% extra XP
+*RWith upgrades, revives you with 20-30 Energy 2 times
+|-
+|[[Yellow Bear Jelly Roll Cake]]
+|[[File:Yellow Bear Jelly Roll Cake.png|75px|link=]]
+|With upgrades, 500-1000 extra points from Yellow Jelly during Cookie Relay
+|-
+|[[Cookie Energy Drink]]
+|[[File:Cookie_Energy_Drink.png|75px|link=]]
+|
+*Minute Magnetic Aura
+*With upgrades, 45-65 extra Energy during Cookie Relay
+|-
+|[[Simply Satisfying Rice Ball]]
+|[[File:Simply_Satisfying_Rice_Ball.png|75px|link=]]
+|
+*With upgrades, 2-5% more Energy recovery
+*With upgrades, 100-300 extra points for Jellies while in Giant Mode
+|-
+|[[Chocolate Covered Workbook]]
+|[[File:Chocolate Covered Workbook.png|75px|link=]]
+|
+*With upgrades, Energy Drain 1-2% slower
+*7-12% extra XP
+|-
+|[[Wonder Donut]]
+|[[File:Wonder_Donut.png|75px|link=]]
+|With upgrades, lifts from hole OR revives with 25 Energy 2-4 times
+|-
+|[[Golden Wreath]]
+|[[File:Golden_Wreath.png|75px|link=]]
+|
+*Additional damage from hitting Obstacles
+*With upgrades, 5-10% Coin Bonus
+|-
+|[[Choccy Russian Doll]]
+|[[File:Choccy Russian Doll.png|75px|link=]]
+|
+*Additional damage from hitting Obstacles
+*With upgrades, 65-115 extra Energy during Cookie Relay
+|-
+|[[Demagnetizing Helmet]]
+|[[File:Magnetic Helmet.png|75px|link=]]
+|
+*Magnetic Aura Blocker
+*With upgrades, 70-120 extra points for all Jellies
+|-
+|[[Medi Cat]]
+|[[File:212px-Medi Cat.png|75px|link=]]
+|
+*The higher the Energy, the faster you run
+*Revives you 1-3 times with 20 Energy
+|-
+|[[Red Hot Chili Soda]]
+|[[File:Red Hot Chili Soda.png|75px|link=]]
+|
+*Minute Magnetic Aura
+*With upgrades, 3-6% Base speed increase
+|-
+|[[Boatman's Dagger]]
+|[[File:Boatman's Dagger.png|75px|link=]]
+|
+*Revives you twice with 20-30 Energy
+*5-7% extra Coins
+|-
+|[[Hefty Elephant's Money Box]]
+|[[File:Hefty Elephant's Money Box.png|75px|link=]]
+|
+*With upgrades, 300-800 more points for Gold Coins
+*With upgrades, 200-500 points for Coins
+|-
+|[[Soda Flavored Ice Pop]]
+|[[File:Soda Flavored Ice Pop.png|75px|link=]]
+|
+*With upgrades, 4-6% more Energy recovery
+*With upgrades, 100-300 extra points for Bubble Jelly
+|-
+|[[Creamy Monster Muffin]]
+|[[File:Creamy Monster Muffin.png|75px|link=]]
+|
+*With upgrades, Energy drain 3-4% slower
+*With upgrades, revives with 30-50 Energy
+|-
+|[[Drenched Drink]]
+|[[File:Drenched Drink.png|75px|link=]]
+|
+*Minute Magnetic Aura
+*With upgrades, lifts from hole OR revives with 10-20 Energy 2-3 times
+|-
+|[[Warm Café Latte]]
+|[[File:Warm Cafe Latte.png|75px|link=]]
+|
+*Minute Magnetic Aura
+*With upgrades, 6-8% more Energy recovery
+|-
+|[[Spankin' New Saddle]]
+|[[File:Spankin' New Saddle.png|75px|link=]]
+|
+*With upgrades, 200-300 extra points for all Jellies while riding
+*With upgrades, Energy drain 2-3% slower
+|-
+|[[Spotted Cow Protein Drink]]
+|[[File:Spotted Cow Protein Drink.png|75px|link=]]
+|
+*With upgrades, 100-200 extra points for all Jellies in Giant Mode
+*With upgrades, revives with 30-40 Energy
+|-
+|[[Sweet Pretzel Donut]]
+|[[File:Sweet Pretzel Donut.png|75px|link=]]
+|With upgrades, lifts from hole OR revives with 15-35 Energy 2 times during Cookie Relay
+|-
+|[[Simply Superb Star Brooch]]
+|[[File:Simply Superb Star Brooch.png|75px|link=]]
+|
+*With upgrades, 300-900 extra points from Blackberry Jelly
+*With upgrades, 50-100 extra points from Colorful Star Jelly
+|-
+|[[Pink Bear Jelly Party Hat]]
+|[[File:Pink Bear Jelly Party Hat.png|75px|link=]]
+|
+*With upgrades 40-60% more chance of triggering an All-Pink Bear Party
+*With upgrades, 200-300 more points for Pink Bear Jelly
+|-
+|[[Candy Roller Skates]]
+|[[File:Candy Roller Skates.png|75px|link=]]
+|
+*With upgrades, 0.3-0.8 seconds of Blast after taking a Potion
+*Energy drain 1% slower
+|-
+|[[Fluffy Kiwi Bread]]
+|[[File:Fluffy Kiwi Bread.png|75px|link=]]
+|
+*With upgrades Base Speed 5-10% higher in Giant Mode
+*With upgrades, 100-200 extra points for Kiwi Jelly
+|-
+|[[Delicious Peanut Butter Sandwich]]
+|[[File:Delicious Peanut Butter Sandwich.png|75px|link=]]
+|
+*With upgrades, 10-15% slower Energy drain while in Giant Mode
+*With upgrades 50-80 extra points for each Jelly collected
+|-
+|[[Golden Energy Drink]]
+|[[File:Golden Energy Drink.png|75px|link=]]
+|
+*Minute Magnetic Aura
+*With upgrades 2-3% chance of generating a Coin Flower
+|-
+|[[Flaming Red Jellyco]]
+|[[File:Flaming Red Jellyco.png|75px|link=]]
+|
+*5% chance of a Jellyco Missile falling
+*With upgrades, Energy drain 1-2% slower
+|-
+|[[Sweet Nightsky Crepe]]
+|[[File:Sweet Nightsky Crepe.png|75px|link=]]
+|
+*With upgrades, 300-800 extra points for Dark Moon Jelly
+*With upgrades, revives with 30-60 Energy
+|-
+|[[Crescent Moonlight Mood Cocktail]]
+|[[File:Crescent Moonlight Mood Cocktail.png|75px|link=]]
+|
+*With upgrades, Energy drain 3-6% slower
+*Lifts cookies from a hole once
+|-
+|[[Tip of the Ice Popsicle]]
+|[[File:Tip of the Ice Popsicle.png|75px|link=]]
+|
+*With upgrades, 2-4% Base speed increase
+*With upgrades gives 10-14% extra XP
+|-
+|[[Prosperity Bracelet of Earth]]
+|[[File:Prosperity Bracelet of Earth.png|75px|link=]]
+|With upgrades Giant landing make coins sprout from the ground beginner Lv.1~10
+|-
+|[[Protection Ring of Fire]]
+|[[File:Protection Ring of Fire.png|75px|link=]]
+|
+*Eliminates all obstacles prior to hit: 1 time
+*With upgrades, Energy drain 3-5% slower
+|-
+|[[Galloping Earring of Wind]]
+|[[File:Galloping Earring of Wind.png|75px|link=]]
+|Goes through obstacles at Blast Speed
+|-
+|[[Restoration Pendant of Water]]
+|[[File:Restoration Pendant of Water.png|75px|link=]]
+|
+*Recovers Energy if hit an obstacle: 1 time
+*With upgrades gives 5-9% Coin Bonus
+|-
+|[[Exhilarating AAA Battery Baton]]
+|[[File:Exhilarating AAA Battery Baton.png|75px|link=]]
+|
+*With upgrades, Magnetic Aura increases during Cookie Relay
+*With upgrades, 20-70 extra points for all Jellies
+|-
+|[[Flavorful Butter Croissant]]
+|[[File:Flavorful Butter Croissant.png|75px|link=]]
+|
+*With upgrades, Energy drain 2-3% slower
+*With upgrades, 4-8% more Energy recovery
+|-
+|[[Colorful Mini Gumball Missile]]
+|[[File:Colorful Mini Gumball Missile.png|75px|link=]]
+|
+*With upgrades, 500-1000 extra points for Gumballball shots
+*With upgrades, revives with 40-60 Energy
+|-
+|[[Someone's Banana Peel]]
+|[[File:Someone's Banana Peel.png|75px|link=]]
+|
+*With upgrades, 3-5% Base speed increase
+*With upgrades, 8-10% Coin Bonus
+|-
+|[[5g Ankle Weights for Amateurs]]
+|[[File:5g Ankle Weights for Amateurs.png|75px|link=]]
+|
+*10% Base speed decrease during Cookie Relay
+*With upgrades, Energy drain 3-5% slower
+|-
+|[[Amateur's Baking Powder]]
+|[[File:Amateur's Baking Powder.png|75px|link=]]
+|
+*2 seconds of Giant mode after taking a Potion
+*With upgrades, 3-5% more Energy recovery
+|-
+|[[Jelly Pogo Stick]]
+|[[File:Jelly Pogo Stick.png|75px|link=]]
+|
+*Miniscule Magnetic Aura
+*With upgrades, Giant landing makes Jelly sprout from ground - Basic Lv.1-10
+|-
+|[[Pink Cherry Blossom Cotton Candy]]
+|[[File:Pink Cherry Blossom Cotton Candy.png|75px|link=]]
+|With upgrades, 100-400 extra points for Cherry Blossom Jelly
+|-
+|[[Icy Creamy Popsicle]]
+|[[File:Icy Creamy Popsicle.png|75px|link=]]
+|With upgrades, 100-200 extra points for Bubble Jelly
+|-
+|[[Sparkling Water Drink]]
+|[[File:Sparkling Water Drink.png|75px|link=]]
+|
+*Miniscule Magnetic Aura
+*With upgrades, revives with 30-60 Energy
+|-
+|[[Sweet Jujube Flower Rice Cake]]
+|[[File:Sweet Jujube Flower Rice Cake.png|75px|link=]]
+|
+*With upgrades, 300-700 extra points for Jujube Slice Jelly
+*With upgrades, revives with 30-60 Energy
+|-
+|[[Bamboo Scented Sticky Rice]]
+|[[File:Bamboo Scented Sticky Rice.png|75px|link=]]
+|
+*With upgrades, 300-700 extra points for Bamboo Leaf Jelly
+*With upgrades, revives with 30-60 Energy
+|-
+|[[Icy Glass Slippers]]
+|[[File:Icy Glass Slippers.png|75px|link=]]
+|
+*With upgrades, 20-30% chance of forming an Ice Bridge
+*With upgrades, Energy drain 2-5% slower
+|-
+|[[Shiny Golden Nunchaku]]
+|[[File:Shiny Golden Nunchaku.png|75px|link=]]
+|
+*With upgrades, 30-80% chances of creating winged Coins for destroying an obstacle
+*With upgrades, 3-4% Coin Bonus
+|-
+|[[Orange-Lime Smoothie]]
+|[[File:Orange-Lime Smoothie.png|75px|link=]]
+|
+*With upgrades, Energy drain 3-4% slower
+*With upgrades, 200-400 extra points for all Citrus Jellies
+|-
+|[[Sweet Chocolate Eclair Baton]]
+|[[File:Sweet Chocolate Eclair Baton.png|75px|link=]]
+|
+*With upgrades, Energy drain 3-4% slower
+*With upgrades, revives with 30-50 Energy 1 time during Cookie Relay
+|-
+|[[Springy Pink Jelly Shoes]]
+|[[File:Springy Pink Jelly Shoes.png|75px|link=]]
+|
+*With upgrades, lifts from hole OR revives with 20 Energy 2-4 times
+*Jumps 1 time more
+|}
+
+===Obtainable from Collecting Mystery Jewels===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Collection Method
+|-
+|[[Compass Eternally Pointing to Coin Island]]
+|[[File:Compass Eternally Pointing to Coin Island.png|75px|link=]]
+|
+*Magnetic Aura Blocked
+*With upgrades get 15-17% Coin Bonus
+|Collecting Mystery Jewels in [[Ghost Pirate's Island of Coins]]
+|-
+|[[Sea Fairy's Crystallized Affection]]
+|[[File:Sea Fairy's Crystallized Affection.png|75px|link=]]
+|
+*With upgrades, 100-400% XP Bonus in Special Episodes
+*With upgrades, 5-10% Coin Bonus in Special Episodes
+|Collecting Mystery Jewels in [[Tower of Frozen Waves]]
+|}
+
+===Obtainable in [[Tower of Frozen Waves]]===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Collection Method
+|-
+|[[Icy Starlight Bellflower]]
+|[[File:Icy Starlight Bellflower.png|75px|link=]]
+|
+*With upgrades, lifts from hole OR revives with 50 Energy 1-3 times
+*With upgrades, 5-10% XP Bonus
+|Collecting {{Star}} 150
+|-
+|[[Golden Watering Tin]]
+|[[File:Golden Watering Tin.png|75px|link=]]
+|
+*With upgrades, 3-5% chance of generating Coin Flower
+*Revives with 30 Energy 1 time
+| rowspan="3" |Mission Reward
+|-
+|[[Icebound Golden Hammer]]
+|[[File:Icebound Golden Hammer.png|75px|link=]]
+|
+*With upgrades, 3-5 extra Coins for destroying an obstacle
+*With upgrades, lifts from hole 1-2 times
+|-
+|[[Icy Blade Skates]]
+|[[File:Icy Blade Skates.png|75px|link=]]
+|With upgrades, 1-1.5 seconds of Blast after taking Frozen Bear Jelly Party
+|}
+
+==Power+ Treasures==
+===Obtainable from upgrading Cookies and Pets===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Cookie/Pet
+|-
+|[[Prophet Cookie's Majestic Beard]]
+|[[File:Prophet Cookie Majestic Beard.png|75px|link=]]
+|With upgrades 7-30% chance of getting 2 Crystals on your first login of the day
+|[[Prophet Cookie]]
+|-
+|[[Cherry Blossom Cookie's Cherry Blossom Jam Biscuit Bag]]
+|[[File:Cherry Blossom Cookie's Cherry Blossom Jam Biscuit Bag.png|75px|link=]]
+|30-50% chance to get a Boost Set on your first login of the day
+|[[Cherry Blossom Cookie]]
+|-
+|[[Snow Globe's Crystal Crown]]
+|[[File:Snow Globe's Crystal Crown.png|75px|link=]]
+|With upgrades 15-60% chance of getting 1 extra Crystal for your first login of the day
+|[[Snow Globe]]
+|-
+|[[King Choco Drop's Jelly Crown]]
+|[[File:King Choco Drop's Jelly Crown.png|75px|link=]]
+|With upgrades 15-60% chance of getting 1 extra Crystal for your first login of the day
+|[[King Choco Drop]]
+|-
+|[[Furball Pup's Doggy Biscuit]]
+|[[File:Furball Pup's Doggy Biscuit.png|75px|link=]]
+|With upgrades 25-50% more chance of getting 150 Magic Powders in the first login of the day
+|[[Furball Pup]]
+|}
+
+===Obtainable from [[Supreme Treasure Chest]]===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+|-
+|[[Rare Sapphire Brooch]]
+|[[File:Rare Sapphire Brooch.png|75px|link=]]
+|5-50% chance of getting 2 Crystals on your first login of the day
+|-
+|[[Magic Sword Handle]]
+|[[File:Magic Sword Handle.png|75px|link=]]
+|5-50% chance of getting 3000 Coins on your first login of the day
+|-
+|[[Pink Bear Jelly Prototype]]
+|[[File:Pink Bear Jelly Prototype.png|75px|link=]]
+|5-50% chance of getting 200 Gift Points on your first login of the day
+|-
+|[[Rare Crystal Clam]]
+|[[File:Rare_Crystal_Clam.png|75px|link=]]
+|1-11% chance of getting 10 Crystals on your first login of the day
+|-
+|[[Big Crystal Ore]]
+|[[File:Big_crystal.PNG|75px|link=]]
+|2-21% chance of getting 5 Crystals on your first log in of the day
+|-
+|[[Ultimate Racing Firecracker Set]]
+|[[File:Ultimate Racing Firecracker Set.png|75px|link=]]
+|30-50% chance to get a Boost Set on your first login of the day
+|-
+|[[Translucent Crystal Alarm Clock]]
+|[[File:Translucent Crystal Alarm Clock.png|75px|link=]]
+|With upgrades 1-10% chance of getting 12 Crystals on your first login of the day
+|-
+|[[Giant Crystal Ring]]
+|[[File:Giant Crystal Ring.png|75px|link=]]
+|With upgrades 4-27% chance of getting 4 Crystals on your first login of the day
+|-
+|[[Embraced Sacred Crystal Sword]]
+|[[File:Embraced Sacred Crystal Sword.png|75px|link=]]
+|With upgrades 3-33% chance of getting 3 Crystals on your first login of the day
+|}
+
+===Obtainable from Reaching Levels===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Objection
+|-
+|[[Lv.50 Golden Club Trophy]]
+|[[File:Lv.50 Golden Club Trophy.png|75px|link=]]
+|With upgrades 20-50% chance of getting 2 Crystals on your first login of the day
+|Reach Level 50
+|-
+|[[Lv.60 Legends Club Trophy]]
+|[[File:Lv.60 Legends Club Trophy.png|75px|link=]]
+|With upgrades 20-50% chance of getting 3 Crystals on your first login of the day
+|Reach Level 60
+|-
+|[[Lv.70 Club Trophy]]
+|[[File:Lv.70 Club Trophy.png|75px|link=]]
+|With upgrades 10-30% chance of getting 5 Crystals on your first login of the day
+|Reach Level 70
+|-
+|[[Lv.80 Premium Club Trophy]]
+|[[File:Lv.80 Premium Club Trophy.png|75px|link=]]
+|With upgrades 10-25% chance of getting 6 Crystals in your first login of the day
+|Reach Level 80
+|-
+|[[Lv.90 VIP Club Trophy]]
+|[[File:Lv.90 VIP Club Trophy.png|75px|link=]]
+|With upgrades 6-16% chance of getting 9 Crystals in your first login of the day
+|Reach Level 90
+|-
+|[[Lv.100 Dream-Come-True Club Trophy]]
+|[[File:Lv.100 Dream-Come-True Club Trophy.png|75px|link=]]
+|With upgrades 5-15% chance of getting 10 Crystals in your first login of the day
+|Reach Level 100
+|}
+
+===Obtainable from [[Tower of Frozen Waves]]===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Collection Method
+|-
+|[[Strangely Familiar Blue Necklace]]
+|[[File:Strangely Familiar Blue Necklace.png|75px|link=]]
+|With upgrades, 5-50% chance of obtaining 1 Crystal upon first login of the day
+|Mission Reward [[100FL]]
+|}
+
+==Obtainable from Limited-Time Events==
+===Power+ Treasures===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Name
+! scope="col" |Picture
+! scope="col" |Effect
+! scope="col" |Event
+|-
+|[[Wishing Lotus Flower]]
+|[[File:Wishing_Lotus_Flower_S.png|75px|link=]]
+|20-40% chance of getting a Boost Set on your first login of the day
+|[[Float Wishing Lotus Flowers (event)|Float Wishing Lotus Flowers]]
+|-
+|[[Commemorative 4 Layer Cake]]
+|[[File:4LayerCake.png|75px|link=]]
+|5-25% chance of getting 4 Crystals at login
+|[[Float Wishing Lotus Flowers (event)|40 Million Downloads Event]]
+|-
+|[[Summer 2015 Crystal Bingsoo]]
+|[[File:Summer 2015 Crystal Bingsoo.png|75px|link=]]
+|50-78% chance of obtaining 2 Crystals upon first login of the day (Till Aug 28, 2015)
+|[[Make your own Bingsoo!!]]
+|-
+|[[50 Million Commemorative Firecrackers]]
+|[[File:50 Million Commemorative Firecrackers.png|75px|link=]]
+|25-50% chance of obtaining Boost Set upon first login of the day
+|[[We've Reached 50M Users!]]
+|-
+|[[Lemon Cookie's Magic Cube Keychain]]
+|[[File:Lemon Cookie's Magic Cube Keychain.png|75px|link=]]
+|50-100% chance of obtaining 200 Magic Powder upon first login of the day until Oct. 8, 2015
+|[[Collect Lemon Cubes]]
+|-
+|[[Ultimate Snowman Soldier Figurine]]
+|[[File:Ultimate Snowman Soldier Figurine.png|75px|link=]]
+|60-90% chance of getting 1 Crystal on your first login of the day until Feb. 29, 2016
+|[[Want to Make a Snowman?]] (2015)
+|-
+|[[60M Celebration! Miraculous Magic Powder Hourglass]]
+|[[File:60M Celebration! Miraculous Magic Powder Hourglass.png|75px|link=]]
+|8-13% chance of obtaining 600 Magic Powder upon first login of the day.
+|60 Million Downloads Celebration
+|-
+|[[Shiny Halloween Pumpkin Cupcake]]
+|[[File:Shiny Halloween Pumpkin Cupcake.png|75px|link=]]
+|30-70% chance of obtaining 1 Crystal upon first login of the day until Oct 31, 2017
+|[[Collect Halloween Candies]]
+|-
+|[[Shiny Crystal Snowflake Brooch]]
+|[[File:Shiny Crystal Snowflake Brooch.png|75px|link=]]
+|60-90% chance of getting 1 Crystal on your first login of the day until Feb. 28, 2017
+|[[Want to Make a Snowman?]] (2016)
+|}
+
+==Obtainable from [[Surprise Squirrel Shop]]==
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Name
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+|-
+|[[Squirrel's Magical Sand Bottle]]
+|[[File:Squirrel's Magical Sand Bottle.png|75px|link=]]
+|With upgrades, 25-50% chance of obtaining 200 Magic Powder upon first login of the day
+|-
+|[[Squirrel's Seashell Necklace]]
+|[[File:Squirrel's Seashell Necklace.png|75px|link=]]
+|
+*With upgrades, 1000-1800 extra points for all Jellies while riding
+*With upgrades, 50-100 extra Energy during Cookie Relay
+|-
+|[[Squirrel's Refreshing Coconut Water]]
+|[[File:Squirrel's Refreshing Coconut Water.png|75px|link=]]
+|
+*With upgrades, revives with 20-30 Energy 2 times
+*With upgrades, 5-12% Coin Bonus
+|-
+|[[Squirrel Snowball]]
+|[[File:Squirrel Snowball.png|75px|link=]]
+|With upgrades, 25-50% chance of obtaining 200 Magic Powder upon first login of the day
+|-
+|[[Jellyco the Red Nosed Reindeer]]
+|[[File:Jellyco the Red Nosed Reindeer.png|75px|link=]]
+|
+*5% chance of a Jellyco Missile falling
+*With upgrades, revives with 20-30 Energy 2 times
+|-
+|[[Christmas Supper Ham Cuisine]]
+|[[File:Christmas Supper Ham Cuisine.png|75px|link=]]
+|
+*Miniscule Magnetic Aura
+*With upgrades, Energy drain 4-6 % slower
+|-
+|[[Coin Poinsettia Christmas Decoration]]
+|[[File:Coin Poinsettia Christmas Decoration.png|75px|link=]]
+|
+*Miniscule Magnetic Aura
+*With upgrades, 5-6% chance of generating Coin Flower
+|-
+|[[Splendid Jelly Light Bulbs]]
+|[[File:Splendid Jelly Light Bulbs.png|75px|link=]]
+|
+*Miniscule Magnetic Aura
+*With upgrades, Giant landing makes Jelly sprout from the ground Lv.1~10
+|-
+|[[Squirrel's Bling-Marbling Grade 1++ Rib Eye]]
+|[[File:Squirrel's Bling-Marbling Grade 1 Rib Eye.png|75px|link=Squirrel's Bling-Marbling Grade 1++ Rib Eye]]
+|
+* With upgrades, Energy drain 5-7% slower
+* With upgrades gives 1-3 extra jumps
+|-
+|[[Squirrel's Shining Dark Moon's Manju]]
+|[[File:Squirrel's Shining Dark Moon's Manju.png|75px|link=Squirrel's Shining Dark Moon's Manju]]
+|
+* With upgrades, 500-1000 extra points for Dark Moon Jelly
+* With upgrades Revives/Lifts from a hole 2 times with 20-40 Energy
+|}
+
+==Certificate Treasures==
+{{Main|Certificate Treasures}}
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Passive Effect
+|-
+|[[Certificate of Playing the New World]]
+|[[File:0M Certificate.png|left|75px]]
+|40-50% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 1M Points Certificate|Cookie Run: 1M Points Certificate]]
+|[[File:1M Certificate.png|left|75px]]
+|41-51% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 2M Points Certificate|Cookie Run: 2M Points Certificate]]
+|[[File:2M Certificate.png|left|75px]]
+|42-52% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 3M Points Certificate|Cookie Run: 3M Points Certificate]]
+|[[File:3M Certificate.png|left|75px]]
+|43-53% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 4M Points Certificate|Cookie Run: 4M Points Certificate]]
+|[[File:4M Certificate.png|left|75px]]
+|44-54% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 5M Points Certificate|Cookie Run: 5M Points Certificate]]
+|[[File:5M Certificate.png|left|75px]]
+|45-55% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 6M Points Certificate|Cookie Run: 6M Points Certificate]]
+|[[File:6M Certificate.png|left|75px]]
+|46-56% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 7M Points Certificate|Cookie Run: 7M Points Certificate]]
+|[[File:7M Certificate.png|left|75px]]
+|47-57% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 8M Points Certificate|Cookie Run: 8M Points Certificate]]
+|[[File:8M Certificate.png|left|75px]]
+|48-58% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 9M Points Certificate|Cookie Run: 9M Points Certificate]]
+|[[File:9M Certificate.png|left|75px]]
+|49-59% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 10M Points Certificate|Cookie Run: 10M Points Certificate]]
+|[[File:10M Certificate.png|left|75px]]
+|50-60% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 20M Points Certificate|Cookie Run: 20M Points Certificate]]
+|[[File:20M Certificate.png|left|75px]]
+|51-61% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 30M Points Certificate|Cookie Run: 30M Points Certificate]]
+|[[File:30M Certificate.png|left|75px]]
+|52-62% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 40M Points Certificate|Cookie Run: 40M Points Certificate]]
+|[[File:40M Certificate.png|left|75px]]
+|53-63% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 50M Points Certificate|Cookie Run: 50M Points Certificate]]
+|[[File:50M Certificate.png|left|75px]]
+|54-64% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 60M Points Certificate|Cookie Run: 60M Points Certificate]]
+|[[File:60M Certificate.png|left|75px]]
+|55-65% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 70M Points Certificate|Cookie Run: 70M Points Certificate]]
+|[[File:70M Certificate.png|left|75px]]
+|56-66% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 80M Points Certificate|Cookie Run: 80M Points Certificate]]
+|[[File:80M Certificate.png|left|75px]]
+|57-67% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 90M Points Certificate|Cookie Run: 90M Points Certificate]]
+|[[File:90M Certificate.png|left|75px]]
+|58-68% chance of getting 1 Crystal at your first login of the day
+|-
+|[[Cookie Run 100M Points Certificate|Cookie Run: 100M Points Certificate]]
+|[[File:100M Certificate.png|left|75px]]
+|60-70% chance of getting 1 Crystal at your first login of the day
+|}
+
+==Trophy Treasures==
+{{Main|Trophy Treasures}}

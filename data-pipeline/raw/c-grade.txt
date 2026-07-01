@@ -1,0 +1,117 @@
+== Equip Treasures ==
+===Obtainable from Upgrading Cookies and Pets===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+! scope="col" |Cookie/Pet
+|-
+|[[Brave Cookie's 3rd Skull Button]]
+|[[File:Brave Cookie's 3rd Skull Button.png|75px|link=]]
+|With upgrades gives 5-15 Extra Energy
+|[[Brave Cookie]]
+|-
+|[[Bright Cookie's Lollipop Bite]]
+|[[File:Bright Cookie's Lollipop Bite.png|75px|link=]]
+|With upgrades gives 2-7% XP Bonus
+|[[Bright Cookie]]
+|-
+|[[Drop of Choco's Choco Bar]]
+|[[File:Drop of Choco's Choccy Chunk.png|75px|link=]]
+|With upgrades 10-20 extra points for Yellow Bear Jellies
+|[[Drop of Choco]]
+|-
+|[[Cheeseberry's Smelly Cheese Slice]]
+|[[File:Cheeseberry's Smelly Cheese Slice.png|75px|link=]]
+|With upgrades 50-60 extra points for Pink Bear Jellies
+|[[Cheeseberry]]
+|-
+|[[Double Bubble's Best Friend]]
+|[[File:Double Bubble's Best Friend.png|75px|link=]]
+|With upgrades All-Bear Jelly parties last 10-15% longer
+|[[Double Bubble]]
+|-
+|[[A Piece of Rainbow's End]]
+|[[File:A Piece of Rainbow's End.png|75px|link=]]
+|With upgrades your pet will get 1.5-2.5x bigger in Bonus Time
+|[[Rainbow's End]]
+|-
+|[[Forgotten Stocking's Patch]]
+|[[File:Forgotten Stocking's Patch.png|75px|link=]]
+|With upgrades gives 3-8% higher base speed
+|[[Forgotten Stocking]]
+|}
+
+===Obtainable from [[Good Treasure Chest]]===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Equipped Effect
+|-
+|[[Just Baked Cracker]]
+|[[File:Just Baked Cracker.png|75px|link=]]
+|5-15 Extra Energy
+|-
+|[[Mud Arrowhead]]
+|[[File:Mud Arrowhead.png|75px|link=]]
+|10-20 points for Coins
+|-
+|[[Sweet Red Cherry]]
+|[[File:Sweet Red Cherry.png|75px|link=]]
+|25-70 extra points for Pink Bear Jellies
+|-
+|[[Witch's Spike]]
+|[[File:Witch's Spike.png|75px|link=]]
+|Magnet Jellies last 10-20% longer
+|-
+|[[Good Year's Wheat Harvest]]
+|[[File:Good Year's Wheat Harvest.png|75px|link=]]
+|50-70 point for Gold Coins
+|-
+|[[Always Cute Acorn]]
+|[[File:Always Cute Acorn.png|75px|link=]]
+|0.8-1.7 extra seconds in Bonus Time
+|-
+|[[Organic Wheat Flour]]
+|[[File:Organic Wheat Flour.png|75px|link=]]
+|25-70 extra points for Alphabet Jellies
+|-
+|[[Roasted Fresh Peanut]]
+|[[File:Roasted Fresh Peanut.png|75px|link=]]
+|10-60 extra points for Yellow Bear Jellies
+|-
+|[[Hand of Liker's Good Thimble]]
+|[[File:Hand of Liker's Good Thimble.png|75px|link=]]
+|20-30 points for Coins
+|}
+
+==Power+ Treasures==
+===Obtainable from [[Good Treasure Chest]]===
+{| class="article-table sortable" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Treasures
+! scope="col" |Picture
+! scope="col" |Passive Effect
+|-
+|[[Healthy Carrot Snack]]
+|[[File:Healthy Carrot Snack.png|75px|link=]]
+|2-11% chance of getting a Cookie Relay on your first login of the day
+|-
+|[[White Sugar Cube]]
+|[[File:White Sugar Cube.png|75px|link=]]
+|2-11% chance of getting a Fast Start on your first login of the day
+|-
+|[[Pitted Pickled Olives]]
+|[[File:Pitted Pickled Olives.png|75px|link=]]
+|2-11% chance of getting Energy Boost on your first login of the day
+|-
+|[[IQ enhancing Walnut]]
+|[[File:IQ enhancing Walnut.png|75px|link=]]
+|2-11% chance of getting a Power Jelly Boost on your first login of the day
+|-
+|[[Big Head Mushroom]]
+|[[File:Big Head Mushroom.png|75px|link=]]
+|2-11% chance of getting a Power a Double XP on your first login of the day
+|}
