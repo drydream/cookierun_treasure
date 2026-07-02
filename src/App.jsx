@@ -46,6 +46,7 @@ const i18n = {
     navPets: 'Pets',
     charCount: n => `${n} items`,
     charSearchPlaceholder: 'Search by name...',
+    charViewList: 'Browse',
     tierEmpty: 'No treasures ranked yet',
     tierFormBase: 'Base form',
     tierFormEvolved: 'Evolved form',
@@ -79,6 +80,7 @@ const i18n = {
     navPets: 'เพ็ท',
     charCount: n => `${n} รายการ`,
     charSearchPlaceholder: 'ค้นหาจากชื่อ...',
+    charViewList: 'รายการทั้งหมด',
     tierEmpty: 'ยังไม่มีการจัดอันดับ',
     tierFormBase: 'ก่อนวิวัฒนาการ',
     tierFormEvolved: 'หลังวิวัฒนาการ',
@@ -245,9 +247,35 @@ function TierListPage({ items, t, onSelect }) {
   );
 }
 
+function CharacterTierListPage({ characters, kind, t }) {
+  const list = useMemo(() => characters.filter(c => c.kind === kind), [characters, kind]);
+  return (
+    <div className="tierlist">
+      {TIERS.map(tier => {
+        const tierItems = list.filter(c => c.tier === tier);
+        return (
+          <div className="tier-row" key={tier}>
+            <div className="tier-label" style={{ background: TIER_COLORS[tier] }}>{tier}</div>
+            <div className="tier-items">
+              {tierItems.length === 0 && <span className="tier-empty">{t.tierEmpty}</span>}
+              {tierItems.map(c => (
+                <div key={c.id} className="tier-item" title={c.name}>
+                  {c.image && <img className="tier-icon" src={c.image} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+                  <span className="tier-name">{c.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 function CharacterListPage({ characters, kind, t }) {
   const [query, setQuery] = useState('');
   const [grade, setGrade] = useState('all');
+  const [view, setView] = useState('list');
   const list = useMemo(() => characters.filter(c => c.kind === kind), [characters, kind]);
   const grades = useMemo(() => ['all', ...new Set(list.map(c => c.grade).filter(Boolean))], [list]);
   const filtered = useMemo(() => {
@@ -261,27 +289,37 @@ function CharacterListPage({ characters, kind, t }) {
 
   return (
     <>
-      <div className="toolbar">
-        <input id="search" type="text" placeholder={t.charSearchPlaceholder} value={query} onChange={e => setQuery(e.target.value)} />
-      </div>
       <div className="grade-filter">
-        {grades.map(g => (
-          <button key={g} className={grade === g ? 'active' : ''} onClick={() => setGrade(g)}>{g === 'all' ? t.all : g}</button>
-        ))}
+        <button className={view === 'list' ? 'active' : ''} onClick={() => setView('list')}>{t.charViewList}</button>
+        <button className={view === 'tier' ? 'active' : ''} onClick={() => setView('tier')}>{t.navTierlist}</button>
       </div>
-      <div id="count">{t.charCount(filtered.length)}</div>
-      <div id="list">
-        {filtered.map(c => (
-          <div className="card" key={c.id}>
-            {c.image && <img src={c.image} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
-            <div className="body">
-              <span className="name">{c.name}</span>
-              {c.grade && <span className="grade">{c.grade}-grade</span>}
-              {(c.ability_en || c.ability) && <div className="effect">{c.ability_en || c.ability}</div>}
-            </div>
+      {view === 'tier' ? (
+        <CharacterTierListPage characters={characters} kind={kind} t={t} />
+      ) : (
+        <>
+          <div className="toolbar">
+            <input id="search" type="text" placeholder={t.charSearchPlaceholder} value={query} onChange={e => setQuery(e.target.value)} />
           </div>
-        ))}
-      </div>
+          <div className="grade-filter">
+            {grades.map(g => (
+              <button key={g} className={grade === g ? 'active' : ''} onClick={() => setGrade(g)}>{g === 'all' ? t.all : g}</button>
+            ))}
+          </div>
+          <div id="count">{t.charCount(filtered.length)}</div>
+          <div id="list">
+            {filtered.map(c => (
+              <div className="card" key={c.id}>
+                {c.image && <img src={c.image} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+                <div className="body">
+                  <span className="name">{c.name}</span>
+                  {c.grade && <span className="grade">{c.grade}-grade</span>}
+                  {(c.ability_en || c.ability) && <div className="effect">{c.ability_en || c.ability}</div>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 }

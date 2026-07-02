@@ -159,6 +159,7 @@
         <option value="all">All</option>
       </select>
     </label>
+    <button id="charAddBtn" style="font-size:13px;padding:4px 10px">+ Add new</button>
     <div id="charSummary"></div>
   </div>
   <table>
@@ -188,10 +189,13 @@
   </div>
   <label class="field">Ability text (EN)</label>
   <textarea id="charAbilityEnInput"></textarea>
+  <label class="field">Tier list</label>
+  <select id="charTierInput"></select>
   <div class="nav">
     <button id="charPrev">&larr; Prev</button>
     <button id="charSave">Save</button>
     <button id="charSkip">Skip &rarr;</button>
+    <button id="charDelete" style="background:#fdd;border-color:#c00">Delete</button>
     <span id="charStatus"></span>
   </div>
 </div>
@@ -209,6 +213,8 @@ TIERS.forEach(tier => {
   document.getElementById('tierFilter').insertAdjacentHTML('beforeend', `<option value="${tier}">${tier}</option>`);
 });
 document.getElementById('tierInput').innerHTML =
+  '<option value="">(none)</option>' + TIERS.map(tier => `<option value="${tier}">${tier}</option>`).join('');
+document.getElementById('charTierInput').innerHTML =
   '<option value="">(none)</option>' + TIERS.map(tier => `<option value="${tier}">${tier}</option>`).join('');
 
 let items = [];
@@ -667,6 +673,11 @@ document.getElementById('delete').onclick = deleteCurrent;
 let characters = [];
 let charKind = 'cookie';
 let charIdx = 0;
+let charIsNew = false;
+
+function charBlankDraft() {
+  return { id: null, kind: charKind, name: '', kr_name: '', grade: '', ability: null, ability_en: '', image: '', tier: '' };
+}
 
 async function loadCharacters() {
   const res = await fetch(`${SUPABASE_URL}/rest/v1/characters?select=*&order=name.asc`, {
@@ -739,20 +750,29 @@ function renderCharList() {
 }
 
 function openCharEdit(i) {
+  charIsNew = false;
   charIdx = i;
   hideAllViews();
   document.getElementById('charEditView').style.display = 'block';
   renderCharEdit();
 }
 
+function openCharAdd() {
+  charIsNew = true;
+  hideAllViews();
+  document.getElementById('charEditView').style.display = 'block';
+  renderCharEdit();
+}
+
 function charBackToList() {
+  charIsNew = false;
   hideAllViews();
   document.getElementById('charListView').style.display = 'block';
   renderCharList();
 }
 
 function renderCharEdit() {
-  const c = characters[charIdx];
+  const c = charIsNew ? charBlankDraft() : characters[charIdx];
   document.getElementById('charImg').src = imgSrc(c.image);
   document.getElementById('charNameInput').value = c.name;
   document.getElementById('charGradeInput').value = c.grade || '';
@@ -760,6 +780,11 @@ function renderCharEdit() {
   document.getElementById('charKrNameInput').value = c.kr_name || '';
   document.getElementById('charKr').textContent = c.ability || '(no ability text in source)';
   document.getElementById('charAbilityEnInput').value = c.ability_en || '';
+  document.getElementById('charTierInput').value = c.tier || '';
+  document.getElementById('charSave').textContent = charIsNew ? 'Add' : 'Save';
+  document.getElementById('charPrev').style.display = charIsNew ? 'none' : '';
+  document.getElementById('charSkip').style.display = charIsNew ? 'none' : '';
+  document.getElementById('charDelete').style.display = charIsNew ? 'none' : '';
 }
 
 function moveCharWithinFiltered(dir) {
@@ -771,24 +796,69 @@ function moveCharWithinFiltered(dir) {
 }
 
 async function saveCharacter() {
-  const c = characters[charIdx];
   const name = document.getElementById('charNameInput').value.trim();
   const grade = document.getElementById('charGradeInput').value.trim();
   const image = document.getElementById('charImageInput').value.trim();
   const kr_name = document.getElementById('charKrNameInput').value.trim();
   const ability_en = document.getElementById('charAbilityEnInput').value.trim();
+  const tier = document.getElementById('charTierInput').value || null;
   const statusEl = document.getElementById('charStatus');
   statusEl.className = '';
+
+  if (charIsNew) {
+    statusEl.textContent = 'Adding...';
+    const res = await fetch('/api/admin/add-character', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password, kind: charKind, name, kr_name, grade, ability_en, image, tier }),
+    });
+    if (res.ok) {
+      statusEl.textContent = 'Added';
+      characters = await loadCharacters();
+      charBackToList();
+    } else {
+      const data = await res.json().catch(() => ({}));
+      statusEl.className = 'error';
+      statusEl.textContent = 'Error: ' + (data.error || res.status);
+      if (res.status === 401) localStorage.removeItem('adminPassword');
+    }
+    return;
+  }
+
+  const c = characters[charIdx];
   statusEl.textContent = 'Saving...';
   const res = await fetch('/api/admin/save-character', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ password, id: c.id, name, kr_name, grade, ability_en, image }),
+    body: JSON.stringify({ password, id: c.id, name, kr_name, grade, ability_en, image, tier }),
   });
   if (res.ok) {
-    Object.assign(c, { name, kr_name, grade, ability_en, image });
+    Object.assign(c, { name, kr_name, grade, ability_en, image, tier });
     statusEl.textContent = 'Saved';
     setTimeout(() => statusEl.textContent = '', 1500);
+  } else {
+    const data = await res.json().catch(() => ({}));
+    statusEl.className = 'error';
+    statusEl.textContent = 'Error: ' + (data.error || res.status);
+    if (res.status === 401) localStorage.removeItem('adminPassword');
+  }
+}
+
+async function deleteCharacter() {
+  const c = characters[charIdx];
+  if (!confirm('Delete "' + c.name + '"? This cannot be undone.')) return;
+  const statusEl = document.getElementById('charStatus');
+  statusEl.className = '';
+  statusEl.textContent = 'Deleting...';
+  const res = await fetch('/api/admin/delete-character', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password, id: c.id }),
+  });
+  if (res.ok) {
+    characters.splice(charIdx, 1);
+    statusEl.textContent = '';
+    charBackToList();
   } else {
     const data = await res.json().catch(() => ({}));
     statusEl.className = 'error';
@@ -806,6 +876,8 @@ document.getElementById('charBackToList').onclick = charBackToList;
 document.getElementById('charPrev').onclick = () => moveCharWithinFiltered(-1);
 document.getElementById('charSkip').onclick = () => moveCharWithinFiltered(1);
 document.getElementById('charSave').onclick = saveCharacter;
+document.getElementById('charDelete').onclick = deleteCharacter;
+document.getElementById('charAddBtn').onclick = openCharAdd;
 
 document.getElementById('charUploadBtn').onclick = () => document.getElementById('charImageFile').click();
 document.getElementById('charImageFile').onchange = async (e) => {
