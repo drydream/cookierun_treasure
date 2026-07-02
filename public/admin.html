@@ -137,6 +137,7 @@
   <p style="color:#666;font-size:13px">Drag a base-form item into a tier row to rank it. Drag it back down to the pool to unrank it.</p>
   <div id="tierBuilderRows"></div>
   <h3>Unranked (base items)</h3>
+  <input id="tierPoolSearch" placeholder="Search unranked items..." style="width:100%;font-size:15px;padding:6px;box-sizing:border-box;margin-bottom:8px">
   <div id="tierPool"></div>
 </div>
 
@@ -290,6 +291,7 @@ function backToList() {
 function openTierBuilder() {
   document.getElementById('listView').style.display = 'none';
   document.getElementById('tierBuilderView').style.display = 'block';
+  document.getElementById('tierPoolSearch').value = '';
   renderTierBuilder();
 }
 
@@ -353,9 +355,16 @@ function renderTierBuilder() {
     wireTbDropzone(zone, tier);
   });
 
+  renderPool();
+}
+
+function renderPool() {
+  const q = document.getElementById('tierPoolSearch').value.trim().toLowerCase();
+  const unranked = items.filter(it => it.type !== 'evolved' && !it.tier
+    && (!q || it.name.toLowerCase().includes(q)));
   const poolZone = document.getElementById('tierPool');
   poolZone.innerHTML = '';
-  baseItems.filter(it => !it.tier).forEach(it => poolZone.appendChild(tbChip(it)));
+  unranked.forEach(it => poolZone.appendChild(tbChip(it)));
   wireTbDropzone(poolZone, null);
 }
 
@@ -526,6 +535,7 @@ document.getElementById('imageFile').onchange = async (e) => {
 document.getElementById('addBtn').onclick = openAdd;
 document.getElementById('tierBuilderBtn').onclick = openTierBuilder;
 document.getElementById('backFromTierBuilder').onclick = backFromTierBuilder;
+document.getElementById('tierPoolSearch').oninput = renderPool;
 
 document.getElementById('dedupeBtn').onclick = async () => {
   if (!confirm('Merge LINE/Kakao-Global treasures that are the same item (same name, or same cookie/pet + grade + type). Only removes the Kakao/Global duplicate row, keeps all your edits. Continue?')) return;
