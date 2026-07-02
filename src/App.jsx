@@ -42,6 +42,10 @@ const i18n = {
     navHome: 'Home',
     navTreasure: 'Treasure Search',
     navTierlist: 'Tier List',
+    navCookies: 'Cookies',
+    navPets: 'Pets',
+    charCount: n => `${n} items`,
+    charSearchPlaceholder: 'Search by name...',
     tierEmpty: 'No treasures ranked yet',
     tierFormBase: 'Base form',
     tierFormEvolved: 'Evolved form',
@@ -71,6 +75,10 @@ const i18n = {
     navHome: 'หน้าแรก',
     navTreasure: 'ค้นหาสมบัติ',
     navTierlist: 'Tier List',
+    navCookies: 'คุกกี้',
+    navPets: 'เพ็ท',
+    charCount: n => `${n} รายการ`,
+    charSearchPlaceholder: 'ค้นหาจากชื่อ...',
     tierEmpty: 'ยังไม่มีการจัดอันดับ',
     tierFormBase: 'ก่อนวิวัฒนาการ',
     tierFormEvolved: 'หลังวิวัฒนาการ',
@@ -96,6 +104,13 @@ async function fetchAllTreasures() {
     if (page.length < PAGE) break;
   }
   return all;
+}
+
+async function fetchAllCharacters() {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/characters?select=*&order=name.asc`, {
+    headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
+  });
+  return res.json();
 }
 
 function highlight(text, q) {
@@ -177,6 +192,8 @@ function HomePage({ t, onNavigate }) {
       <div className="home-menu">
         <button type="button" onClick={() => onNavigate('treasure')}>{t.navTreasure}</button>
         <button type="button" onClick={() => onNavigate('tierlist')}>{t.navTierlist}</button>
+        <button type="button" onClick={() => onNavigate('cookies')}>{t.navCookies}</button>
+        <button type="button" onClick={() => onNavigate('pets')}>{t.navPets}</button>
       </div>
     </div>
   );
@@ -228,6 +245,47 @@ function TierListPage({ items, t, onSelect }) {
   );
 }
 
+function CharacterListPage({ characters, kind, t }) {
+  const [query, setQuery] = useState('');
+  const [grade, setGrade] = useState('all');
+  const list = useMemo(() => characters.filter(c => c.kind === kind), [characters, kind]);
+  const grades = useMemo(() => ['all', ...new Set(list.map(c => c.grade).filter(Boolean))], [list]);
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return list.filter(c => {
+      if (grade !== 'all' && c.grade !== grade) return false;
+      if (q && !c.name.toLowerCase().includes(q) && !(c.kr_name || '').toLowerCase().includes(q)) return false;
+      return true;
+    });
+  }, [list, query, grade]);
+
+  return (
+    <>
+      <div className="toolbar">
+        <input id="search" type="text" placeholder={t.charSearchPlaceholder} value={query} onChange={e => setQuery(e.target.value)} />
+      </div>
+      <div className="grade-filter">
+        {grades.map(g => (
+          <button key={g} className={grade === g ? 'active' : ''} onClick={() => setGrade(g)}>{g === 'all' ? t.all : g}</button>
+        ))}
+      </div>
+      <div id="count">{t.charCount(filtered.length)}</div>
+      <div id="list">
+        {filtered.map(c => (
+          <div className="card" key={c.id}>
+            <img src={c.image} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />
+            <div className="body">
+              <span className="name">{c.name}</span>
+              {c.grade && <span className="grade">{c.grade}-grade</span>}
+              {c.ability && <div className="effect">{c.ability}</div>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
 function DonateModal({ t, onClose }) {
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -243,6 +301,7 @@ function DonateModal({ t, onClose }) {
 
 export default function App() {
   const [items, setItems] = useState([]);
+  const [characters, setCharacters] = useState([]);
   const [query, setQuery] = useState('');
   const [grade, setGrade] = useState('all');
   const [typeFilter, setTypeFilter] = useState('all');
@@ -271,6 +330,7 @@ export default function App() {
         tier: row.tier,
       })));
     });
+    fetchAllCharacters().then(setCharacters);
   }, []);
 
   const t = i18n[lang];
@@ -324,6 +384,8 @@ export default function App() {
             <button className={page === 'home' ? 'active' : ''} onClick={() => setPage('home')}>{t.navHome}</button>
             <button className={page === 'treasure' ? 'active' : ''} onClick={() => setPage('treasure')}>{t.navTreasure}</button>
             <button className={page === 'tierlist' ? 'active' : ''} onClick={() => setPage('tierlist')}>{t.navTierlist}</button>
+            <button className={page === 'cookies' ? 'active' : ''} onClick={() => setPage('cookies')}>{t.navCookies}</button>
+            <button className={page === 'pets' ? 'active' : ''} onClick={() => setPage('pets')}>{t.navPets}</button>
           </>
         )}
         <div className="lang-toggle">
@@ -372,6 +434,8 @@ export default function App() {
         </>
       )}
       {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
+      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage characters={characters} kind="cookie" t={t} /></>}
+      {page === 'pets' && <><h1>{t.navPets}</h1><CharacterListPage characters={characters} kind="pet" t={t} /></>}
     </>
   );
 }

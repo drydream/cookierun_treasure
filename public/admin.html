@@ -80,6 +80,7 @@
     <button id="tierBuilderBtn" style="font-size:13px;padding:4px 10px">Tier Builder</button>
     <button id="dedupeBtn" style="font-size:13px;padding:4px 10px">Merge duplicates</button>
     <button id="importBtn" style="font-size:13px;padding:4px 10px">Import/reset from JSON files</button>
+    <button id="importCharsBtn" style="font-size:13px;padding:4px 10px">Import Cookies &amp; Pets</button>
     <div id="summary"></div>
   </div>
   <table>
@@ -572,6 +573,23 @@ document.getElementById('importBtn').onclick = async () => {
     items = await loadItems();
     renderDatalist();
     renderList();
+  } else {
+    alert('Error: ' + (data.error || res.status));
+  }
+};
+
+document.getElementById('importCharsBtn').onclick = async () => {
+  if (!confirm('This replaces all rows in the characters table from cookierunhub.com. Continue?')) return;
+  document.getElementById('importCharsBtn').textContent = 'Importing...';
+  const res = await fetch('/api/admin/import-characters', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password }),
+  });
+  const data = await res.json().catch(() => ({}));
+  document.getElementById('importCharsBtn').textContent = 'Import Cookies & Pets';
+  if (res.ok) {
+    alert('Imported ' + data.imported + ' cookies/pets.');
   } else {
     alert('Error: ' + (data.error || res.status));
   }
