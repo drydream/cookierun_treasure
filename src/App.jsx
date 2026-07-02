@@ -41,7 +41,7 @@ function highlight(text, q) {
   );
 }
 
-function Card({ item, query, t, evolvesTo }) {
+function Card({ item, query, t, evolvesTo, imageByName }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="card">
@@ -58,7 +58,10 @@ function Card({ item, query, t, evolvesTo }) {
         {evolvesTo && (
           <div className="evolves-to">
             <span className="label">{t.evolvesTo}</span>{' '}
-            <a href={wikiUrl(evolvesTo)} target="_blank" rel="noopener">{evolvesTo}</a>
+            <a href={wikiUrl(evolvesTo)} target="_blank" rel="noopener">
+              {imageByName[evolvesTo] && <img className="inline-icon" src={imageByName[evolvesTo]} alt="" loading="lazy" />}
+              {evolvesTo}
+            </a>
           </div>
         )}
         {item.baseItem && (
@@ -67,7 +70,10 @@ function Card({ item, query, t, evolvesTo }) {
             <div className={'recipe' + (open ? ' open' : '')}>
               <div className="row">
                 <span className="label">{t.evolvedFrom}</span>{' '}
-                <a href={wikiUrl(item.baseItem)} target="_blank" rel="noopener">{item.baseItem}</a>
+                <a href={wikiUrl(item.baseItem)} target="_blank" rel="noopener">
+                  {imageByName[item.baseItem] && <img className="inline-icon" src={imageByName[item.baseItem]} alt="" loading="lazy" />}
+                  {item.baseItem}
+                </a>
               </div>
               <div className="row">
                 <span className="label">{t.ingredients}</span>{' '}
@@ -105,6 +111,11 @@ export default function App() {
     items.forEach(it => { if (it.baseItem) m[it.baseItem] = it.name; });
     return m;
   }, [items]);
+  const imageByName = useMemo(() => {
+    const m = {};
+    items.forEach(it => { m[it.name] = it.localImage; });
+    return m;
+  }, [items]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -140,7 +151,7 @@ export default function App() {
       <div id="count">{t.count(filtered.length)}</div>
       <div id="list">
         {filtered.map((it, i) => (
-          <Card key={it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.name]} />
+          <Card key={it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.name]} imageByName={imageByName} />
         ))}
       </div>
     </>

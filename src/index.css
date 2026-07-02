@@ -46,6 +46,7 @@ h1 { text-align: center; }
 .recipe { display: none; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px dashed #eadbc8; font-size: 0.85rem; }
 .recipe.open { display: block; }
 .recipe a { color: #b5651d; text-decoration: none; }
+.inline-icon { width: 1.1em; height: 1.1em; object-fit: contain; vertical-align: middle; margin-right: 0.2em; border-radius: 3px; background: #f7efe2; }
 .recipe a:hover { text-decoration: underline; }
 .recipe .row { margin-top: 0.2rem; }
 .recipe .label { font-weight: bold; }
