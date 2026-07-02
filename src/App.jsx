@@ -11,6 +11,7 @@ const i18n = {
     blessed: 'Blessed:',
     recipeBtn: 'Evolution recipe',
     evolvedFrom: 'Evolved from:',
+    evolvesTo: 'Evolves to:',
     ingredients: 'Ingredients:',
   },
   th: {
@@ -23,6 +24,7 @@ const i18n = {
     blessed: 'อัปเกรดพร (Blessed):',
     recipeBtn: 'สูตรวิวัฒนาการ',
     evolvedFrom: 'วิวัฒนาการมาจาก:',
+    evolvesTo: 'วิวัฒนาการเป็น:',
     ingredients: 'วัตถุดิบ:',
   },
 };
@@ -39,7 +41,7 @@ function highlight(text, q) {
   );
 }
 
-function Card({ item, query, t }) {
+function Card({ item, query, t, evolvesTo }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="card">
@@ -53,6 +55,12 @@ function Card({ item, query, t }) {
           <div className="blessed"><span className="blessed-label">{t.blessed}</span> {highlight(item.blessedEffect, query)}</div>
         )}
         <div className="meta">{item.section}{item.extra ? ' — ' + item.extra : ''}</div>
+        {evolvesTo && (
+          <div className="evolves-to">
+            <span className="label">{t.evolvesTo}</span>{' '}
+            <a href={wikiUrl(evolvesTo)} target="_blank" rel="noopener">{evolvesTo}</a>
+          </div>
+        )}
         {item.baseItem && (
           <>
             <button type="button" className="recipe-btn" onClick={() => setOpen(o => !o)}>{t.recipeBtn}</button>
@@ -92,6 +100,11 @@ export default function App() {
 
   const t = i18n[lang];
   const grades = useMemo(() => ['all', ...new Set(items.map(d => d.grade))], [items]);
+  const evolvesIntoMap = useMemo(() => {
+    const m = {};
+    items.forEach(it => { if (it.baseItem) m[it.baseItem] = it.name; });
+    return m;
+  }, [items]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -127,7 +140,7 @@ export default function App() {
       <div id="count">{t.count(filtered.length)}</div>
       <div id="list">
         {filtered.map((it, i) => (
-          <Card key={it.name + i} item={it} query={query.trim().toLowerCase()} t={t} />
+          <Card key={it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.name]} />
         ))}
       </div>
     </>
