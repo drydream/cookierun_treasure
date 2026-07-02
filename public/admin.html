@@ -37,6 +37,17 @@
 
   #loginView { max-width: 320px; margin: 100px auto; text-align: center; }
   #loginView input { width: 100%; font-size: 15px; padding: 8px; box-sizing: border-box; margin-bottom: 10px; }
+
+  .tb-row { display: flex; border-bottom: 2px solid #000; background: #1a1a1a; }
+  .tb-label { width: 90px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; font-size: 12px; padding: 8px; }
+  .tb-dropzone { flex: 1; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px; padding: 8px; min-height: 64px; }
+  .tb-dropzone.tb-over { background: rgba(255,255,255,0.15); }
+  #tierPool { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; min-height: 64px; background: #f5f5f5; border-radius: 8px; margin-top: 8px; }
+  #tierPool.tb-over { background: #e8e8e8; }
+  .tb-chip { display: flex; flex-direction: column; align-items: center; width: 64px; cursor: grab; user-select: none; }
+  .tb-chip img { width: 44px; height: 44px; object-fit: contain; background: #eee; border-radius: 6px; }
+  .tb-chip span { font-size: 10px; text-align: center; line-height: 1.15; color: #333; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .tb-row .tb-chip span { color: #eee; }
 </style>
 </head>
 <body>
@@ -66,6 +77,7 @@
     </label>
     <label style="white-space:nowrap"><input type="checkbox" id="onlyUntranslated"> only untranslated</label>
     <button id="addBtn" style="font-size:13px;padding:4px 10px">+ Add new</button>
+    <button id="tierBuilderBtn" style="font-size:13px;padding:4px 10px">Tier Builder</button>
     <button id="dedupeBtn" style="font-size:13px;padding:4px 10px">Merge duplicates</button>
     <button id="importBtn" style="font-size:13px;padding:4px 10px">Import/reset from JSON files</button>
     <div id="summary"></div>
@@ -120,11 +132,23 @@
   </div>
 </div>
 
+<div id="tierBuilderView" style="display:none">
+  <button id="backFromTierBuilder">&larr; Back to list</button>
+  <p style="color:#666;font-size:13px">Drag a base-form item into a tier row to rank it. Drag it back down to the pool to unrank it.</p>
+  <div id="tierBuilderRows"></div>
+  <h3>Unranked (base items)</h3>
+  <div id="tierPool"></div>
+</div>
+
 <script>
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZGhzbnlubGx6b2l0Ym9sbmdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NTk3MDYsImV4cCI6MjA5ODUzNTcwNn0.yBoBJ3R_AHpjNQG1ikIwfXFOLfWQWSiwZgLaP8m-hxI';
 
 const TIERS = ['power plus (SSSS)', 'SSS', 'SS', 'S', 'A', 'B', 'E', 'F', 'ขยะ', 'เฉพาะทาง'];
+const TIER_COLORS = {
+  'power plus (SSSS)': '#c3d4f5', SSS: '#ef5350', SS: '#ffb74d', S: '#fff176',
+  A: '#c5e1a5', B: '#81c784', E: '#90a4ae', F: '#f48fb1', ขยะ: '#ffd54f', เฉพาะทาง: '#81d4fa',
+};
 TIERS.forEach(tier => {
   document.getElementById('tierFilter').insertAdjacentHTML('beforeend', `<option value="${tier}">${tier}</option>`);
 });
@@ -168,7 +192,16 @@ function renderDatalist() {
 function showApp() {
   document.getElementById('loginView').style.display = 'none';
   document.getElementById('listView').style.display = 'block';
-  loadItems().then(data => { items = data; renderDatalist(); renderList(); });
+  loadItems().then(data => {
+    items = data;
+    renderDatalist();
+    renderList();
+    const editId = new URLSearchParams(location.search).get('edit');
+    if (editId) {
+      const i = items.findIndex(it => it.id === parseInt(editId));
+      if (i !== -1) openEdit(i);
+    }
+  });
 }
 
 if (password) showApp();
@@ -252,6 +285,78 @@ function backToList() {
   document.getElementById('editView').style.display = 'none';
   document.getElementById('listView').style.display = 'block';
   renderList();
+}
+
+function openTierBuilder() {
+  document.getElementById('listView').style.display = 'none';
+  document.getElementById('tierBuilderView').style.display = 'block';
+  renderTierBuilder();
+}
+
+function backFromTierBuilder() {
+  document.getElementById('tierBuilderView').style.display = 'none';
+  document.getElementById('listView').style.display = 'block';
+  renderList();
+}
+
+function tbChip(it) {
+  const el = document.createElement('div');
+  el.className = 'tb-chip';
+  el.draggable = true;
+  el.title = it.name;
+  el.dataset.id = it.id;
+  el.innerHTML = `<img src="${imgSrc(it.image)}" loading="lazy"><span>${escapeHtml(it.name)}</span>`;
+  el.ondragstart = e => e.dataTransfer.setData('text/plain', String(it.id));
+  return el;
+}
+
+function wireTbDropzone(zone, tier) {
+  zone.ondragover = e => { e.preventDefault(); zone.classList.add('tb-over'); };
+  zone.ondragleave = () => zone.classList.remove('tb-over');
+  zone.ondrop = async e => {
+    e.preventDefault();
+    zone.classList.remove('tb-over');
+    const id = parseInt(e.dataTransfer.getData('text/plain'));
+    const it = items.find(x => x.id === id);
+    if (!it || it.tier === tier) return;
+    const prevTier = it.tier;
+    it.tier = tier;
+    renderTierBuilder();
+    const res = await fetch('/api/admin/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password, id, tier }),
+    });
+    if (!res.ok) {
+      it.tier = prevTier;
+      renderTierBuilder();
+      const data = await res.json().catch(() => ({}));
+      alert('Failed to save tier: ' + (data.error || res.status));
+      if (res.status === 401) localStorage.removeItem('adminPassword');
+    }
+  };
+}
+
+function renderTierBuilder() {
+  const rowsEl = document.getElementById('tierBuilderRows');
+  rowsEl.innerHTML = TIERS.map(tier => `
+    <div class="tb-row">
+      <div class="tb-label" style="background:${TIER_COLORS[tier]}">${escapeHtml(tier)}</div>
+      <div class="tb-dropzone" data-tier="${escapeHtml(tier)}"></div>
+    </div>
+  `).join('');
+
+  const baseItems = items.filter(it => it.type !== 'evolved');
+  TIERS.forEach(tier => {
+    const zone = rowsEl.querySelector(`.tb-dropzone[data-tier="${CSS.escape(tier)}"]`);
+    baseItems.filter(it => it.tier === tier).forEach(it => zone.appendChild(tbChip(it)));
+    wireTbDropzone(zone, tier);
+  });
+
+  const poolZone = document.getElementById('tierPool');
+  poolZone.innerHTML = '';
+  baseItems.filter(it => !it.tier).forEach(it => poolZone.appendChild(tbChip(it)));
+  wireTbDropzone(poolZone, null);
 }
 
 function renderEdit() {
@@ -419,6 +524,8 @@ document.getElementById('imageFile').onchange = async (e) => {
 };
 
 document.getElementById('addBtn').onclick = openAdd;
+document.getElementById('tierBuilderBtn').onclick = openTierBuilder;
+document.getElementById('backFromTierBuilder').onclick = backFromTierBuilder;
 
 document.getElementById('dedupeBtn').onclick = async () => {
   if (!confirm('Merge LINE/Kakao-Global treasures that are the same item (same name, or same cookie/pet + grade + type). Only removes the Kakao/Global duplicate row, keeps all your edits. Continue?')) return;

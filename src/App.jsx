@@ -45,6 +45,7 @@ const i18n = {
     tierEmpty: 'No treasures ranked yet',
     tierFormBase: 'Base form',
     tierFormEvolved: 'Evolved form',
+    editBtn: '✎ Edit',
   },
   th: {
     title: 'ค้นหาสมบัติ Cookie Run Classic',
@@ -73,6 +74,7 @@ const i18n = {
     tierEmpty: 'ยังไม่มีการจัดอันดับ',
     tierFormBase: 'ก่อนวิวัฒนาการ',
     tierFormEvolved: 'หลังวิวัฒนาการ',
+    editBtn: '✎ แก้ไข',
   },
 };
 
@@ -113,7 +115,7 @@ function RelatedItem({ name, image, onJump }) {
   );
 }
 
-function Card({ item, query, t, evolvesTo, imageByName, onJump }) {
+function Card({ item, query, t, evolvesTo, imageByName, onJump, isAdmin }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="card">
@@ -124,6 +126,7 @@ function Card({ item, query, t, evolvesTo, imageByName, onJump }) {
         <span className="version-tag">{item.version === 'kr' ? t.versionKr : t.versionLine}</span>
         {item.type === 'evolved' && <span className="evolved-tag">{t.evolved}</span>}
         {item.tier && <span className="tier-tag">{item.tier}</span>}
+        {isAdmin && <a className="admin-edit-link" href={`admin.html?edit=${item.id}`} target="_blank" rel="noopener">{t.editBtn}</a>}
         {item.effect ? (
           <div className="effect">{highlight(item.effect, query)}</div>
         ) : (
@@ -179,7 +182,7 @@ function HomePage({ t, onNavigate }) {
   );
 }
 
-function TierListPage({ items, t, onSelect }) {
+function TierListPage({ items, t, onSelect, isAdmin }) {
   const [showEvolved, setShowEvolved] = useState(false);
   return (
     <div>
@@ -198,22 +201,24 @@ function TierListPage({ items, t, onSelect }) {
                 {list.map((it, i) => {
                   const display = showEvolved ? (items.find(x => x.baseItem === it.name) || it) : it;
                   return (
-                    <button
-                      type="button"
-                      key={it.version + it.name + i}
-                      className="tier-item"
-                      title={display.name}
-                      onClick={() => onSelect(display.name)}
-                    >
-                      <img
-                        className="tier-icon"
-                        src={display.localImage}
-                        alt=""
-                        loading="lazy"
-                        onError={e => { e.target.style.visibility = 'hidden'; }}
-                      />
-                      <span className="tier-name">{display.name}</span>
-                    </button>
+                    <div className="tier-item" key={it.version + it.name + i}>
+                      <button
+                        type="button"
+                        className="tier-item-btn"
+                        title={display.name}
+                        onClick={() => onSelect(display.name)}
+                      >
+                        <img
+                          className="tier-icon"
+                          src={display.localImage}
+                          alt=""
+                          loading="lazy"
+                          onError={e => { e.target.style.visibility = 'hidden'; }}
+                        />
+                        <span className="tier-name">{display.name}</span>
+                      </button>
+                      {isAdmin && <a className="admin-edit-link tier-edit-link" href={`admin.html?edit=${display.id}`} target="_blank" rel="noopener">{t.editBtn}</a>}
+                    </div>
                   );
                 })}
               </div>
@@ -248,10 +253,12 @@ export default function App() {
   const [tier, setTier] = useState('all');
   const [lang, setLang] = useState('en');
   const [page, setPage] = useState('home');
+  const isAdmin = !!localStorage.getItem('adminPassword');
 
   useEffect(() => {
     fetchAllTreasures().then(rows => {
       setItems(rows.map(row => ({
+        id: row.id,
         name: row.name,
         grade: row.grade,
         section: row.category,
@@ -358,7 +365,7 @@ export default function App() {
           <div id="count">{t.count(filtered.length)}</div>
           <div id="list">
             {visibleItems.map((it, i) => (
-              <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} onJump={jumpTo} />
+              <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} onJump={jumpTo} isAdmin={isAdmin} />
             ))}
           </div>
           {visibleCount < filtered.length && (
@@ -366,7 +373,7 @@ export default function App() {
           )}
         </>
       )}
-      {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
+      {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} isAdmin={isAdmin} />}
     </>
   );
 }

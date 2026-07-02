@@ -38,6 +38,8 @@ h1 { text-align: center; }
 .card .evolved-tag { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.3rem; background: #f0c419; color: #4a2e1e; }
 .card .version-tag { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.3rem; background: #eaf2f8; color: #3a6b8a; }
 .card .tier-tag { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.3rem; background: #7a4fa3; color: #fff; }
+.admin-edit-link { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.3rem; background: #e8f5e9; color: #2e7d32; text-decoration: none; }
+.admin-edit-link:hover { background: #c8e6c9; }
 .card .effect { margin: 0.3rem 0 0; white-space: pre-line; }
 .card .effect.muted { color: #aaa; font-style: italic; }
 .card .blessed { margin: 0.3rem 0 0; white-space: pre-line; color: #7a4fa3; }
@@ -112,9 +114,10 @@ mark { background: #ffe08a; padding: 0 2px; }
 .tier-row:last-child { border-bottom: none; }
 .tier-label { width: 90px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; font-size: 0.78rem; padding: 0.4rem; text-transform: capitalize; }
 .tier-items { flex: 1; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px; padding: 8px; min-height: 70px; }
-.tier-item { display: flex; flex-direction: column; align-items: center; width: 66px; border: none; background: none; padding: 2px; cursor: pointer; }
+.tier-item { display: flex; flex-direction: column; align-items: center; width: 66px; }
+.tier-item-btn { display: flex; flex-direction: column; align-items: center; width: 100%; border: none; background: none; padding: 2px; cursor: pointer; }
 .tier-icon { width: 48px; height: 48px; object-fit: contain; background: linear-gradient(135deg, #fceff9, #e0d4f7); border-radius: 8px; }
-.tier-item:hover .tier-icon { outline: 2px solid #fff; }
+.tier-item-btn:hover .tier-icon { outline: 2px solid #fff; }
 .tier-name {
   margin-top: 3px;
   font-size: 0.62rem;
@@ -127,3 +130,4 @@ mark { background: #ffe08a; padding: 0 2px; }
   overflow: hidden;
 }
 .tier-empty { color: #888; font-size: 0.85rem; align-self: center; padding: 0 0.5rem; }
+.tier-edit-link { margin: 2px 0 0; font-size: 0.55rem; padding: 0 0.3rem; }
