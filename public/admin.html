@@ -65,6 +65,7 @@
       </select>
     </label>
     <label style="white-space:nowrap"><input type="checkbox" id="onlyUntranslated"> only untranslated</label>
+    <button id="addBtn" style="font-size:13px;padding:4px 10px">+ Add new</button>
     <button id="dedupeBtn" style="font-size:13px;padding:4px 10px">Merge duplicates</button>
     <button id="importBtn" style="font-size:13px;padding:4px 10px">Import/reset from JSON files</button>
     <div id="summary"></div>
@@ -80,8 +81,15 @@
   <div class="card" style="margin-top:10px">
     <img id="img">
     <div style="flex:1">
-      <input id="nameInput">
-      <div class="grade" id="gradeInfo"></div>
+      <input id="nameInput" placeholder="Name">
+      <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+        <select id="sourceInput">
+          <option value="line">LINE</option>
+          <option value="kr">Kakao/Global</option>
+        </select>
+        <input id="gradeInput" placeholder="Grade (S/A/B/C)" style="width:110px">
+        <input id="imageInput" placeholder="Image path, e.g. images/foo.webp" style="flex:1;min-width:180px">
+      </div>
       <div class="grade" id="krName"></div>
     </div>
   </div>
@@ -118,7 +126,12 @@ document.getElementById('tierInput').innerHTML =
 
 let items = [];
 let idx = 0;
+let isNew = false;
 let password = localStorage.getItem('adminPassword') || '';
+
+function blankDraft() {
+  return { id: null, source: 'line', name: '', grade: '', category: '', effect: '', tier: '', kr_name: null, kr_ability: null, image: '' };
+}
 
 async function loadItems() {
   // Supabase caps each response at 1000 rows regardless of Range, so page
@@ -203,29 +216,45 @@ function renderList() {
 }
 
 function openEdit(i) {
+  isNew = false;
   idx = i;
   document.getElementById('listView').style.display = 'none';
   document.getElementById('editView').style.display = 'block';
   renderEdit();
 }
 
+function openAdd() {
+  isNew = true;
+  document.getElementById('listView').style.display = 'none';
+  document.getElementById('editView').style.display = 'block';
+  renderEdit();
+}
+
 function backToList() {
+  isNew = false;
   document.getElementById('editView').style.display = 'none';
   document.getElementById('listView').style.display = 'block';
   renderList();
 }
 
 function renderEdit() {
-  const it = items[idx];
+  const it = isNew ? blankDraft() : items[idx];
   document.getElementById('img').src = it.image ? '/' + it.image : '';
   document.getElementById('nameInput').value = it.name;
-  document.getElementById('gradeInfo').textContent = it.grade + '-grade · ' + it.category + ' · ' + (it.source === 'kr' ? 'Kakao/Global' : 'LINE');
+  document.getElementById('sourceInput').value = it.source;
+  document.getElementById('gradeInput').value = it.grade || '';
+  document.getElementById('imageInput').value = it.image || '';
   document.getElementById('krName').textContent = it.kr_name || '';
   document.getElementById('krBlock').style.display = it.source === 'kr' ? 'block' : 'none';
   document.getElementById('kr').textContent = it.kr_ability || '(no ability text in source)';
   document.getElementById('categoryInput').value = it.category || '';
   document.getElementById('tierInput').value = it.tier || '';
   document.getElementById('effectInput').value = it.effect || '';
+  document.getElementById('save').textContent = isNew ? 'Add' : 'Save';
+  document.getElementById('saveNext').style.display = isNew ? 'none' : '';
+  document.getElementById('prev').style.display = isNew ? 'none' : '';
+  document.getElementById('skip').style.display = isNew ? 'none' : '';
+  document.getElementById('delete').style.display = isNew ? 'none' : '';
 }
 
 function moveWithinFiltered(dir) {
@@ -237,21 +266,48 @@ function moveWithinFiltered(dir) {
 }
 
 async function save() {
-  const it = items[idx];
   const name = document.getElementById('nameInput').value.trim();
+  const source = document.getElementById('sourceInput').value;
+  const grade = document.getElementById('gradeInput').value.trim();
+  const image = document.getElementById('imageInput').value.trim();
   const category = document.getElementById('categoryInput').value.trim();
   const tier = document.getElementById('tierInput').value || null;
   const effect = document.getElementById('effectInput').value.trim();
   const statusEl = document.getElementById('status');
   statusEl.className = '';
+
+  if (isNew) {
+    statusEl.textContent = 'Adding...';
+    const res = await fetch('/api/admin/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password, source, name, grade, category, tier, effect, image }),
+    });
+    if (res.ok) {
+      statusEl.textContent = 'Added';
+      items = await loadItems();
+      backToList();
+    } else {
+      const data = await res.json().catch(() => ({}));
+      statusEl.className = 'error';
+      statusEl.textContent = 'Error: ' + (data.error || res.status);
+      if (res.status === 401) localStorage.removeItem('adminPassword');
+    }
+    return;
+  }
+
+  const it = items[idx];
   statusEl.textContent = 'Saving...';
   const res = await fetch('/api/admin/save', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ password, id: it.id, name, category, tier, effect }),
+    body: JSON.stringify({ password, id: it.id, name, source, grade, category, tier, effect, image }),
   });
   if (res.ok) {
     it.name = name;
+    it.source = source;
+    it.grade = grade;
+    it.image = image;
     it.category = category;
     it.tier = tier;
     it.effect = effect;
@@ -289,6 +345,8 @@ async function deleteCurrent() {
     if (res.status === 401) localStorage.removeItem('adminPassword');
   }
 }
+
+document.getElementById('addBtn').onclick = openAdd;
 
 document.getElementById('dedupeBtn').onclick = async () => {
   if (!confirm('Merge LINE/Kakao-Global treasures that are the same item (same name, or same cookie/pet + grade + type). Only removes the Kakao/Global duplicate row, keeps all your edits. Continue?')) return;

@@ -7,11 +7,11 @@ const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 
 // Supabase caps each response at 1000 rows regardless of Range, so page
 // through in batches until a short page signals the end.
-async function fetchAllExistingTiers(serviceKey) {
+async function fetchAllExisting(serviceKey) {
   const PAGE = 1000;
   let all = [];
   for (let offset = 0; ; offset += PAGE) {
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/treasures?select=source,name,tier&order=id.asc`, {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/treasures?select=*&order=id.asc`, {
       headers: {
         apikey: serviceKey,
         Authorization: `Bearer ${serviceKey}`,
@@ -49,7 +49,7 @@ export default async function handler(req, res) {
     const [lineItems, krRaw, existing] = await Promise.all([
       fetch(`${base}/treasures.json`).then(r => r.json()),
       fetch(`${base}/treasures-kr.json`).then(r => r.json()),
-      fetchAllExistingTiers(serviceKey),
+      fetchAllExisting(serviceKey),
     ]);
 
     // Import wipes and rebuilds the whole table, but tier ranks are set by
@@ -112,7 +112,18 @@ export default async function handler(req, res) {
         tier: tierByKey['kr|' + it.englishName] || null,
       }));
 
-    const rows = [...lineRows, ...krRows];
+    // Items added by hand via the admin "+ Add new" button have no JSON
+    // backing at all, so carry those over unchanged too (minus their old id,
+    // which gets replaced on insert).
+    const coveredKeys = new Set([
+      ...lineRows.map(r => r.source + '|' + r.name),
+      ...krRows.map(r => r.source + '|' + r.name),
+    ]);
+    const manualRows = existing
+      .filter(it => !coveredKeys.has(it.source + '|' + it.name))
+      .map(({ id, ...rest }) => rest);
+
+    const rows = [...lineRows, ...krRows, ...manualRows];
 
     // Clear existing rows so this endpoint is safely re-runnable.
     const delRes = await fetch(`${SUPABASE_URL}/rest/v1/treasures?id=gt.0`, {
