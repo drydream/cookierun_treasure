@@ -46,6 +46,7 @@
 <div id="listView" style="display:none">
   <div class="top">
     <input id="search" placeholder="Search by name...">
+    <label style="white-space:nowrap"><input type="checkbox" id="onlyUntranslated"> only untranslated</label>
     <div id="summary"></div>
   </div>
   <table>
@@ -98,17 +99,21 @@ document.getElementById('loginBtn').onclick = () => {
 
 function filteredIndices() {
   const q = document.getElementById('search').value.trim().toLowerCase();
-  if (!q) return items.map((it, i) => i);
-  return items.map((it, i) => i).filter(i =>
-    items[i].englishName.toLowerCase().includes(q) || (items[i].name || '').includes(q)
-  );
+  const onlyUntranslated = document.getElementById('onlyUntranslated').checked;
+  return items.map((it, i) => i).filter(i => {
+    const it = items[i];
+    if (onlyUntranslated && !(it.ability && !it.abilityEn)) return false;
+    if (!q) return true;
+    return it.englishName.toLowerCase().includes(q) || (it.name || '').includes(q);
+  });
 }
 
 function renderList() {
   const vis = filteredIndices();
   const translatedCount = items.filter(it => it.abilityEn).length;
+  const untranslatedCount = items.filter(it => it.ability && !it.abilityEn).length;
   document.getElementById('summary').textContent =
-    `${vis.length} shown (of ${items.length}) · ${translatedCount} translated total`;
+    `${vis.length} shown (of ${items.length}) · ${translatedCount} translated · ${untranslatedCount} untranslated`;
   const rows = vis.map(i => {
     const it = items[i];
     const img = it.localImage ? '/' + it.localImage : '';
@@ -187,6 +192,7 @@ async function save() {
 }
 
 document.getElementById('search').oninput = renderList;
+document.getElementById('onlyUntranslated').onchange = renderList;
 document.getElementById('backToList').onclick = backToList;
 document.getElementById('prev').onclick = () => moveWithinFiltered(-1);
 document.getElementById('skip').onclick = () => moveWithinFiltered(1);
