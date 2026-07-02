@@ -38,6 +38,9 @@
   #loginView { max-width: 320px; margin: 100px auto; text-align: center; }
   #loginView input { width: 100%; font-size: 15px; padding: 8px; box-sizing: border-box; margin-bottom: 10px; }
 
+  #sectionTabs button { font-size: 14px; padding: 6px 14px; cursor: pointer; }
+  #sectionTabs button.active { background: #d9a066; color: #fff; border-color: #d9a066; }
+
   .tb-row { display: flex; border-bottom: 2px solid #000; background: #1a1a1a; }
   .tb-label { width: 90px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; font-size: 12px; padding: 8px; }
   .tb-dropzone { flex: 1; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px; padding: 8px; min-height: 64px; }
@@ -57,6 +60,12 @@
   <input id="password" type="password">
   <button id="loginBtn">Enter</button>
   <div id="loginStatus" style="color:#c00"></div>
+</div>
+
+<div id="sectionTabs" style="display:none;margin-bottom:12px">
+  <button id="tabTreasures" class="active">Treasures</button>
+  <button id="tabCookies">Cookies</button>
+  <button id="tabPets">Pets</button>
 </div>
 
 <div id="listView" style="display:none">
@@ -142,6 +151,51 @@
   <div id="tierPool"></div>
 </div>
 
+<div id="charListView" style="display:none">
+  <div class="top">
+    <input id="charSearch" placeholder="Search by name...">
+    <label style="white-space:nowrap">grade:
+      <select id="charGradeFilter">
+        <option value="all">All</option>
+      </select>
+    </label>
+    <div id="charSummary"></div>
+  </div>
+  <table>
+    <thead><tr><th></th><th>Name</th><th>Grade</th><th>Ability (EN)</th><th></th></tr></thead>
+    <tbody id="charRows"></tbody>
+  </table>
+</div>
+
+<div id="charEditView" style="display:none">
+  <button id="charBackToList">&larr; Back to list</button>
+  <div class="card" style="margin-top:10px">
+    <img id="charImg">
+    <div style="flex:1">
+      <input id="charNameInput" placeholder="Name">
+      <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+        <input id="charGradeInput" placeholder="Grade" style="width:110px">
+        <input id="charImageInput" placeholder="Image path, e.g. images-char/foo.png" style="flex:1;min-width:180px">
+        <button type="button" id="charUploadBtn" style="font-size:13px;padding:6px 10px">Upload image</button>
+        <input type="file" id="charImageFile" accept="image/*" style="display:none">
+      </div>
+      <input id="charKrNameInput" placeholder="Korean name" style="margin-top:6px;width:100%;box-sizing:border-box">
+    </div>
+  </div>
+  <div id="charKrBlock">
+    <label class="field">Korean ability text (reference)</label>
+    <div class="kr" id="charKr"></div>
+  </div>
+  <label class="field">Ability text (EN)</label>
+  <textarea id="charAbilityEnInput"></textarea>
+  <div class="nav">
+    <button id="charPrev">&larr; Prev</button>
+    <button id="charSave">Save</button>
+    <button id="charSkip">Skip &rarr;</button>
+    <span id="charStatus"></span>
+  </div>
+</div>
+
 <script>
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZGhzbnlubGx6b2l0Ym9sbmdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NTk3MDYsImV4cCI6MjA5ODUzNTcwNn0.yBoBJ3R_AHpjNQG1ikIwfXFOLfWQWSiwZgLaP8m-hxI';
@@ -193,6 +247,7 @@ function renderDatalist() {
 
 function showApp() {
   document.getElementById('loginView').style.display = 'none';
+  document.getElementById('sectionTabs').style.display = 'block';
   document.getElementById('listView').style.display = 'block';
   loadItems().then(data => {
     items = data;
@@ -204,6 +259,7 @@ function showApp() {
       if (i !== -1) openEdit(i);
     }
   });
+  loadCharacters().then(data => { characters = data; });
 }
 
 if (password) showApp();
@@ -590,6 +646,7 @@ document.getElementById('importCharsBtn').onclick = async () => {
   document.getElementById('importCharsBtn').textContent = 'Import Cookies & Pets';
   if (res.ok) {
     alert('Imported ' + data.imported + ' cookies/pets.');
+    characters = await loadCharacters();
   } else {
     alert('Error: ' + (data.error || res.status));
   }
@@ -605,6 +662,187 @@ document.getElementById('skip').onclick = () => moveWithinFiltered(1);
 document.getElementById('save').onclick = save;
 document.getElementById('saveNext').onclick = async () => { await save(); moveWithinFiltered(1); };
 document.getElementById('delete').onclick = deleteCurrent;
+
+// --- Cookies / Pets section ---
+let characters = [];
+let charKind = 'cookie';
+let charIdx = 0;
+
+async function loadCharacters() {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/characters?select=*&order=name.asc`, {
+    headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
+  });
+  return res.json();
+}
+
+function hideAllViews() {
+  ['listView', 'editView', 'tierBuilderView', 'charListView', 'charEditView'].forEach(id => {
+    document.getElementById(id).style.display = 'none';
+  });
+}
+
+function setActiveTab(id) {
+  ['tabTreasures', 'tabCookies', 'tabPets'].forEach(t => {
+    document.getElementById(t).classList.toggle('active', t === id);
+  });
+}
+
+function showTreasures() {
+  hideAllViews();
+  setActiveTab('tabTreasures');
+  document.getElementById('listView').style.display = 'block';
+}
+
+function showCharKind(kind) {
+  charKind = kind;
+  hideAllViews();
+  setActiveTab(kind === 'cookie' ? 'tabCookies' : 'tabPets');
+  document.getElementById('charListView').style.display = 'block';
+  const grades = ['all', ...new Set(characters.filter(c => c.kind === kind).map(c => c.grade).filter(Boolean))];
+  document.getElementById('charGradeFilter').innerHTML = grades.map(g => `<option value="${g}">${g === 'all' ? 'All' : g}</option>`).join('');
+  renderCharList();
+}
+
+function charFilteredIndices() {
+  const q = document.getElementById('charSearch').value.trim().toLowerCase();
+  const gradeFilter = document.getElementById('charGradeFilter').value;
+  return characters.map((c, i) => i).filter(i => {
+    const c = characters[i];
+    if (c.kind !== charKind) return false;
+    if (gradeFilter !== 'all' && c.grade !== gradeFilter) return false;
+    if (!q) return true;
+    return c.name.toLowerCase().includes(q) || (c.kr_name || '').includes(q);
+  });
+}
+
+function renderCharList() {
+  const vis = charFilteredIndices();
+  document.getElementById('charSummary').textContent = `${vis.length} shown`;
+  const rows = vis.map(i => {
+    const c = characters[i];
+    const img = imgSrc(c.image);
+    const abilityCell = c.ability_en
+      ? `<td class="effect" title="${escapeHtml(c.ability_en)}">${escapeHtml(c.ability_en)}</td>`
+      : `<td class="effect empty">(no translation)</td>`;
+    return `<tr>
+      <td class="thumb"><img src="${img}" loading="lazy"></td>
+      <td><div>${escapeHtml(c.name)}</div>${c.kr_name ? '<div class="krname">' + escapeHtml(c.kr_name) + '</div>' : ''}</td>
+      <td>${c.grade || ''}</td>
+      ${abilityCell}
+      <td class="actions"><button data-idx="${i}">Edit</button></td>
+    </tr>`;
+  }).join('');
+  document.getElementById('charRows').innerHTML = rows;
+  document.getElementById('charRows').querySelectorAll('button[data-idx]').forEach(btn => {
+    btn.onclick = () => openCharEdit(parseInt(btn.dataset.idx));
+  });
+}
+
+function openCharEdit(i) {
+  charIdx = i;
+  hideAllViews();
+  document.getElementById('charEditView').style.display = 'block';
+  renderCharEdit();
+}
+
+function charBackToList() {
+  hideAllViews();
+  document.getElementById('charListView').style.display = 'block';
+  renderCharList();
+}
+
+function renderCharEdit() {
+  const c = characters[charIdx];
+  document.getElementById('charImg').src = imgSrc(c.image);
+  document.getElementById('charNameInput').value = c.name;
+  document.getElementById('charGradeInput').value = c.grade || '';
+  document.getElementById('charImageInput').value = c.image || '';
+  document.getElementById('charKrNameInput').value = c.kr_name || '';
+  document.getElementById('charKr').textContent = c.ability || '(no ability text in source)';
+  document.getElementById('charAbilityEnInput').value = c.ability_en || '';
+}
+
+function moveCharWithinFiltered(dir) {
+  const vis = charFilteredIndices();
+  const pos = vis.indexOf(charIdx);
+  const next = vis[(pos + dir + vis.length) % vis.length];
+  charIdx = next !== undefined ? next : charIdx;
+  renderCharEdit();
+}
+
+async function saveCharacter() {
+  const c = characters[charIdx];
+  const name = document.getElementById('charNameInput').value.trim();
+  const grade = document.getElementById('charGradeInput').value.trim();
+  const image = document.getElementById('charImageInput').value.trim();
+  const kr_name = document.getElementById('charKrNameInput').value.trim();
+  const ability_en = document.getElementById('charAbilityEnInput').value.trim();
+  const statusEl = document.getElementById('charStatus');
+  statusEl.className = '';
+  statusEl.textContent = 'Saving...';
+  const res = await fetch('/api/admin/save-character', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password, id: c.id, name, kr_name, grade, ability_en, image }),
+  });
+  if (res.ok) {
+    Object.assign(c, { name, kr_name, grade, ability_en, image });
+    statusEl.textContent = 'Saved';
+    setTimeout(() => statusEl.textContent = '', 1500);
+  } else {
+    const data = await res.json().catch(() => ({}));
+    statusEl.className = 'error';
+    statusEl.textContent = 'Error: ' + (data.error || res.status);
+    if (res.status === 401) localStorage.removeItem('adminPassword');
+  }
+}
+
+document.getElementById('tabTreasures').onclick = showTreasures;
+document.getElementById('tabCookies').onclick = () => showCharKind('cookie');
+document.getElementById('tabPets').onclick = () => showCharKind('pet');
+document.getElementById('charSearch').oninput = renderCharList;
+document.getElementById('charGradeFilter').onchange = renderCharList;
+document.getElementById('charBackToList').onclick = charBackToList;
+document.getElementById('charPrev').onclick = () => moveCharWithinFiltered(-1);
+document.getElementById('charSkip').onclick = () => moveCharWithinFiltered(1);
+document.getElementById('charSave').onclick = saveCharacter;
+
+document.getElementById('charUploadBtn').onclick = () => document.getElementById('charImageFile').click();
+document.getElementById('charImageFile').onchange = async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  if (file.size > 4 * 1024 * 1024) {
+    alert('Image too large (max 4MB).');
+    e.target.value = '';
+    return;
+  }
+  const statusEl = document.getElementById('charStatus');
+  statusEl.className = '';
+  statusEl.textContent = 'Uploading image...';
+  const dataBase64 = await new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result.split(',')[1]);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+  const res = await fetch('/api/admin/upload', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password, filename: file.name, contentType: file.type, dataBase64 }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (res.ok) {
+    document.getElementById('charImageInput').value = data.url;
+    document.getElementById('charImg').src = data.url;
+    statusEl.textContent = 'Image uploaded';
+    setTimeout(() => statusEl.textContent = '', 1500);
+  } else {
+    statusEl.className = 'error';
+    statusEl.textContent = 'Error: ' + (data.error || res.status);
+    if (res.status === 401) localStorage.removeItem('adminPassword');
+  }
+  e.target.value = '';
+};
 </script>
 </body>
 </html>
