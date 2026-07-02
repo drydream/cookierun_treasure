@@ -58,6 +58,7 @@
       </select>
     </label>
     <label style="white-space:nowrap"><input type="checkbox" id="onlyUntranslated"> only untranslated</label>
+    <button id="importBtn" style="font-size:13px;padding:4px 10px">Import/reset from JSON files</button>
     <div id="summary"></div>
   </div>
   <table>
@@ -92,42 +93,28 @@
 </div>
 
 <script>
+const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZGhzbnlubGx6b2l0Ym9sbmdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NTk3MDYsImV4cCI6MjA5ODUzNTcwNn0.yBoBJ3R_AHpjNQG1ikIwfXFOLfWQWSiwZgLaP8m-hxI';
+
 let items = [];
 let idx = 0;
 let password = localStorage.getItem('adminPassword') || '';
 
+async function loadItems() {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/treasures?select=*&order=id.asc`, {
+    headers: {
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+      Range: '0-4999',
+    },
+  });
+  return res.json();
+}
+
 function showApp() {
   document.getElementById('loginView').style.display = 'none';
   document.getElementById('listView').style.display = 'block';
-  Promise.all([
-    fetch('/treasures.json').then(r => r.json()),
-    fetch('/treasures-kr.json').then(r => r.json()),
-  ]).then(([lineRaw, krRaw]) => {
-    const lineItems = lineRaw.map(it => ({
-      source: 'line',
-      originalName: it.name,
-      name: it.name,
-      krName: '',
-      grade: it.grade,
-      category: it.section,
-      effect: it.effect,
-      krAbility: '',
-      localImage: it.localImage,
-    }));
-    const krItems = krRaw.map(it => ({
-      source: 'kr',
-      id: it.id,
-      name: it.englishName,
-      krName: it.name,
-      grade: it.grade,
-      category: it.category,
-      effect: it.abilityEn,
-      krAbility: it.ability,
-      localImage: it.localImage,
-    }));
-    items = [...lineItems, ...krItems];
-    renderList();
-  });
+  loadItems().then(data => { items = data; renderList(); });
 }
 
 if (password) showApp();
@@ -138,6 +125,10 @@ document.getElementById('loginBtn').onclick = () => {
   showApp();
 };
 
+function escapeHtml(s) {
+  return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
 function filteredIndices() {
   const q = document.getElementById('search').value.trim().toLowerCase();
   const onlyUntranslated = document.getElementById('onlyUntranslated').checked;
@@ -147,12 +138,8 @@ function filteredIndices() {
     if (sourceFilter !== 'all' && it.source !== sourceFilter) return false;
     if (onlyUntranslated && it.effect) return false;
     if (!q) return true;
-    return it.name.toLowerCase().includes(q) || (it.krName || '').includes(q);
+    return it.name.toLowerCase().includes(q) || (it.kr_name || '').includes(q);
   });
-}
-
-function escapeHtml(s) {
-  return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 }
 
 function renderList() {
@@ -163,13 +150,13 @@ function renderList() {
     `${vis.length} shown (of ${items.length}) · ${translatedCount} with text · ${untranslatedCount} without`;
   const rows = vis.map(i => {
     const it = items[i];
-    const img = it.localImage ? '/' + it.localImage : '';
+    const img = it.image ? '/' + it.image : '';
     const effectCell = it.effect
       ? `<td class="effect" title="${escapeHtml(it.effect)}">${escapeHtml(it.effect)}</td>`
       : `<td class="effect empty">(no effect text)</td>`;
     return `<tr>
       <td class="thumb"><img src="${img}" loading="lazy"></td>
-      <td><div>${escapeHtml(it.name)}</div>${it.krName ? '<div class="krname">' + escapeHtml(it.krName) + '</div>' : ''}</td>
+      <td><div>${escapeHtml(it.name)}</div>${it.kr_name ? '<div class="krname">' + escapeHtml(it.kr_name) + '</div>' : ''}</td>
       <td class="src-${it.source}">${it.source === 'kr' ? 'Kakao/Global' : 'LINE'}</td>
       <td>${it.grade}</td>
       ${effectCell}
@@ -197,12 +184,12 @@ function backToList() {
 
 function renderEdit() {
   const it = items[idx];
-  document.getElementById('img').src = it.localImage ? '/' + it.localImage : '';
+  document.getElementById('img').src = it.image ? '/' + it.image : '';
   document.getElementById('nameInput').value = it.name;
   document.getElementById('gradeInfo').textContent = it.grade + '-grade · ' + it.category + ' · ' + (it.source === 'kr' ? 'Kakao/Global' : 'LINE');
-  document.getElementById('krName').textContent = it.krName;
+  document.getElementById('krName').textContent = it.kr_name || '';
   document.getElementById('krBlock').style.display = it.source === 'kr' ? 'block' : 'none';
-  document.getElementById('kr').textContent = it.krAbility || '(no ability text in source)';
+  document.getElementById('kr').textContent = it.kr_ability || '(no ability text in source)';
   document.getElementById('effectInput').value = it.effect || '';
 }
 
@@ -220,21 +207,17 @@ async function save() {
   const effect = document.getElementById('effectInput').value.trim();
   const statusEl = document.getElementById('status');
   statusEl.className = '';
-  statusEl.textContent = 'Saving (commits to GitHub, redeploy takes ~30-60s)...';
-  const body = it.source === 'kr'
-    ? { password, source: 'kr', id: it.id, englishName: name, abilityEn: effect }
-    : { password, source: 'line', originalName: it.originalName, name, effect };
+  statusEl.textContent = 'Saving...';
   const res = await fetch('/api/admin/save', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
+    body: JSON.stringify({ password, id: it.id, name, effect }),
   });
   if (res.ok) {
     it.name = name;
     it.effect = effect;
-    if (it.source === 'line') it.originalName = name;
     statusEl.textContent = 'Saved';
-    setTimeout(() => statusEl.textContent = '', 2000);
+    setTimeout(() => statusEl.textContent = '', 1500);
   } else {
     const data = await res.json().catch(() => ({}));
     statusEl.className = 'error';
@@ -244,6 +227,25 @@ async function save() {
     }
   }
 }
+
+document.getElementById('importBtn').onclick = async () => {
+  if (!confirm('This replaces all rows in the treasures table from public/treasures.json + treasures-kr.json. Continue?')) return;
+  document.getElementById('importBtn').textContent = 'Importing...';
+  const res = await fetch('/api/admin/import', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password }),
+  });
+  const data = await res.json().catch(() => ({}));
+  document.getElementById('importBtn').textContent = 'Import/reset from JSON files';
+  if (res.ok) {
+    alert('Imported ' + data.imported + ' rows.');
+    items = await loadItems();
+    renderList();
+  } else {
+    alert('Error: ' + (data.error || res.status));
+  }
+};
 
 document.getElementById('search').oninput = renderList;
 document.getElementById('onlyUntranslated').onchange = renderList;

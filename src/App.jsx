@@ -1,5 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 
+const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZGhzbnlubGx6b2l0Ym9sbmdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NTk3MDYsImV4cCI6MjA5ODUzNTcwNn0.yBoBJ3R_AHpjNQG1ikIwfXFOLfWQWSiwZgLaP8m-hxI';
+
 const i18n = {
   en: {
     title: 'Cookie Run Classic Treasure Search',
@@ -51,83 +54,66 @@ function highlight(text, q) {
   );
 }
 
-function RelatedItem({ name, image, versioned }) {
+function RelatedItem({ name, image, version }) {
   const content = (
     <>
       {image && <img className="inline-icon" src={image} alt="" loading="lazy" />}
       {name}
     </>
   );
-  return versioned === 'line'
+  return version === 'line'
     ? <a href={wikiUrl(name)} target="_blank" rel="noopener">{content}</a>
     : <span>{content}</span>;
 }
 
-function VariantBlock({ v, query, t, evolvesTo, imageByName }) {
+function Card({ item, query, t, evolvesTo, imageByName }) {
   const [open, setOpen] = useState(false);
-  return (
-    <div className="variant">
-      <span className="grade">{v.grade}-grade</span>
-      <span className="version-tag">{v.version === 'kr' ? t.versionKr : t.versionLine}</span>
-      {v.type === 'evolved' && <span className="evolved-tag">{t.evolved}</span>}
-      {v.effect ? (
-        <div className="effect">{highlight(v.effect, query)}</div>
-      ) : (
-        <div className="effect muted">{t.noAbility}</div>
-      )}
-      {v.blessedEffect && (
-        <div className="blessed"><span className="blessed-label">{t.blessed}</span> {highlight(v.blessedEffect, query)}</div>
-      )}
-      <div className="meta">{v.section}{v.extra ? ' — ' + v.extra : ''}</div>
-      {evolvesTo && (
-        <div className="evolves-to">
-          <span className="label">{t.evolvesTo}</span>{' '}
-          <RelatedItem name={evolvesTo} image={imageByName[v.version + '|' + evolvesTo]} versioned={v.version} />
-        </div>
-      )}
-      {v.baseItem && (
-        <>
-          <button type="button" className="recipe-btn" onClick={() => setOpen(o => !o)}>{t.recipeBtn}</button>
-          <div className={'recipe' + (open ? ' open' : '')}>
-            <div className="row">
-              <span className="label">{t.evolvedFrom}</span>{' '}
-              <RelatedItem name={v.baseItem} image={imageByName[v.version + '|' + v.baseItem]} versioned={v.version} />
-            </div>
-            {v.ingredients && (
-              <div className="row">
-                <span className="label">{t.ingredients}</span>{' '}
-                {v.ingredients.map((ing, i) => (
-                  <span key={ing.name}>
-                    {i > 0 && ', '}
-                    <a href={wikiUrl(ing.name)} target="_blank" rel="noopener">{ing.name}</a>
-                    {ing.grade ? ` (${ing.grade})` : ''}
-                  </span>
-                ))}
-              </div>
-            )}
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
-function Card({ item, variants, query, t, evolvesIntoMap, imageByName }) {
   return (
     <div className="card">
       <img src={item.localImage} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />
       <div className="body">
         <span className="name">{highlight(item.name, query)}</span>
-        {variants.map(v => (
-          <VariantBlock
-            key={v.version}
-            v={v}
-            query={query}
-            t={t}
-            evolvesTo={evolvesIntoMap[v.version + '|' + item.name]}
-            imageByName={imageByName}
-          />
-        ))}
+        <span className="grade">{item.grade}-grade</span>
+        <span className="version-tag">{item.version === 'kr' ? t.versionKr : t.versionLine}</span>
+        {item.type === 'evolved' && <span className="evolved-tag">{t.evolved}</span>}
+        {item.effect ? (
+          <div className="effect">{highlight(item.effect, query)}</div>
+        ) : (
+          <div className="effect muted">{t.noAbility}</div>
+        )}
+        {item.blessedEffect && (
+          <div className="blessed"><span className="blessed-label">{t.blessed}</span> {highlight(item.blessedEffect, query)}</div>
+        )}
+        <div className="meta">{item.section}{item.extra ? ' — ' + item.extra : ''}</div>
+        {evolvesTo && (
+          <div className="evolves-to">
+            <span className="label">{t.evolvesTo}</span>{' '}
+            <RelatedItem name={evolvesTo} image={imageByName[item.version + '|' + evolvesTo]} version={item.version} />
+          </div>
+        )}
+        {item.baseItem && (
+          <>
+            <button type="button" className="recipe-btn" onClick={() => setOpen(o => !o)}>{t.recipeBtn}</button>
+            <div className={'recipe' + (open ? ' open' : '')}>
+              <div className="row">
+                <span className="label">{t.evolvedFrom}</span>{' '}
+                <RelatedItem name={item.baseItem} image={imageByName[item.version + '|' + item.baseItem]} version={item.version} />
+              </div>
+              {item.ingredients && (
+                <div className="row">
+                  <span className="label">{t.ingredients}</span>{' '}
+                  {item.ingredients.map((ing, i) => (
+                    <span key={ing.name}>
+                      {i > 0 && ', '}
+                      <a href={wikiUrl(ing.name)} target="_blank" rel="noopener">{ing.name}</a>
+                      {ing.grade ? ` (${ing.grade})` : ''}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
@@ -142,67 +128,54 @@ export default function App() {
   const [lang, setLang] = useState('en');
 
   useEffect(() => {
-    Promise.all([
-      fetch('treasures.json').then(r => r.json()),
-      fetch('treasures-kr.json').then(r => r.json()),
-    ]).then(([lineItems, krRaw]) => {
-      const idToName = {};
-      krRaw.forEach(it => { idToName[it.id] = it.englishName; });
-      const krItems = krRaw.map(it => ({
-        name: it.englishName,
-        grade: it.grade,
-        section: it.category,
-        effect: it.abilityEn,
-        extra: '',
-        localImage: it.localImage || '',
-        type: it.evolvedFromId ? 'evolved' : 'base',
-        baseItem: it.evolvedFromId ? idToName[it.evolvedFromId] : undefined,
-        version: 'kr',
-      }));
-      const lineTagged = lineItems.map(it => ({ ...it, version: 'line' }));
-      const lineNames = new Set(lineTagged.map(it => it.name));
-
-      // Where a name exists in both LINE and Kakao/Global, keep only the LINE
-      // record — one database entry per treasure instead of showing both.
-      const krItemsUnique = krItems.filter(it => !lineNames.has(it.name));
-
-      const merged = [...lineTagged, ...krItemsUnique].map(v => ({
-        name: v.name,
-        localImage: v.localImage,
-        variants: [v],
-      }));
-      setItems(merged);
-    });
+    fetch(`${SUPABASE_URL}/rest/v1/treasures?select=*&order=id.asc`, {
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        Range: '0-4999',
+      },
+    })
+      .then(r => r.json())
+      .then(rows => {
+        setItems(rows.map(row => ({
+          name: row.name,
+          grade: row.grade,
+          section: row.category,
+          effect: row.effect,
+          extra: row.extra,
+          localImage: row.image,
+          type: row.type,
+          baseItem: row.base_item_name,
+          ingredients: row.ingredients,
+          blessedEffect: row.blessed_effect,
+          version: row.source,
+        })));
+      });
   }, []);
 
   const t = i18n[lang];
-  const grades = useMemo(() => ['all', ...new Set(items.flatMap(it => it.variants.map(v => v.grade)))], [items]);
+  const grades = useMemo(() => ['all', ...new Set(items.map(it => it.grade))], [items]);
   const evolvesIntoMap = useMemo(() => {
     const m = {};
-    items.forEach(it => it.variants.forEach(v => { if (v.baseItem) m[v.version + '|' + v.baseItem] = it.name; }));
+    items.forEach(it => { if (it.baseItem) m[it.version + '|' + it.baseItem] = it.name; });
     return m;
   }, [items]);
   const imageByName = useMemo(() => {
     const m = {};
-    items.forEach(it => it.variants.forEach(v => { m[v.version + '|' + it.name] = v.localImage || it.localImage; }));
+    items.forEach(it => { m[it.version + '|' + it.name] = it.localImage; });
     return m;
   }, [items]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return items
-      .map(it => {
-        const variants = version === 'all' ? it.variants : it.variants.filter(v => v.version === version);
-        return { ...it, variants };
-      })
-      .filter(it => {
-        if (!it.variants.length) return false;
-        if (grade !== 'all' && !it.variants.some(v => v.grade === grade)) return false;
-        if (typeFilter === 'evolved' && !it.variants.some(v => v.type === 'evolved')) return false;
-        if (!q) return true;
-        const text = (it.name + ' ' + it.variants.map(v => v.effect + ' ' + v.section + ' ' + v.extra + ' ' + (v.blessedEffect || '')).join(' ')).toLowerCase();
-        return text.includes(q);
-      });
+    return items.filter(it => {
+      if (grade !== 'all' && it.grade !== grade) return false;
+      if (typeFilter === 'evolved' && it.type !== 'evolved') return false;
+      if (version !== 'all' && it.version !== version) return false;
+      if (!q) return true;
+      const text = (it.name + ' ' + it.effect + ' ' + it.section + ' ' + (it.extra || '') + ' ' + (it.blessedEffect || '')).toLowerCase();
+      return text.includes(q);
+    });
   }, [items, query, grade, typeFilter, version]);
 
   const PAGE_SIZE = 60;
@@ -239,7 +212,7 @@ export default function App() {
       <div id="count">{t.count(filtered.length)}</div>
       <div id="list">
         {visibleItems.map((it, i) => (
-          <Card key={it.name + i} item={it} variants={it.variants} query={query.trim().toLowerCase()} t={t} evolvesIntoMap={evolvesIntoMap} imageByName={imageByName} />
+          <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} />
         ))}
       </div>
       {visibleCount < filtered.length && (
