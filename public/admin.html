@@ -88,6 +88,7 @@
     <button id="save">Save</button>
     <button id="saveNext">Save &amp; Next</button>
     <button id="skip">Skip &rarr;</button>
+    <button id="delete" style="background:#fdd;border-color:#c00">Delete</button>
     <span id="status"></span>
   </div>
 </div>
@@ -237,6 +238,29 @@ async function save() {
   }
 }
 
+async function deleteCurrent() {
+  const it = items[idx];
+  if (!confirm('Delete "' + it.name + '"? This cannot be undone.')) return;
+  const statusEl = document.getElementById('status');
+  statusEl.className = '';
+  statusEl.textContent = 'Deleting...';
+  const res = await fetch('/api/admin/delete', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password, id: it.id }),
+  });
+  if (res.ok) {
+    items.splice(idx, 1);
+    statusEl.textContent = '';
+    backToList();
+  } else {
+    const data = await res.json().catch(() => ({}));
+    statusEl.className = 'error';
+    statusEl.textContent = 'Error: ' + (data.error || res.status);
+    if (res.status === 401) localStorage.removeItem('adminPassword');
+  }
+}
+
 document.getElementById('importBtn').onclick = async () => {
   if (!confirm('This replaces all rows in the treasures table from public/treasures.json + treasures-kr.json. Continue?')) return;
   document.getElementById('importBtn').textContent = 'Importing...';
@@ -264,6 +288,7 @@ document.getElementById('prev').onclick = () => moveWithinFiltered(-1);
 document.getElementById('skip').onclick = () => moveWithinFiltered(1);
 document.getElementById('save').onclick = save;
 document.getElementById('saveNext').onclick = async () => { await save(); moveWithinFiltered(1); };
+document.getElementById('delete').onclick = deleteCurrent;
 </script>
 </body>
 </html>

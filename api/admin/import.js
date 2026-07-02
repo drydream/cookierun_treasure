@@ -29,6 +29,21 @@ export default async function handler(req, res) {
     krRaw.forEach(it => { idToName[it.id] = it.englishName; });
     const lineNames = new Set(lineItems.map(it => it.name));
 
+    // Some treasures are named differently between LINE and Kakao/Global
+    // (e.g. "Adventurer Cookie's Cinnamon Rope" vs "Adventurer Cookie Rope
+    // Baumkuchen") but are the same cookie/pet's signature item. Match them
+    // by owner name prefix + grade + base/evolved status and drop the KR
+    // duplicate too, same as an exact name match.
+    const excludedKrIds = new Set();
+    krRaw.forEach(it => { if (lineNames.has(it.englishName)) excludedKrIds.add(it.id); });
+    lineItems.forEach(it => {
+      if (!it.extra) return;
+      const cands = krRaw.filter(k => k.grade === it.grade && k.englishName
+        && k.englishName.startsWith(it.extra)
+        && (it.type === 'evolved' ? k.evolvedFromId != null : k.evolvedFromId == null));
+      if (cands.length === 1) excludedKrIds.add(cands[0].id);
+    });
+
     const lineRows = lineItems.map(it => ({
       source: 'line',
       name: it.name,
@@ -46,7 +61,7 @@ export default async function handler(req, res) {
     }));
 
     const krRows = krRaw
-      .filter(it => !lineNames.has(it.englishName))
+      .filter(it => !excludedKrIds.has(it.id))
       .map(it => ({
         source: 'kr',
         name: it.englishName,
