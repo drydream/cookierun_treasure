@@ -101,14 +101,23 @@ let idx = 0;
 let password = localStorage.getItem('adminPassword') || '';
 
 async function loadItems() {
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/treasures?select=*&order=id.asc`, {
-    headers: {
-      apikey: SUPABASE_ANON_KEY,
-      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-      Range: '0-4999',
-    },
-  });
-  return res.json();
+  // Supabase caps each response at 1000 rows regardless of Range, so page
+  // through in batches until a short page signals the end.
+  const PAGE = 1000;
+  let all = [];
+  for (let offset = 0; ; offset += PAGE) {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/treasures?select=*&order=id.asc`, {
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        Range: `${offset}-${offset + PAGE - 1}`,
+      },
+    });
+    const page = await res.json();
+    all = all.concat(page);
+    if (page.length < PAGE) break;
+  }
+  return all;
 }
 
 function showApp() {

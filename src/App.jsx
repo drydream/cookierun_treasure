@@ -21,6 +21,10 @@ const i18n = {
     versionLine: 'LINE',
     versionKr: 'Kakao/Global',
     loadMore: 'Load more',
+    donateBtn: '☕ Buy me a coffee',
+    donateTitle: 'Buy me a coffee',
+    donateBank: 'Kasikorn Bank',
+    donateClose: 'Close',
   },
   th: {
     title: 'ค้นหาสมบัติ Cookie Run Classic',
@@ -39,8 +43,32 @@ const i18n = {
     versionLine: 'LINE',
     versionKr: 'Kakao/Global',
     loadMore: 'โหลดเพิ่ม',
+    donateBtn: '☕ บริจาคค่ากาแฟ',
+    donateTitle: 'บริจาคค่ากาแฟ',
+    donateBank: 'ธนาคารกสิกรไทย',
+    donateClose: 'ปิด',
   },
 };
+
+// Supabase caps each response at 1000 rows regardless of the requested
+// Range, so page through in batches until a short page signals the end.
+async function fetchAllTreasures() {
+  const PAGE = 1000;
+  let all = [];
+  for (let offset = 0; ; offset += PAGE) {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/treasures?select=*&order=id.asc`, {
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        Range: `${offset}-${offset + PAGE - 1}`,
+      },
+    });
+    const page = await res.json();
+    all = all.concat(page);
+    if (page.length < PAGE) break;
+  }
+  return all;
+}
 
 function wikiUrl(name) {
   return 'https://cookierun.fandom.com/wiki/' + encodeURIComponent(name.replace(/ /g, '_'));
@@ -119,38 +147,44 @@ function Card({ item, query, t, evolvesTo, imageByName }) {
   );
 }
 
+function DonateModal({ t, onClose }) {
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal donate-modal" onClick={e => e.stopPropagation()}>
+        <button type="button" className="modal-close" onClick={onClose}>&times;</button>
+        <h2>{t.donateTitle}</h2>
+        <p className="donate-bank">{t.donateBank}: 010-2-59224-9</p>
+        <img className="donate-qr" src="donate-qr.jpg" alt="Donate QR code" />
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [items, setItems] = useState([]);
   const [query, setQuery] = useState('');
   const [grade, setGrade] = useState('all');
   const [typeFilter, setTypeFilter] = useState('all');
+  const [showDonate, setShowDonate] = useState(false);
   const [version, setVersion] = useState('all');
   const [lang, setLang] = useState('en');
 
   useEffect(() => {
-    fetch(`${SUPABASE_URL}/rest/v1/treasures?select=*&order=id.asc`, {
-      headers: {
-        apikey: SUPABASE_ANON_KEY,
-        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-        Range: '0-4999',
-      },
-    })
-      .then(r => r.json())
-      .then(rows => {
-        setItems(rows.map(row => ({
-          name: row.name,
-          grade: row.grade,
-          section: row.category,
-          effect: row.effect,
-          extra: row.extra,
-          localImage: row.image,
-          type: row.type,
-          baseItem: row.base_item_name,
-          ingredients: row.ingredients,
-          blessedEffect: row.blessed_effect,
-          version: row.source,
-        })));
-      });
+    fetchAllTreasures().then(rows => {
+      setItems(rows.map(row => ({
+        name: row.name,
+        grade: row.grade,
+        section: row.category,
+        effect: row.effect,
+        extra: row.extra,
+        localImage: row.image,
+        type: row.type,
+        baseItem: row.base_item_name,
+        ingredients: row.ingredients,
+        blessedEffect: row.blessed_effect,
+        version: row.source,
+      })));
+    });
   }, []);
 
   const t = i18n[lang];
@@ -185,6 +219,8 @@ export default function App() {
 
   return (
     <>
+      <button type="button" className="donate-btn" onClick={() => setShowDonate(true)}>{t.donateBtn}</button>
+      {showDonate && <DonateModal t={t} onClose={() => setShowDonate(false)} />}
       <h1>{t.title}</h1>
       <div className="toolbar">
         <input id="search" type="text" placeholder={t.placeholder} value={query} onChange={e => setQuery(e.target.value)} />

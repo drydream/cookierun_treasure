@@ -55,3 +55,47 @@ h1 { text-align: center; }
 mark { background: #ffe08a; padding: 0 2px; }
 .load-more { display: block; margin: 1rem auto; padding: 0.6rem 1.5rem; border-radius: 8px; border: 1px solid #d9a066; background: #fff; cursor: pointer; font-size: 1rem; }
 .load-more:hover { background: #fff8ef; }
+
+.donate-btn {
+  position: fixed;
+  top: 0.6rem;
+  right: 0.6rem;
+  z-index: 10;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  border: 1px solid #d9a066;
+  background: #fff;
+  cursor: pointer;
+}
+.donate-btn:hover { background: #fff8ef; }
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+.modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  max-width: 260px;
+  text-align: center;
+  position: relative;
+}
+.modal h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+.modal-close {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.6rem;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #999;
+}
+.donate-bank { font-size: 0.85rem; color: #666; margin: 0 0 0.6rem; }
+.donate-qr { width: 100%; max-width: 200px; border-radius: 6px; }
