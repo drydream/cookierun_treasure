@@ -20,6 +20,8 @@ const TIER_COLORS = {
 
 const PURPOSES = ['score', 'auto_farm', 'semi_auto', 'coins', 'exp', 'boxes'];
 const EPISODES = ['ep1', 'ep2', 'ep3', 'ep4', 'ep5', 'ep6', 'special1', 'special2', 'special3'];
+const BOOSTS = ['energy_boost', 'item_time', 'fast_start'];
+const POWER_EFFECTS = ['cheerleader', 'special_force', 'fairy', 'cheesecake', 'sea_fairy', 'serenade'];
 
 const i18n = {
   en: {
@@ -70,6 +72,20 @@ const i18n = {
     buildSubmitted: 'Build submitted!',
     buildSubmitError: 'Failed to submit build',
     buildShare: 'Share to Facebook',
+    buildSlot: { main: 'Main', relay: 'Relay (optional)', pet: 'Pet' },
+    buildTreasureSlot: 'Treasure (optional, up to 3)',
+    buildAddTreasure: '+ Add Treasure',
+    buildBoosts: 'Boosts',
+    buildBoostLabel: { energy_boost: 'Energy Boost', item_time: 'Item Time', fast_start: 'Fast Start' },
+    buildPowerEffects: 'Power+ Effects',
+    buildPowerEffectLabel: { cheerleader: 'Cheerleader', special_force: 'Special Force', fairy: 'Fairy', cheesecake: 'Cheesecake', sea_fairy: 'Sea Fairy', serenade: 'Serenade' },
+    buildScore: 'Score',
+    buildCoins: 'Coins',
+    buildNotes: 'Notes',
+    buildPickerSearch: 'Search by name...',
+    buildTreasureBase: 'Base Treasures',
+    buildTreasureEvolved: 'Evolved Treasures',
+    buildClear: 'Clear',
   },
   th: {
     title: 'ค้นหาสมบัติ Cookie Run Classic',
@@ -119,6 +135,20 @@ const i18n = {
     buildSubmitted: 'ส่ง build สำเร็จ!',
     buildSubmitError: 'ส่ง build ไม่สำเร็จ',
     buildShare: 'แชร์ไป Facebook',
+    buildSlot: { main: 'Main', relay: 'Relay (ไม่บังคับ)', pet: 'Pet' },
+    buildTreasureSlot: 'สมบัติ (ไม่บังคับ, สูงสุด 3 ชิ้น)',
+    buildAddTreasure: '+ เพิ่มสมบัติ',
+    buildBoosts: 'Boosts',
+    buildBoostLabel: { energy_boost: 'Energy Boost', item_time: 'Item Time', fast_start: 'Fast Start' },
+    buildPowerEffects: 'Power+ Effects',
+    buildPowerEffectLabel: { cheerleader: 'Cheerleader', special_force: 'Special Force', fairy: 'Fairy', cheesecake: 'Cheesecake', sea_fairy: 'Sea Fairy', serenade: 'Serenade' },
+    buildScore: 'Score',
+    buildCoins: 'Coins',
+    buildNotes: 'หมายเหตุ',
+    buildPickerSearch: 'ค้นหาจากชื่อ...',
+    buildTreasureBase: 'สมบัติก่อนวิวัฒนาการ',
+    buildTreasureEvolved: 'สมบัติหลังวิวัฒนาการ',
+    buildClear: 'ล้าง',
   },
 };
 
@@ -170,11 +200,11 @@ function shareBuildUrl(id) {
 
 // Open to the public (no admin password), but gated by a Cloudflare
 // Turnstile bot check verified server-side in /api/submit-build.
-async function submitBuild(purpose, episode, combi, turnstileToken) {
+async function submitBuild(purpose, episode, combi, turnstileToken, extra) {
   const res = await fetch('/api/submit-build', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ purpose, episode, combi, turnstileToken }),
+    body: JSON.stringify({ purpose, episode, combi, turnstileToken, ...extra }),
   });
   if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || res.status);
 }
@@ -389,13 +419,85 @@ function CharacterListPage({ characters, kind, t }) {
   );
 }
 
+// entry.slot is one of 'main'/'relay'/'pet'/'treasure'. Older test submissions
+// used entry.kind ('cookie'/'pet'/'treasure') instead — fall back to that.
+function combiEntryDisplayKind(entry) {
+  const key = entry.slot || entry.kind;
+  if (key === 'treasure') return 'treasure';
+  if (key === 'pet') return 'pet';
+  return 'cookie';
+}
+
 function resolveCombiIcon(entry, items, characters) {
-  if (entry.kind === 'treasure') {
+  const displayKind = combiEntryDisplayKind(entry);
+  if (displayKind === 'treasure') {
     const it = items.find(x => x.name === entry.name);
     return it ? it.localImage : null;
   }
-  const c = characters.find(x => x.kind === entry.kind && x.name === entry.name);
+  const c = characters.find(x => x.kind === displayKind && x.name === entry.name);
   return c ? c.image : null;
+}
+
+function ItemPickerModal({ title, kind, items, characters, onSelect, onClose, t }) {
+  const [search, setSearch] = useState('');
+  const [grade, setGrade] = useState('all');
+  const [subTab, setSubTab] = useState('base');
+
+  const candidates = useMemo(() => {
+    if (kind === 'treasure') {
+      const seen = new Set();
+      return items.filter(it => {
+        if (it.type !== subTab) return false;
+        if (seen.has(it.name)) return false;
+        seen.add(it.name);
+        return true;
+      });
+    }
+    return characters.filter(c => c.kind === kind);
+  }, [kind, items, characters, subTab]);
+
+  const grades = useMemo(() => ['all', ...new Set(candidates.map(c => c.grade).filter(Boolean))], [candidates]);
+
+  const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    return candidates.filter(c => {
+      if (grade !== 'all' && c.grade !== grade) return false;
+      if (q && !c.name.toLowerCase().includes(q)) return false;
+      return true;
+    });
+  }, [candidates, search, grade]);
+
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal picker-modal" onClick={e => e.stopPropagation()}>
+        <button type="button" className="modal-close" onClick={onClose}>&times;</button>
+        <h2>{title}</h2>
+        {kind === 'treasure' && (
+          <div className="grade-filter">
+            <button className={subTab === 'base' ? 'active' : ''} onClick={() => setSubTab('base')}>{t.buildTreasureBase}</button>
+            <button className={subTab === 'evolved' ? 'active' : ''} onClick={() => setSubTab('evolved')}>{t.buildTreasureEvolved}</button>
+          </div>
+        )}
+        <input type="text" placeholder={t.buildPickerSearch} value={search} onChange={e => setSearch(e.target.value)} style={{ width: '100%', boxSizing: 'border-box', padding: '0.5rem', margin: '0.5rem 0' }} />
+        <div className="grade-filter">
+          {grades.map(g => (
+            <button key={g} className={grade === g ? 'active' : ''} onClick={() => setGrade(g)}>{g === 'all' ? t.all : g}</button>
+          ))}
+        </div>
+        <div className="picker-grid">
+          {filtered.map(c => {
+            const img = kind === 'treasure' ? c.localImage : c.image;
+            return (
+              <button type="button" key={c.id} className="picker-item" onClick={() => onSelect(c)}>
+                {img && <img src={img} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+                <span>{c.name}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function BuildCreatorPage({ items, characters, t, initialBuildId }) {
@@ -457,12 +559,20 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                     {b.combi.map((entry, i) => {
                       const icon = resolveCombiIcon(entry, items, characters);
                       return (
-                        <div className={'combi-icon combi-icon-' + entry.kind} key={i} title={entry.name}>
+                        <div className={'combi-icon combi-icon-' + combiEntryDisplayKind(entry)} key={i} title={entry.name}>
                           {icon && <img src={icon} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
                         </div>
                       );
                     })}
                   </div>
+                  {(b.score != null || b.coins != null) && (
+                    <div className="meta">
+                      {b.score != null && `${t.buildScore}: ${b.score}`}
+                      {b.score != null && b.coins != null && ' · '}
+                      {b.coins != null && `${t.buildCoins}: ${b.coins}`}
+                    </div>
+                  )}
+                  {b.notes && <div className="effect">{b.notes}</div>}
                   <button type="button" className="recipe-btn" style={{ marginTop: '0.5rem' }} onClick={() => shareBuild(b.id)}>{t.buildShare}</button>
                 </div>
               </div>
@@ -475,9 +585,16 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
 }
 
 function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel }) {
-  const [kind, setKind] = useState('cookie');
-  const [name, setName] = useState('');
-  const [combi, setCombi] = useState([]);
+  const [main, setMain] = useState(null);
+  const [relay, setRelay] = useState(null);
+  const [pet, setPet] = useState(null);
+  const [treasures, setTreasures] = useState([]);
+  const [boosts, setBoosts] = useState([]);
+  const [powerEffects, setPowerEffects] = useState([]);
+  const [score, setScore] = useState('');
+  const [coins, setCoins] = useState('');
+  const [notes, setNotes] = useState('');
+  const [picker, setPicker] = useState(null); // 'main' | 'relay' | 'pet' | 'treasure' | null
   const [status, setStatus] = useState('');
   const [turnstileToken, setTurnstileToken] = useState('');
   const turnstileRef = useRef(null);
@@ -501,27 +618,40 @@ function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel
     };
   }, []);
 
-  const candidateNames = useMemo(() => {
-    if (kind === 'treasure') return [...new Set(items.map(it => it.name))];
-    return characters.filter(c => c.kind === kind).map(c => c.name);
-  }, [kind, items, characters]);
-
-  function addToCombi() {
-    const n = name.trim();
-    if (!n || !candidateNames.includes(n)) return;
-    setCombi(c => [...c, { kind, name: n }]);
-    setName('');
+  function toggleInList(list, setList, value) {
+    setList(list.includes(value) ? list.filter(v => v !== value) : [...list, value]);
   }
 
-  function removeFromCombi(i) {
-    setCombi(c => c.filter((_, idx) => idx !== i));
+  function pickSlot(c) {
+    if (picker === 'main') setMain(c);
+    else if (picker === 'relay') setRelay(c);
+    else if (picker === 'pet') setPet(c);
+    else if (picker === 'treasure') setTreasures(ts => ts.length < 3 ? [...ts, c] : ts);
+    setPicker(null);
   }
+
+  const combi = useMemo(() => {
+    const list = [];
+    if (main) list.push({ slot: 'main', name: main.name });
+    if (relay) list.push({ slot: 'relay', name: relay.name });
+    if (pet) list.push({ slot: 'pet', name: pet.name });
+    treasures.forEach(it => list.push({ slot: 'treasure', name: it.name }));
+    return list;
+  }, [main, relay, pet, treasures]);
+
+  const canSubmit = !!main && !!pet && !!turnstileToken;
 
   async function submit() {
-    if (combi.length === 0 || !turnstileToken) return;
+    if (!canSubmit) return;
     setStatus(t.buildSubmitting);
     try {
-      await submitBuild(purpose, episode, combi, turnstileToken);
+      await submitBuild(purpose, episode, combi, turnstileToken, {
+        boosts,
+        power_effects: powerEffects,
+        score: score === '' ? null : Number(score),
+        coins: coins === '' ? null : Number(coins),
+        notes: notes.trim() || null,
+      });
       setStatus(t.buildSubmitted);
       setTimeout(onDone, 800);
     } catch {
@@ -529,37 +659,76 @@ function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel
     }
   }
 
+  function slotBox(slotKey, value, setValue) {
+    const icon = value ? value.image : null;
+    return (
+      <div className="build-slot" key={slotKey}>
+        <button type="button" className="build-slot-box" onClick={() => setPicker(slotKey)}>
+          {icon && <img src={icon} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+        </button>
+        <span className="build-slot-label">{t.buildSlot[slotKey]}</span>
+        {value && <button type="button" className="build-slot-clear" onClick={() => setValue(null)}>{t.buildClear}</button>}
+      </div>
+    );
+  }
+
   return (
     <div className="card" style={{ display: 'block', marginTop: '1rem' }}>
-      <div className="grade-filter">
-        {['cookie', 'pet', 'treasure'].map(k => (
-          <button key={k} className={kind === k ? 'active' : ''} onClick={() => setKind(k)}>{t.buildKind[k]}</button>
+      <div className="build-slots">
+        {slotBox('main', main, setMain)}
+        {slotBox('relay', relay, setRelay)}
+        {slotBox('pet', pet, setPet)}
+      </div>
+
+      <label className="field">{t.buildTreasureSlot}</label>
+      <button type="button" className="recipe-btn" onClick={() => treasures.length < 3 && setPicker('treasure')} disabled={treasures.length >= 3}>{t.buildAddTreasure}</button>
+      <div className="combi-icons" style={{ marginTop: '0.5rem' }}>
+        {treasures.map((it, i) => (
+          <div className="combi-icon combi-icon-treasure" key={i} title={it.name} onClick={() => setTreasures(ts => ts.filter((_, idx) => idx !== i))} style={{ cursor: 'pointer' }}>
+            {it.localImage && <img src={it.localImage} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+          </div>
         ))}
       </div>
-      <div className="toolbar">
-        <input list="buildCandidates" placeholder={t.buildSearchPlaceholder} value={name} onChange={e => setName(e.target.value)} />
-        <datalist id="buildCandidates">
-          {candidateNames.map(n => <option value={n} key={n} />)}
-        </datalist>
-        <button type="button" className="recipe-btn" onClick={addToCombi}>{t.buildAddItem}</button>
+
+      <label className="field">{t.buildBoosts}</label>
+      <div className="grade-filter">
+        {BOOSTS.map(b => (
+          <button key={b} type="button" className={boosts.includes(b) ? 'active' : ''} onClick={() => toggleInList(boosts, setBoosts, b)}>{t.buildBoostLabel[b]}</button>
+        ))}
       </div>
-      <div className="combi-icons" style={{ marginTop: '0.6rem' }}>
-        {combi.length === 0 && <span className="tier-empty">{t.buildCombiEmpty}</span>}
-        {combi.map((entry, i) => {
-          const icon = resolveCombiIcon(entry, items, characters);
-          return (
-            <div className={'combi-icon combi-icon-' + entry.kind} key={i} title={entry.name} onClick={() => removeFromCombi(i)} style={{ cursor: 'pointer' }}>
-              {icon && <img src={icon} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
-            </div>
-          );
-        })}
+
+      <label className="field">{t.buildPowerEffects}</label>
+      <div className="grade-filter">
+        {POWER_EFFECTS.map(p => (
+          <button key={p} type="button" className={powerEffects.includes(p) ? 'active' : ''} onClick={() => toggleInList(powerEffects, setPowerEffects, p)}>{t.buildPowerEffectLabel[p]}</button>
+        ))}
       </div>
+
+      <label className="field">{t.buildScore}</label>
+      <input type="number" value={score} onChange={e => setScore(e.target.value)} />
+      <label className="field">{t.buildCoins}</label>
+      <input type="number" value={coins} onChange={e => setCoins(e.target.value)} />
+      <label className="field">{t.buildNotes}</label>
+      <textarea value={notes} onChange={e => setNotes(e.target.value)} />
+
       <div ref={turnstileRef} style={{ marginTop: '0.6rem' }}></div>
       <div className="nav">
-        <button type="button" onClick={submit} disabled={combi.length === 0 || !turnstileToken}>{t.buildSubmit}</button>
+        <button type="button" onClick={submit} disabled={!canSubmit}>{t.buildSubmit}</button>
         <button type="button" onClick={onCancel}>{t.buildBackBtn}</button>
         <span>{status}</span>
       </div>
+
+      {picker && (
+        <ItemPickerModal
+          title={picker === 'treasure' ? t.buildTreasureSlot : t.buildSlot[picker]}
+          kind={picker === 'pet' ? 'pet' : picker === 'treasure' ? 'treasure' : 'cookie'}
+          items={items}
+          characters={characters}
+          t={t}
+          onSelect={pickSlot}
+          onClose={() => setPicker(null)}
+        />
+      )}
     </div>
   );
 }

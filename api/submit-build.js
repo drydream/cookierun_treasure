@@ -8,12 +8,26 @@ const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 
 const PURPOSES = ['score', 'auto_farm', 'semi_auto', 'coins', 'exp', 'boxes'];
 const EPISODES = ['ep1', 'ep2', 'ep3', 'ep4', 'ep5', 'ep6', 'special1', 'special2', 'special3'];
-const KINDS = ['cookie', 'pet', 'treasure'];
+const SLOTS = ['main', 'relay', 'pet', 'treasure'];
+const BOOSTS = ['energy_boost', 'item_time', 'fast_start'];
+const POWER_EFFECTS = ['cheerleader', 'special_force', 'fairy', 'cheesecake', 'sea_fairy', 'serenade'];
+const NOTES_MAX = 2000;
 
 function validCombi(combi) {
-  return Array.isArray(combi) && combi.length > 0 && combi.every(entry =>
-    entry && typeof entry.name === 'string' && entry.name.trim() && KINDS.includes(entry.kind)
-  );
+  if (!Array.isArray(combi) || combi.length === 0 || combi.length > 10) return false;
+  if (!combi.every(entry => entry && typeof entry.name === 'string' && entry.name.trim() && SLOTS.includes(entry.slot))) {
+    return false;
+  }
+  const bySlot = slot => combi.filter(e => e.slot === slot).length;
+  return bySlot('main') === 1 && bySlot('pet') === 1 && bySlot('relay') <= 1 && bySlot('treasure') <= 3;
+}
+
+function validStringList(list, allowed) {
+  return list === undefined || (Array.isArray(list) && list.every(v => allowed.includes(v)));
+}
+
+function validNumber(n) {
+  return n === undefined || n === null || (typeof n === 'number' && Number.isFinite(n));
 }
 
 export default async function handler(req, res) {
@@ -22,7 +36,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { purpose, episode, combi, turnstileToken } = req.body;
+  const { purpose, episode, combi, boosts, power_effects, score, coins, notes, turnstileToken } = req.body;
 
   if (!PURPOSES.includes(purpose)) {
     res.status(400).json({ error: 'Invalid purpose' });
@@ -33,7 +47,19 @@ export default async function handler(req, res) {
     return;
   }
   if (!validCombi(combi)) {
-    res.status(400).json({ error: 'Invalid combi' });
+    res.status(400).json({ error: 'Invalid combi (need exactly one main, one pet, up to 1 relay and 3 treasures)' });
+    return;
+  }
+  if (!validStringList(boosts, BOOSTS) || !validStringList(power_effects, POWER_EFFECTS)) {
+    res.status(400).json({ error: 'Invalid boosts or power_effects' });
+    return;
+  }
+  if (!validNumber(score) || !validNumber(coins)) {
+    res.status(400).json({ error: 'Invalid score or coins' });
+    return;
+  }
+  if (notes !== undefined && notes !== null && (typeof notes !== 'string' || notes.length > NOTES_MAX)) {
+    res.status(400).json({ error: 'Notes too long' });
     return;
   }
   if (!turnstileToken) {
@@ -62,7 +88,16 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
         Prefer: 'return=minimal',
       },
-      body: JSON.stringify([{ purpose, episode, combi }]),
+      body: JSON.stringify([{
+        purpose,
+        episode,
+        combi,
+        boosts: boosts || null,
+        power_effects: power_effects || null,
+        score: score ?? null,
+        coins: coins ?? null,
+        notes: notes || null,
+      }]),
     });
     if (!insRes.ok) throw new Error('Supabase insert failed: ' + insRes.status + ' ' + await insRes.text());
 

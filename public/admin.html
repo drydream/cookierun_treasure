@@ -979,11 +979,13 @@ async function loadBuilds() {
 }
 
 function resolveBuildIcon(entry) {
-  if (entry.kind === 'treasure') {
+  const key = entry.slot || entry.kind;
+  if (key === 'treasure') {
     const it = items.find(x => x.name === entry.name);
     return it ? it.image : null;
   }
-  const c = characters.find(x => x.kind === entry.kind && x.name === entry.name);
+  const charKind = key === 'pet' ? 'pet' : 'cookie';
+  const c = characters.find(x => x.kind === charKind && x.name === entry.name);
   return c ? c.image : null;
 }
 
