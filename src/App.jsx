@@ -68,6 +68,7 @@ const i18n = {
     buildSubmitting: 'Submitting...',
     buildSubmitted: 'Build submitted!',
     buildSubmitError: 'Failed to submit build',
+    buildShare: 'Share to Facebook',
   },
   th: {
     title: 'ค้นหาสมบัติ Cookie Run Classic',
@@ -116,6 +117,7 @@ const i18n = {
     buildSubmitting: 'กำลังส่ง...',
     buildSubmitted: 'ส่ง build สำเร็จ!',
     buildSubmitError: 'ส่ง build ไม่สำเร็จ',
+    buildShare: 'แชร์ไป Facebook',
   },
 };
 
@@ -151,6 +153,18 @@ async function fetchAllBuilds() {
     headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
   });
   return res.json();
+}
+
+async function fetchBuildById(id) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/builds?id=eq.${id}&select=*`, {
+    headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
+  });
+  const [build] = await res.json();
+  return build || null;
+}
+
+function shareBuildUrl(id) {
+  return `${window.location.origin}${window.location.pathname}?build=${id}`;
 }
 
 // Open to the public: the `builds` table has an insert RLS policy that
@@ -389,15 +403,23 @@ function resolveCombiIcon(entry, items, characters) {
   return c ? c.image : null;
 }
 
-function BuildCreatorPage({ items, characters, t }) {
+function BuildCreatorPage({ items, characters, t, initialBuildId }) {
   const [view, setView] = useState('browse');
   const [purpose, setPurpose] = useState('score');
   const [episode, setEpisode] = useState('ep1');
   const [builds, setBuilds] = useState([]);
+  const [highlightId, setHighlightId] = useState(initialBuildId || null);
 
   useEffect(() => {
     fetchAllBuilds().then(setBuilds);
   }, []);
+
+  useEffect(() => {
+    if (!initialBuildId) return;
+    fetchBuildById(initialBuildId).then(b => {
+      if (b) { setPurpose(b.purpose); setEpisode(b.episode); }
+    });
+  }, [initialBuildId]);
 
   const filtered = useMemo(
     () => builds.filter(b => b.purpose === purpose && b.episode === episode),
@@ -407,6 +429,11 @@ function BuildCreatorPage({ items, characters, t }) {
   function backToBrowse() {
     setView('browse');
     fetchAllBuilds().then(setBuilds);
+  }
+
+  function shareBuild(id) {
+    setHighlightId(null);
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareBuildUrl(id)), '_blank', 'noopener');
   }
 
   return (
@@ -429,7 +456,7 @@ function BuildCreatorPage({ items, characters, t }) {
           <div id="list">
             {filtered.length === 0 && <div className="effect muted" style={{ marginTop: '1rem' }}>{t.buildNone}</div>}
             {filtered.map(b => (
-              <div className="card" key={b.id}>
+              <div className={'card' + (b.id === highlightId ? ' build-highlight' : '')} key={b.id}>
                 <div className="body">
                   <div className="combi-icons">
                     {b.combi.map((entry, i) => {
@@ -441,6 +468,7 @@ function BuildCreatorPage({ items, characters, t }) {
                       );
                     })}
                   </div>
+                  <button type="button" className="recipe-btn" style={{ marginTop: '0.5rem' }} onClick={() => shareBuild(b.id)}>{t.buildShare}</button>
                 </div>
               </div>
             ))}
@@ -542,7 +570,11 @@ export default function App() {
   const [version, setVersion] = useState('all');
   const [tier, setTier] = useState('all');
   const [lang, setLang] = useState('en');
-  const [page, setPage] = useState('home');
+  const [initialBuildId] = useState(() => {
+    const id = new URLSearchParams(window.location.search).get('build');
+    return id ? parseInt(id) : null;
+  });
+  const [page, setPage] = useState(() => (initialBuildId ? 'buildcreator' : 'home'));
   const isAdmin = !!localStorage.getItem('adminPassword');
 
   useEffect(() => {
@@ -670,7 +702,7 @@ export default function App() {
       {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
       {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage characters={characters} kind="cookie" t={t} /></>}
       {page === 'pets' && <><h1>{t.navPets}</h1><CharacterListPage characters={characters} kind="pet" t={t} /></>}
-      {page === 'buildcreator' && <><h1>{t.navBuilds}</h1><BuildCreatorPage items={items} characters={characters} t={t} /></>}
+      {page === 'buildcreator' && <><h1>{t.navBuilds}</h1><BuildCreatorPage items={items} characters={characters} t={t} initialBuildId={initialBuildId} /></>}
     </>
   );
 }
