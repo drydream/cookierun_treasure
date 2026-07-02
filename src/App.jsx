@@ -17,6 +17,7 @@ const i18n = {
     versionAll: 'All versions',
     versionLine: 'LINE',
     versionKr: 'Kakao/Global',
+    loadMore: 'Load more',
   },
   th: {
     title: 'ค้นหาสมบัติ Cookie Run Classic',
@@ -34,6 +35,7 @@ const i18n = {
     versionAll: 'ทุกเวอร์ชัน',
     versionLine: 'LINE',
     versionKr: 'Kakao/Global',
+    loadMore: 'โหลดเพิ่ม',
   },
 };
 
@@ -168,6 +170,11 @@ export default function App() {
     });
   }, [items, query, grade, typeFilter, version]);
 
+  const PAGE_SIZE = 60;
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [query, grade, typeFilter, version]);
+  const visibleItems = filtered.slice(0, visibleCount);
+
   return (
     <>
       <h1>{t.title}</h1>
@@ -196,10 +203,13 @@ export default function App() {
       </div>
       <div id="count">{t.count(filtered.length)}</div>
       <div id="list">
-        {filtered.map((it, i) => (
+        {visibleItems.map((it, i) => (
           <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} />
         ))}
       </div>
+      {visibleCount < filtered.length && (
+        <button className="load-more" onClick={() => setVisibleCount(c => c + PAGE_SIZE)}>{t.loadMore}</button>
+      )}
     </>
   );
 }

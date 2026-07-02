@@ -53,3 +53,5 @@ h1 { text-align: center; }
 .recipe .row { margin-top: 0.2rem; }
 .recipe .label { font-weight: bold; }
 mark { background: #ffe08a; padding: 0 2px; }
+.load-more { display: block; margin: 1rem auto; padding: 0.6rem 1.5rem; border-radius: 8px; border: 1px solid #d9a066; background: #fff; cursor: pointer; font-size: 1rem; }
+.load-more:hover { background: #fff8ef; }
