@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { password, id, name, category, tier, effect, source, grade, image, evolvesTo } = req.body;
+  const { password, id, name, category, tier, effect, source, grade, image, evolvesTo, baseItemName } = req.body;
 
   if (!process.env.ADMIN_PASSWORD || password !== process.env.ADMIN_PASSWORD) {
     res.status(401).json({ error: 'Wrong password' });
@@ -38,10 +38,22 @@ export default async function handler(req, res) {
     const [before] = await beforeRes.json();
     const prevName = before && before.name;
 
+    const base = (baseItemName || '').trim();
+    if (base) {
+      const baseRes = await fetch(`${SUPABASE_URL}/rest/v1/treasures?name=eq.${encodeURIComponent(base)}&select=id`, {
+        headers: { apikey: serviceKey, Authorization: `Bearer ${serviceKey}` },
+      });
+      const [baseRow] = await baseRes.json();
+      if (!baseRow) {
+        res.status(400).json({ error: 'No treasure named "' + base + '" found — pick one from the list' });
+        return;
+      }
+    }
+
     const putRes = await fetch(`${SUPABASE_URL}/rest/v1/treasures?id=eq.${id}`, {
       method: 'PATCH',
       headers,
-      body: JSON.stringify({ name, category, tier, effect, source, grade, image }),
+      body: JSON.stringify({ name, category, tier, effect, source, grade, image, base_item_name: base || null, type: base ? 'evolved' : 'base' }),
     });
     if (!putRes.ok) {
       const err = await putRes.text();

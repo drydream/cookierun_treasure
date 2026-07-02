@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { password, source, name, grade, category, tier, effect, image } = req.body;
+  const { password, source, name, grade, category, tier, effect, image, baseItemName } = req.body;
 
   if (!process.env.ADMIN_PASSWORD || password !== process.env.ADMIN_PASSWORD) {
     res.status(401).json({ error: 'Wrong password' });
@@ -20,16 +20,25 @@ export default async function handler(req, res) {
   }
 
   const serviceKey = process.env.service_role;
+  const headers = {
+    apikey: serviceKey,
+    Authorization: `Bearer ${serviceKey}`,
+    'Content-Type': 'application/json',
+  };
 
   try {
+    if (baseItemName) {
+      const baseRes = await fetch(`${SUPABASE_URL}/rest/v1/treasures?name=eq.${encodeURIComponent(baseItemName)}&select=id`, { headers });
+      const [baseRow] = await baseRes.json();
+      if (!baseRow) {
+        res.status(400).json({ error: 'No treasure named "' + baseItemName + '" found — pick one from the list' });
+        return;
+      }
+    }
+
     const insRes = await fetch(`${SUPABASE_URL}/rest/v1/treasures`, {
       method: 'POST',
-      headers: {
-        apikey: serviceKey,
-        Authorization: `Bearer ${serviceKey}`,
-        'Content-Type': 'application/json',
-        Prefer: 'return=representation',
-      },
+      headers: { ...headers, Prefer: 'return=representation' },
       body: JSON.stringify([{
         source,
         name,
@@ -38,6 +47,8 @@ export default async function handler(req, res) {
         tier: tier || null,
         effect: effect || null,
         image: image || null,
+        base_item_name: baseItemName || null,
+        type: baseItemName ? 'evolved' : 'base',
       }]),
     });
     if (!insRes.ok) {
