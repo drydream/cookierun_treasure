@@ -1,0 +1,1196 @@
+[
+ {
+  "idx": 0,
+  "ability": "• 꼬마 자력 초급~9단",
+  "count": 1,
+  "sample": "Angel Cookie's Holy Feather"
+ },
+ {
+  "idx": 1,
+  "ability": "• 체력 10~20으로 부활 2회",
+  "count": 1,
+  "sample": "Pirate Cookie's Revival Boots"
+ },
+ {
+  "idx": 2,
+  "ability": "• 점프 1~3회 추가",
+  "count": 1,
+  "sample": "Ninja Cookie Clone Leaf"
+ },
+ {
+  "idx": 3,
+  "ability": "• 초급 꼬마 연기점수 추가 1단~10단",
+  "count": 1,
+  "sample": "Skating Queen Cookie Blueberry Hairpin"
+ },
+ {
+  "idx": 4,
+  "ability": "• 체력감소 4~5% 느림",
+  "count": 1,
+  "sample": "Hero Cookie's Mint Candy"
+ },
+ {
+  "idx": 5,
+  "ability": "• 이어달리기시 체력 40~90 증가",
+  "count": 1,
+  "sample": "Cheerleader Cookie's Pink Megaphone"
+ },
+ {
+  "idx": 6,
+  "ability": "• 장애물 파괴시 7,300~10,000점 추가",
+  "count": 2,
+  "sample": "Special Forces Cookie Choco Camo Cream"
+ },
+ {
+  "idx": 7,
+  "ability": "• 2단점프부터 500~1,000점 추가",
+  "count": 1,
+  "sample": "Rebel Cookie Clone Doll"
+ },
+ {
+  "idx": 8,
+  "ability": "• 분홍곰젤리 200~400점 추가",
+  "count": 1,
+  "sample": "Devil Cookie's Tail Compass"
+ },
+ {
+  "idx": 9,
+  "ability": "• 거대화시 모든 젤리 100~150점 추가",
+  "count": 1,
+  "sample": "Kumiho Cookie Fresh Red Pudding"
+ },
+ {
+  "idx": 10,
+  "ability": "• 장애물 파괴시 1~4코인 획득",
+  "count": 1,
+  "sample": "Wizard Cookie Popping Candy Ice Cream"
+ },
+ {
+  "idx": 11,
+  "ability": "• 이어달리기시 체력 50~100 증가",
+  "count": 1,
+  "sample": "Fairy Cookie Green Tea Roll Cake"
+ },
+ {
+  "idx": 12,
+  "ability": "• 체력감소 2~3% 느림\r\n • 체력회복량 4~5% 증가",
+  "count": 1,
+  "sample": "Rockstar Cookie Legendary Guitar Pick"
+ },
+ {
+  "idx": 13,
+  "ability": "• 모든 젤리 10~30점 추가",
+  "count": 1,
+  "sample": "Minstrel Cookie Christmas Tree Cookie"
+ },
+ {
+  "idx": 14,
+  "ability": "• 이어달리기시 체력 25~70 증가\r\n • 구출 1~2회",
+  "count": 1,
+  "sample": "Snow Sugar Cookie's Snow Parfait"
+ },
+ {
+  "idx": 15,
+  "ability": "• 분홍곰젤리 300~500점 추가",
+  "count": 1,
+  "sample": "Pink Choco Cookie Handmade Choco Set"
+ },
+ {
+  "idx": 16,
+  "ability": "• 이어달리기 쿠키가 체력 25로 부활 1~3회",
+  "count": 1,
+  "sample": "Pistachio Cookie Revival Chalice"
+ },
+ {
+  "idx": 17,
+  "ability": "• 15~25%확률로 코인매직에 금화출현",
+  "count": 1,
+  "sample": "Alchemist Cookie Molecule Brooch"
+ },
+ {
+  "idx": 18,
+  "ability": "• 체력 30~65으로 부활 1회\r\n• 충돌 피해 6~10% 감소",
+  "count": 1,
+  "sample": "Vampire Cookie Revival Grape Juice"
+ },
+ {
+  "idx": 19,
+  "ability": null,
+  "count": 416,
+  "sample": "Green Apple Cookie Apple Hairpin"
+ },
+ {
+  "idx": 20,
+  "ability": "• 기본속도 3~5% 증가\r\n • 체력 30~50으로 부활",
+  "count": 2,
+  "sample": "Kiwi Cookie Precious Key"
+ },
+ {
+  "idx": 21,
+  "ability": "• 체력 30~70으로 부활\r\n • 장애물 파괴시 7,300~10,000점 추가",
+  "count": 1,
+  "sample": "Red Pepper Cookie Tightly Tied Hairband"
+ },
+ {
+  "idx": 22,
+  "ability": "• 광속질주 시간 10~15% 연장\r\n • 광속질주 속도 10~15% 증가",
+  "count": 1,
+  "sample": "Orange Cookie's Sports Bottle"
+ },
+ {
+  "idx": 23,
+  "ability": "• 생명물약획득시 거대화 1~2초",
+  "count": 1,
+  "sample": "Jujube Cookie Neat Fine Tooth Comb"
+ },
+ {
+  "idx": 24,
+  "ability": "• 광속질주시 장애물 통과\r\n • 장애물 통과시 6,300~9,000점 추가",
+  "count": 1,
+  "sample": "Onion Cookie Tear Soaked Pillow"
+ },
+ {
+  "idx": 25,
+  "ability": "• 마카롱 동물 젤리 500~1,000점 추가",
+  "count": 1,
+  "sample": "Macaron Cookie Blush Puff"
+ },
+ {
+  "idx": 26,
+  "ability": "• 화이트초코 젤리 500~1,000점 추가",
+  "count": 1,
+  "sample": "White Choco Cookie's White Rose Bouquet"
+ },
+ {
+  "idx": 27,
+  "ability": "• 장애물 파괴시 8,300~11,000점 추가\r\n • 기본속도 4~7% 증가",
+  "count": 1,
+  "sample": "Roll Cake Cookie Mini Roll Glass"
+ },
+ {
+  "idx": 28,
+  "ability": "• 체력 30~40으로 부활\r\n • 코인 3~5% 보너스",
+  "count": 1,
+  "sample": "Banana Cookie Banana Milk Bottle"
+ },
+ {
+  "idx": 29,
+  "ability": "• 꿀떡젤리 2,000~3,000점 추가\r\n• 체력 50으로 부활",
+  "count": 1,
+  "sample": "Moon Rabbit Cookie Fancy Rice Cake"
+ },
+ {
+  "idx": 30,
+  "ability": "• 초미니자력\r\n • 구출/부활(체력 10~20) 총 1~3회",
+  "count": 1,
+  "sample": "Strawberry Shortcake Cookie Attachment Cushion"
+ },
+ {
+  "idx": 31,
+  "ability": "• 초미니자력\r\n • 기본속도 2~4% 증가",
+  "count": 1,
+  "sample": "Potato Salad Cookie Tasting Spoon"
+ },
+ {
+  "idx": 32,
+  "ability": "• 5~10% 확률로 젤리코가 떨어짐",
+  "count": 1,
+  "sample": "Jellyco Cube's Lost Jellyco"
+ },
+ {
+  "idx": 33,
+  "ability": "• 기본속도 2~6% 증가",
+  "count": 1,
+  "sample": "Magic Dictionary Torn Page"
+ },
+ {
+  "idx": 34,
+  "ability": "• 기본속도 3~4% 증가\r\n• 충돌 피해 6~10% 감소",
+  "count": 1,
+  "sample": "Oak Juice Barrel Wooden Tap"
+ },
+ {
+  "idx": 35,
+  "ability": "• 생명물약 획득시 광속질주 0.3~0.8초",
+  "count": 1,
+  "sample": "Marshmallow Hamster Choco Sunflower Seed"
+ },
+ {
+  "idx": 36,
+  "ability": "• 광속질주시 체력감소 10~15% 느림\r\n • 광속질주 속도 10~15% 증가",
+  "count": 1,
+  "sample": "Orange Mouse Orange Peel Wheel"
+ },
+ {
+  "idx": 37,
+  "ability": "• 20~30% 확률로 얼음다리 생성\r\n • 체력 38로 2~4회 구출/부활",
+  "count": 1,
+  "sample": "Wave Drop Precious Mini Coral"
+ },
+ {
+  "idx": 38,
+  "ability": "• 체력 30~40으로 부활\r\n • 장애물 파괴시 1~4코인 획득",
+  "count": 1,
+  "sample": "Savabana Lion Fallen Tail"
+ },
+ {
+  "idx": 39,
+  "ability": "• 거대화시 기본속도 5~8% 증가\r\n • 거대화시 10~60% 확률로 은화를 금화로 변환(변경 최대 개수 제한 있음)",
+  "count": 1,
+  "sample": "Dasara Bread Fresh Bread Clip"
+ },
+ {
+  "idx": 40,
+  "ability": "• 미니 자력 초급~9단",
+  "count": 1,
+  "sample": "Cookiebox 720 Controller"
+ },
+ {
+  "idx": 41,
+  "ability": "• 장애물 통과시 7,300~10,000점 추가\r\n • 장애물 통과시 6,300~9,000점 추가",
+  "count": 1,
+  "sample": "Camping Flame Lantern"
+ },
+ {
+  "idx": 42,
+  "ability": "• 초미니자력\r\n • 체력감소 2~4% 느림",
+  "count": 1,
+  "sample": "Magnetic Energy Drink"
+ },
+ {
+  "idx": 43,
+  "ability": "• 구멍에 빠진 쿠키를 1~2회 구출\r\n • 체력 20으로 1~3회 부활",
+  "count": 1,
+  "sample": "Sweet Revival Donut"
+ },
+ {
+  "idx": 44,
+  "ability": "• 초미니자력\r\n • 모든 젤리 50~100점 추가",
+  "count": 1,
+  "sample": "Magnetic Rainbow Drink"
+ },
+ {
+  "idx": 45,
+  "ability": "• 체력감소 4~7% 느림",
+  "count": 1,
+  "sample": "Someone Made Fresh Vegetable Juice"
+ },
+ {
+  "idx": 46,
+  "ability": "• 경험치 10% 보너스\r\n • 체력 20~30으로 부활 2회",
+  "count": 1,
+  "sample": "Mind Awakening Wasabi Chapstick"
+ },
+ {
+  "idx": 47,
+  "ability": "• 초미니자력\r\n • 이어달리기시 체력 45~65 추가",
+  "count": 1,
+  "sample": "Red Cookie Energy Drink"
+ },
+ {
+  "idx": 48,
+  "ability": "• 체력감소 1~2% 느림\r\n • 경험치 7~12% 보너스",
+  "count": 1,
+  "sample": "Chocolate Cover Workbook"
+ },
+ {
+  "idx": 49,
+  "ability": "• 구출/부활(체력 25) 총 2~4회",
+  "count": 1,
+  "sample": "Glazed Immortality Donut"
+ },
+ {
+  "idx": 50,
+  "ability": "• 충돌데미지추가\r\n • 코인 5~10% 보너스",
+  "count": 1,
+  "sample": "Golden Thorn Ring"
+ },
+ {
+  "idx": 51,
+  "ability": "• 체력비례속도증가\r\n • 체력 20으로 부활 1~3회",
+  "count": 1,
+  "sample": "Small Ambulance Toy"
+ },
+ {
+  "idx": 52,
+  "ability": "• 초미니자력\r\n • 기본속도 3~6% 증가",
+  "count": 1,
+  "sample": "Red Hot Chili Energy Drink"
+ },
+ {
+  "idx": 53,
+  "ability": "• 체력감소 3~4% 느림\r\n • 체력 30~50으로 부활",
+  "count": 1,
+  "sample": "Whipped Cream Monster Muffin"
+ },
+ {
+  "idx": 54,
+  "ability": "• 초미니자력\r\n • 구출/부활(체력 10~20) 총 2~3회",
+  "count": 1,
+  "sample": "Vita Vita Drink"
+ },
+ {
+  "idx": 55,
+  "ability": "• 초미니자력\r\n • 체력회복량 6~8% 증가",
+  "count": 1,
+  "sample": "Warm Cafe Latte Drink"
+ },
+ {
+  "idx": 56,
+  "ability": "• 소환수에 탑승시 모든 젤리 200~300점 추가\r\n • 체력감소 2~3% 느림",
+  "count": 1,
+  "sample": "Soft Jelly Saddle"
+ },
+ {
+  "idx": 57,
+  "ability": "• 생명물약 획득시 광속질주 0.3~0.8초\r\n • 체력감소 1% 느림",
+  "count": 1,
+  "sample": "Candy Wheel Roller Skate"
+ },
+ {
+  "idx": 58,
+  "ability": "• 초미니자력\r\n • 2~3% 확률로 코인꽃 생성",
+  "count": 1,
+  "sample": "Golden Shake Drink"
+ },
+ {
+  "idx": 59,
+  "ability": "• 기본속도 2~4% 증가\r\n • 경험치 10~14% 보너스",
+  "count": 1,
+  "sample": "Tip of Iceberg Ice Bar"
+ },
+ {
+  "idx": 60,
+  "ability": "• 장애물에 충돌시 체력복구 1회\r\n • 코인 5~9% 보너스",
+  "count": 1,
+  "sample": "Waters Recovery Pendant"
+ },
+ {
+  "idx": 61,
+  "ability": "• 체력감소 2~4% 느림\r\n • 체력회복량 4~8% 증가",
+  "count": 1,
+  "sample": "Flavorful Butter Croissant"
+ },
+ {
+  "idx": 62,
+  "ability": "• 기본속도 3~5% 증가\r\n • 코인 8~10% 보너스",
+  "count": 1,
+  "sample": "Banana Peel Left By Someone"
+ },
+ {
+  "idx": 63,
+  "ability": "• 생명물약 획득시 거대화 2초\r\n• 체력회복량 3~5% 증가",
+  "count": 1,
+  "sample": "Beginner Baking Powder"
+ },
+ {
+  "idx": 64,
+  "ability": "• 초미니자력\r\n • 거대화 착지시 바닥에서 젤리 생성 초급 1~10단",
+  "count": 1,
+  "sample": "Jelly Pong Pong Pogo Stick"
+ },
+ {
+  "idx": 65,
+  "ability": "• 초미니자력\r\n • 체력 30~60으로 부활 1회",
+  "count": 1,
+  "sample": "Sparkling Water Drink"
+ },
+ {
+  "idx": 66,
+  "ability": "• 장애물 파괴시 30~80% 확률로 날개 달린 코인 생성\r\n • 코인 3~4% 보너스",
+  "count": 1,
+  "sample": "Shiny Golden Nunchaku"
+ },
+ {
+  "idx": 67,
+  "ability": "• 체력감소 3~4% 느림\r\n • 모든 과즙젤리 200~400점 추가",
+  "count": 1,
+  "sample": "Ice Orange Lime Smoothie"
+ },
+ {
+  "idx": 68,
+  "ability": "• 초미니자력\r\n • 코인 6~8% 보너스",
+  "count": 1,
+  "sample": "Sweet and Sour Carbonated Drink"
+ },
+ {
+  "idx": 69,
+  "ability": "• 소환수 탑승시 체력감소 11~20% 느림\r\n • 소환수 탑승 시 모든 젤리 100~400점 추가",
+  "count": 1,
+  "sample": "Feed for Summoned Pet"
+ },
+ {
+  "idx": 70,
+  "ability": "• 꼬마자력 초급~9단\r\n • 체력 30~40으로 2회 부활",
+  "count": 1,
+  "sample": "Feather Laurel Wreath for Winner"
+ },
+ {
+  "idx": 71,
+  "ability": "• 거대화시 기본속도 5~10% 증가\r\n • 거대화시 30~80% 확률로 은화를 금화로 변경 (변경 최대 개수 제한 있음)",
+  "count": 1,
+  "sample": "Jingling Coin Wallet"
+ },
+ {
+  "idx": 72,
+  "ability": "• 초미니자력\r\n • 생명물약 획득시 광속질주 0.2~0.6초",
+  "count": 1,
+  "sample": "Mushroom Drink"
+ },
+ {
+  "idx": 73,
+  "ability": "• 부활시 0.8~1.7초 동안 거대화(중첩적용X)\r\n • 부활시 0.8~1.7초 동안 광속질주(중첩적용X)",
+  "count": 1,
+  "sample": "Long Lasting Mushroom Flashlight"
+ },
+ {
+  "idx": 74,
+  "ability": "• 초미니자력\r\n • 생명물약획득시 거대화 1~2초",
+  "count": 1,
+  "sample": "Hyper Carbonated Drink Zero"
+ },
+ {
+  "idx": 75,
+  "ability": "• 초미니자력\r\n • 5~6% 확률로 코인꽃 생성",
+  "count": 1,
+  "sample": "Squirrels Highly Concentrated Acorn Drink"
+ },
+ {
+  "idx": 76,
+  "ability": "일반성공시 :\r\n • 기본속도 3~5% 증가\r\n • 체력 10으로 부활 2회\r\n대성공시 :\r\n • 기본속도 4~6% 증가\r\n • 체력 10으로 부활 3회",
+  "count": 1,
+  "sample": "Burning Swift Wheel"
+ },
+ {
+  "idx": 77,
+  "ability": "일반성공시 :\r\n • 꼬마 자력 초급~9단\r\n • 모든 젤리 100~240점 추가\r\n대성공시 :\r\n • 꼬마 자력 초급~9단\r\n • 모든 젤리 120~260점 추가\r\n\r\n※ 미진화형보다 일반성공/대성공 보물의 자력이 조금 더 강함",
+  "count": 1,
+  "sample": "Angel Cookie's Rainbow Feather"
+ },
+ {
+  "idx": 78,
+  "ability": "일반성공시 :\r\n• 이어달리기 쿠키가 체력 10~30으로 부활 3회\r\n• 이어달리기시 모든 젤리 170~310점 추가\r\n대성공시 :\r\n• 이어달리기 쿠키가 체력 20~40으로 부활 3회\r\n• 이어달리기시 모든 젤리 210~350점 추가",
+  "count": 1,
+  "sample": "Holy Immortal Chalice"
+ },
+ {
+  "idx": 79,
+  "ability": "일반성공시 :\r\n • 체력 30~80으로 부활\r\n • 장애물 파괴시 10,300~13,000점 추가\r\n대성공시 :\r\n • 체력 50~100으로 부활\r\n • 장애물 파괴시 12,300~15,000점 추가",
+  "count": 1,
+  "sample": "Indomitable Tricolor Hairband"
+ },
+ {
+  "idx": 80,
+  "ability": "일반성공시 :\r\n • 광속질주 속도 10~15% 증가\r\n • 생명물약 획득시 광속질주 0.3~0.8초\r\n대성공시 :\r\n • 광속질주 속도 10~15% 증가\r\n • 생명물약 획득시 광속질주 0.5~1.0초",
+  "count": 1,
+  "sample": "Frozen Orange Drink"
+ },
+ {
+  "idx": 81,
+  "ability": "일반성공시 :\r\n• 점프 2회 추가\r\n• 구출/부활(체력 15~25) 3회\r\n대성공시 :\r\n• 점프 2회 추가\r\n•구출/부활(체력 20~30) 3회",
+  "count": 1,
+  "sample": "Peach Cookies Silk Scroll Secret Book"
+ },
+ {
+  "idx": 82,
+  "ability": "일반성공시 :\r\n • 체력감소 7% 느림\r\n • 장애물 통과시 7,500~12,000점 추가\r\n대성공시 :\r\n • 체력감소 7% 느림\r\n • 장애물 통과시 10,500~15,000점 추가",
+  "count": 1,
+  "sample": "Onion Cookie Lace Pillow"
+ },
+ {
+  "idx": 83,
+  "ability": "일반성공시 :\r\n• 마카롱 동물 젤리 500~1,000점 추가\r\n• 체력 50~68으로 부활\r\n대성공시 :\r\n• 마카롱 동물 젤리 500~1,000점 추가\r\n• 체력 60~78으로 부활",
+  "count": 1,
+  "sample": "Macaron Cookie's Blusher Brush"
+ },
+ {
+  "idx": 84,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 화이트초코 젤리 1,000~1,500점 추가\r\n대성공시 :\r\n • 초미니자력\r\n • 화이트초코 젤리 1,500~2,000점 추가",
+  "count": 1,
+  "sample": "White Rose Vase"
+ },
+ {
+  "idx": 85,
+  "ability": "일반성공시 :\r\n • 구출/부활(체력 15~25) 3회\r\n • 코인 8~10% 보너스\r\n대성공시 :\r\n • 구출/부활(체력 20~30) 3회\r\n • 코인 9~11% 보너스",
+  "count": 1,
+  "sample": "Radiant Banana Milk Two Handed Cup"
+ },
+ {
+  "idx": 86,
+  "ability": "일반성공시 :\r\n• 꿀떡젤리 3,000~3,500점 추가\r\n• 체력 65으로 부활\r\n대성공시 :\r\n• 꿀떡젤리 3,500~4,000점 추가\r\n• 체력 75으로 부활",
+  "count": 1,
+  "sample": "Moon Rabbit Cookies Three Tier Songpyeon Rice Cake"
+ },
+ {
+  "idx": 87,
+  "ability": "일반성공시 :\r\n • 구출 1~3회\r\n • 체력 10으로 부활 1~2회\r\n대성공시 :\r\n • 구출 1~3회\r\n • 체력 20으로 부활 1~2회",
+  "count": 1,
+  "sample": "Little Ghost Radiant Memory"
+ },
+ {
+  "idx": 88,
+  "ability": "일반성공시 :\n • 기본속도 3~8% 증가\n • 구출 1회\n대성공시 :\n • 기본속도 4~9% 증가\n • 구출 2회",
+  "count": 1,
+  "sample": "Magic Dictionary Appendix Bromide"
+ },
+ {
+  "idx": 89,
+  "ability": "일반성공시 :\r\n • 생명물약 획득시 광속질주 0.3~0.8초\r\n • 펫이 획득한 점수 5~10% 추가\r\n대성공시 :\r\n • 생명물약 획득시 광속질주 0.5~1초\r\n • 펫이 획득한 점수 10~15% 추가",
+  "count": 1,
+  "sample": "Flavorful Sunflower Seed"
+ },
+ {
+  "idx": 90,
+  "ability": "일반성공시 :\r\n • 모든 젤리 130~180점 추가\r\n • 기본속도 6~11% 증가\r\n대성공시 :\r\n • 모든 젤리 150~200점 추가\r\n • 기본속도 8~13% 증가",
+  "count": 1,
+  "sample": "Sticky Rice Seal Premium Red Bean Can"
+ },
+ {
+  "idx": 91,
+  "ability": "일반성공시 :\r\n • 구출/체력(체력15~25) 총 3회\r\n • 장애물 파괴시 4~6코인 획득\r\n대성공시 :\r\n • 구출/부활(체력 20~30) 총 3회\r\n • 장애물 파괴시 6~8코인 획득",
+  "count": 1,
+  "sample": "Fallen Choco Topping Tail"
+ },
+ {
+  "idx": 92,
+  "ability": "일반성공시 :\r\n • 미니 자력 초급~9단\r\n • 구출 1회\r\n대성공시 :\r\n • 미니 자력 초급~9단\r\n • 구출 2회\r\n\r\n※ 일반성공보다 대성공 보물의 자력이 조금 더 강함",
+  "count": 1,
+  "sample": "Cookie Box 1440 Controller"
+ },
+ {
+  "idx": 93,
+  "ability": "일반성공시 :\r\n • 장애물 파괴시 13,300~16,000점 추가\r\n • 체력회복량 4~13% 증가\r\n대성공시 :\r\n • 장애물 파괴시 15,300~18,000점 추가\r\n • 체력회복량 6~15% 증가",
+  "count": 1,
+  "sample": "Invincible Steel Hot Dog"
+ },
+ {
+  "idx": 94,
+  "ability": "일반성공시 :\r\n • 기본속도 4.3~6.3% 증가\r\n • 체력감소 3.5~4.5% 느림\r\n대성공시 :\r\n • 기본속도 5.3~7.3% 증가\r\n • 체력감소 4.5~5.5% 느림",
+  "count": 1,
+  "sample": "Frozen Hard Ice Choco Biscuit"
+ },
+ {
+  "idx": 95,
+  "ability": "일반성공시 :\r\n • 장애물 통과시 8,500~13,000점 추가\r\n • 체력감소 5~8% 느림\r\n대성공시 :\r\n • 장애물 통과시 11,500~16,000점 추가\r\n • 체력감소 6~9% 느림",
+  "count": 1,
+  "sample": "Darkness Swallowing Transparent Lantern"
+ },
+ {
+  "idx": 96,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 체력감소 3~5.5% 느림\r\n대성공시 :\r\n • 초미니자력\r\n • 체력감소 4~6.5% 느림",
+  "count": 1,
+  "sample": "Magnetic Stamina Recovery Drink"
+ },
+ {
+  "idx": 97,
+  "ability": "일반성공시 :\r\n • 구멍에 빠진 쿠키를 1~2회 구출\r\n • 체력 25으로 1~3회 부활\r\n대성공시 :\r\n • 구멍에 빠진 쿠키를 1~3회 구출\r\n • 체력 30으로 1~3회 부활",
+  "count": 1,
+  "sample": "Storm Sweet Revival Donut"
+ },
+ {
+  "idx": 98,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 모든 젤리 170~350점 추가\r\n대성공시 :\r\n • 초미니자력\r\n • 모든 젤리 220~400점 추가",
+  "count": 1,
+  "sample": "Rainbow Black Hole Drink"
+ },
+ {
+  "idx": 99,
+  "ability": "일반성공시 :\r\n • 체력감소 4~7% 느림\r\n • 체력 20~40으로 부활\r\n대성공시 :\r\n • 체력감소 5~8% 느림\r\n • 체력 30~50으로 부활",
+  "count": 1,
+  "sample": "Someone Made Flame Cocktail"
+ },
+ {
+  "idx": 100,
+  "ability": "일반성공시 :\r\n • 경험치 13~23% 보너스\r\n • 체력 20~30으로 부활 2회\r\n대성공시 :\r\n • 경험치 15~25% 보너스\r\n • 체력 20~30으로 부활 2회",
+  "count": 1,
+  "sample": "Tear and Runny Nose Wasabi Chapstick"
+ },
+ {
+  "idx": 101,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 이어달리기시 체력 50~70 추가\r\n대성공시 :\r\n • 초미니자력\r\n • 이어달리기시 체력 55~75 증가",
+  "count": 1,
+  "sample": "Muscle Explosion Energy Drink"
+ },
+ {
+  "idx": 102,
+  "ability": "일반성공시 :\r\n • 경험치 15~25% 보너스\r\n • 체력감소 1~2% 느림\r\n대성공시 :\r\n • 경험치 20~30% 보너스\r\n • 체력감소 2~3% 느림",
+  "count": 1,
+  "sample": "Chocolate Cover Workbook Hardcover"
+ },
+ {
+  "idx": 103,
+  "ability": "일반성공시 :\r\n • 구출/부활(체력 30) 총 2~4회\r\n대성공시 :\r\n • 구출/부활(체력 36) 총 2~4회",
+  "count": 1,
+  "sample": "Great Immortal Donut"
+ },
+ {
+  "idx": 104,
+  "ability": "일반성공시 :\r\n • 충돌데미지추가\r\n • 코인 8~15% 보너스\r\n대성공시 :\r\n • 충돌데미지추가\r\n • 코인 10~17% 보너스",
+  "count": 1,
+  "sample": "Flying Golden Lotus Wisdom Ring"
+ },
+ {
+  "idx": 105,
+  "ability": "일반성공시 :\r\n • 체력비례속도증가\r\n • 체력 25로 부활 1~3회\r\n대성공시 :\r\n • 체력비례속도증가\r\n • 체력 30으로 부활 1~3회",
+  "count": 1,
+  "sample": "Miracle Calling Ambulance Toy"
+ },
+ {
+  "idx": 106,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 기본속도 4~7% 증가\r\n대성공시 :\r\n • 초미니자력\r\n • 기본속도 5~8% 증가",
+  "count": 1,
+  "sample": "Hot Hot Shub Shub Drink"
+ },
+ {
+  "idx": 107,
+  "ability": "일반성공시 :\n • 체력감소 3.5~4.5% 느림\n • 체력 50~68로 부활\n대성공시 :\n • 체력감소 4.5~5.5% 느림\n • 체력 70~88로 부활",
+  "count": 1,
+  "sample": "More Delicious Monster Muffin"
+ },
+ {
+  "idx": 108,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 구출/부활(체력 15~25) 총 3회\r\n대성공시 :\r\n • 초미니자력\r\n • 구출/부활(체력 20~30) 총 3회",
+  "count": 1,
+  "sample": "Vita Vita Plus Drink"
+ },
+ {
+  "idx": 109,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 체력회복량 8~10% 증가\r\n대성공시 :\r\n • 초미니자력\r\n • 체력회복량 10~12% 증가",
+  "count": 1,
+  "sample": "Strong Black Coffee Drink"
+ },
+ {
+  "idx": 110,
+  "ability": "일반성공시 :\r\n • 소환수에 탑승시 모든 젤리 500~1400점 추가\r\n • 체력감소 4~7% 느림\r\n대성공시 :\r\n • 소환수에 탑승시 모든 젤리 800~1700점 추가\r\n • 체력감소 5~8% 느림",
+  "count": 1,
+  "sample": "Royal Bear Jelly Saddle"
+ },
+ {
+  "idx": 111,
+  "ability": "일반성공시 :\r\n • 생명물약 획득시 광속질주 0.5~1초\r\n • 체력감소 1~2% 느림\r\n대성공시 :\r\n • 생명물약 획득시 광속질주 0.5~1초\r\n • 체력감소 2~3% 느림",
+  "count": 1,
+  "sample": "Candy Wheel Inline Skate"
+ },
+ {
+  "idx": 112,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 5~6% 확률로 코인꽃 생성\r\n대성공시 :\r\n • 초미니자력\r\n • 6~7% 확률로 코인꽃 생성",
+  "count": 1,
+  "sample": "99 Point 9 Percent Golden Drink"
+ },
+ {
+  "idx": 113,
+  "ability": "일반성공시 :\r\n • 기본속도 2~4% 증가\r\n • 경험치 15~25% 추가\r\n대성공시 :\r\n • 기본속도 3~5% 증가\r\n • 경험치 20~30% 추가",
+  "count": 1,
+  "sample": "Fatal Twin Iceberg Bar"
+ },
+ {
+  "idx": 114,
+  "ability": "일반성공시 :\r\n • 장애물에 충돌시 체력복구 2회\r\n • 코인 8~13% 보너스\r\n대성공시 :\r\n • 장애물에 충돌시 체력복구 2회\r\n • 코인 10~15% 보너스",
+  "count": 1,
+  "sample": "Sacred Waters Recovery Pendant"
+ },
+ {
+  "idx": 115,
+  "ability": "일반성공시 :\r\n • 체력감소 2~4% 느림\r\n • 체력회복량 5.5~10% 증가\r\n대성공시 :\r\n • 체력감소 3~5% 느림\r\n • 체력회복량 8.5~13% 증가",
+  "count": 1,
+  "sample": "Flavor Explosion Choco Croissant"
+ },
+ {
+  "idx": 116,
+  "ability": "일반성공시 :\r\n • 기본속도 4~6% 증가\r\n • 코인 10~12% 보너스\r\n대성공시 :\r\n • 기본속도 5~7% 증가\r\n • 코인 11~13% 보너스",
+  "count": 1,
+  "sample": "Slippery Golden Banana Peel"
+ },
+ {
+  "idx": 117,
+  "ability": "일반성공시 :\r\n • 생명물약 획득시 거대화 2~3초\r\n • 체력회복량 4~6% 증가\r\n대성공시 :\r\n • 생명물약 획득시 거대화 2~3초\r\n • 체력회복량 6~8% 증가",
+  "count": 1,
+  "sample": "Expert's Baking Powder"
+ },
+ {
+  "idx": 118,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 거대화 착지시 바닥에서 젤리 생성 중급 1~10단\r\n대성공시 :\r\n • 초미니자력\r\n • 거대화 착지시 바닥에서 젤리 생성 고급 1~10단",
+  "count": 1,
+  "sample": "Jelly Pong Pong Jumping Jelly Horse"
+ },
+ {
+  "idx": 119,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 체력 45~75으로 부활 1회\r\n대성공시 :\r\n • 초미니자력\r\n • 체력 60~90으로 부활 1회",
+  "count": 1,
+  "sample": "Ice Sparkling Water Drink"
+ },
+ {
+  "idx": 120,
+  "ability": "일반성공시 :\r\n • 장애물 파괴시 30~80% 확률로 날개 달린 코인 생성\r\n • 코인 5~6% 보너스\r\n대성공시 :\r\n • 장애물 파괴시 30~80% 확률로 날개 달린 코인 생성\r\n • 코인 6~7% 보너스",
+  "count": 1,
+  "sample": "Flashy Golden Mace"
+ },
+ {
+  "idx": 121,
+  "ability": "일반성공시 :\r\n • 체력감소 4~5% 느림\r\n • 모든 과즙젤리 250~450점 추가\r\n대성공시 :\r\n • 체력감소 4~5% 느림\r\n • 모든 과즙젤리 300~500점 추가",
+  "count": 1,
+  "sample": "Pulp Full Orange Lime Toktok Smoothie"
+ },
+ {
+  "idx": 122,
+  "ability": "일반성공시 :\r\n • 체력감소 4~5% 느림\r\n • 이어달리기 쿠키가 체력 50~68로 부활\r\n대성공시 :\r\n • 체력감소 4.5~5.5% 느림\r\n • 이어달리기 쿠키가 체력 70~88로 부활",
+  "count": 1,
+  "sample": "Whipped Cream Full Strawberry Eclair Baton"
+ },
+ {
+  "idx": 123,
+  "ability": "일반성공시 :\r\n • 기본속도 5~10% 증가\r\n • 굴랍자문젤리 2,200~3,100점 추가\r\n대성공시 :\r\n • 기본속도 7~12% 증가\r\n • 굴랍자문젤리 2,900~3,800점 추가",
+  "count": 1,
+  "sample": "Chewy Crispy Freshly Baked Naan Set"
+ },
+ {
+  "idx": 124,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 코인 6~13% 보너스\r\n대성공시 :\r\n • 초미니자력\r\n • 코인 8~15% 보너스",
+  "count": 1,
+  "sample": "Sweet Sour Thrilling Super Carbonated Drink"
+ },
+ {
+  "idx": 125,
+  "ability": "일반성공시 :\r\n • 소환수 탑승시 체력감소 19~28% 느림\r\n • 소환수 탑승 시 모든 젤리 100~1,000점 추가\r\n대성공시 :\r\n • 소환수 탑승시 체력감소 21~30% 느림\r\n • 소환수 탑승 시 모든 젤리 400~1,300점 추가",
+  "count": 1,
+  "sample": "Special Feed for Summoned Pet"
+ },
+ {
+  "idx": 126,
+  "ability": "일반성공시 :\r\n • 꼬마 자력 초급~9단\r\n • 체력 45~55으로 2회 부활\r\n대성공시 :\r\n • 꼬마 자력 초급~9단\r\n • 체력 50~60으로 2회 부활\r\n\r\n※ 미진화형보다 일반성공/대성공 보물의 자력이 조금 더 강함",
+  "count": 1,
+  "sample": "Shining Crown for Champion"
+ },
+ {
+  "idx": 127,
+  "ability": "일반성공시 :\n • 거대화시 기본속도 8~13% 증가\n • 거대화시 30~90% 확률로 은화를 금화로 변경 (변경 최대 개수 제한 있음)\n대성공시 :\n • 거대화시 기본속도 10~15% 증가\n • 거대화시 50~100% 확률로 은화를 금화로 변경 (변경 최대 개수 제한 있음)",
+  "count": 1,
+  "sample": "Rich Rich Coin Wallet"
+ },
+ {
+  "idx": 128,
+  "ability": "일반성공시 :\n • 모든 젤리 220~400점 추가\n • 체력감소 4~7% 느림\n대성공시 :\n • 모든 젤리 270~450점 추가\n • 체력감소 5~8% 느림",
+  "count": 1,
+  "sample": "Autumn Night Camping Skewer Set"
+ },
+ {
+  "idx": 129,
+  "ability": "일반성공시 :\r\n • 초미니자력\r\n • 생명물약 획득시 광속질주 0.3~0.8초\r\n대성공시 :\r\n • 초미니자력\r\n • 생명물약 획득시 광속질주 0.5~1초",
+  "count": 1,
+  "sample": "Super Mushroom Drink"
+ },
+ {
+  "idx": 130,
+  "ability": "일반성공시 :\n • 부활시 1.5~2.5초 동안 광속질주(중첩적용X)\n • 부활시 1.5~2.5초 동안 광속질주(중첩적용X)\n대성공시 :\n • 부활시 2~3초 동안 거대화(중첩적용X)\n • 부활시 2~3초 동안 광속질주(중첩적용X)",
+  "count": 1,
+  "sample": "Mushroom Lamp in the Forest"
+ },
+ {
+  "idx": 131,
+  "ability": "일반성공시 :\r\n • 충돌 직전 모든 장애물을 파괴 2회\r\n • 모든 젤리 370~650점 추가\r\n대성공시 :\r\n • 충돌 직전 모든 장애물을 파괴 2회\r\n • 모든 젤리 470~750점 추가",
+  "count": 1,
+  "sample": "Round Watermelon Bouncy Ball"
+ },
+ {
+  "idx": 132,
+  "ability": "일반성공시 :\r\n • 자력차단\r\n • 체력감소 7.5~10.5% 느림\r\n대성공시 :\r\n • 자력차단\r\n • 체력감소 8.5~11.5% 느림",
+  "count": 1,
+  "sample": "Sturdy Magnetism Blocking Gloves"
+ },
+ {
+  "idx": 133,
+  "ability": "일반성공시 :\n • 초미니자력\n • 생명물약 획득시 거대화 1.9~2.8초\n대성공시 :\n • 초미니자력\n • 생명물약 획득시 거대화 2.1~3초",
+  "count": 1,
+  "sample": "Hyper Neon Carbonated Drink Zero"
+ },
+ {
+  "idx": 134,
+  "ability": "• 자력차단\r\n • 코인 15~17% 보너스",
+  "count": 1,
+  "sample": "Compass Pointing to Coin Island"
+ },
+ {
+  "idx": 135,
+  "ability": "• 스페셜 에피소드 1, 2에서 경험치 100~400% 보너스\r\n • 스페셜 에피소드 1, 2에서 코인 5~10% 보너스",
+  "count": 1,
+  "sample": "Sea Fairy Heart Yearning for the Moon"
+ },
+ {
+  "idx": 136,
+  "ability": "• 구출/부활(체력 50) 1~3회\r\n • 경험치 5~10% 보너스",
+  "count": 1,
+  "sample": "Ice Lily Infused with Starlight"
+ },
+ {
+  "idx": 137,
+  "ability": "• 거대화시 쿠키의 크기가 10~30% 커짐\r\n • 구출/부활(체력 10~20) 총 2~3회",
+  "count": 1,
+  "sample": "Newcomer School Backpack"
+ },
+ {
+  "idx": 138,
+  "ability": "• 체력감소 5~8% 느림\r\n • 충돌시 체력복구 + 800만점 획득 (최대 2회)",
+  "count": 1,
+  "sample": "Kids Smart Learning Tablet"
+ },
+ {
+  "idx": 139,
+  "ability": "일반성공시 :\n • 거대화시 쿠키의 크기가 40~60% 커짐\n • 구출/부활(체력 15~25) 총 3회\n대성공시 :\n • 거대화시 쿠키의 크기가 50~70% 커짐\n • 구출/부활(체력 20~30) 총 3회",
+  "count": 1,
+  "sample": "Badge Covered Rookie Backpack"
+ },
+ {
+  "idx": 140,
+  "ability": "일반성공시 :\n • 기본속도 4~7% 증가\n • 체력 55~75으로 부활\n대성공시 :\n • 기본속도 5~8% 증가\n • 체력 65~85으로 부활",
+  "count": 1,
+  "sample": "Vibrant Rainbow Choco Pen Set"
+ },
+ {
+  "idx": 141,
+  "ability": "일반성공시 :\n • 체력감소 4~7% 느림\n • 충돌시 체력복구 + 700만점 획득 (최대 2회)\n대성공시 :\n • 체력감소 5~8% 느림\n • 충돌시 체력복구 + 800만점 획득 (최대 2회)",
+  "count": 1,
+  "sample": "Early Adopter Smart Pad"
+ },
+ {
+  "idx": 142,
+  "ability": "• 구출/부활(체력 10~20) 총 3회\r\n • 경험치+20%, 코인 5~10% 보너스",
+  "count": 1,
+  "sample": "Squirrels Boing Boing Toy Hammer"
+ },
+ {
+  "idx": 143,
+  "ability": "• 충돌데미지추가\r\n • 체력감소 6~7% 느림",
+  "count": 1,
+  "sample": "Fluttering Spring Picnic Mat"
+ },
+ {
+  "idx": 144,
+  "ability": "• 구출 1회 + 구출시 체력이 40증가 (1회) * 해당 보물에 한함\r\n • 모든 젤리 30~210점 추가",
+  "count": 1,
+  "sample": "Heart Pounding Spring Picnic Set"
+ },
+ {
+  "idx": 145,
+  "ability": "일반성공시 :\r\n • 구출 1회 + 구출시 체력이 60증가 (1회) * 해당 보물에 한함\r\n • 모든 젤리 230~410점 추가\r\n대성공시 :\r\n • 구출 1회 + 구출시 체력이 65증가 (1회) * 해당 보물에 한함\r\n • 모든 젤리 280~460점 추가",
+  "count": 1,
+  "sample": "Heart-Pounding Spring Picnic Basket"
+ },
+ {
+  "idx": 146,
+  "ability": "일반성공시 :\r\n • 충돌데미지추가\r\n • 체력감소 9~10% 느림\r\n대성공시 :\r\n • 충돌데미지추가\r\n • 체력감소 10~11% 느림",
+  "count": 1,
+  "sample": "Ethnic Tent in Spring Sunlight"
+ },
+ {
+  "idx": 147,
+  "ability": "• 체력감소 3~6% 느림\r\n • 충돌시 체력복구 + 800만점 획득 (최대 2회)",
+  "count": 1,
+  "sample": "Spring Flowers Full Squirrel Pot"
+ },
+ {
+  "idx": 148,
+  "ability": "• 구출 1회 + 구출시 체력이 40 증가 (1회) * 해당 보물에 한함\r\n • 모든 젤리 280~460점 추가",
+  "count": 1,
+  "sample": "Ramji Blossom Tail Pen"
+ },
+ {
+  "idx": 149,
+  "ability": "• 민들레 홀씨 젤리 300~500점 추가\r\n • 체력감소 2~3% 느림",
+  "count": 1,
+  "sample": "Dandelion Fairy Cookie's Spring-Scented Flower Tea"
+ },
+ {
+  "idx": 150,
+  "ability": "• 봄꽃 젤리 500~1000점 추가\r\n • 체력회복량 2~4% 증가",
+  "count": 1,
+  "sample": "Baby Dandelion Seed's Fluttering Pinwheel"
+ },
+ {
+  "idx": 151,
+  "ability": "• 소환수에 탑승시 모든 젤리 350~550점 추가\r\n• 소환수 탑승시 11~20% 체력감소 느림",
+  "count": 1,
+  "sample": "Dubai Chewy Cookie's Pistachio Spread"
+ },
+ {
+  "idx": 152,
+  "ability": "• 두쫀볼 젤리 1500~3500점 추가\r\n• 체력감소 2~3% 느림",
+  "count": 1,
+  "sample": "Chewy Choco Hedgehog's Cozy Luxury Case"
+ },
+ {
+  "idx": 153,
+  "ability": "• 경험치 12~17% 보너스\r\n• 게임종료 시 150코인 당 1경험치 획득",
+  "count": 1,
+  "sample": "Blueberry White Horse Music Box"
+ },
+ {
+  "idx": 154,
+  "ability": "• 충돌시 체력복구 + 200~400만점 획득 (최대 2회)\r\n• 구출1회 + 구출시 체력이 30증가 (1회) * 해당 보물에 한함",
+  "count": 1,
+  "sample": "Colorful Kids Paints"
+ },
+ {
+  "idx": 155,
+  "ability": "• 체력감소 2~4% 느림\r\n• 장애물 파괴시 8,300~11,000점 추가",
+  "count": 1,
+  "sample": "Sturdy Catchball Glove"
+ },
+ {
+  "idx": 156,
+  "ability": "일반성공시 :\r\n• 경험치 20~30% 보너스\r\n• 게임종료 시 120코인 당 1경험치 획득\r\n대성공시 :\r\n• 경험치 25~35% 보너스\r\n• 게임종료 시 100코인 당 1경험치 획득",
+  "count": 1,
+  "sample": "Raspberry Carousel Music Box"
+ },
+ {
+  "idx": 157,
+  "ability": "일반성공시 :\r\n• 충돌시 체력복구 + 400~600만점 획득 (최대 2회)\r\n• 구출1회 + 구출시 체력이 50증가 (1회) * 해당 보물에 한함\r\n대성공시 :\r\n• 충돌시 체력복구 + 500~700만점 획득 (최대 2회)\r\n• 구출1회 + 구출시 체력이 60증가 (1회) * 해당 보물에 한함",
+  "count": 1,
+  "sample": "Artist's Palette Set"
+ },
+ {
+  "idx": 158,
+  "ability": "일반성공시 :\r\n• 체력감소 6~7% 느림\r\n• 장애물 파괴시 15,300~18,000점 추가\r\n대성공시 :\r\n• 체력감소 7~8% 느림\r\n• 장애물 파괴시 16,300~19,000점 추가",
+  "count": 1,
+  "sample": "Pro's Golden Glove"
+ },
+ {
+  "idx": 159,
+  "ability": "• 카이막 젤리 300~500점 추가\r\n• 체력감소 2~3% 느림",
+  "count": 1,
+  "sample": "Kaymak Cookie's Cloud Boots"
+ },
+ {
+  "idx": 160,
+  "ability": "• 꿀 젤리 500~1000점 추가\r\n• 체력회복량 2~4% 증가",
+  "count": 1,
+  "sample": "Honey Bottle's Golden Beeswax Stopper"
+ },
+ {
+  "idx": 161,
+  "ability": "• 금강법사맛 쿠키가 착용 시 코인 추가 생성\r\n • 코인 9~12% 보너스",
+  "count": 1,
+  "sample": "Baekmyong's Golden Magic Scripture"
+ },
+ {
+  "idx": 162,
+  "ability": "• 금강법사맛 쿠키가 착용 시 경전 젤리 변환\r\n • 체력감소 5~8% 느림",
+  "count": 1,
+  "sample": "Geumgang Beopsa Cookie's Noble Scripture"
+ },
+ {
+  "idx": 163,
+  "ability": "• 장애물 통과시 9,300~12,000점 추가\r\n• 기본속도 3~4% 증가",
+  "count": 1,
+  "sample": "Refreshing White Peach Popsicle"
+ },
+ {
+  "idx": 164,
+  "ability": "• 초미니자력\r\n• 경험치+15%, 코인 3~5% 보너스",
+  "count": 1,
+  "sample": "Very Lonely Melody Guitar"
+ },
+ {
+  "idx": 165,
+  "ability": "• 생명물약 획득시 광속질주 0.1~0.6초\r\n• 광속질주시 모든 젤리 100~200점 추가",
+  "count": 1,
+  "sample": "tr_X??"
+ },
+ {
+  "idx": 166,
+  "ability": "일반성공시 :\r\n• 장애물 통과시 10,500~15,000점 추가\r\n• 기본속도 5~6% 증가\r\n대성공시 :\r\n• 장애물 통과시 13,500~18,000점 추가\r\n• 기본속도 6~7% 증가",
+  "count": 1,
+  "sample": "Special Peach Parfait"
+ },
+ {
+  "idx": 167,
+  "ability": "일반성공시 :\r\n• 초미니자력\r\n• 경험치+20%, 코인 5~10% 보너스\r\n대성공시 :\r\n• 초미니자력\r\n• 경험치+25%, 코인 7~12% 보너스",
+  "count": 1,
+  "sample": "Rock Spirit Korean Melon Electric Guitar"
+ },
+ {
+  "idx": 168,
+  "ability": "일반성공시 :\r\n• 생명물약 획득시 광속질주 0.3~0.8초\r\n• 광속질주시 모든 젤리 400~500점 추가\r\n대성공시 :\r\n• 생명물약 획득시 광속질주 0.5~1초\r\n• 광속질주시 모든 젤리 500~600점 추가",
+  "count": 1,
+  "sample": "Big Big Plums Malrangi"
+ },
+ {
+  "idx": 169,
+  "ability": "• 해골 연근 젤리 250~750점 추가\r\n• 체력 30~70으로 부활",
+  "count": 1,
+  "sample": "연근요괴맛 쿠키의 연근조림 팩"
+ },
+ {
+  "idx": 170,
+  "ability": "• 연꽃방울 젤리 15,000~33,000점 추가\r\n• 초미니자력",
+  "count": 1,
+  "sample": "연밥 유모의 연밥 딸랑이"
+ },
+ {
+  "idx": 171,
+  "ability": "• 체력회복량 2~4% 증가",
+  "count": 1,
+  "sample": "Coffee Cookie Original Coffee Bean"
+ },
+ {
+  "idx": 172,
+  "ability": "• 기본속도 3~5% 증가",
+  "count": 1,
+  "sample": "Boarder Cookie Swift Wheel"
+ },
+ {
+  "idx": 173,
+  "ability": "• 충돌 피해 5~6% 감소",
+  "count": 1,
+  "sample": "Princess Cookie Precious Jewel Ring"
+ },
+ {
+  "idx": 174,
+  "ability": "• 광속질주 속도 5~10% 증가",
+  "count": 1,
+  "sample": "Knight Cookie Horseshoe Ornament"
+ },
+ {
+  "idx": 175,
+  "ability": "• 장애물 파괴시 1,200~4,000점 추가",
+  "count": 1,
+  "sample": "Muscle Cookie's Protein Powder"
+ },
+ {
+  "idx": 176,
+  "ability": "• 체력 10~20으로 부활",
+  "count": 1,
+  "sample": "Zombie Cookie Original Cell"
+ },
+ {
+  "idx": 177,
+  "ability": "• 기본속도 4~5% 증가\r\n • 코인 10~11% 보너스",
+  "count": 1,
+  "sample": "Melting Highly Concentrated Banana Choco Bread"
+ },
+ {
+  "idx": 178,
+  "ability": "• 체력 50으로 부활\r\n• 코인/경험치 10% 보너스",
+  "count": 1,
+  "sample": "Dreaming Strawberry Choco Donut"
+ },
+ {
+  "idx": 179,
+  "ability": "일반성공시 :\n • 체력이 15~25 증가\n • 체력 10~20으로 부활 1회\n대성공시 :\n • 체력이 20~30 증가\n • 체력 10~20으로 부활 1회",
+  "count": 1,
+  "sample": "Courage Skull Button Necklace"
+ },
+ {
+  "idx": 180,
+  "ability": "일반성공시 :\n • 체력감소 2~5% 느림\n대성공시 :\n • 체력감소 3~6% 느림",
+  "count": 1,
+  "sample": "Cookies and Cream Cookie Late Night Snack"
+ },
+ {
+  "idx": 181,
+  "ability": "일반성공시 :\n • 체력감소 1~2% 느림\n • 체력회복량 2~4% 증가\n대성공시 :\n • 체력감소 2~3% 느림\n • 체력회복량 3~5% 증가",
+  "count": 1,
+  "sample": "Bizarre Cafe Latte"
+ },
+ {
+  "idx": 182,
+  "ability": "일반성공시 :\n • 체력 10~20으로 부활 2회\n대성공시 :\n • 체력 10~20으로 부활 3회",
+  "count": 1,
+  "sample": "Wriggling Zombie Cell"
+ },
+ {
+  "idx": 183,
+  "ability": "일반성공시 :\r\n • 기본속도 3~5% 증가\r\n • 아이템 시간 10% 연장\r\n대성공시 :\r\n • 기본속도 4~6% 증가\r\n • 아이템 시간 10% 연장",
+  "count": 1,
+  "sample": "Uv Blocking Olive Oil"
+ },
+ {
+  "idx": 184,
+  "ability": "• 보너스타임 0.5~1초 연장",
+  "count": 1,
+  "sample": "Strawberry Cookie's Sweet Strawberry"
+ },
+ {
+  "idx": 185,
+  "ability": "• 체력감소 1~4% 느림",
+  "count": 1,
+  "sample": "Cookies and Cream Cookie Afternoon Snack"
+ },
+ {
+  "idx": 186,
+  "ability": "• 아이템 시간 5~6% 연장",
+  "count": 1,
+  "sample": "Cloud Cookie Rainbow Candy Piece"
+ },
+ {
+  "idx": 187,
+  "ability": "• 코인 3~4% 보너스",
+  "count": 1,
+  "sample": "Buttercream Choco Cookie Greasy Butter Piece"
+ },
+ {
+  "idx": 188,
+  "ability": "• 기본속도 2~4% 증가",
+  "count": 1,
+  "sample": "First Harvested Olive Oil"
+ },
+ {
+  "idx": 189,
+  "ability": " • 체력이 5~15 증가",
+  "count": 1,
+  "sample": "Brave Cookie Third Skull Button"
+ },
+ {
+  "idx": 190,
+  "ability": "• 경험치 2~7% 보너스",
+  "count": 1,
+  "sample": "Bright Cookie Lollipop Piece"
+ },
+ {
+  "idx": 191,
+  "ability": "• 체력이 5~15 증가",
+  "count": 1,
+  "sample": "Freshly Baked Cracker"
+ },
+ {
+  "idx": 192,
+  "ability": "• 은화 획득시 10~20점 추가",
+  "count": 1,
+  "sample": "Clay Arrowhead"
+ },
+ {
+  "idx": 193,
+  "ability": "• 분홍곰젤리 25~70점 추가",
+  "count": 1,
+  "sample": "Shining Red Cherry"
+ },
+ {
+  "idx": 194,
+  "ability": "• 자석 시간 10~20% 연장",
+  "count": 1,
+  "sample": "Witchs Thumbtack"
+ },
+ {
+  "idx": 195,
+  "ability": "• 금화 획득시 50~70점 추가",
+  "count": 1,
+  "sample": "Bountiful Harvest Wheat"
+ },
+ {
+  "idx": 196,
+  "ability": "• 보너스타임 0.3~0.8초 연장",
+  "count": 1,
+  "sample": "Always Cute Acorn"
+ },
+ {
+  "idx": 197,
+  "ability": "• 알파벳젤리 25~70점 추가",
+  "count": 1,
+  "sample": "Yellowish Organic Flour"
+ },
+ {
+  "idx": 198,
+  "ability": "• 노란곰젤리 10~60점 추가",
+  "count": 1,
+  "sample": "Well Roasted Fresh Peanut"
+ }
+]
