@@ -102,7 +102,7 @@ function filteredIndices() {
   const onlyUntranslated = document.getElementById('onlyUntranslated').checked;
   return items.map((it, i) => i).filter(i => {
     const it = items[i];
-    if (onlyUntranslated && !(it.ability && !it.abilityEn)) return false;
+    if (onlyUntranslated && it.abilityEn) return false;
     if (!q) return true;
     return it.englishName.toLowerCase().includes(q) || (it.name || '').includes(q);
   });
@@ -111,7 +111,7 @@ function filteredIndices() {
 function renderList() {
   const vis = filteredIndices();
   const translatedCount = items.filter(it => it.abilityEn).length;
-  const untranslatedCount = items.filter(it => it.ability && !it.abilityEn).length;
+  const untranslatedCount = items.filter(it => !it.abilityEn).length;
   document.getElementById('summary').textContent =
     `${vis.length} shown (of ${items.length}) · ${translatedCount} translated · ${untranslatedCount} untranslated`;
   const rows = vis.map(i => {
