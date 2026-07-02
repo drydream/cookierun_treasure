@@ -43,6 +43,8 @@ const i18n = {
     navTreasure: 'Treasure Search',
     navTierlist: 'Tier List',
     tierEmpty: 'No treasures ranked yet',
+    tierFormBase: 'Base form',
+    tierFormEvolved: 'Evolved form',
   },
   th: {
     title: 'ค้นหาสมบัติ Cookie Run Classic',
@@ -69,6 +71,8 @@ const i18n = {
     navTreasure: 'ค้นหาสมบัติ',
     navTierlist: 'Tier List',
     tierEmpty: 'ยังไม่มีการจัดอันดับ',
+    tierFormBase: 'ก่อนวิวัฒนาการ',
+    tierFormEvolved: 'หลังวิวัฒนาการ',
   },
 };
 
@@ -176,37 +180,47 @@ function HomePage({ t, onNavigate }) {
 }
 
 function TierListPage({ items, t, onSelect }) {
+  const [showEvolved, setShowEvolved] = useState(false);
   return (
-    <div className="tierlist">
-      {TIERS.map(tier => {
-        const list = items.filter(it => it.tier === tier);
-        return (
-          <div className="tier-row" key={tier}>
-            <div className="tier-label" style={{ background: TIER_COLORS[tier] }}>{tier}</div>
-            <div className="tier-items">
-              {list.length === 0 && <span className="tier-empty">{t.tierEmpty}</span>}
-              {list.map((it, i) => (
-                <button
-                  type="button"
-                  key={it.version + it.name + i}
-                  className="tier-item"
-                  title={it.name}
-                  onClick={() => onSelect(it.name)}
-                >
-                  <img
-                    className="tier-icon"
-                    src={it.localImage}
-                    alt=""
-                    loading="lazy"
-                    onError={e => { e.target.style.visibility = 'hidden'; }}
-                  />
-                  <span className="tier-name">{it.name}</span>
-                </button>
-              ))}
+    <div>
+      <div className="grade-filter">
+        <button className={!showEvolved ? 'active' : ''} onClick={() => setShowEvolved(false)}>{t.tierFormBase}</button>
+        <button className={showEvolved ? 'active' : ''} onClick={() => setShowEvolved(true)}>{t.tierFormEvolved}</button>
+      </div>
+      <div className="tierlist">
+        {TIERS.map(tier => {
+          const list = items.filter(it => it.tier === tier);
+          return (
+            <div className="tier-row" key={tier}>
+              <div className="tier-label" style={{ background: TIER_COLORS[tier] }}>{tier}</div>
+              <div className="tier-items">
+                {list.length === 0 && <span className="tier-empty">{t.tierEmpty}</span>}
+                {list.map((it, i) => {
+                  const display = showEvolved ? (items.find(x => x.baseItem === it.name) || it) : it;
+                  return (
+                    <button
+                      type="button"
+                      key={it.version + it.name + i}
+                      className="tier-item"
+                      title={display.name}
+                      onClick={() => onSelect(display.name)}
+                    >
+                      <img
+                        className="tier-icon"
+                        src={display.localImage}
+                        alt=""
+                        loading="lazy"
+                        onError={e => { e.target.style.visibility = 'hidden'; }}
+                      />
+                      <span className="tier-name">{display.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }
