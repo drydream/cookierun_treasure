@@ -22,18 +22,17 @@ const PURPOSES = ['score', 'auto_farm', 'semi_auto', 'coins', 'exp', 'boxes'];
 const EPISODES = ['ep1', 'ep2', 'ep3', 'ep4', 'ep5', 'ep6', 'special1', 'special2', 'special3'];
 const BOOSTS = ['energy_boost', 'item_time', 'fast_start'];
 const POWER_EFFECTS = ['cheerleader', 'special_force', 'fairy', 'cheesecake', 'sea_fairy', 'serenade'];
-// Maps each Power+ effect to the cookie whose "possession effect" it is, so
-// its real portrait can be shown instead of a generic icon. 'serenade'
-// doesn't correspond to a cookie in our data (cookierunhub calls it
-// "Serenade of Love" and uses a piano icon, not a cookie portrait) — left
-// without a match rather than guessing.
-const POWER_EFFECT_COOKIE = {
-  cheerleader: 'Cheerleader Cookie',
-  special_force: 'Special Force Cookie',
-  fairy: 'Fairy Cookie',
-  cheesecake: 'Cheesecake Cookie',
-  sea_fairy: 'Sea Fairy Cookie',
-  serenade: null,
+// Maps each Power+ effect to the cookie/pet whose portrait represents it,
+// so a real icon can be shown instead of a generic one. 'serenade' isn't a
+// cookie (cookierunhub calls it "Serenade of Love" with a piano icon) — it's
+// Ms. Do-Re-Mi's (S-grade pet) effect instead.
+const POWER_EFFECT_CHAR = {
+  cheerleader: { kind: 'cookie', name: 'Cheerleader Cookie' },
+  special_force: { kind: 'cookie', name: 'Special Force Cookie' },
+  fairy: { kind: 'cookie', name: 'Fairy Cookie' },
+  cheesecake: { kind: 'cookie', name: 'Cheesecake Cookie' },
+  sea_fairy: { kind: 'cookie', name: 'Sea Fairy Cookie' },
+  serenade: { kind: 'pet', name: 'Ms. Do-Re-Mi' },
 };
 
 const i18n = {
@@ -97,9 +96,9 @@ const i18n = {
       cheerleader: 'Cheerleader Cookie appears unexpectedly during the run and restores 30 Stamina (more at higher upgrade levels).',
       special_force: 'Special Force Cookie appears unexpectedly during the run and provides supporting fire.',
       fairy: 'Fairy Cookie creates a shield with a certain probability during the run.',
-      cheesecake: 'Cheesecake Cookie has a certain probability of triggering a Coin Firework Party during the run.',
+      cheesecake: 'Periodically summons Coin Fireworks Parties during play (leveling up extends the duration).',
       sea_fairy: 'Sea Fairy Cookie recovers some collision damage with a certain probability when hitting an obstacle (more at higher upgrade levels).',
-      serenade: 'Not a cookie effect — exact mechanic unconfirmed, no matching icon in our data.',
+      serenade: 'Activates Love Serenade and restores HP once Ms. Do-Re-Mi or Mr. Fa-Sol-La-Si (both S-grade pets) has been obtained.',
     },
     buildScore: 'Score',
     buildCoins: 'Coins',
@@ -182,9 +181,9 @@ const i18n = {
       cheerleader: 'Cheerleader Cookie จะโผล่มาแบบไม่คาดคิดระหว่างวิ่งแล้วฟื้นฟู Stamina 30 หน่วย (อัปเกรดยิ่งสูงยิ่งฟื้นเยอะ)',
       special_force: 'Special Force Cookie จะโผล่มาแบบไม่คาดคิดระหว่างวิ่งแล้วช่วยยิงสนับสนุน',
       fairy: 'Fairy Cookie มีโอกาสสร้างโล่ป้องกันระหว่างวิ่ง',
-      cheesecake: 'Cheesecake Cookie มีโอกาสเปิด Coin Firework Party ระหว่างวิ่ง',
+      cheesecake: 'เปิด Coin Fireworks Party เป็นระยะระหว่างวิ่ง (อัปเกรดยิ่งสูงยิ่งอยู่นาน)',
       sea_fairy: 'Sea Fairy Cookie มีโอกาสฟื้นฟูความเสียหายบางส่วนเมื่อชนสิ่งกีดขวาง (อัปเกรดยิ่งสูงยิ่งฟื้นเยอะ)',
-      serenade: 'ไม่ใช่เอฟเฟกต์ของคุกกี้ — ยังไม่ยืนยันกลไกที่แน่ชัด ไม่มีไอคอนที่ตรงในข้อมูลของเรา',
+      serenade: 'เปิด Love Serenade และฟื้นฟู HP เมื่อมี Ms. Do-Re-Mi หรือ Mr. Fa-Sol-La-Si (เพ็ท S-grade ทั้งคู่)',
     },
     buildScore: 'Score',
     buildCoins: 'Coins',
@@ -871,8 +870,8 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
       <label className="field">{t.buildPowerEffects}</label>
       <div className="power-effects-grid">
         {POWER_EFFECTS.map(p => {
-          const cookieName = POWER_EFFECT_COOKIE[p];
-          const char = cookieName ? characters.find(c => c.kind === 'cookie' && c.name === cookieName) : null;
+          const ref = POWER_EFFECT_CHAR[p];
+          const char = ref ? characters.find(c => c.kind === ref.kind && c.name === ref.name) : null;
           return (
             <button
               key={p}
