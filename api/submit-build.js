@@ -27,13 +27,24 @@ const SLOTS = ['main', 'relay', 'pet', 'treasure'];
 const BOOSTS = ['energy_boost', 'item_time', 'fast_start'];
 const POWER_EFFECTS = ['cheerleader', 'special_force', 'fairy', 'cheesecake', 'sea_fairy', 'serenade'];
 const NOTES_MAX = 2000;
+const YOUTUBE_LINK_MAX = 300;
+
+function validYoutubeLink(link) {
+  return link === undefined || link === null || (typeof link === 'string' && link.length <= YOUTUBE_LINK_MAX);
+}
 
 const PURPOSE_LABEL = { score: 'Score', auto_farm: 'Auto Farm', semi_auto: 'Semi-Auto', coins: 'Coins', exp: 'EXP', boxes: 'Boxes' };
 const EPISODE_LABEL = { ep1: 'EP 1', ep2: 'EP 2', ep3: 'EP 3', ep4: 'EP 4', ep5: 'EP 5', ep6: 'EP 6', special1: 'Special 1', special2: 'Special 2', special3: 'Special 3' };
 
 function validCombi(combi) {
   if (!Array.isArray(combi) || combi.length === 0 || combi.length > 10) return false;
-  if (!combi.every(entry => entry && typeof entry.name === 'string' && entry.name.trim() && SLOTS.includes(entry.slot))) {
+  if (!combi.every(entry => {
+    if (!entry || typeof entry.name !== 'string' || !entry.name.trim() || !SLOTS.includes(entry.slot)) return false;
+    if (entry.slot === 'treasure' && entry.level !== undefined) {
+      if (!Number.isInteger(entry.level) || entry.level < 0 || entry.level > 9) return false;
+    }
+    return true;
+  })) {
     return false;
   }
   const bySlot = slot => combi.filter(e => e.slot === slot).length;
@@ -128,7 +139,7 @@ function validPassword(pw) {
 }
 
 async function handleSubmit(req, res) {
-  const { purpose, episode, combi, boosts, power_effects, score, coins, notes, turnstileToken, password } = req.body;
+  const { purpose, episode, combi, boosts, power_effects, score, coins, notes, youtube_link, turnstileToken, password } = req.body;
 
   if (!validPassword(password)) {
     res.status(400).json({ error: 'Password must be 4-20 characters (needed to edit/delete this build later)' });
@@ -156,6 +167,10 @@ async function handleSubmit(req, res) {
   }
   if (notes !== undefined && notes !== null && (typeof notes !== 'string' || notes.length > NOTES_MAX)) {
     res.status(400).json({ error: 'Notes too long' });
+    return;
+  }
+  if (!validYoutubeLink(youtube_link)) {
+    res.status(400).json({ error: 'YouTube link too long' });
     return;
   }
   if (!turnstileToken) {
@@ -187,6 +202,7 @@ async function handleSubmit(req, res) {
         score: score ?? null,
         coins: coins ?? null,
         notes: notes || null,
+        youtube_link: youtube_link || null,
         edit_password_hash: hashPassword(password),
       }]),
     });
@@ -200,7 +216,7 @@ async function handleSubmit(req, res) {
 
 async function handleEdit(req, res) {
   const id = parseInt(req.query.id);
-  const { password, purpose, episode, combi, boosts, power_effects, score, coins, notes } = req.body;
+  const { password, purpose, episode, combi, boosts, power_effects, score, coins, notes, youtube_link } = req.body;
 
   if (!Number.isInteger(id) || !validPassword(password)) {
     res.status(400).json({ error: 'Missing id or password' });
@@ -230,6 +246,10 @@ async function handleEdit(req, res) {
     res.status(400).json({ error: 'Notes too long' });
     return;
   }
+  if (!validYoutubeLink(youtube_link)) {
+    res.status(400).json({ error: 'YouTube link too long' });
+    return;
+  }
 
   try {
     const ownHash = await fetchOwnHash(id);
@@ -238,7 +258,7 @@ async function handleEdit(req, res) {
       return;
     }
 
-    const patch = { purpose, episode, combi, boosts, power_effects, score, coins, notes };
+    const patch = { purpose, episode, combi, boosts, power_effects, score, coins, notes, youtube_link };
     const putRes = await fetch(`${SUPABASE_URL}/rest/v1/builds?id=eq.${id}`, {
       method: 'PATCH',
       headers: serviceHeaders(),

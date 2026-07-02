@@ -22,6 +22,19 @@ const PURPOSES = ['score', 'auto_farm', 'semi_auto', 'coins', 'exp', 'boxes'];
 const EPISODES = ['ep1', 'ep2', 'ep3', 'ep4', 'ep5', 'ep6', 'special1', 'special2', 'special3'];
 const BOOSTS = ['energy_boost', 'item_time', 'fast_start'];
 const POWER_EFFECTS = ['cheerleader', 'special_force', 'fairy', 'cheesecake', 'sea_fairy', 'serenade'];
+// Maps each Power+ effect to the cookie whose "possession effect" it is, so
+// its real portrait can be shown instead of a generic icon. 'serenade'
+// doesn't correspond to a cookie in our data (cookierunhub calls it
+// "Serenade of Love" and uses a piano icon, not a cookie portrait) — left
+// without a match rather than guessing.
+const POWER_EFFECT_COOKIE = {
+  cheerleader: 'Cheerleader Cookie',
+  special_force: 'Special Force Cookie',
+  fairy: 'Fairy Cookie',
+  cheesecake: 'Cheesecake Cookie',
+  sea_fairy: 'Sea Fairy Cookie',
+  serenade: null,
+};
 
 const i18n = {
   en: {
@@ -79,7 +92,15 @@ const i18n = {
     buildBoosts: 'Boosts',
     buildBoostLabel: { energy_boost: 'Energy Boost', item_time: 'Item Time', fast_start: 'Fast Start' },
     buildPowerEffects: 'Power+ Effects',
-    buildPowerEffectLabel: { cheerleader: 'Cheerleader', special_force: 'Special Force', fairy: 'Fairy', cheesecake: 'Cheesecake', sea_fairy: 'Sea Fairy', serenade: 'Serenade' },
+    buildPowerEffectLabel: { cheerleader: 'Cheerleader', special_force: 'Special Force', fairy: 'Fairy', cheesecake: 'Cheesecake', sea_fairy: 'Sea Fairy', serenade: 'Serenade of Love' },
+    buildPowerEffectDesc: {
+      cheerleader: 'Cheerleader Cookie appears unexpectedly during the run and restores 30 Stamina (more at higher upgrade levels).',
+      special_force: 'Special Force Cookie appears unexpectedly during the run and provides supporting fire.',
+      fairy: 'Fairy Cookie creates a shield with a certain probability during the run.',
+      cheesecake: 'Cheesecake Cookie has a certain probability of triggering a Coin Firework Party during the run.',
+      sea_fairy: 'Sea Fairy Cookie recovers some collision damage with a certain probability when hitting an obstacle (more at higher upgrade levels).',
+      serenade: 'Not a cookie effect — exact mechanic unconfirmed, no matching icon in our data.',
+    },
     buildScore: 'Score',
     buildCoins: 'Coins',
     buildNotes: 'Notes',
@@ -97,6 +118,9 @@ const i18n = {
     buildWrongPassword: 'Wrong password',
     buildDeleted: 'Build deleted',
     buildSaved: 'Saved!',
+    buildYoutube: 'YouTube link (optional)',
+    buildYoutubePlaceholder: 'https://youtube.com/...',
+    buildWatchVideo: 'Watch video',
   },
   th: {
     title: 'ค้นหาสมบัติ Cookie Run Classic',
@@ -153,7 +177,15 @@ const i18n = {
     buildBoosts: 'Boosts',
     buildBoostLabel: { energy_boost: 'Energy Boost', item_time: 'Item Time', fast_start: 'Fast Start' },
     buildPowerEffects: 'Power+ Effects',
-    buildPowerEffectLabel: { cheerleader: 'Cheerleader', special_force: 'Special Force', fairy: 'Fairy', cheesecake: 'Cheesecake', sea_fairy: 'Sea Fairy', serenade: 'Serenade' },
+    buildPowerEffectLabel: { cheerleader: 'Cheerleader', special_force: 'Special Force', fairy: 'Fairy', cheesecake: 'Cheesecake', sea_fairy: 'Sea Fairy', serenade: 'Serenade of Love' },
+    buildPowerEffectDesc: {
+      cheerleader: 'Cheerleader Cookie จะโผล่มาแบบไม่คาดคิดระหว่างวิ่งแล้วฟื้นฟู Stamina 30 หน่วย (อัปเกรดยิ่งสูงยิ่งฟื้นเยอะ)',
+      special_force: 'Special Force Cookie จะโผล่มาแบบไม่คาดคิดระหว่างวิ่งแล้วช่วยยิงสนับสนุน',
+      fairy: 'Fairy Cookie มีโอกาสสร้างโล่ป้องกันระหว่างวิ่ง',
+      cheesecake: 'Cheesecake Cookie มีโอกาสเปิด Coin Firework Party ระหว่างวิ่ง',
+      sea_fairy: 'Sea Fairy Cookie มีโอกาสฟื้นฟูความเสียหายบางส่วนเมื่อชนสิ่งกีดขวาง (อัปเกรดยิ่งสูงยิ่งฟื้นเยอะ)',
+      serenade: 'ไม่ใช่เอฟเฟกต์ของคุกกี้ — ยังไม่ยืนยันกลไกที่แน่ชัด ไม่มีไอคอนที่ตรงในข้อมูลของเรา',
+    },
     buildScore: 'Score',
     buildCoins: 'Coins',
     buildNotes: 'หมายเหตุ',
@@ -171,6 +203,9 @@ const i18n = {
     buildWrongPassword: 'รหัสผ่านไม่ถูกต้อง',
     buildDeleted: 'ลบ build แล้ว',
     buildSaved: 'บันทึกแล้ว!',
+    buildYoutube: 'ลิงก์ YouTube (ไม่บังคับ)',
+    buildYoutubePlaceholder: 'https://youtube.com/...',
+    buildWatchVideo: 'ดูวิดีโอ',
   },
 };
 
@@ -643,6 +678,9 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                       return (
                         <div className={'combi-icon combi-icon-' + combiEntryDisplayKind(entry)} key={i} title={entry.name}>
                           {icon && <img src={icon} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+                          {combiEntryDisplayKind(entry) === 'treasure' && !!entry.level && (
+                            <span className="treasure-level-badge">+{entry.level}</span>
+                          )}
                         </div>
                       );
                     })}
@@ -655,6 +693,7 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                     </div>
                   )}
                   {b.notes && <div className="effect">{b.notes}</div>}
+                  {b.youtube_link && <a className="related-link" href={b.youtube_link} target="_blank" rel="noopener">▶ {t.buildWatchVideo}</a>}
                   <div style={{ display: 'flex', gap: '0.4rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
                     <button type="button" className="recipe-btn" onClick={() => shareBuild(b.id)}>{copiedId === b.id ? t.buildLinkCopied : t.buildShare}</button>
                     <button type="button" className="recipe-btn" onClick={() => { setPrompt({ id: b.id, action: 'edit' }); setPromptError(''); }}>{t.buildEdit}</button>
@@ -693,7 +732,10 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
   const [pet, setPet] = useState(() => seedChar('pet', 'pet'));
   const [treasures, setTreasures] = useState(() =>
     seedCombi.filter(e => (e.slot || e.kind) === 'treasure')
-      .map(e => items.find(it => it.name === e.name))
+      .map(e => {
+        const it = items.find(x => x.name === e.name);
+        return it ? { ...it, level: e.level || 0 } : null;
+      })
       .filter(Boolean)
   );
   const [boosts, setBoosts] = useState(() => (isEdit && editing.build.boosts) || []);
@@ -701,6 +743,7 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
   const [score, setScore] = useState(() => (isEdit && editing.build.score != null) ? String(editing.build.score) : '');
   const [coins, setCoins] = useState(() => (isEdit && editing.build.coins != null) ? String(editing.build.coins) : '');
   const [notes, setNotes] = useState(() => (isEdit && editing.build.notes) || '');
+  const [youtube, setYoutube] = useState(() => (isEdit && editing.build.youtube_link) || '');
   const [password, setPassword] = useState('');
   const [picker, setPicker] = useState(null); // 'main' | 'relay' | 'pet' | 'treasure' | null
   const [status, setStatus] = useState('');
@@ -735,8 +778,12 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
     if (picker === 'main') setMain(c);
     else if (picker === 'relay') setRelay(c);
     else if (picker === 'pet') setPet(c);
-    else if (picker === 'treasure') setTreasures(ts => ts.length < 3 ? [...ts, c] : ts);
+    else if (picker === 'treasure') setTreasures(ts => ts.length < 3 ? [...ts, { ...c, level: 0 }] : ts);
     setPicker(null);
+  }
+
+  function setTreasureLevel(i, level) {
+    setTreasures(ts => ts.map((it, idx) => idx === i ? { ...it, level } : it));
   }
 
   const combi = useMemo(() => {
@@ -744,7 +791,7 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
     if (main) list.push({ slot: 'main', name: main.name });
     if (relay) list.push({ slot: 'relay', name: relay.name });
     if (pet) list.push({ slot: 'pet', name: pet.name });
-    treasures.forEach(it => list.push({ slot: 'treasure', name: it.name }));
+    treasures.forEach(it => list.push({ slot: 'treasure', name: it.name, level: it.level || 0 }));
     return list;
   }, [main, relay, pet, treasures]);
 
@@ -762,6 +809,7 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
       score: score === '' ? null : Number(score),
       coins: coins === '' ? null : Number(coins),
       notes: notes.trim() || null,
+      youtube_link: youtube.trim() || null,
     };
     try {
       if (isEdit) {
@@ -802,8 +850,13 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
       <button type="button" className="recipe-btn" onClick={() => treasures.length < 3 && setPicker('treasure')} disabled={treasures.length >= 3}>{t.buildAddTreasure}</button>
       <div className="combi-icons" style={{ marginTop: '0.5rem' }}>
         {treasures.map((it, i) => (
-          <div className="combi-icon combi-icon-treasure" key={i} title={it.name} onClick={() => setTreasures(ts => ts.filter((_, idx) => idx !== i))} style={{ cursor: 'pointer' }}>
-            {it.localImage && <img src={it.localImage} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+          <div className="treasure-chip" key={i}>
+            <div className="combi-icon combi-icon-treasure" title={t.buildClear + ': ' + it.name} onClick={() => setTreasures(ts => ts.filter((_, idx) => idx !== i))} style={{ cursor: 'pointer' }}>
+              {it.localImage && <img src={it.localImage} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+            </div>
+            <select value={it.level || 0} onChange={e => setTreasureLevel(i, Number(e.target.value))}>
+              {Array.from({ length: 10 }, (_, lvl) => <option key={lvl} value={lvl}>+{lvl}</option>)}
+            </select>
           </div>
         ))}
       </div>
@@ -816,25 +869,48 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
       </div>
 
       <label className="field">{t.buildPowerEffects}</label>
-      <div className="grade-filter">
-        {POWER_EFFECTS.map(p => (
-          <button key={p} type="button" className={powerEffects.includes(p) ? 'active' : ''} onClick={() => toggleInList(powerEffects, setPowerEffects, p)}>{t.buildPowerEffectLabel[p]}</button>
-        ))}
+      <div className="power-effects-grid">
+        {POWER_EFFECTS.map(p => {
+          const cookieName = POWER_EFFECT_COOKIE[p];
+          const char = cookieName ? characters.find(c => c.kind === 'cookie' && c.name === cookieName) : null;
+          return (
+            <button
+              key={p}
+              type="button"
+              className={'power-effect-btn' + (powerEffects.includes(p) ? ' active' : '')}
+              onClick={() => toggleInList(powerEffects, setPowerEffects, p)}
+            >
+              {char && <img src={char.image} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+              <span className="power-effect-name">{t.buildPowerEffectLabel[p]}</span>
+              <span className="power-effect-desc">{t.buildPowerEffectDesc[p]}</span>
+            </button>
+          );
+        })}
       </div>
 
-      <label className="field">{t.buildScore}</label>
-      <input type="number" value={score} onChange={e => setScore(e.target.value)} />
-      <label className="field">{t.buildCoins}</label>
-      <input type="number" value={coins} onChange={e => setCoins(e.target.value)} />
-      <label className="field">{t.buildNotes}</label>
-      <textarea value={notes} onChange={e => setNotes(e.target.value)} />
+      <div className="build-details-box">
+        <div className="build-details-row">
+          <label>
+            <span className="field">{t.buildScore}</span>
+            <input type="number" value={score} onChange={e => setScore(e.target.value)} />
+          </label>
+          <label>
+            <span className="field">{t.buildCoins}</span>
+            <input type="number" value={coins} onChange={e => setCoins(e.target.value)} />
+          </label>
+        </div>
+        <label className="field">{t.buildNotes}</label>
+        <textarea value={notes} onChange={e => setNotes(e.target.value)} />
+        <label className="field">{t.buildYoutube}</label>
+        <input type="url" placeholder={t.buildYoutubePlaceholder} value={youtube} onChange={e => setYoutube(e.target.value)} />
+      </div>
 
       {!isEdit && (
-        <>
+        <div className="build-password-box">
           <label className="field">{t.buildPassword}</label>
           <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
           <div ref={turnstileRef} style={{ marginTop: '0.6rem' }}></div>
-        </>
+        </div>
       )}
       <div className="nav">
         <button type="button" onClick={submit} disabled={!canSubmit}>{t.buildSubmit}</button>
