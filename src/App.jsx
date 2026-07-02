@@ -3,6 +3,8 @@ import { useEffect, useMemo, useState } from 'react';
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZGhzbnlubGx6b2l0Ym9sbmdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NTk3MDYsImV4cCI6MjA5ODUzNTcwNn0.yBoBJ3R_AHpjNQG1ikIwfXFOLfWQWSiwZgLaP8m-hxI';
 
+const TIERS = ['power plus (SSSS)', 'SSS', 'SS', 'S', 'A', 'B', 'E', 'F', 'ขยะ', 'เฉพาะทาง'];
+
 const i18n = {
   en: {
     title: 'Cookie Run Classic Treasure Search',
@@ -97,6 +99,7 @@ function Card({ item, query, t, evolvesTo, imageByName, onJump }) {
         <span className="grade">{item.grade}-grade</span>
         <span className="version-tag">{item.version === 'kr' ? t.versionKr : t.versionLine}</span>
         {item.type === 'evolved' && <span className="evolved-tag">{t.evolved}</span>}
+        {item.tier && <span className="tier-tag">{item.tier}</span>}
         {item.effect ? (
           <div className="effect">{highlight(item.effect, query)}</div>
         ) : (
@@ -160,6 +163,7 @@ export default function App() {
   const [typeFilter, setTypeFilter] = useState('all');
   const [showDonate, setShowDonate] = useState(false);
   const [version, setVersion] = useState('all');
+  const [tier, setTier] = useState('all');
   const [lang, setLang] = useState('en');
 
   useEffect(() => {
@@ -176,6 +180,7 @@ export default function App() {
         ingredients: row.ingredients,
         blessedEffect: row.blessed_effect,
         version: row.source,
+        tier: row.tier,
       })));
     });
   }, []);
@@ -199,15 +204,16 @@ export default function App() {
       if (grade !== 'all' && it.grade !== grade) return false;
       if (typeFilter === 'evolved' && it.type !== 'evolved') return false;
       if (version !== 'all' && it.version !== version) return false;
+      if (tier !== 'all' && it.tier !== tier) return false;
       if (!q) return true;
       const text = (it.name + ' ' + it.effect + ' ' + it.section + ' ' + (it.extra || '') + ' ' + (it.blessedEffect || '')).toLowerCase();
       return text.includes(q);
     });
-  }, [items, query, grade, typeFilter, version]);
+  }, [items, query, grade, typeFilter, version, tier]);
 
   const PAGE_SIZE = 60;
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [query, grade, typeFilter, version]);
+  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [query, grade, typeFilter, version, tier]);
   const visibleItems = filtered.slice(0, visibleCount);
 
   function jumpTo(name) {
@@ -215,6 +221,7 @@ export default function App() {
     setGrade('all');
     setTypeFilter('all');
     setVersion('all');
+    setTier('all');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -244,6 +251,12 @@ export default function App() {
           <button key={g} className={grade === g ? 'active' : ''} onClick={() => setGrade(g)}>
             {g === 'all' ? t.all : g + '-grade'}
           </button>
+        ))}
+      </div>
+      <div className="grade-filter">
+        <button className={tier === 'all' ? 'active' : ''} onClick={() => setTier('all')}>{t.all}</button>
+        {TIERS.map(tr => (
+          <button key={tr} className={tier === tr ? 'active' : ''} onClick={() => setTier(tr)}>{tr}</button>
         ))}
       </div>
       <div id="count">{t.count(filtered.length)}</div>

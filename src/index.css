@@ -35,6 +35,7 @@ h1 { text-align: center; }
 .card .grade { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.5rem; background: #eee; }
 .card .evolved-tag { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.3rem; background: #f0c419; color: #4a2e1e; }
 .card .version-tag { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.3rem; background: #eaf2f8; color: #3a6b8a; }
+.card .tier-tag { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.3rem; background: #7a4fa3; color: #fff; }
 .card .effect { margin: 0.3rem 0 0; white-space: pre-line; }
 .card .effect.muted { color: #aaa; font-style: italic; }
 .card .blessed { margin: 0.3rem 0 0; white-space: pre-line; color: #7a4fa3; }

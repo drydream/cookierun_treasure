@@ -58,13 +58,19 @@
         <option value="kr">Kakao/Global</option>
       </select>
     </label>
+    <label style="white-space:nowrap">tier:
+      <select id="tierFilter">
+        <option value="all">All</option>
+        <option value="unranked">Unranked</option>
+      </select>
+    </label>
     <label style="white-space:nowrap"><input type="checkbox" id="onlyUntranslated"> only untranslated</label>
     <button id="dedupeBtn" style="font-size:13px;padding:4px 10px">Merge duplicates</button>
     <button id="importBtn" style="font-size:13px;padding:4px 10px">Import/reset from JSON files</button>
     <div id="summary"></div>
   </div>
   <table>
-    <thead><tr><th></th><th>Name</th><th>Source</th><th>Grade</th><th>Effect text</th><th></th></tr></thead>
+    <thead><tr><th></th><th>Name</th><th>Source</th><th>Grade</th><th>Tier</th><th>Effect text</th><th></th></tr></thead>
     <tbody id="rows"></tbody>
   </table>
 </div>
@@ -85,6 +91,8 @@
   </div>
   <label class="field">How to get</label>
   <input id="categoryInput" placeholder="e.g. Obtained from upgrading Cookies and Pets">
+  <label class="field">Tier list</label>
+  <select id="tierInput"></select>
   <label class="field">Effect text</label>
   <textarea id="effectInput" placeholder="No effect text in source for this item"></textarea>
   <div class="nav">
@@ -100,6 +108,13 @@
 <script>
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZGhzbnlubGx6b2l0Ym9sbmdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NTk3MDYsImV4cCI6MjA5ODUzNTcwNn0.yBoBJ3R_AHpjNQG1ikIwfXFOLfWQWSiwZgLaP8m-hxI';
+
+const TIERS = ['power plus (SSSS)', 'SSS', 'SS', 'S', 'A', 'B', 'E', 'F', 'ขยะ', 'เฉพาะทาง'];
+TIERS.forEach(tier => {
+  document.getElementById('tierFilter').insertAdjacentHTML('beforeend', `<option value="${tier}">${tier}</option>`);
+});
+document.getElementById('tierInput').innerHTML =
+  '<option value="">(none)</option>' + TIERS.map(tier => `<option value="${tier}">${tier}</option>`).join('');
 
 let items = [];
 let idx = 0;
@@ -147,9 +162,12 @@ function filteredIndices() {
   const q = document.getElementById('search').value.trim().toLowerCase();
   const onlyUntranslated = document.getElementById('onlyUntranslated').checked;
   const sourceFilter = document.getElementById('sourceFilter').value;
+  const tierFilter = document.getElementById('tierFilter').value;
   return items.map((it, i) => i).filter(i => {
     const it = items[i];
     if (sourceFilter !== 'all' && it.source !== sourceFilter) return false;
+    if (tierFilter === 'unranked' && it.tier) return false;
+    if (tierFilter !== 'all' && tierFilter !== 'unranked' && it.tier !== tierFilter) return false;
     if (onlyUntranslated && it.effect) return false;
     if (!q) return true;
     return it.name.toLowerCase().includes(q) || (it.kr_name || '').includes(q);
@@ -173,6 +191,7 @@ function renderList() {
       <td><div>${escapeHtml(it.name)}</div>${it.kr_name ? '<div class="krname">' + escapeHtml(it.kr_name) + '</div>' : ''}</td>
       <td class="src-${it.source}">${it.source === 'kr' ? 'Kakao/Global' : 'LINE'}</td>
       <td>${it.grade}</td>
+      <td>${it.tier ? escapeHtml(it.tier) : ''}</td>
       ${effectCell}
       <td class="actions"><button data-idx="${i}">Edit</button></td>
     </tr>`;
@@ -205,6 +224,7 @@ function renderEdit() {
   document.getElementById('krBlock').style.display = it.source === 'kr' ? 'block' : 'none';
   document.getElementById('kr').textContent = it.kr_ability || '(no ability text in source)';
   document.getElementById('categoryInput').value = it.category || '';
+  document.getElementById('tierInput').value = it.tier || '';
   document.getElementById('effectInput').value = it.effect || '';
 }
 
@@ -220,6 +240,7 @@ async function save() {
   const it = items[idx];
   const name = document.getElementById('nameInput').value.trim();
   const category = document.getElementById('categoryInput').value.trim();
+  const tier = document.getElementById('tierInput').value || null;
   const effect = document.getElementById('effectInput').value.trim();
   const statusEl = document.getElementById('status');
   statusEl.className = '';
@@ -227,11 +248,12 @@ async function save() {
   const res = await fetch('/api/admin/save', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ password, id: it.id, name, category, effect }),
+    body: JSON.stringify({ password, id: it.id, name, category, tier, effect }),
   });
   if (res.ok) {
     it.name = name;
     it.category = category;
+    it.tier = tier;
     it.effect = effect;
     statusEl.textContent = 'Saved';
     setTimeout(() => statusEl.textContent = '', 1500);
@@ -309,6 +331,7 @@ document.getElementById('importBtn').onclick = async () => {
 document.getElementById('search').oninput = renderList;
 document.getElementById('onlyUntranslated').onchange = renderList;
 document.getElementById('sourceFilter').onchange = renderList;
+document.getElementById('tierFilter').onchange = renderList;
 document.getElementById('backToList').onclick = backToList;
 document.getElementById('prev').onclick = () => moveWithinFiltered(-1);
 document.getElementById('skip').onclick = () => moveWithinFiltered(1);

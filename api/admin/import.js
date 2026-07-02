@@ -5,6 +5,26 @@
 // Requires env vars: SUPABASE_URL (or derived below), service_role, ADMIN_PASSWORD.
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 
+// Supabase caps each response at 1000 rows regardless of Range, so page
+// through in batches until a short page signals the end.
+async function fetchAllExistingTiers(serviceKey) {
+  const PAGE = 1000;
+  let all = [];
+  for (let offset = 0; ; offset += PAGE) {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/treasures?select=source,name,tier&order=id.asc`, {
+      headers: {
+        apikey: serviceKey,
+        Authorization: `Bearer ${serviceKey}`,
+        Range: `${offset}-${offset + PAGE - 1}`,
+      },
+    });
+    const page = await res.json();
+    all = all.concat(page);
+    if (page.length < PAGE) break;
+  }
+  return all;
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -18,12 +38,24 @@ export default async function handler(req, res) {
 
   const serviceKey = process.env.service_role;
   const base = `https://${req.headers.host}`;
+  const headers = {
+    apikey: serviceKey,
+    Authorization: `Bearer ${serviceKey}`,
+    'Content-Type': 'application/json',
+    Prefer: 'return=minimal',
+  };
 
   try {
-    const [lineItems, krRaw] = await Promise.all([
+    const [lineItems, krRaw, existing] = await Promise.all([
       fetch(`${base}/treasures.json`).then(r => r.json()),
       fetch(`${base}/treasures-kr.json`).then(r => r.json()),
+      fetchAllExistingTiers(serviceKey),
     ]);
+
+    // Import wipes and rebuilds the whole table, but tier ranks are set by
+    // hand with no JSON backing, so carry them over by matching source+name.
+    const tierByKey = {};
+    existing.forEach(it => { if (it.tier) tierByKey[it.source + '|' + it.name] = it.tier; });
 
     const idToName = {};
     krRaw.forEach(it => { idToName[it.id] = it.englishName; });
@@ -58,6 +90,7 @@ export default async function handler(req, res) {
       base_item_name: it.baseItem || null,
       ingredients: it.ingredients || null,
       blessed_effect: it.blessedEffect || null,
+      tier: tierByKey['line|' + it.name] || null,
     }));
 
     const krRows = krRaw
@@ -76,16 +109,10 @@ export default async function handler(req, res) {
         base_item_name: it.evolvedFromId ? (idToName[it.evolvedFromId] || null) : null,
         ingredients: null,
         blessed_effect: null,
+        tier: tierByKey['kr|' + it.englishName] || null,
       }));
 
     const rows = [...lineRows, ...krRows];
-
-    const headers = {
-      apikey: serviceKey,
-      Authorization: `Bearer ${serviceKey}`,
-      'Content-Type': 'application/json',
-      Prefer: 'return=minimal',
-    };
 
     // Clear existing rows so this endpoint is safely re-runnable.
     const delRes = await fetch(`${SUPABASE_URL}/rest/v1/treasures?id=gt.0`, {
