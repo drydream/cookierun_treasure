@@ -160,18 +160,16 @@ export default function App() {
         version: 'kr',
       }));
       const lineTagged = lineItems.map(it => ({ ...it, version: 'line' }));
+      const lineNames = new Set(lineTagged.map(it => it.name));
 
-      // Merge same-named items (e.g. shared across LINE and Kakao/Global) into
-      // one card with a variant per version, instead of duplicate list entries.
-      const grouped = new Map();
-      [...lineTagged, ...krItems].forEach(v => {
-        if (!grouped.has(v.name)) grouped.set(v.name, []);
-        grouped.get(v.name).push(v);
-      });
-      const merged = [...grouped.values()].map(variants => ({
-        name: variants[0].name,
-        localImage: (variants.find(v => v.version === 'line') || variants[0]).localImage,
-        variants,
+      // Where a name exists in both LINE and Kakao/Global, keep only the LINE
+      // record — one database entry per treasure instead of showing both.
+      const krItemsUnique = krItems.filter(it => !lineNames.has(it.name));
+
+      const merged = [...lineTagged, ...krItemsUnique].map(v => ({
+        name: v.name,
+        localImage: v.localImage,
+        variants: [v],
       }));
       setItems(merged);
     });
