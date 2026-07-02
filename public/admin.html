@@ -89,6 +89,8 @@
         </select>
         <input id="gradeInput" placeholder="Grade (S/A/B/C)" style="width:110px">
         <input id="imageInput" placeholder="Image path, e.g. images/foo.webp" style="flex:1;min-width:180px">
+        <button type="button" id="uploadBtn" style="font-size:13px;padding:6px 10px">Upload image</button>
+        <input type="file" id="imageFile" accept="image/*" style="display:none">
       </div>
       <div class="grade" id="krName"></div>
     </div>
@@ -167,6 +169,11 @@ document.getElementById('loginBtn').onclick = () => {
   showApp();
 };
 
+function imgSrc(path) {
+  if (!path) return '';
+  return /^https?:\/\//.test(path) ? path : '/' + path;
+}
+
 function escapeHtml(s) {
   return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 }
@@ -195,7 +202,7 @@ function renderList() {
     `${vis.length} shown (of ${items.length}) · ${translatedCount} with text · ${untranslatedCount} without`;
   const rows = vis.map(i => {
     const it = items[i];
-    const img = it.image ? '/' + it.image : '';
+    const img = imgSrc(it.image);
     const effectCell = it.effect
       ? `<td class="effect" title="${escapeHtml(it.effect)}">${escapeHtml(it.effect)}</td>`
       : `<td class="effect empty">(no effect text)</td>`;
@@ -239,7 +246,7 @@ function backToList() {
 
 function renderEdit() {
   const it = isNew ? blankDraft() : items[idx];
-  document.getElementById('img').src = it.image ? '/' + it.image : '';
+  document.getElementById('img').src = imgSrc(it.image);
   document.getElementById('nameInput').value = it.name;
   document.getElementById('sourceInput').value = it.source;
   document.getElementById('gradeInput').value = it.grade || '';
@@ -345,6 +352,44 @@ async function deleteCurrent() {
     if (res.status === 401) localStorage.removeItem('adminPassword');
   }
 }
+
+document.getElementById('uploadBtn').onclick = () => document.getElementById('imageFile').click();
+
+document.getElementById('imageFile').onchange = async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  if (file.size > 4 * 1024 * 1024) {
+    alert('Image too large (max 4MB).');
+    e.target.value = '';
+    return;
+  }
+  const statusEl = document.getElementById('status');
+  statusEl.className = '';
+  statusEl.textContent = 'Uploading image...';
+  const dataBase64 = await new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result.split(',')[1]);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+  const res = await fetch('/api/admin/upload', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password, filename: file.name, contentType: file.type, dataBase64 }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (res.ok) {
+    document.getElementById('imageInput').value = data.url;
+    document.getElementById('img').src = data.url;
+    statusEl.textContent = 'Image uploaded';
+    setTimeout(() => statusEl.textContent = '', 1500);
+  } else {
+    statusEl.className = 'error';
+    statusEl.textContent = 'Error: ' + (data.error || res.status);
+    if (res.status === 401) localStorage.removeItem('adminPassword');
+  }
+  e.target.value = '';
+};
 
 document.getElementById('addBtn').onclick = openAdd;
 
