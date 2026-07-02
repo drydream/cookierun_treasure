@@ -4,6 +4,18 @@ const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZGhzbnlubGx6b2l0Ym9sbmdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NTk3MDYsImV4cCI6MjA5ODUzNTcwNn0.yBoBJ3R_AHpjNQG1ikIwfXFOLfWQWSiwZgLaP8m-hxI';
 
 const TIERS = ['power plus (SSSS)', 'SSS', 'SS', 'S', 'A', 'B', 'E', 'F', 'ขยะ', 'เฉพาะทาง'];
+const TIER_COLORS = {
+  'power plus (SSSS)': '#c3d4f5',
+  SSS: '#ef5350',
+  SS: '#ffb74d',
+  S: '#fff176',
+  A: '#c5e1a5',
+  B: '#81c784',
+  E: '#90a4ae',
+  F: '#f48fb1',
+  ขยะ: '#ffd54f',
+  เฉพาะทาง: '#81d4fa',
+};
 
 const i18n = {
   en: {
@@ -27,6 +39,10 @@ const i18n = {
     donateTitle: 'Buy me a coffee',
     donateBank: 'Kasikorn Bank',
     donateClose: 'Close',
+    navHome: 'Home',
+    navTreasure: 'Treasure Search',
+    navTierlist: 'Tier List',
+    tierEmpty: 'No treasures ranked yet',
   },
   th: {
     title: 'ค้นหาสมบัติ Cookie Run Classic',
@@ -49,6 +65,10 @@ const i18n = {
     donateTitle: 'บริจาคค่ากาแฟ',
     donateBank: 'ธนาคารกสิกรไทย',
     donateClose: 'ปิด',
+    navHome: 'หน้าแรก',
+    navTreasure: 'ค้นหาสมบัติ',
+    navTierlist: 'Tier List',
+    tierEmpty: 'ยังไม่มีการจัดอันดับ',
   },
 };
 
@@ -143,6 +163,48 @@ function Card({ item, query, t, evolvesTo, imageByName, onJump }) {
   );
 }
 
+function HomePage({ t, onNavigate }) {
+  return (
+    <div className="home">
+      <img className="home-banner" src="banner.jpg" alt="Cookie Run Classic" />
+      <div className="home-menu">
+        <button type="button" onClick={() => onNavigate('treasure')}>{t.navTreasure}</button>
+        <button type="button" onClick={() => onNavigate('tierlist')}>{t.navTierlist}</button>
+      </div>
+    </div>
+  );
+}
+
+function TierListPage({ items, t, onSelect }) {
+  return (
+    <div className="tierlist">
+      {TIERS.map(tier => {
+        const list = items.filter(it => it.tier === tier);
+        return (
+          <div className="tier-row" key={tier}>
+            <div className="tier-label" style={{ background: TIER_COLORS[tier] }}>{tier}</div>
+            <div className="tier-items">
+              {list.length === 0 && <span className="tier-empty">{t.tierEmpty}</span>}
+              {list.map((it, i) => (
+                <img
+                  key={it.version + it.name + i}
+                  className="tier-icon"
+                  src={it.localImage}
+                  alt={it.name}
+                  title={it.name}
+                  loading="lazy"
+                  onClick={() => onSelect(it.name)}
+                  onError={e => { e.target.style.visibility = 'hidden'; }}
+                />
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 function DonateModal({ t, onClose }) {
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -165,6 +227,7 @@ export default function App() {
   const [version, setVersion] = useState('all');
   const [tier, setTier] = useState('all');
   const [lang, setLang] = useState('en');
+  const [page, setPage] = useState('home');
 
   useEffect(() => {
     fetchAllTreasures().then(rows => {
@@ -217,6 +280,7 @@ export default function App() {
   const visibleItems = filtered.slice(0, visibleCount);
 
   function jumpTo(name) {
+    setPage('treasure');
     setQuery(name);
     setGrade('all');
     setTypeFilter('all');
@@ -229,45 +293,60 @@ export default function App() {
     <>
       <button type="button" className="donate-btn" onClick={() => setShowDonate(true)}>{t.donateBtn}</button>
       {showDonate && <DonateModal t={t} onClose={() => setShowDonate(false)} />}
-      <h1>{t.title}</h1>
-      <div className="toolbar">
-        <input id="search" type="text" placeholder={t.placeholder} value={query} onChange={e => setQuery(e.target.value)} />
+      <div className="nav-bar">
+        {page !== 'home' && (
+          <>
+            <button className={page === 'home' ? 'active' : ''} onClick={() => setPage('home')}>{t.navHome}</button>
+            <button className={page === 'treasure' ? 'active' : ''} onClick={() => setPage('treasure')}>{t.navTreasure}</button>
+            <button className={page === 'tierlist' ? 'active' : ''} onClick={() => setPage('tierlist')}>{t.navTierlist}</button>
+          </>
+        )}
         <div className="lang-toggle">
           <button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')}>EN</button>
           <button className={lang === 'th' ? 'active' : ''} onClick={() => setLang('th')}>TH</button>
         </div>
       </div>
-      <div className="grade-filter">
-        <button className={typeFilter === 'all' ? 'active' : ''} onClick={() => setTypeFilter('all')}>{t.all}</button>
-        <button className={typeFilter === 'evolved' ? 'active' : ''} onClick={() => setTypeFilter('evolved')}>{t.evolution}</button>
-      </div>
-      <div className="grade-filter">
-        <button className={version === 'all' ? 'active' : ''} onClick={() => setVersion('all')}>{t.versionAll}</button>
-        <button className={version === 'line' ? 'active' : ''} onClick={() => setVersion('line')}>{t.versionLine}</button>
-        <button className={version === 'kr' ? 'active' : ''} onClick={() => setVersion('kr')}>{t.versionKr}</button>
-      </div>
-      <div className="grade-filter">
-        {grades.map(g => (
-          <button key={g} className={grade === g ? 'active' : ''} onClick={() => setGrade(g)}>
-            {g === 'all' ? t.all : g + '-grade'}
-          </button>
-        ))}
-      </div>
-      <div className="grade-filter">
-        <button className={tier === 'all' ? 'active' : ''} onClick={() => setTier('all')}>{t.all}</button>
-        {TIERS.map(tr => (
-          <button key={tr} className={tier === tr ? 'active' : ''} onClick={() => setTier(tr)}>{tr}</button>
-        ))}
-      </div>
-      <div id="count">{t.count(filtered.length)}</div>
-      <div id="list">
-        {visibleItems.map((it, i) => (
-          <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} onJump={jumpTo} />
-        ))}
-      </div>
-      {visibleCount < filtered.length && (
-        <button className="load-more" onClick={() => setVisibleCount(c => c + PAGE_SIZE)}>{t.loadMore}</button>
+      {page === 'home' && <HomePage t={t} onNavigate={setPage} />}
+      {page === 'treasure' && (
+        <>
+          <h1>{t.title}</h1>
+          <div className="toolbar">
+            <input id="search" type="text" placeholder={t.placeholder} value={query} onChange={e => setQuery(e.target.value)} />
+          </div>
+          <div className="grade-filter">
+            <button className={typeFilter === 'all' ? 'active' : ''} onClick={() => setTypeFilter('all')}>{t.all}</button>
+            <button className={typeFilter === 'evolved' ? 'active' : ''} onClick={() => setTypeFilter('evolved')}>{t.evolution}</button>
+          </div>
+          <div className="grade-filter">
+            <button className={version === 'all' ? 'active' : ''} onClick={() => setVersion('all')}>{t.versionAll}</button>
+            <button className={version === 'line' ? 'active' : ''} onClick={() => setVersion('line')}>{t.versionLine}</button>
+            <button className={version === 'kr' ? 'active' : ''} onClick={() => setVersion('kr')}>{t.versionKr}</button>
+          </div>
+          <div className="grade-filter">
+            {grades.map(g => (
+              <button key={g} className={grade === g ? 'active' : ''} onClick={() => setGrade(g)}>
+                {g === 'all' ? t.all : g + '-grade'}
+              </button>
+            ))}
+          </div>
+          <div className="grade-filter">
+            <button className={tier === 'all' ? 'active' : ''} onClick={() => setTier('all')}>{t.all}</button>
+            {TIERS.map(tr => (
+              <button key={tr} className={tier === tr ? 'active' : ''} onClick={() => setTier(tr)}>{tr}</button>
+            ))}
+          </div>
+          <div id="count">{t.count(filtered.length)}</div>
+          <div id="list">
+            {visibleItems.map((it, i) => (
+              <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} onJump={jumpTo} />
+            ))}
+          </div>
+          {visibleCount < filtered.length && (
+            <button className="load-more" onClick={() => setVisibleCount(c => c + PAGE_SIZE)}>{t.loadMore}</button>
+          )}
+        </>
       )}
+      {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
     </>
   );
 }

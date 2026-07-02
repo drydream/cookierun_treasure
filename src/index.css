@@ -18,15 +18,17 @@ h1 { text-align: center; }
 }
 #count { margin: 0.5rem 0; color: #777; font-size: 0.9rem; }
 .toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+.nav-bar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+.nav-bar .lang-toggle { margin-left: auto; }
 .grade-filter { margin: 0.5rem 0; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-.grade-filter button, .lang-toggle button {
+.grade-filter button, .lang-toggle button, .nav-bar button {
   padding: 0.3rem 0.8rem;
   border-radius: 6px;
   border: 1px solid #d9a066;
   background: #fff;
   cursor: pointer;
 }
-.grade-filter button.active, .lang-toggle button.active { background: #d9a066; color: #fff; }
+.grade-filter button.active, .lang-toggle button.active, .nav-bar button.active { background: #d9a066; color: #fff; }
 #list { display: grid; gap: 0.6rem; margin-top: 1rem; }
 .card { background: #fff; border: 1px solid #eadbc8; border-radius: 8px; padding: 0.7rem 1rem; display: flex; gap: 0.8rem; }
 .card img { width: 56px; height: 56px; object-fit: contain; flex-shrink: 0; background: #f7efe2; border-radius: 6px; }
@@ -98,3 +100,18 @@ mark { background: #ffe08a; padding: 0 2px; }
 }
 .donate-bank { font-size: 0.85rem; color: #666; margin: 0 0 0.6rem; }
 .donate-qr { width: 100%; max-width: 200px; border-radius: 6px; }
+
+.home { text-align: center; }
+.home-banner { width: 100%; border-radius: 12px; display: block; box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+.home-menu { display: flex; justify-content: center; gap: 1rem; margin-top: 1.2rem; }
+.home-menu button { padding: 0.8rem 2rem; font-size: 1.1rem; border-radius: 10px; border: 1px solid #d9a066; background: #fff; cursor: pointer; }
+.home-menu button:hover { background: #fff8ef; }
+
+.tierlist { background: #1a1a1a; border-radius: 12px; padding: 4px; margin-top: 1rem; overflow: hidden; }
+.tier-row { display: flex; border-bottom: 2px solid #000; }
+.tier-row:last-child { border-bottom: none; }
+.tier-label { width: 90px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; font-size: 0.78rem; padding: 0.4rem; text-transform: capitalize; }
+.tier-items { flex: 1; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 4px; padding: 6px; min-height: 56px; }
+.tier-icon { width: 48px; height: 48px; object-fit: contain; background: linear-gradient(135deg, #fceff9, #e0d4f7); border-radius: 8px; cursor: pointer; }
+.tier-icon:hover { outline: 2px solid #fff; }
+.tier-empty { color: #888; font-size: 0.85rem; align-self: center; padding: 0 0.5rem; }
