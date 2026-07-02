@@ -160,6 +160,7 @@
       </select>
     </label>
     <button id="charAddBtn" style="font-size:13px;padding:4px 10px">+ Add new</button>
+    <button id="charTierBuilderBtn" style="font-size:13px;padding:4px 10px">Tier Builder</button>
     <div id="charSummary"></div>
   </div>
   <table>
@@ -198,6 +199,15 @@
     <button id="charDelete" style="background:#fdd;border-color:#c00">Delete</button>
     <span id="charStatus"></span>
   </div>
+</div>
+
+<div id="charTierBuilderView" style="display:none">
+  <button id="backFromCharTierBuilder">&larr; Back to list</button>
+  <p style="color:#666;font-size:13px">Drag an item into a tier row to rank it. Drag it back down to the pool to unrank it.</p>
+  <div id="charTierBuilderRows"></div>
+  <h3>Unranked</h3>
+  <input id="charTierPoolSearch" placeholder="Search unranked items..." style="width:100%;font-size:15px;padding:6px;box-sizing:border-box;margin-bottom:8px">
+  <div id="charTierPool"></div>
 </div>
 
 <script>
@@ -687,7 +697,7 @@ async function loadCharacters() {
 }
 
 function hideAllViews() {
-  ['listView', 'editView', 'tierBuilderView', 'charListView', 'charEditView'].forEach(id => {
+  ['listView', 'editView', 'tierBuilderView', 'charListView', 'charEditView', 'charTierBuilderView'].forEach(id => {
     document.getElementById(id).style.display = 'none';
   });
 }
@@ -867,6 +877,86 @@ async function deleteCharacter() {
   }
 }
 
+function openCharTierBuilder() {
+  hideAllViews();
+  document.getElementById('charTierBuilderView').style.display = 'block';
+  document.getElementById('charTierPoolSearch').value = '';
+  renderCharTierBuilder();
+}
+
+function backFromCharTierBuilder() {
+  hideAllViews();
+  document.getElementById('charListView').style.display = 'block';
+  renderCharList();
+}
+
+function charTbChip(c) {
+  const el = document.createElement('div');
+  el.className = 'tb-chip';
+  el.draggable = true;
+  el.title = c.name;
+  el.dataset.id = c.id;
+  el.innerHTML = `<img src="${imgSrc(c.image)}" loading="lazy"><span>${escapeHtml(c.name)}</span>`;
+  el.ondragstart = e => e.dataTransfer.setData('text/plain', String(c.id));
+  return el;
+}
+
+function wireCharTbDropzone(zone, tier) {
+  zone.ondragover = e => { e.preventDefault(); zone.classList.add('tb-over'); };
+  zone.ondragleave = () => zone.classList.remove('tb-over');
+  zone.ondrop = async e => {
+    e.preventDefault();
+    zone.classList.remove('tb-over');
+    const id = parseInt(e.dataTransfer.getData('text/plain'));
+    const c = characters.find(x => x.id === id);
+    if (!c || c.tier === tier) return;
+    const prevTier = c.tier;
+    c.tier = tier;
+    renderCharTierBuilder();
+    const res = await fetch('/api/admin/save-character', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password, id, tier }),
+    });
+    if (!res.ok) {
+      c.tier = prevTier;
+      renderCharTierBuilder();
+      const data = await res.json().catch(() => ({}));
+      alert('Failed to save tier: ' + (data.error || res.status));
+      if (res.status === 401) localStorage.removeItem('adminPassword');
+    }
+  };
+}
+
+function renderCharTierBuilder() {
+  const rowsEl = document.getElementById('charTierBuilderRows');
+  rowsEl.innerHTML = TIERS.map(tier => `
+    <div class="tb-row">
+      <div class="tb-label" style="background:${TIER_COLORS[tier]}">${escapeHtml(tier)}</div>
+      <div class="tb-dropzone" data-tier="${escapeHtml(tier)}"></div>
+    </div>
+  `).join('');
+
+  const kindItems = characters.filter(c => c.kind === charKind);
+  TIERS.forEach(tier => {
+    const zone = rowsEl.querySelector(`.tb-dropzone[data-tier="${CSS.escape(tier)}"]`);
+    kindItems.filter(c => c.tier === tier).forEach(c => zone.appendChild(charTbChip(c)));
+    wireCharTbDropzone(zone, tier);
+  });
+
+  renderCharPool();
+}
+
+function renderCharPool() {
+  const q = document.getElementById('charTierPoolSearch').value.trim().toLowerCase();
+  const unranked = characters.filter(c => c.kind === charKind && !c.tier
+    && (!q || c.name.toLowerCase().includes(q)));
+  const poolZone = document.getElementById('charTierPool');
+  poolZone.innerHTML = '';
+  unranked.forEach(c => poolZone.appendChild(charTbChip(c)));
+  wireCharTbDropzone(poolZone, null);
+}
+
 document.getElementById('tabTreasures').onclick = showTreasures;
 document.getElementById('tabCookies').onclick = () => showCharKind('cookie');
 document.getElementById('tabPets').onclick = () => showCharKind('pet');
@@ -878,6 +968,9 @@ document.getElementById('charSkip').onclick = () => moveCharWithinFiltered(1);
 document.getElementById('charSave').onclick = saveCharacter;
 document.getElementById('charDelete').onclick = deleteCharacter;
 document.getElementById('charAddBtn').onclick = openCharAdd;
+document.getElementById('charTierBuilderBtn').onclick = openCharTierBuilder;
+document.getElementById('backFromCharTierBuilder').onclick = backFromCharTierBuilder;
+document.getElementById('charTierPoolSearch').oninput = renderCharPool;
 
 document.getElementById('charUploadBtn').onclick = () => document.getElementById('charImageFile').click();
 document.getElementById('charImageFile').onchange = async (e) => {
