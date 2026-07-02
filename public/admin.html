@@ -26,7 +26,7 @@
   .card { display: flex; gap: 16px; align-items: flex-start; }
   label.field { display: block; font-size: 13px; color: #666; margin: 10px 0 2px; }
   #nameInput { width: 100%; font-size: 18px; font-weight: bold; box-sizing: border-box; }
-  #categoryInput { width: 100%; font-size: 15px; padding: 6px; box-sizing: border-box; }
+  #categoryInput, #evolvesToInput { width: 100%; font-size: 15px; padding: 6px; box-sizing: border-box; }
   .grade { color: #b8860b; }
   .kr { white-space: pre-wrap; background: #f5f5f5; padding: 10px; border-radius: 6px; margin: 4px 0; }
   textarea { width: 100%; height: 100px; font-size: 15px; box-sizing: border-box; }
@@ -103,6 +103,9 @@
   <input id="categoryInput" placeholder="e.g. Obtained from upgrading Cookies and Pets">
   <label class="field">Tier list</label>
   <select id="tierInput"></select>
+  <label class="field" id="evolvesToLabel">Evolves to</label>
+  <input id="evolvesToInput" list="evolvesToList" placeholder="Type to search an item...">
+  <datalist id="evolvesToList"></datalist>
   <label class="field">Effect text</label>
   <textarea id="effectInput" placeholder="No effect text in source for this item"></textarea>
   <div class="nav">
@@ -155,10 +158,15 @@ async function loadItems() {
   return all;
 }
 
+function renderDatalist() {
+  document.getElementById('evolvesToList').innerHTML =
+    items.map(it => `<option value="${escapeHtml(it.name)}">`).join('');
+}
+
 function showApp() {
   document.getElementById('loginView').style.display = 'none';
   document.getElementById('listView').style.display = 'block';
-  loadItems().then(data => { items = data; renderList(); });
+  loadItems().then(data => { items = data; renderDatalist(); renderList(); });
 }
 
 if (password) showApp();
@@ -257,6 +265,10 @@ function renderEdit() {
   document.getElementById('categoryInput').value = it.category || '';
   document.getElementById('tierInput').value = it.tier || '';
   document.getElementById('effectInput').value = it.effect || '';
+  const child = isNew ? null : items.find(x => x.base_item_name === it.name);
+  document.getElementById('evolvesToInput').value = child ? child.name : '';
+  document.getElementById('evolvesToInput').style.display = isNew ? 'none' : '';
+  document.getElementById('evolvesToLabel').style.display = isNew ? 'none' : '';
   document.getElementById('save').textContent = isNew ? 'Add' : 'Save';
   document.getElementById('saveNext').style.display = isNew ? 'none' : '';
   document.getElementById('prev').style.display = isNew ? 'none' : '';
@@ -293,6 +305,7 @@ async function save() {
     if (res.ok) {
       statusEl.textContent = 'Added';
       items = await loadItems();
+      renderDatalist();
       backToList();
     } else {
       const data = await res.json().catch(() => ({}));
@@ -304,13 +317,20 @@ async function save() {
   }
 
   const it = items[idx];
+  const evolvesTo = document.getElementById('evolvesToInput').value.trim();
   statusEl.textContent = 'Saving...';
   const res = await fetch('/api/admin/save', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ password, id: it.id, name, source, grade, category, tier, effect, image }),
+    body: JSON.stringify({ password, id: it.id, name, source, grade, category, tier, effect, image, evolvesTo }),
   });
   if (res.ok) {
+    const oldChild = items.find(x => x.base_item_name === it.name);
+    if (oldChild && oldChild.name !== evolvesTo) oldChild.base_item_name = null;
+    if (evolvesTo) {
+      const newChild = items.find(x => x.name === evolvesTo);
+      if (newChild) { newChild.base_item_name = name; newChild.type = 'evolved'; }
+    }
     it.name = name;
     it.source = source;
     it.grade = grade;
@@ -318,6 +338,7 @@ async function save() {
     it.category = category;
     it.tier = tier;
     it.effect = effect;
+    renderDatalist();
     statusEl.textContent = 'Saved';
     setTimeout(() => statusEl.textContent = '', 1500);
   } else {
@@ -406,6 +427,7 @@ document.getElementById('dedupeBtn').onclick = async () => {
   if (res.ok) {
     alert('Merged ' + data.deleted + ' duplicate rows.');
     items = await loadItems();
+    renderDatalist();
     renderList();
   } else {
     alert('Error: ' + (data.error || res.status));
@@ -425,6 +447,7 @@ document.getElementById('importBtn').onclick = async () => {
   if (res.ok) {
     alert('Imported ' + data.imported + ' rows.');
     items = await loadItems();
+    renderDatalist();
     renderList();
   } else {
     alert('Error: ' + (data.error || res.status));
