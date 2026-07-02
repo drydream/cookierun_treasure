@@ -182,7 +182,7 @@ function HomePage({ t, onNavigate }) {
   );
 }
 
-function TierListPage({ items, t, onSelect, isAdmin }) {
+function TierListPage({ items, t, onSelect }) {
   const [showEvolved, setShowEvolved] = useState(false);
   return (
     <div>
@@ -201,24 +201,22 @@ function TierListPage({ items, t, onSelect, isAdmin }) {
                 {list.map((it, i) => {
                   const display = showEvolved ? (items.find(x => x.baseItem === it.name) || it) : it;
                   return (
-                    <div className="tier-item" key={it.version + it.name + i}>
-                      <button
-                        type="button"
-                        className="tier-item-btn"
-                        title={display.name}
-                        onClick={() => onSelect(display.name)}
-                      >
-                        <img
-                          className="tier-icon"
-                          src={display.localImage}
-                          alt=""
-                          loading="lazy"
-                          onError={e => { e.target.style.visibility = 'hidden'; }}
-                        />
-                        <span className="tier-name">{display.name}</span>
-                      </button>
-                      {isAdmin && <a className="admin-edit-link tier-edit-link" href={`admin.html?edit=${display.id}`} target="_blank" rel="noopener">{t.editBtn}</a>}
-                    </div>
+                    <button
+                      type="button"
+                      key={it.version + it.name + i}
+                      className="tier-item"
+                      title={display.name}
+                      onClick={() => onSelect(display.name)}
+                    >
+                      <img
+                        className="tier-icon"
+                        src={display.localImage}
+                        alt=""
+                        loading="lazy"
+                        onError={e => { e.target.style.visibility = 'hidden'; }}
+                      />
+                      <span className="tier-name">{display.name}</span>
+                    </button>
                   );
                 })}
               </div>
@@ -373,7 +371,7 @@ export default function App() {
           )}
         </>
       )}
-      {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} isAdmin={isAdmin} />}
+      {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
     </>
   );
 }
