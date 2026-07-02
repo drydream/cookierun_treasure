@@ -41,6 +41,9 @@
   #sectionTabs button { font-size: 14px; padding: 6px 14px; cursor: pointer; }
   #sectionTabs button.active { background: #d9a066; color: #fff; border-color: #d9a066; }
 
+  .build-combi { display: flex; gap: 4px; flex-wrap: wrap; }
+  .build-combi img { width: 32px; height: 32px; object-fit: contain; background: #f2eadf; border-radius: 6px; }
+
   .tb-row { display: flex; border-bottom: 2px solid #000; background: #1a1a1a; }
   .tb-label { width: 90px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; font-size: 12px; padding: 8px; }
   .tb-dropzone { flex: 1; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px; padding: 8px; min-height: 64px; }
@@ -66,6 +69,7 @@
   <button id="tabTreasures" class="active">Treasures</button>
   <button id="tabCookies">Cookies</button>
   <button id="tabPets">Pets</button>
+  <button id="tabBuilds">Builds</button>
 </div>
 
 <div id="listView" style="display:none">
@@ -208,6 +212,14 @@
   <h3>Unranked</h3>
   <input id="charTierPoolSearch" placeholder="Search unranked items..." style="width:100%;font-size:15px;padding:6px;box-sizing:border-box;margin-bottom:8px">
   <div id="charTierPool"></div>
+</div>
+
+<div id="buildsView" style="display:none">
+  <p style="color:#666;font-size:13px">Community-submitted builds. Anyone can add one from the public site; delete spam/junk here.</p>
+  <table>
+    <thead><tr><th>Purpose</th><th>Episode</th><th>Combi</th><th></th></tr></thead>
+    <tbody id="buildRows"></tbody>
+  </table>
 </div>
 
 <script>
@@ -697,13 +709,13 @@ async function loadCharacters() {
 }
 
 function hideAllViews() {
-  ['listView', 'editView', 'tierBuilderView', 'charListView', 'charEditView', 'charTierBuilderView'].forEach(id => {
+  ['listView', 'editView', 'tierBuilderView', 'charListView', 'charEditView', 'charTierBuilderView', 'buildsView'].forEach(id => {
     document.getElementById(id).style.display = 'none';
   });
 }
 
 function setActiveTab(id) {
-  ['tabTreasures', 'tabCookies', 'tabPets'].forEach(t => {
+  ['tabTreasures', 'tabCookies', 'tabPets', 'tabBuilds'].forEach(t => {
     document.getElementById(t).classList.toggle('active', t === id);
   });
 }
@@ -957,9 +969,66 @@ function renderCharPool() {
   wireCharTbDropzone(poolZone, null);
 }
 
+let builds = [];
+
+async function loadBuilds() {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/builds?select=*&order=created_at.desc`, {
+    headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
+  });
+  return res.json();
+}
+
+function resolveBuildIcon(entry) {
+  if (entry.kind === 'treasure') {
+    const it = items.find(x => x.name === entry.name);
+    return it ? it.image : null;
+  }
+  const c = characters.find(x => x.kind === entry.kind && x.name === entry.name);
+  return c ? c.image : null;
+}
+
+function showBuilds() {
+  hideAllViews();
+  setActiveTab('tabBuilds');
+  document.getElementById('buildsView').style.display = 'block';
+  loadBuilds().then(data => { builds = data; renderBuilds(); });
+}
+
+function renderBuilds() {
+  document.getElementById('buildRows').innerHTML = builds.map(b => `
+    <tr>
+      <td>${escapeHtml(b.purpose)}</td>
+      <td>${escapeHtml(b.episode)}</td>
+      <td class="build-combi">${b.combi.map(entry => `<img src="${imgSrc(resolveBuildIcon(entry))}" title="${escapeHtml(entry.name)}" loading="lazy">`).join('')}</td>
+      <td class="actions"><button data-id="${b.id}">Delete</button></td>
+    </tr>
+  `).join('');
+  document.getElementById('buildRows').querySelectorAll('button[data-id]').forEach(btn => {
+    btn.onclick = () => deleteBuild(parseInt(btn.dataset.id));
+  });
+}
+
+async function deleteBuild(id) {
+  if (!confirm('Delete this build?')) return;
+  const res = await fetch('/api/admin/delete-build', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password, id }),
+  });
+  if (res.ok) {
+    builds = builds.filter(b => b.id !== id);
+    renderBuilds();
+  } else {
+    const data = await res.json().catch(() => ({}));
+    alert('Error: ' + (data.error || res.status));
+    if (res.status === 401) localStorage.removeItem('adminPassword');
+  }
+}
+
 document.getElementById('tabTreasures').onclick = showTreasures;
 document.getElementById('tabCookies').onclick = () => showCharKind('cookie');
 document.getElementById('tabPets').onclick = () => showCharKind('pet');
+document.getElementById('tabBuilds').onclick = showBuilds;
 document.getElementById('charSearch').oninput = renderCharList;
 document.getElementById('charGradeFilter').onchange = renderCharList;
 document.getElementById('charBackToList').onclick = charBackToList;

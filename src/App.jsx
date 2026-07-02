@@ -17,6 +17,9 @@ const TIER_COLORS = {
   เฉพาะทาง: '#81d4fa',
 };
 
+const PURPOSES = ['score', 'auto_farm', 'semi_auto', 'coins', 'exp', 'boxes'];
+const EPISODES = ['ep1', 'ep2', 'ep3', 'ep4', 'ep5', 'ep6', 'special1', 'special2', 'special3'];
+
 const i18n = {
   en: {
     title: 'Cookie Run Classic Treasure Search',
@@ -51,6 +54,20 @@ const i18n = {
     tierFormBase: 'Base form',
     tierFormEvolved: 'Evolved form',
     editBtn: '✎ Edit',
+    navBuilds: 'Build Creator',
+    buildAddBtn: '+ Add build',
+    buildBackBtn: '← Back to builds',
+    buildNone: 'No builds yet for this filter',
+    buildPurpose: { score: 'Score', auto_farm: 'Auto Farm', semi_auto: 'Semi-Auto', coins: 'Coins', exp: 'EXP', boxes: 'Boxes' },
+    buildEpisode: { ep1: 'EP 1', ep2: 'EP 2', ep3: 'EP 3', ep4: 'EP 4', ep5: 'EP 5', ep6: 'EP 6', special1: 'Special 1', special2: 'Special 2', special3: 'Special 3' },
+    buildKind: { cookie: 'Cookie', pet: 'Pet', treasure: 'Treasure' },
+    buildSearchPlaceholder: 'Type to search a cookie, pet, or treasure...',
+    buildAddItem: 'Add to combi',
+    buildCombiEmpty: 'No items added yet',
+    buildSubmit: 'Submit build',
+    buildSubmitting: 'Submitting...',
+    buildSubmitted: 'Build submitted!',
+    buildSubmitError: 'Failed to submit build',
   },
   th: {
     title: 'ค้นหาสมบัติ Cookie Run Classic',
@@ -85,6 +102,20 @@ const i18n = {
     tierFormBase: 'ก่อนวิวัฒนาการ',
     tierFormEvolved: 'หลังวิวัฒนาการ',
     editBtn: '✎ แก้ไข',
+    navBuilds: 'Build Creator',
+    buildAddBtn: '+ เพิ่ม build',
+    buildBackBtn: '← กลับไปหน้า build',
+    buildNone: 'ยังไม่มี build ในหมวดนี้',
+    buildPurpose: { score: 'Score', auto_farm: 'Auto Farm', semi_auto: 'Semi-Auto', coins: 'Coins', exp: 'EXP', boxes: 'Boxes' },
+    buildEpisode: { ep1: 'EP 1', ep2: 'EP 2', ep3: 'EP 3', ep4: 'EP 4', ep5: 'EP 5', ep6: 'EP 6', special1: 'Special 1', special2: 'Special 2', special3: 'Special 3' },
+    buildKind: { cookie: 'คุกกี้', pet: 'เพ็ท', treasure: 'สมบัติ' },
+    buildSearchPlaceholder: 'พิมพ์ค้นหาคุกกี้ เพ็ท หรือสมบัติ...',
+    buildAddItem: 'เพิ่มลง combi',
+    buildCombiEmpty: 'ยังไม่มีไอเทมใน combi นี้',
+    buildSubmit: 'ส่ง build',
+    buildSubmitting: 'กำลังส่ง...',
+    buildSubmitted: 'ส่ง build สำเร็จ!',
+    buildSubmitError: 'ส่ง build ไม่สำเร็จ',
   },
 };
 
@@ -113,6 +144,30 @@ async function fetchAllCharacters() {
     headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
   });
   return res.json();
+}
+
+async function fetchAllBuilds() {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/builds?select=*&order=created_at.desc`, {
+    headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
+  });
+  return res.json();
+}
+
+// Open to the public: the `builds` table has an insert RLS policy that
+// allows anyone to write with just the anon key (no admin password), same
+// trust model as cookierunhub.com's own community build submissions.
+async function submitBuild(purpose, episode, combi) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/builds`, {
+    method: 'POST',
+    headers: {
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+      'Content-Type': 'application/json',
+      Prefer: 'return=minimal',
+    },
+    body: JSON.stringify([{ purpose, episode, combi }]),
+  });
+  if (!res.ok) throw new Error(await res.text());
 }
 
 function highlight(text, q) {
@@ -196,6 +251,7 @@ function HomePage({ t, onNavigate }) {
         <button type="button" onClick={() => onNavigate('tierlist')}>{t.navTierlist}</button>
         <button type="button" onClick={() => onNavigate('cookies')}>{t.navCookies}</button>
         <button type="button" onClick={() => onNavigate('pets')}>{t.navPets}</button>
+        <button type="button" onClick={() => onNavigate('buildcreator')}>{t.navBuilds}</button>
       </div>
     </div>
   );
@@ -324,6 +380,145 @@ function CharacterListPage({ characters, kind, t }) {
   );
 }
 
+function resolveCombiIcon(entry, items, characters) {
+  if (entry.kind === 'treasure') {
+    const it = items.find(x => x.name === entry.name);
+    return it ? it.localImage : null;
+  }
+  const c = characters.find(x => x.kind === entry.kind && x.name === entry.name);
+  return c ? c.image : null;
+}
+
+function BuildCreatorPage({ items, characters, t }) {
+  const [view, setView] = useState('browse');
+  const [purpose, setPurpose] = useState('score');
+  const [episode, setEpisode] = useState('ep1');
+  const [builds, setBuilds] = useState([]);
+
+  useEffect(() => {
+    fetchAllBuilds().then(setBuilds);
+  }, []);
+
+  const filtered = useMemo(
+    () => builds.filter(b => b.purpose === purpose && b.episode === episode),
+    [builds, purpose, episode]
+  );
+
+  function backToBrowse() {
+    setView('browse');
+    fetchAllBuilds().then(setBuilds);
+  }
+
+  return (
+    <>
+      <div className="grade-filter">
+        {PURPOSES.map(p => (
+          <button key={p} className={purpose === p ? 'active' : ''} onClick={() => setPurpose(p)}>{t.buildPurpose[p]}</button>
+        ))}
+      </div>
+      <div className="grade-filter">
+        {EPISODES.map(ep => (
+          <button key={ep} className={episode === ep ? 'active' : ''} onClick={() => setEpisode(ep)}>{t.buildEpisode[ep]}</button>
+        ))}
+      </div>
+      {view === 'add' ? (
+        <BuildAddForm items={items} characters={characters} t={t} purpose={purpose} episode={episode} onDone={backToBrowse} onCancel={() => setView('browse')} />
+      ) : (
+        <>
+          <button type="button" className="recipe-btn" onClick={() => setView('add')}>{t.buildAddBtn}</button>
+          <div id="list">
+            {filtered.length === 0 && <div className="effect muted" style={{ marginTop: '1rem' }}>{t.buildNone}</div>}
+            {filtered.map(b => (
+              <div className="card" key={b.id}>
+                <div className="body">
+                  <div className="combi-icons">
+                    {b.combi.map((entry, i) => {
+                      const icon = resolveCombiIcon(entry, items, characters);
+                      return (
+                        <div className={'combi-icon combi-icon-' + entry.kind} key={i} title={entry.name}>
+                          {icon && <img src={icon} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+    </>
+  );
+}
+
+function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel }) {
+  const [kind, setKind] = useState('cookie');
+  const [name, setName] = useState('');
+  const [combi, setCombi] = useState([]);
+  const [status, setStatus] = useState('');
+
+  const candidateNames = useMemo(() => {
+    if (kind === 'treasure') return [...new Set(items.map(it => it.name))];
+    return characters.filter(c => c.kind === kind).map(c => c.name);
+  }, [kind, items, characters]);
+
+  function addToCombi() {
+    const n = name.trim();
+    if (!n || !candidateNames.includes(n)) return;
+    setCombi(c => [...c, { kind, name: n }]);
+    setName('');
+  }
+
+  function removeFromCombi(i) {
+    setCombi(c => c.filter((_, idx) => idx !== i));
+  }
+
+  async function submit() {
+    if (combi.length === 0) return;
+    setStatus(t.buildSubmitting);
+    try {
+      await submitBuild(purpose, episode, combi);
+      setStatus(t.buildSubmitted);
+      setTimeout(onDone, 800);
+    } catch {
+      setStatus(t.buildSubmitError);
+    }
+  }
+
+  return (
+    <div className="card" style={{ display: 'block', marginTop: '1rem' }}>
+      <div className="grade-filter">
+        {['cookie', 'pet', 'treasure'].map(k => (
+          <button key={k} className={kind === k ? 'active' : ''} onClick={() => setKind(k)}>{t.buildKind[k]}</button>
+        ))}
+      </div>
+      <div className="toolbar">
+        <input list="buildCandidates" placeholder={t.buildSearchPlaceholder} value={name} onChange={e => setName(e.target.value)} />
+        <datalist id="buildCandidates">
+          {candidateNames.map(n => <option value={n} key={n} />)}
+        </datalist>
+        <button type="button" className="recipe-btn" onClick={addToCombi}>{t.buildAddItem}</button>
+      </div>
+      <div className="combi-icons" style={{ marginTop: '0.6rem' }}>
+        {combi.length === 0 && <span className="tier-empty">{t.buildCombiEmpty}</span>}
+        {combi.map((entry, i) => {
+          const icon = resolveCombiIcon(entry, items, characters);
+          return (
+            <div className={'combi-icon combi-icon-' + entry.kind} key={i} title={entry.name} onClick={() => removeFromCombi(i)} style={{ cursor: 'pointer' }}>
+              {icon && <img src={icon} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+            </div>
+          );
+        })}
+      </div>
+      <div className="nav">
+        <button type="button" onClick={submit} disabled={combi.length === 0}>{t.buildSubmit}</button>
+        <button type="button" onClick={onCancel}>{t.buildBackBtn}</button>
+        <span>{status}</span>
+      </div>
+    </div>
+  );
+}
+
 function DonateModal({ t, onClose }) {
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -424,6 +619,7 @@ export default function App() {
             <button className={page === 'tierlist' ? 'active' : ''} onClick={() => setPage('tierlist')}>{t.navTierlist}</button>
             <button className={page === 'cookies' ? 'active' : ''} onClick={() => setPage('cookies')}>{t.navCookies}</button>
             <button className={page === 'pets' ? 'active' : ''} onClick={() => setPage('pets')}>{t.navPets}</button>
+            <button className={page === 'buildcreator' ? 'active' : ''} onClick={() => setPage('buildcreator')}>{t.navBuilds}</button>
           </>
         )}
         <div className="lang-toggle">
@@ -474,6 +670,7 @@ export default function App() {
       {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
       {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage characters={characters} kind="cookie" t={t} /></>}
       {page === 'pets' && <><h1>{t.navPets}</h1><CharacterListPage characters={characters} kind="pet" t={t} /></>}
+      {page === 'buildcreator' && <><h1>{t.navBuilds}</h1><BuildCreatorPage items={items} characters={characters} t={t} /></>}
     </>
   );
 }
