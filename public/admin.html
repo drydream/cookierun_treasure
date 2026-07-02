@@ -58,6 +58,7 @@
       </select>
     </label>
     <label style="white-space:nowrap"><input type="checkbox" id="onlyUntranslated"> only untranslated</label>
+    <button id="dedupeBtn" style="font-size:13px;padding:4px 10px">Merge duplicates</button>
     <button id="importBtn" style="font-size:13px;padding:4px 10px">Import/reset from JSON files</button>
     <div id="summary"></div>
   </div>
@@ -260,6 +261,25 @@ async function deleteCurrent() {
     if (res.status === 401) localStorage.removeItem('adminPassword');
   }
 }
+
+document.getElementById('dedupeBtn').onclick = async () => {
+  if (!confirm('Merge LINE/Kakao-Global treasures that are the same item (same name, or same cookie/pet + grade + type). Only removes the Kakao/Global duplicate row, keeps all your edits. Continue?')) return;
+  document.getElementById('dedupeBtn').textContent = 'Merging...';
+  const res = await fetch('/api/admin/dedupe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password }),
+  });
+  const data = await res.json().catch(() => ({}));
+  document.getElementById('dedupeBtn').textContent = 'Merge duplicates';
+  if (res.ok) {
+    alert('Merged ' + data.deleted + ' duplicate rows.');
+    items = await loadItems();
+    renderList();
+  } else {
+    alert('Error: ' + (data.error || res.status));
+  }
+};
 
 document.getElementById('importBtn').onclick = async () => {
   if (!confirm('This replaces all rows in the treasures table from public/treasures.json + treasures-kr.json. Continue?')) return;
