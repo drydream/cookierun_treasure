@@ -273,11 +273,11 @@ function CharacterListPage({ characters, kind, t }) {
       <div id="list">
         {filtered.map(c => (
           <div className="card" key={c.id}>
-            <img src={c.image} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />
+            {c.image && <img src={c.image} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
             <div className="body">
               <span className="name">{c.name}</span>
               {c.grade && <span className="grade">{c.grade}-grade</span>}
-              {c.ability && <div className="effect">{c.ability}</div>}
+              {(c.ability_en || c.ability) && <div className="effect">{c.ability_en || c.ability}</div>}
             </div>
           </div>
         ))}
