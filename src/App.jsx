@@ -70,10 +70,6 @@ async function fetchAllTreasures() {
   return all;
 }
 
-function wikiUrl(name) {
-  return 'https://cookierun.fandom.com/wiki/' + encodeURIComponent(name.replace(/ /g, '_'));
-}
-
 function highlight(text, q) {
   if (!q) return text;
   const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
@@ -82,19 +78,16 @@ function highlight(text, q) {
   );
 }
 
-function RelatedItem({ name, image, version }) {
-  const content = (
-    <>
+function RelatedItem({ name, image, onJump }) {
+  return (
+    <button type="button" className="related-link" onClick={() => onJump(name)}>
       {image && <img className="inline-icon" src={image} alt="" loading="lazy" />}
       {name}
-    </>
+    </button>
   );
-  return version === 'line'
-    ? <a href={wikiUrl(name)} target="_blank" rel="noopener">{content}</a>
-    : <span>{content}</span>;
 }
 
-function Card({ item, query, t, evolvesTo, imageByName }) {
+function Card({ item, query, t, evolvesTo, imageByName, onJump }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="card">
@@ -116,7 +109,7 @@ function Card({ item, query, t, evolvesTo, imageByName }) {
         {evolvesTo && (
           <div className="evolves-to">
             <span className="label">{t.evolvesTo}</span>{' '}
-            <RelatedItem name={evolvesTo} image={imageByName[item.version + '|' + evolvesTo]} version={item.version} />
+            <RelatedItem name={evolvesTo} image={imageByName[item.version + '|' + evolvesTo]} onJump={onJump} />
           </div>
         )}
         {item.baseItem && (
@@ -125,7 +118,7 @@ function Card({ item, query, t, evolvesTo, imageByName }) {
             <div className={'recipe' + (open ? ' open' : '')}>
               <div className="row">
                 <span className="label">{t.evolvedFrom}</span>{' '}
-                <RelatedItem name={item.baseItem} image={imageByName[item.version + '|' + item.baseItem]} version={item.version} />
+                <RelatedItem name={item.baseItem} image={imageByName[item.version + '|' + item.baseItem]} onJump={onJump} />
               </div>
               {item.ingredients && (
                 <div className="row">
@@ -133,7 +126,7 @@ function Card({ item, query, t, evolvesTo, imageByName }) {
                   {item.ingredients.map((ing, i) => (
                     <span key={ing.name}>
                       {i > 0 && ', '}
-                      <a href={wikiUrl(ing.name)} target="_blank" rel="noopener">{ing.name}</a>
+                      <RelatedItem name={ing.name} onJump={onJump} />
                       {ing.grade ? ` (${ing.grade})` : ''}
                     </span>
                   ))}
@@ -217,6 +210,14 @@ export default function App() {
   useEffect(() => { setVisibleCount(PAGE_SIZE); }, [query, grade, typeFilter, version]);
   const visibleItems = filtered.slice(0, visibleCount);
 
+  function jumpTo(name) {
+    setQuery(name);
+    setGrade('all');
+    setTypeFilter('all');
+    setVersion('all');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   return (
     <>
       <button type="button" className="donate-btn" onClick={() => setShowDonate(true)}>{t.donateBtn}</button>
@@ -248,7 +249,7 @@ export default function App() {
       <div id="count">{t.count(filtered.length)}</div>
       <div id="list">
         {visibleItems.map((it, i) => (
-          <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} />
+          <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} onJump={jumpTo} />
         ))}
       </div>
       {visibleCount < filtered.length && (
