@@ -71,7 +71,8 @@ const i18n = {
     buildSubmitting: 'Submitting...',
     buildSubmitted: 'Build submitted!',
     buildSubmitError: 'Failed to submit build',
-    buildShare: 'Share to Facebook',
+    buildShare: 'Share build (copy link)',
+    buildLinkCopied: 'Link copied!',
     buildSlot: { main: 'Main', relay: 'Relay (optional)', pet: 'Pet' },
     buildTreasureSlot: 'Treasure (optional, up to 3)',
     buildAddTreasure: '+ Add Treasure',
@@ -134,7 +135,8 @@ const i18n = {
     buildSubmitting: 'กำลังส่ง...',
     buildSubmitted: 'ส่ง build สำเร็จ!',
     buildSubmitError: 'ส่ง build ไม่สำเร็จ',
-    buildShare: 'แชร์ไป Facebook',
+    buildShare: 'แชร์ build (คัดลอกลิงก์)',
+    buildLinkCopied: 'คัดลอกลิงก์แล้ว!',
     buildSlot: { main: 'Main', relay: 'Relay (ไม่บังคับ)', pet: 'Pet' },
     buildTreasureSlot: 'สมบัติ (ไม่บังคับ, สูงสุด 3 ชิ้น)',
     buildAddTreasure: '+ เพิ่มสมบัติ',
@@ -195,7 +197,7 @@ async function fetchBuildById(id) {
 }
 
 function shareBuildUrl(id) {
-  return `${window.location.origin}${window.location.pathname}?build=${id}`;
+  return `${window.location.origin}/build/${id}`;
 }
 
 // Open to the public (no admin password), but gated by a Cloudflare
@@ -506,6 +508,7 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
   const [episode, setEpisode] = useState('ep1');
   const [builds, setBuilds] = useState([]);
   const [highlightId, setHighlightId] = useState(initialBuildId || null);
+  const [copiedId, setCopiedId] = useState(null);
 
   useEffect(() => {
     fetchAllBuilds().then(setBuilds);
@@ -530,7 +533,9 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
 
   function shareBuild(id) {
     setHighlightId(null);
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareBuildUrl(id)), '_blank', 'noopener');
+    navigator.clipboard.writeText(shareBuildUrl(id));
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(c => (c === id ? null : c)), 1500);
   }
 
   return (
@@ -573,7 +578,7 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                     </div>
                   )}
                   {b.notes && <div className="effect">{b.notes}</div>}
-                  <button type="button" className="recipe-btn" style={{ marginTop: '0.5rem' }} onClick={() => shareBuild(b.id)}>{t.buildShare}</button>
+                  <button type="button" className="recipe-btn" style={{ marginTop: '0.5rem' }} onClick={() => shareBuild(b.id)}>{copiedId === b.id ? t.buildLinkCopied : t.buildShare}</button>
                 </div>
               </div>
             ))}
