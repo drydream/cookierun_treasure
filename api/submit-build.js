@@ -1,14 +1,22 @@
-// Vercel serverless function, doing double duty to stay under the Hobby
-// plan's serverless function count limit:
+// Vercel serverless function, doing double duty (quadruple, now) to stay
+// under the Hobby plan's serverless function count limit:
 //  - POST: the only allowed write path for public build submissions.
 //    Verifies a Cloudflare Turnstile token server-side before inserting via
 //    service_role, so this is the sole gate once the `builds` table's public
-//    INSERT RLS policy is dropped.
+//    INSERT RLS policy is dropped. Also hashes the submitter's chosen
+//    password (SHA-256, unsalted — proportionate for "edit a fan-site build
+//    entry", not a real credential) so they can edit/delete it later.
 //  - GET (?id=<id>): serves a real HTML document with per-build Open Graph
 //    tags at /build/:id (see vercel.json rewrite), then redirects real
 //    browsers into the SPA. Crawlers read the tags from this initial
 //    response directly — they don't execute JS or follow the redirect.
+//  - PATCH / DELETE (?id=<id>, body {password, ...}): owner self-service
+//    edit/delete, gated by matching the stored password hash. No anon
+//    update/delete RLS policy exists on `builds` (only select), so these are
+//    the only paths that can touch an existing row besides the admin panel.
 // Requires env vars: service_role, TURNSTILE_SECRET_KEY.
+import crypto from 'node:crypto';
+
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZGhzbnlubGx6b2l0Ym9sbmdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NTk3MDYsImV4cCI6MjA5ODUzNTcwNn0.yBoBJ3R_AHpjNQG1ikIwfXFOLfWQWSiwZgLaP8m-hxI';
 const SITE_URL = 'https://cookierunclassic-treasure.vercel.app';
@@ -42,6 +50,28 @@ function validNumber(n) {
 
 function esc(s) {
   return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
+function hashPassword(pw) {
+  return crypto.createHash('sha256').update(pw).digest('hex');
+}
+
+function serviceHeaders() {
+  const serviceKey = process.env.service_role;
+  return {
+    apikey: serviceKey,
+    Authorization: `Bearer ${serviceKey}`,
+    'Content-Type': 'application/json',
+    Prefer: 'return=minimal',
+  };
+}
+
+async function fetchOwnHash(id) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/builds?id=eq.${id}&select=edit_password_hash`, {
+    headers: { apikey: process.env.service_role, Authorization: `Bearer ${process.env.service_role}` },
+  });
+  const [row] = await res.json();
+  return row ? row.edit_password_hash : null;
 }
 
 async function handleBuildPage(req, res) {
@@ -93,9 +123,17 @@ async function handleBuildPage(req, res) {
   }
 }
 
-async function handleSubmit(req, res) {
-  const { purpose, episode, combi, boosts, power_effects, score, coins, notes, turnstileToken } = req.body;
+function validPassword(pw) {
+  return typeof pw === 'string' && pw.length >= 4 && pw.length <= 20;
+}
 
+async function handleSubmit(req, res) {
+  const { purpose, episode, combi, boosts, power_effects, score, coins, notes, turnstileToken, password } = req.body;
+
+  if (!validPassword(password)) {
+    res.status(400).json({ error: 'Password must be 4-20 characters (needed to edit/delete this build later)' });
+    return;
+  }
   if (!PURPOSES.includes(purpose)) {
     res.status(400).json({ error: 'Invalid purpose' });
     return;
@@ -137,15 +175,9 @@ async function handleSubmit(req, res) {
       return;
     }
 
-    const serviceKey = process.env.service_role;
     const insRes = await fetch(`${SUPABASE_URL}/rest/v1/builds`, {
       method: 'POST',
-      headers: {
-        apikey: serviceKey,
-        Authorization: `Bearer ${serviceKey}`,
-        'Content-Type': 'application/json',
-        Prefer: 'return=minimal',
-      },
+      headers: serviceHeaders(),
       body: JSON.stringify([{
         purpose,
         episode,
@@ -155,6 +187,7 @@ async function handleSubmit(req, res) {
         score: score ?? null,
         coins: coins ?? null,
         notes: notes || null,
+        edit_password_hash: hashPassword(password),
       }]),
     });
     if (!insRes.ok) throw new Error('Supabase insert failed: ' + insRes.status + ' ' + await insRes.text());
@@ -165,8 +198,92 @@ async function handleSubmit(req, res) {
   }
 }
 
+async function handleEdit(req, res) {
+  const id = parseInt(req.query.id);
+  const { password, purpose, episode, combi, boosts, power_effects, score, coins, notes } = req.body;
+
+  if (!Number.isInteger(id) || !validPassword(password)) {
+    res.status(400).json({ error: 'Missing id or password' });
+    return;
+  }
+  if (purpose !== undefined && !PURPOSES.includes(purpose)) {
+    res.status(400).json({ error: 'Invalid purpose' });
+    return;
+  }
+  if (episode !== undefined && !EPISODES.includes(episode)) {
+    res.status(400).json({ error: 'Invalid episode' });
+    return;
+  }
+  if (combi !== undefined && !validCombi(combi)) {
+    res.status(400).json({ error: 'Invalid combi (need exactly one main, one pet, up to 1 relay and 3 treasures)' });
+    return;
+  }
+  if (!validStringList(boosts, BOOSTS) || !validStringList(power_effects, POWER_EFFECTS)) {
+    res.status(400).json({ error: 'Invalid boosts or power_effects' });
+    return;
+  }
+  if (!validNumber(score) || !validNumber(coins)) {
+    res.status(400).json({ error: 'Invalid score or coins' });
+    return;
+  }
+  if (notes !== undefined && notes !== null && (typeof notes !== 'string' || notes.length > NOTES_MAX)) {
+    res.status(400).json({ error: 'Notes too long' });
+    return;
+  }
+
+  try {
+    const ownHash = await fetchOwnHash(id);
+    if (!ownHash || ownHash !== hashPassword(password)) {
+      res.status(403).json({ error: 'Wrong password' });
+      return;
+    }
+
+    const patch = { purpose, episode, combi, boosts, power_effects, score, coins, notes };
+    const putRes = await fetch(`${SUPABASE_URL}/rest/v1/builds?id=eq.${id}`, {
+      method: 'PATCH',
+      headers: serviceHeaders(),
+      body: JSON.stringify(patch),
+    });
+    if (!putRes.ok) throw new Error('Supabase update failed: ' + putRes.status + ' ' + await putRes.text());
+
+    res.status(200).json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+}
+
+async function handleDelete(req, res) {
+  const id = parseInt(req.query.id);
+  const { password } = req.body;
+
+  if (!Number.isInteger(id) || !validPassword(password)) {
+    res.status(400).json({ error: 'Missing id or password' });
+    return;
+  }
+
+  try {
+    const ownHash = await fetchOwnHash(id);
+    if (!ownHash || ownHash !== hashPassword(password)) {
+      res.status(403).json({ error: 'Wrong password' });
+      return;
+    }
+
+    const delRes = await fetch(`${SUPABASE_URL}/rest/v1/builds?id=eq.${id}`, {
+      method: 'DELETE',
+      headers: serviceHeaders(),
+    });
+    if (!delRes.ok) throw new Error('Supabase delete failed: ' + delRes.status + ' ' + await delRes.text());
+
+    res.status(200).json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method === 'GET') return handleBuildPage(req, res);
   if (req.method === 'POST') return handleSubmit(req, res);
+  if (req.method === 'PATCH') return handleEdit(req, res);
+  if (req.method === 'DELETE') return handleDelete(req, res);
   res.status(405).json({ error: 'Method not allowed' });
 }

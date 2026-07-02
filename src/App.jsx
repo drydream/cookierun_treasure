@@ -87,6 +87,16 @@ const i18n = {
     buildTreasureBase: 'Base Treasures',
     buildTreasureEvolved: 'Evolved Treasures',
     buildClear: 'Clear',
+    buildPassword: 'Password (4-20 chars, needed to edit/delete later)',
+    buildEdit: 'Edit',
+    buildDelete: 'Delete',
+    buildPasswordPromptEdit: 'Enter this build\'s password to edit it',
+    buildPasswordPromptDelete: 'Enter this build\'s password to delete it',
+    buildConfirm: 'Confirm',
+    buildCancel: 'Cancel',
+    buildWrongPassword: 'Wrong password',
+    buildDeleted: 'Build deleted',
+    buildSaved: 'Saved!',
   },
   th: {
     title: 'ค้นหาสมบัติ Cookie Run Classic',
@@ -151,6 +161,16 @@ const i18n = {
     buildTreasureBase: 'สมบัติก่อนวิวัฒนาการ',
     buildTreasureEvolved: 'สมบัติหลังวิวัฒนาการ',
     buildClear: 'ล้าง',
+    buildPassword: 'รหัสผ่าน (4-20 ตัวอักษร ใช้แก้ไข/ลบทีหลัง)',
+    buildEdit: 'แก้ไข',
+    buildDelete: 'ลบ',
+    buildPasswordPromptEdit: 'ใส่รหัสผ่านของ build นี้เพื่อแก้ไข',
+    buildPasswordPromptDelete: 'ใส่รหัสผ่านของ build นี้เพื่อลบ',
+    buildConfirm: 'ยืนยัน',
+    buildCancel: 'ยกเลิก',
+    buildWrongPassword: 'รหัสผ่านไม่ถูกต้อง',
+    buildDeleted: 'ลบ build แล้ว',
+    buildSaved: 'บันทึกแล้ว!',
   },
 };
 
@@ -207,6 +227,26 @@ async function submitBuild(purpose, episode, combi, turnstileToken, extra) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ purpose, episode, combi, turnstileToken, ...extra }),
+  });
+  if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || res.status);
+}
+
+// Owner self-service edit/delete, gated by the password chosen at submit
+// time (see /api/submit-build's PATCH/DELETE handlers) — no admin login.
+async function editBuild(id, password, fields) {
+  const res = await fetch(`/api/submit-build?id=${id}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password, ...fields }),
+  });
+  if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || res.status);
+}
+
+async function deleteBuildByOwner(id, password) {
+  const res = await fetch(`/api/submit-build?id=${id}`, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password }),
   });
   if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || res.status);
 }
@@ -502,6 +542,19 @@ function ItemPickerModal({ title, kind, items, characters, onSelect, onClose, t 
   );
 }
 
+function PasswordPrompt({ label, t, onConfirm, onCancel, error }) {
+  const [password, setPassword] = useState('');
+  return (
+    <div className="password-prompt">
+      <div>{label}</div>
+      <input type="password" value={password} onChange={e => setPassword(e.target.value)} autoFocus />
+      <button type="button" className="recipe-btn" onClick={() => onConfirm(password)}>{t.buildConfirm}</button>
+      <button type="button" className="recipe-btn" onClick={onCancel}>{t.buildCancel}</button>
+      {error && <div className="effect error-text">{error}</div>}
+    </div>
+  );
+}
+
 function BuildCreatorPage({ items, characters, t, initialBuildId }) {
   const [view, setView] = useState('browse');
   const [purpose, setPurpose] = useState('score');
@@ -509,6 +562,9 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
   const [builds, setBuilds] = useState([]);
   const [highlightId, setHighlightId] = useState(initialBuildId || null);
   const [copiedId, setCopiedId] = useState(null);
+  const [prompt, setPrompt] = useState(null); // { id, action: 'edit' | 'delete' } | null
+  const [promptError, setPromptError] = useState('');
+  const [editingBuild, setEditingBuild] = useState(null); // { build, password } | null
 
   useEffect(() => {
     fetchAllBuilds().then(setBuilds);
@@ -528,6 +584,7 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
 
   function backToBrowse() {
     setView('browse');
+    setEditingBuild(null);
     fetchAllBuilds().then(setBuilds);
   }
 
@@ -536,6 +593,26 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
     navigator.clipboard.writeText(shareBuildUrl(id));
     setCopiedId(id);
     setTimeout(() => setCopiedId(c => (c === id ? null : c)), 1500);
+  }
+
+  async function confirmPrompt(password) {
+    const { id, action } = prompt;
+    if (action === 'delete') {
+      try {
+        await deleteBuildByOwner(id, password);
+        setBuilds(bs => bs.filter(b => b.id !== id));
+        setPrompt(null);
+        setPromptError('');
+      } catch {
+        setPromptError(t.buildWrongPassword);
+      }
+      return;
+    }
+    const build = builds.find(b => b.id === id);
+    setEditingBuild({ build, password });
+    setView('add');
+    setPrompt(null);
+    setPromptError('');
   }
 
   return (
@@ -551,7 +628,7 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
         ))}
       </div>
       {view === 'add' ? (
-        <BuildAddForm items={items} characters={characters} t={t} purpose={purpose} episode={episode} onDone={backToBrowse} onCancel={() => setView('browse')} />
+        <BuildAddForm items={items} characters={characters} t={t} purpose={purpose} episode={episode} editing={editingBuild} onDone={backToBrowse} onCancel={() => { setEditingBuild(null); setView('browse'); }} />
       ) : (
         <>
           <button type="button" className="recipe-btn" onClick={() => setView('add')}>{t.buildAddBtn}</button>
@@ -578,7 +655,20 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                     </div>
                   )}
                   {b.notes && <div className="effect">{b.notes}</div>}
-                  <button type="button" className="recipe-btn" style={{ marginTop: '0.5rem' }} onClick={() => shareBuild(b.id)}>{copiedId === b.id ? t.buildLinkCopied : t.buildShare}</button>
+                  <div style={{ display: 'flex', gap: '0.4rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
+                    <button type="button" className="recipe-btn" onClick={() => shareBuild(b.id)}>{copiedId === b.id ? t.buildLinkCopied : t.buildShare}</button>
+                    <button type="button" className="recipe-btn" onClick={() => { setPrompt({ id: b.id, action: 'edit' }); setPromptError(''); }}>{t.buildEdit}</button>
+                    <button type="button" className="recipe-btn" onClick={() => { setPrompt({ id: b.id, action: 'delete' }); setPromptError(''); }}>{t.buildDelete}</button>
+                  </div>
+                  {prompt && prompt.id === b.id && (
+                    <PasswordPrompt
+                      label={prompt.action === 'edit' ? t.buildPasswordPromptEdit : t.buildPasswordPromptDelete}
+                      t={t}
+                      error={promptError}
+                      onConfirm={confirmPrompt}
+                      onCancel={() => { setPrompt(null); setPromptError(''); }}
+                    />
+                  )}
                 </div>
               </div>
             ))}
@@ -589,22 +679,36 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
   );
 }
 
-function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel }) {
-  const [main, setMain] = useState(null);
-  const [relay, setRelay] = useState(null);
-  const [pet, setPet] = useState(null);
-  const [treasures, setTreasures] = useState([]);
-  const [boosts, setBoosts] = useState([]);
-  const [powerEffects, setPowerEffects] = useState([]);
-  const [score, setScore] = useState('');
-  const [coins, setCoins] = useState('');
-  const [notes, setNotes] = useState('');
+function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone, onCancel }) {
+  const isEdit = !!editing;
+  const seedCombi = isEdit ? editing.build.combi : [];
+  const seedEntry = slot => seedCombi.find(e => (e.slot || e.kind) === slot);
+  const seedChar = (slot, kind) => {
+    const e = seedEntry(slot);
+    return e ? characters.find(c => c.kind === kind && c.name === e.name) || null : null;
+  };
+
+  const [main, setMain] = useState(() => seedChar('main', 'cookie'));
+  const [relay, setRelay] = useState(() => seedChar('relay', 'cookie'));
+  const [pet, setPet] = useState(() => seedChar('pet', 'pet'));
+  const [treasures, setTreasures] = useState(() =>
+    seedCombi.filter(e => (e.slot || e.kind) === 'treasure')
+      .map(e => items.find(it => it.name === e.name))
+      .filter(Boolean)
+  );
+  const [boosts, setBoosts] = useState(() => (isEdit && editing.build.boosts) || []);
+  const [powerEffects, setPowerEffects] = useState(() => (isEdit && editing.build.power_effects) || []);
+  const [score, setScore] = useState(() => (isEdit && editing.build.score != null) ? String(editing.build.score) : '');
+  const [coins, setCoins] = useState(() => (isEdit && editing.build.coins != null) ? String(editing.build.coins) : '');
+  const [notes, setNotes] = useState(() => (isEdit && editing.build.notes) || '');
+  const [password, setPassword] = useState('');
   const [picker, setPicker] = useState(null); // 'main' | 'relay' | 'pet' | 'treasure' | null
   const [status, setStatus] = useState('');
   const [turnstileToken, setTurnstileToken] = useState('');
   const turnstileRef = useRef(null);
 
   useEffect(() => {
+    if (isEdit) return; // editing is password-gated, not bot-gated
     let widgetId;
     let cancelled = false;
     // Turnstile's script loads async (see index.html), so poll briefly for it.
@@ -621,7 +725,7 @@ function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel
       clearInterval(start);
       if (widgetId && window.turnstile) window.turnstile.remove(widgetId);
     };
-  }, []);
+  }, [isEdit]);
 
   function toggleInList(list, setList, value) {
     setList(list.includes(value) ? list.filter(v => v !== value) : [...list, value]);
@@ -644,20 +748,29 @@ function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel
     return list;
   }, [main, relay, pet, treasures]);
 
-  const canSubmit = !!main && !!pet && !!turnstileToken;
+  const canSubmit = !!main && !!pet && (isEdit ? true : !!turnstileToken && password.length >= 4);
 
   async function submit() {
     if (!canSubmit) return;
     setStatus(t.buildSubmitting);
+    const fields = {
+      purpose,
+      episode,
+      combi,
+      boosts,
+      power_effects: powerEffects,
+      score: score === '' ? null : Number(score),
+      coins: coins === '' ? null : Number(coins),
+      notes: notes.trim() || null,
+    };
     try {
-      await submitBuild(purpose, episode, combi, turnstileToken, {
-        boosts,
-        power_effects: powerEffects,
-        score: score === '' ? null : Number(score),
-        coins: coins === '' ? null : Number(coins),
-        notes: notes.trim() || null,
-      });
-      setStatus(t.buildSubmitted);
+      if (isEdit) {
+        await editBuild(editing.build.id, editing.password, fields);
+        setStatus(t.buildSaved);
+      } else {
+        await submitBuild(purpose, episode, combi, turnstileToken, { ...fields, password });
+        setStatus(t.buildSubmitted);
+      }
       setTimeout(onDone, 800);
     } catch {
       setStatus(t.buildSubmitError);
@@ -716,7 +829,13 @@ function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel
       <label className="field">{t.buildNotes}</label>
       <textarea value={notes} onChange={e => setNotes(e.target.value)} />
 
-      <div ref={turnstileRef} style={{ marginTop: '0.6rem' }}></div>
+      {!isEdit && (
+        <>
+          <label className="field">{t.buildPassword}</label>
+          <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+          <div ref={turnstileRef} style={{ marginTop: '0.6rem' }}></div>
+        </>
+      )}
       <div className="nav">
         <button type="button" onClick={submit} disabled={!canSubmit}>{t.buildSubmit}</button>
         <button type="button" onClick={onCancel}>{t.buildBackBtn}</button>
