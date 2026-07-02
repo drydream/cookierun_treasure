@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Treasure editor</title>
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 900px; margin: 20px auto; padding: 0 16px; }
+  body { font-family: system-ui, sans-serif; max-width: 1100px; margin: 20px auto; padding: 0 16px; }
   .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 12px; flex-wrap: wrap; }
   #search { flex: 1; min-width: 160px; font-size: 15px; padding: 6px; }
   #summary { color: #666; font-size: 14px; white-space: nowrap; }
@@ -13,6 +13,8 @@
   th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #eee; vertical-align: middle; }
   tr:hover { background: #faf6ee; }
   td.thumb img { width: 40px; height: 40px; object-fit: contain; background: #f2eadf; border-radius: 6px; }
+  td.effect { max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #555; font-size: 13px; }
+  td.effect.empty { color: #bbb; font-style: italic; }
   .krname { color: #888; font-size: 12px; }
   .yes { color: #2e8b2e; }
   .no { color: #bbb; }
@@ -59,7 +61,7 @@
     <div id="summary"></div>
   </div>
   <table>
-    <thead><tr><th></th><th>Name</th><th>Source</th><th>Grade</th><th>Category</th><th>Has text</th><th></th></tr></thead>
+    <thead><tr><th></th><th>Name</th><th>Source</th><th>Grade</th><th>Effect text</th><th></th></tr></thead>
     <tbody id="rows"></tbody>
   </table>
 </div>
@@ -149,6 +151,10 @@ function filteredIndices() {
   });
 }
 
+function escapeHtml(s) {
+  return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
 function renderList() {
   const vis = filteredIndices();
   const translatedCount = items.filter(it => it.effect).length;
@@ -158,14 +164,15 @@ function renderList() {
   const rows = vis.map(i => {
     const it = items[i];
     const img = it.localImage ? '/' + it.localImage : '';
-    const check = it.effect ? '<span class="yes">&check;</span>' : '<span class="no">&mdash;</span>';
+    const effectCell = it.effect
+      ? `<td class="effect" title="${escapeHtml(it.effect)}">${escapeHtml(it.effect)}</td>`
+      : `<td class="effect empty">(no effect text)</td>`;
     return `<tr>
       <td class="thumb"><img src="${img}" loading="lazy"></td>
-      <td><div>${it.name}</div>${it.krName ? '<div class="krname">' + it.krName + '</div>' : ''}</td>
+      <td><div>${escapeHtml(it.name)}</div>${it.krName ? '<div class="krname">' + escapeHtml(it.krName) + '</div>' : ''}</td>
       <td class="src-${it.source}">${it.source === 'kr' ? 'Kakao/Global' : 'LINE'}</td>
       <td>${it.grade}</td>
-      <td>${it.category}</td>
-      <td>${check}</td>
+      ${effectCell}
       <td class="actions"><button data-idx="${i}">Edit</button></td>
     </tr>`;
   }).join('');
