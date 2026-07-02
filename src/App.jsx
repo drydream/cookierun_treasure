@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jZGhzbnlubGx6b2l0Ym9sbmdkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NTk3MDYsImV4cCI6MjA5ODUzNTcwNn0.yBoBJ3R_AHpjNQG1ikIwfXFOLfWQWSiwZgLaP8m-hxI';
+const TURNSTILE_SITE_KEY = '0x4AAAAAADujU_67p4B8imJx';
 
 const TIERS = ['power plus (SSSS)', 'SSS', 'SS', 'S', 'A', 'B', 'E', 'F', 'ขยะ', 'เฉพาะทาง'];
 const TIER_COLORS = {
@@ -167,21 +168,15 @@ function shareBuildUrl(id) {
   return `${window.location.origin}${window.location.pathname}?build=${id}`;
 }
 
-// Open to the public: the `builds` table has an insert RLS policy that
-// allows anyone to write with just the anon key (no admin password), same
-// trust model as cookierunhub.com's own community build submissions.
-async function submitBuild(purpose, episode, combi) {
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/builds`, {
+// Open to the public (no admin password), but gated by a Cloudflare
+// Turnstile bot check verified server-side in /api/submit-build.
+async function submitBuild(purpose, episode, combi, turnstileToken) {
+  const res = await fetch('/api/submit-build', {
     method: 'POST',
-    headers: {
-      apikey: SUPABASE_ANON_KEY,
-      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-      'Content-Type': 'application/json',
-      Prefer: 'return=minimal',
-    },
-    body: JSON.stringify([{ purpose, episode, combi }]),
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ purpose, episode, combi, turnstileToken }),
   });
-  if (!res.ok) throw new Error(await res.text());
+  if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || res.status);
 }
 
 function highlight(text, q) {
@@ -484,6 +479,27 @@ function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel
   const [name, setName] = useState('');
   const [combi, setCombi] = useState([]);
   const [status, setStatus] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const turnstileRef = useRef(null);
+
+  useEffect(() => {
+    let widgetId;
+    let cancelled = false;
+    // Turnstile's script loads async (see index.html), so poll briefly for it.
+    const start = setInterval(() => {
+      if (cancelled || !window.turnstile || !turnstileRef.current) return;
+      clearInterval(start);
+      widgetId = window.turnstile.render(turnstileRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        callback: token => setTurnstileToken(token),
+      });
+    }, 200);
+    return () => {
+      cancelled = true;
+      clearInterval(start);
+      if (widgetId && window.turnstile) window.turnstile.remove(widgetId);
+    };
+  }, []);
 
   const candidateNames = useMemo(() => {
     if (kind === 'treasure') return [...new Set(items.map(it => it.name))];
@@ -502,10 +518,10 @@ function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel
   }
 
   async function submit() {
-    if (combi.length === 0) return;
+    if (combi.length === 0 || !turnstileToken) return;
     setStatus(t.buildSubmitting);
     try {
-      await submitBuild(purpose, episode, combi);
+      await submitBuild(purpose, episode, combi, turnstileToken);
       setStatus(t.buildSubmitted);
       setTimeout(onDone, 800);
     } catch {
@@ -538,8 +554,9 @@ function BuildAddForm({ items, characters, t, purpose, episode, onDone, onCancel
           );
         })}
       </div>
+      <div ref={turnstileRef} style={{ marginTop: '0.6rem' }}></div>
       <div className="nav">
-        <button type="button" onClick={submit} disabled={combi.length === 0}>{t.buildSubmit}</button>
+        <button type="button" onClick={submit} disabled={combi.length === 0 || !turnstileToken}>{t.buildSubmit}</button>
         <button type="button" onClick={onCancel}>{t.buildBackBtn}</button>
         <span>{status}</span>
       </div>
