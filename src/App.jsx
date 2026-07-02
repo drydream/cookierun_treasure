@@ -186,16 +186,22 @@ function TierListPage({ items, t, onSelect }) {
             <div className="tier-items">
               {list.length === 0 && <span className="tier-empty">{t.tierEmpty}</span>}
               {list.map((it, i) => (
-                <img
+                <button
+                  type="button"
                   key={it.version + it.name + i}
-                  className="tier-icon"
-                  src={it.localImage}
-                  alt={it.name}
+                  className="tier-item"
                   title={it.name}
-                  loading="lazy"
                   onClick={() => onSelect(it.name)}
-                  onError={e => { e.target.style.visibility = 'hidden'; }}
-                />
+                >
+                  <img
+                    className="tier-icon"
+                    src={it.localImage}
+                    alt=""
+                    loading="lazy"
+                    onError={e => { e.target.style.visibility = 'hidden'; }}
+                  />
+                  <span className="tier-name">{it.name}</span>
+                </button>
               ))}
             </div>
           </div>
