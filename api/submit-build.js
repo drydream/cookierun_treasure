@@ -25,6 +25,10 @@ const PURPOSES = ['score', 'auto_farm', 'semi_auto', 'coins', 'exp', 'boxes'];
 const EPISODES = ['ep1', 'ep2', 'ep3', 'ep4', 'ep5', 'ep6', 'special1', 'special2', 'special3'];
 const SLOTS = ['main', 'relay', 'pet', 'treasure'];
 const BOOSTS = ['energy_boost', 'item_time', 'fast_start'];
+const RANDOM_BOOST_OPTIONS = [
+  'double_coins', 'hp_drain_15', 'crush_70', 'gold_coin_magic', 'hp_potion_20',
+  'pit_lift_2', 'score_bonus_15', 'revive_80hp', 'speed_17', 'collision_30', 'magnetic_aura',
+];
 const POWER_EFFECTS = ['cheerleader', 'special_force', 'fairy', 'cheesecake', 'sea_fairy', 'serenade'];
 const NOTES_MAX = 2000;
 const YOUTUBE_LINK_MAX = 300;
@@ -53,6 +57,10 @@ function validCombi(combi) {
 
 function validStringList(list, allowed) {
   return list === undefined || (Array.isArray(list) && list.every(v => allowed.includes(v)));
+}
+
+function validRandomBoost(v) {
+  return v === undefined || v === null || RANDOM_BOOST_OPTIONS.includes(v);
 }
 
 function validNumber(n) {
@@ -139,7 +147,7 @@ function validPassword(pw) {
 }
 
 async function handleSubmit(req, res) {
-  const { purpose, episode, combi, boosts, power_effects, score, coins, notes, youtube_link, turnstileToken, password } = req.body;
+  const { purpose, episode, combi, boosts, random_boost, power_effects, score, coins, notes, youtube_link, turnstileToken, password } = req.body;
 
   if (!validPassword(password)) {
     res.status(400).json({ error: 'Password must be 4-20 characters (needed to edit/delete this build later)' });
@@ -159,6 +167,10 @@ async function handleSubmit(req, res) {
   }
   if (!validStringList(boosts, BOOSTS) || !validStringList(power_effects, POWER_EFFECTS)) {
     res.status(400).json({ error: 'Invalid boosts or power_effects' });
+    return;
+  }
+  if (!validRandomBoost(random_boost)) {
+    res.status(400).json({ error: 'Invalid random_boost' });
     return;
   }
   if (!validNumber(score) || !validNumber(coins)) {
@@ -198,6 +210,7 @@ async function handleSubmit(req, res) {
         episode,
         combi,
         boosts: boosts || null,
+        random_boost: random_boost || null,
         power_effects: power_effects || null,
         score: score ?? null,
         coins: coins ?? null,
@@ -216,7 +229,7 @@ async function handleSubmit(req, res) {
 
 async function handleEdit(req, res) {
   const id = parseInt(req.query.id);
-  const { password, purpose, episode, combi, boosts, power_effects, score, coins, notes, youtube_link } = req.body;
+  const { password, purpose, episode, combi, boosts, random_boost, power_effects, score, coins, notes, youtube_link } = req.body;
 
   if (!Number.isInteger(id) || !validPassword(password)) {
     res.status(400).json({ error: 'Missing id or password' });
@@ -236,6 +249,10 @@ async function handleEdit(req, res) {
   }
   if (!validStringList(boosts, BOOSTS) || !validStringList(power_effects, POWER_EFFECTS)) {
     res.status(400).json({ error: 'Invalid boosts or power_effects' });
+    return;
+  }
+  if (!validRandomBoost(random_boost)) {
+    res.status(400).json({ error: 'Invalid random_boost' });
     return;
   }
   if (!validNumber(score) || !validNumber(coins)) {
@@ -258,7 +275,7 @@ async function handleEdit(req, res) {
       return;
     }
 
-    const patch = { purpose, episode, combi, boosts, power_effects, score, coins, notes, youtube_link };
+    const patch = { purpose, episode, combi, boosts, random_boost, power_effects, score, coins, notes, youtube_link };
     const putRes = await fetch(`${SUPABASE_URL}/rest/v1/builds?id=eq.${id}`, {
       method: 'PATCH',
       headers: serviceHeaders(),

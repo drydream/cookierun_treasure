@@ -21,6 +21,10 @@ const TIER_COLORS = {
 const PURPOSES = ['score', 'auto_farm', 'semi_auto', 'coins', 'exp', 'boxes'];
 const EPISODES = ['ep1', 'ep2', 'ep3', 'ep4', 'ep5', 'ep6', 'special1', 'special2', 'special3'];
 const BOOSTS = ['energy_boost', 'item_time', 'fast_start'];
+const RANDOM_BOOST_OPTIONS = [
+  'double_coins', 'hp_drain_15', 'crush_70', 'gold_coin_magic', 'hp_potion_20',
+  'pit_lift_2', 'score_bonus_15', 'revive_80hp', 'speed_17', 'collision_30', 'magnetic_aura',
+];
 const POWER_EFFECTS = ['cheerleader', 'special_force', 'fairy', 'cheesecake', 'sea_fairy', 'serenade'];
 // Maps each Power+ effect to the cookie/pet whose portrait represents it,
 // so a real icon can be shown instead of a generic one. 'serenade' isn't a
@@ -92,6 +96,20 @@ const i18n = {
     buildAddTreasure: '+ Add Treasure',
     buildBoosts: 'Boosts',
     buildBoostLabel: { energy_boost: 'Energy Boost', item_time: 'Item Time', fast_start: 'Fast Start' },
+    buildRandomBoost: 'Random Boost',
+    buildRandomBoostLabel: {
+      double_coins: 'Double Coins',
+      hp_drain_15: '-15% HP drain',
+      crush_70: '70% Crush Chance',
+      gold_coin_magic: 'Gold Coin Magic',
+      hp_potion_20: '+20% HP from potions',
+      pit_lift_2: '2 Pit Lifts',
+      score_bonus_15: '15% score bonus',
+      revive_80hp: 'Revive once with 80 HP',
+      speed_17: '+17% base speed',
+      collision_30: '-30% collision damage',
+      magnetic_aura: 'Magnetic Aura',
+    },
     buildPowerEffects: 'Power+ Effects',
     buildPowerEffectLabel: { cheerleader: 'Cheerleader', special_force: 'Special Force', fairy: 'Fairy', cheesecake: 'Cheesecake', sea_fairy: 'Sea Fairy', serenade: 'Serenade of Love' },
     buildPowerEffectDesc: {
@@ -179,6 +197,20 @@ const i18n = {
     buildAddTreasure: '+ เพิ่มสมบัติ',
     buildBoosts: 'Boosts',
     buildBoostLabel: { energy_boost: 'Energy Boost', item_time: 'Item Time', fast_start: 'Fast Start' },
+    buildRandomBoost: 'Random Boost',
+    buildRandomBoostLabel: {
+      double_coins: 'เหรียญคูณสอง',
+      hp_drain_15: 'ลดการเสีย HP 15%',
+      crush_70: 'โอกาสทำลายสิ่งกีดขวาง 70%',
+      gold_coin_magic: 'แม่เหล็กเหรียญทอง',
+      hp_potion_20: 'ฟื้นฟู HP จากโพชั่น +20%',
+      pit_lift_2: 'พ้นหลุม 2 ครั้ง',
+      score_bonus_15: 'โบนัสคะแนน 15%',
+      revive_80hp: 'ฟื้นคืนชีพ 1 ครั้ง (HP 80)',
+      speed_17: 'ความเร็วพื้นฐาน +17%',
+      collision_30: 'ลดความเสียหายจากการชน 30%',
+      magnetic_aura: 'Magnetic Aura',
+    },
     buildPowerEffects: 'Power+ Effects',
     buildPowerEffectLabel: { cheerleader: 'Cheerleader', special_force: 'Special Force', fairy: 'Fairy', cheesecake: 'Cheesecake', sea_fairy: 'Sea Fairy', serenade: 'Serenade of Love' },
     buildPowerEffectDesc: {
@@ -733,6 +765,7 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                       {b.coins != null && `${t.buildCoins}: ${b.coins}`}
                     </div>
                   )}
+                  {b.random_boost && <div className="meta">{t.buildRandomBoost}: {t.buildRandomBoostLabel[b.random_boost] || b.random_boost}</div>}
                   {b.notes && <div className="effect">{b.notes}</div>}
                   {b.youtube_link && <a className="related-link" href={b.youtube_link} target="_blank" rel="noopener">▶ {t.buildWatchVideo}</a>}
                   <div style={{ display: 'flex', gap: '0.4rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
@@ -780,6 +813,8 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
       .filter(Boolean)
   );
   const [boosts, setBoosts] = useState(() => (isEdit && editing.build.boosts) || []);
+  const [randomBoost, setRandomBoost] = useState(() => (isEdit && editing.build.random_boost) || null);
+  const [showRandomBoostPicker, setShowRandomBoostPicker] = useState(false);
   const [powerEffects, setPowerEffects] = useState(() => (isEdit && editing.build.power_effects) || []);
   const [score, setScore] = useState(() => (isEdit && editing.build.score != null) ? String(editing.build.score) : '');
   const [coins, setCoins] = useState(() => (isEdit && editing.build.coins != null) ? String(editing.build.coins) : '');
@@ -846,6 +881,7 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
       episode,
       combi,
       boosts,
+      random_boost: randomBoost,
       power_effects: powerEffects,
       score: score === '' ? null : Number(score),
       coins: coins === '' ? null : Number(coins),
@@ -907,7 +943,24 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
         {BOOSTS.map(b => (
           <button key={b} type="button" className={boosts.includes(b) ? 'active' : ''} onClick={() => toggleInList(boosts, setBoosts, b)}>{t.buildBoostLabel[b]}</button>
         ))}
+        <button type="button" className={randomBoost ? 'active' : ''} onClick={() => setShowRandomBoostPicker(s => !s)}>
+          {randomBoost ? t.buildRandomBoostLabel[randomBoost] : t.buildRandomBoost}
+        </button>
       </div>
+      {showRandomBoostPicker && (
+        <div className="grade-filter" style={{ marginTop: '0.4rem' }}>
+          {RANDOM_BOOST_OPTIONS.map(rb => (
+            <button
+              key={rb}
+              type="button"
+              className={randomBoost === rb ? 'active' : ''}
+              onClick={() => { setRandomBoost(randomBoost === rb ? null : rb); setShowRandomBoostPicker(false); }}
+            >
+              {t.buildRandomBoostLabel[rb]}
+            </button>
+          ))}
+        </div>
+      )}
 
       <label className="field">{t.buildPowerEffects}</label>
       <div className="power-effects-grid">
