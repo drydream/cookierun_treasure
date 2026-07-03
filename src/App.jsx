@@ -1095,15 +1095,15 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  const [charJumpQuery, setCharJumpQuery] = useState('');
+  const [charJump, setCharJump] = useState({ kind: 'cookie', query: '' });
   function jumpToCookie(name) {
     setPage('cookies');
-    setCharJumpQuery(name);
+    setCharJump({ kind: 'cookie', query: name });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   function jumpToPet(name) {
     setPage('pets');
-    setCharJumpQuery(name);
+    setCharJump({ kind: 'pet', query: name });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -1168,8 +1168,8 @@ export default function App() {
         </>
       )}
       {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
-      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage key={charJumpQuery} characters={characters} kind="cookie" t={t} initialQuery={charJumpQuery} treasures={items} onJumpToTreasure={jumpTo} comboPetByCookieName={comboPetByCookieName} onJumpToPet={jumpToPet} /></>}
-      {page === 'pets' && <><h1>{t.navPets}</h1><CharacterListPage characters={characters} kind="pet" t={t} /></>}
+      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage key={charJump.kind === 'cookie' ? charJump.query : ''} characters={characters} kind="cookie" t={t} initialQuery={charJump.kind === 'cookie' ? charJump.query : ''} treasures={items} onJumpToTreasure={jumpTo} comboPetByCookieName={comboPetByCookieName} onJumpToPet={jumpToPet} /></>}
+      {page === 'pets' && <><h1>{t.navPets}</h1><CharacterListPage key={charJump.kind === 'pet' ? charJump.query : ''} characters={characters} kind="pet" t={t} initialQuery={charJump.kind === 'pet' ? charJump.query : ''} /></>}
       {page === 'buildcreator' && <><h1>{t.navBuilds}</h1><BuildCreatorPage items={items} characters={characters} t={t} initialBuildId={initialBuildId} /></>}
     </>
   );
