@@ -54,6 +54,15 @@
   .tb-chip img { width: 44px; height: 44px; object-fit: contain; background: #eee; border-radius: 6px; }
   .tb-chip span { font-size: 10px; text-align: center; line-height: 1.15; color: #333; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .tb-row .tb-chip span { color: #eee; }
+
+  .picker-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 50; }
+  .picker-modal { background: #fff; border-radius: 10px; padding: 16px; width: 480px; max-width: 90vw; max-height: 80vh; overflow-y: auto; }
+  .picker-modal input { width: 100%; font-size: 15px; padding: 6px; box-sizing: border-box; margin: 0 0 8px; }
+  .picker-close { float: right; border: none; background: none; font-size: 20px; cursor: pointer; color: #999; }
+  .picker-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .picker-item { display: flex; flex-direction: column; align-items: center; width: 72px; border: 1px solid #eadbc8; border-radius: 8px; padding: 4px; background: #fff; cursor: pointer; font-size: 15px; margin: 0; }
+  .picker-item img { width: 48px; height: 48px; object-fit: contain; background: #f2eadf; border-radius: 6px; }
+  .picker-item span { font-size: 11px; text-align: center; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 </style>
 </head>
 <body>
@@ -199,10 +208,7 @@
   <div id="charLinkedTreasuresBlock">
     <label class="field">Linked treasures</label>
     <div id="charLinkedTreasures"></div>
-    <div style="display:flex;gap:6px;margin-top:6px">
-      <input id="charLinkTreasureInput" list="evolvesToList" placeholder="Treasure name to link..." style="flex:1;font-size:15px;padding:6px;box-sizing:border-box">
-      <button type="button" id="charLinkTreasureBtn" style="font-size:13px;padding:6px 10px">Link</button>
-    </div>
+    <button type="button" id="charLinkTreasureBtn" style="font-size:13px;padding:6px 10px;margin-top:2px">+ Link a treasure</button>
   </div>
   <div class="nav">
     <button id="charPrev">&larr; Prev</button>
@@ -210,6 +216,15 @@
     <button id="charSkip">Skip &rarr;</button>
     <button id="charDelete" style="background:#fdd;border-color:#c00">Delete</button>
     <span id="charStatus"></span>
+  </div>
+</div>
+
+<div id="treasurePickerBackdrop" class="picker-backdrop" style="display:none">
+  <div class="picker-modal">
+    <button type="button" class="picker-close" id="treasurePickerClose">&times;</button>
+    <h3 style="margin-top:0">Pick a treasure</h3>
+    <input id="treasurePickerSearch" placeholder="Search by name...">
+    <div class="picker-grid" id="treasurePickerGrid"></div>
   </div>
 </div>
 
@@ -828,12 +843,10 @@ async function unlinkTreasure(treasureId) {
   renderCharLinkedTreasures(charIsNew ? charBlankDraft() : characters[charIdx]);
 }
 
-async function linkTreasure() {
+async function linkTreasureById(treasureId) {
   const c = charIsNew ? charBlankDraft() : characters[charIdx];
-  const name = document.getElementById('charLinkTreasureInput').value.trim();
-  if (!name) return;
-  const it = items.find(x => x.name === name);
-  if (!it) { alert('No treasure named "' + name + '" found — pick one from the list'); return; }
+  const it = items.find(x => x.id === treasureId);
+  if (!it) return;
   const res = await fetch('/api/admin/save', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -846,9 +859,42 @@ async function linkTreasure() {
     return;
   }
   it.extra = c.name;
-  document.getElementById('charLinkTreasureInput').value = '';
   renderCharLinkedTreasures(c);
 }
+
+function openTreasurePicker() {
+  document.getElementById('treasurePickerSearch').value = '';
+  renderTreasurePickerGrid();
+  document.getElementById('treasurePickerBackdrop').style.display = 'flex';
+}
+
+function closeTreasurePicker() {
+  document.getElementById('treasurePickerBackdrop').style.display = 'none';
+}
+
+function renderTreasurePickerGrid() {
+  const q = document.getElementById('treasurePickerSearch').value.trim().toLowerCase();
+  const candidates = items.filter(it => it.type !== 'evolved' && (!q || it.name.toLowerCase().includes(q)));
+  const grid = document.getElementById('treasurePickerGrid');
+  grid.innerHTML = candidates.map(it => `
+    <button type="button" class="picker-item" data-id="${it.id}">
+      <img src="${imgSrc(it.image)}" loading="lazy">
+      <span>${escapeHtml(it.name)}</span>
+    </button>
+  `).join('');
+  grid.querySelectorAll('.picker-item').forEach(btn => {
+    btn.onclick = () => {
+      closeTreasurePicker();
+      linkTreasureById(parseInt(btn.dataset.id));
+    };
+  });
+}
+
+document.getElementById('treasurePickerClose').onclick = closeTreasurePicker;
+document.getElementById('treasurePickerSearch').oninput = renderTreasurePickerGrid;
+document.getElementById('treasurePickerBackdrop').onclick = e => {
+  if (e.target.id === 'treasurePickerBackdrop') closeTreasurePicker();
+};
 
 function renderCharLinkedTreasures(c) {
   const el = document.getElementById('charLinkedTreasures');
@@ -877,7 +923,7 @@ function renderCharLinkedTreasures(c) {
       btn.onclick = () => unlinkTreasure(parseInt(btn.dataset.unlinkId));
     });
   }
-  document.getElementById('charLinkTreasureBtn').onclick = linkTreasure;
+  document.getElementById('charLinkTreasureBtn').onclick = openTreasurePicker;
 }
 
 function renderCharEdit() {
