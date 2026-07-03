@@ -196,8 +196,14 @@
   <textarea id="charAbilityEnInput"></textarea>
   <label class="field">Tier list</label>
   <select id="charTierInput"></select>
-  <label class="field">Linked treasures</label>
-  <div id="charLinkedTreasures"></div>
+  <div id="charLinkedTreasuresBlock">
+    <label class="field">Linked treasures</label>
+    <div id="charLinkedTreasures"></div>
+    <div style="display:flex;gap:6px;margin-top:6px">
+      <input id="charLinkTreasureInput" list="evolvesToList" placeholder="Treasure name to link..." style="flex:1;font-size:15px;padding:6px;box-sizing:border-box">
+      <button type="button" id="charLinkTreasureBtn" style="font-size:13px;padding:6px 10px">Link</button>
+    </div>
+  </div>
   <div class="nav">
     <button id="charPrev">&larr; Prev</button>
     <button id="charSave">Save</button>
@@ -805,29 +811,73 @@ function linkedTreasuresFor(name) {
   return [...base, ...evolved];
 }
 
+async function unlinkTreasure(treasureId) {
+  const res = await fetch('/api/admin/save', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password, id: treasureId, extra: null }),
+  });
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    alert('Failed to unlink: ' + (data.error || res.status));
+    if (res.status === 401) localStorage.removeItem('adminPassword');
+    return;
+  }
+  const it = items.find(x => x.id === treasureId);
+  if (it) it.extra = null;
+  renderCharLinkedTreasures(charIsNew ? charBlankDraft() : characters[charIdx]);
+}
+
+async function linkTreasure() {
+  const c = charIsNew ? charBlankDraft() : characters[charIdx];
+  const name = document.getElementById('charLinkTreasureInput').value.trim();
+  if (!name) return;
+  const it = items.find(x => x.name === name);
+  if (!it) { alert('No treasure named "' + name + '" found — pick one from the list'); return; }
+  const res = await fetch('/api/admin/save', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password, id: it.id, extra: c.name }),
+  });
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    alert('Failed to link: ' + (data.error || res.status));
+    if (res.status === 401) localStorage.removeItem('adminPassword');
+    return;
+  }
+  it.extra = c.name;
+  document.getElementById('charLinkTreasureInput').value = '';
+  renderCharLinkedTreasures(c);
+}
+
 function renderCharLinkedTreasures(c) {
   const el = document.getElementById('charLinkedTreasures');
   const linked = c.kind === 'cookie' ? linkedTreasuresFor(c.name) : [];
   if (linked.length === 0) {
     el.innerHTML = '<div style="color:#999;font-size:13px">(none)</div>';
-    return;
+  } else {
+    el.innerHTML = linked.map(it => `
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+        <img src="${imgSrc(it.image)}" loading="lazy" style="width:32px;height:32px;object-fit:contain;flex-shrink:0">
+        <span style="flex:1">${escapeHtml(it.name)}${it.type === 'evolved' ? ' (Evolved)' : ''}</span>
+        <button type="button" data-name="${escapeHtml(it.name)}" style="font-size:13px;padding:4px 10px">Edit</button>
+        ${it.type !== 'evolved' ? `<button type="button" data-unlink-id="${it.id}" style="font-size:13px;padding:4px 10px">Unlink</button>` : ''}
+      </div>
+    `).join('');
+    el.querySelectorAll('button[data-name]').forEach(btn => {
+      btn.onclick = () => {
+        const i = items.findIndex(it => it.name === btn.dataset.name);
+        if (i === -1) return;
+        hideAllViews();
+        setActiveTab('tabTreasures');
+        openEdit(i);
+      };
+    });
+    el.querySelectorAll('button[data-unlink-id]').forEach(btn => {
+      btn.onclick = () => unlinkTreasure(parseInt(btn.dataset.unlinkId));
+    });
   }
-  el.innerHTML = linked.map(it => `
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
-      <img src="${imgSrc(it.image)}" loading="lazy" style="width:32px;height:32px;object-fit:contain;flex-shrink:0">
-      <span style="flex:1">${escapeHtml(it.name)}${it.type === 'evolved' ? ' (Evolved)' : ''}</span>
-      <button type="button" data-name="${escapeHtml(it.name)}" style="font-size:13px;padding:4px 10px">Edit</button>
-    </div>
-  `).join('');
-  el.querySelectorAll('button[data-name]').forEach(btn => {
-    btn.onclick = () => {
-      const i = items.findIndex(it => it.name === btn.dataset.name);
-      if (i === -1) return;
-      hideAllViews();
-      setActiveTab('tabTreasures');
-      openEdit(i);
-    };
-  });
+  document.getElementById('charLinkTreasureBtn').onclick = linkTreasure;
 }
 
 function renderCharEdit() {
@@ -840,7 +890,8 @@ function renderCharEdit() {
   document.getElementById('charKr').textContent = c.ability || '(no ability text in source)';
   document.getElementById('charAbilityEnInput').value = c.ability_en || '';
   document.getElementById('charTierInput').value = c.tier || '';
-  renderCharLinkedTreasures(c);
+  document.getElementById('charLinkedTreasuresBlock').style.display = charIsNew ? 'none' : '';
+  if (!charIsNew) renderCharLinkedTreasures(c);
   document.getElementById('charSave').textContent = charIsNew ? 'Add' : 'Save';
   document.getElementById('charPrev').style.display = charIsNew ? 'none' : '';
   document.getElementById('charSkip').style.display = charIsNew ? 'none' : '';
