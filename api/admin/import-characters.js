@@ -1,7 +1,9 @@
-// One-time (re-runnable) import: reads the pre-fetched public/characters.json
-// (built by data-pipeline-characters/fetch-characters.js, which downloads
-// images locally and does a rough KO->EN translation) and replaces the
-// contents of the Supabase `characters` table. Password-gated like save.js.
+// Re-runnable import: reads the pre-fetched public/characters.json (built by
+// data-pipeline-characters/fetch-characters.js) and adds any character not
+// already in the Supabase `characters` table (matched by kind + kr_name,
+// the stable Korean source name). It never deletes or edits existing rows -
+// admin edits (name/image/ability/tier fixes made through the admin panel)
+// are never touched by this endpoint. Password-gated like save.js.
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 
 export default async function handler(req, res) {
@@ -28,21 +30,17 @@ export default async function handler(req, res) {
   try {
     const rows = await fetch(`${base}/characters.json`).then(r => r.json());
 
-    // The re-import wipes and rebuilds the whole table from the static JSON,
-    // which has no `tier` data. Save existing tier assignments (set by hand
-    // via the admin Tier Builder) so they survive the re-import.
     const existing = await fetch(
-      `${SUPABASE_URL}/rest/v1/characters?tier=not.is.null&select=kind,name,tier`,
+      `${SUPABASE_URL}/rest/v1/characters?select=kind,kr_name`,
       { headers }
     ).then(r => r.json());
-    const tierByKey = new Map(existing.map(c => [`${c.kind}:${c.name}`, c.tier]));
+    const existingKeys = new Set(existing.map(c => `${c.kind}:${c.kr_name}`));
 
-    const delRes = await fetch(`${SUPABASE_URL}/rest/v1/characters?id=gt.0`, { method: 'DELETE', headers });
-    if (!delRes.ok) throw new Error('Wipe failed: ' + await delRes.text());
+    const newRows = rows.filter(r => !existingKeys.has(`${r.kind}:${r.kr_name}`));
 
     const CHUNK = 200;
-    for (let i = 0; i < rows.length; i += CHUNK) {
-      const chunk = rows.slice(i, i + CHUNK);
+    for (let i = 0; i < newRows.length; i += CHUNK) {
+      const chunk = newRows.slice(i, i + CHUNK);
       const insRes = await fetch(`${SUPABASE_URL}/rest/v1/characters`, {
         method: 'POST',
         headers,
@@ -51,15 +49,7 @@ export default async function handler(req, res) {
       if (!insRes.ok) throw new Error('Insert failed: ' + insRes.status + ' ' + await insRes.text());
     }
 
-    for (const [key, tier] of tierByKey) {
-      const [kind, name] = key.split(':');
-      await fetch(
-        `${SUPABASE_URL}/rest/v1/characters?kind=eq.${encodeURIComponent(kind)}&name=eq.${encodeURIComponent(name)}`,
-        { method: 'PATCH', headers, body: JSON.stringify({ tier }) }
-      );
-    }
-
-    res.status(200).json({ ok: true, imported: rows.length, tiersRestored: tierByKey.size });
+    res.status(200).json({ ok: true, added: newRows.length, skipped: rows.length - newRows.length });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
