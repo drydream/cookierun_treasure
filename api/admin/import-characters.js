@@ -1,10 +1,16 @@
 // Re-runnable import: reads the pre-fetched public/characters.json (built by
-// data-pipeline-characters/fetch-characters.js) and adds any character not
-// already in the Supabase `characters` table (matched by kind + kr_name,
-// the stable Korean source name). It never deletes or edits existing rows -
-// admin edits (name/image/ability/tier fixes made through the admin panel)
-// are never touched by this endpoint. Password-gated like save.js.
+// data-pipeline-characters/fetch-characters.js). Characters not already in
+// the Supabase `characters` table (matched by kind + kr_name, the stable
+// Korean source name) are inserted. For characters that already exist, only
+// fields that are currently null/empty get filled in from the JSON - a field
+// the admin has already set (including `tier`, which the JSON never carries)
+// is never overwritten. Password-gated like save.js.
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
+const FILLABLE_FIELDS = ['name', 'grade', 'ability', 'ability_en', 'image'];
+
+function isEmpty(v) {
+  return v === null || v === undefined || (typeof v === 'string' && !v.trim());
+}
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -31,12 +37,12 @@ export default async function handler(req, res) {
     const rows = await fetch(`${base}/characters.json`).then(r => r.json());
 
     const existing = await fetch(
-      `${SUPABASE_URL}/rest/v1/characters?select=kind,kr_name`,
+      `${SUPABASE_URL}/rest/v1/characters?select=id,kind,kr_name,name,grade,ability,ability_en,image`,
       { headers }
     ).then(r => r.json());
-    const existingKeys = new Set(existing.map(c => `${c.kind}:${c.kr_name}`));
+    const existingByKey = new Map(existing.map(c => [`${c.kind}:${c.kr_name}`, c]));
 
-    const newRows = rows.filter(r => !existingKeys.has(`${r.kind}:${r.kr_name}`));
+    const newRows = rows.filter(r => !existingByKey.has(`${r.kind}:${r.kr_name}`));
 
     const CHUNK = 200;
     for (let i = 0; i < newRows.length; i += CHUNK) {
@@ -49,7 +55,25 @@ export default async function handler(req, res) {
       if (!insRes.ok) throw new Error('Insert failed: ' + insRes.status + ' ' + await insRes.text());
     }
 
-    res.status(200).json({ ok: true, added: newRows.length, skipped: rows.length - newRows.length });
+    let filled = 0;
+    for (const row of rows) {
+      const current = existingByKey.get(`${row.kind}:${row.kr_name}`);
+      if (!current) continue;
+      const patch = {};
+      for (const field of FILLABLE_FIELDS) {
+        if (isEmpty(current[field]) && !isEmpty(row[field])) patch[field] = row[field];
+      }
+      if (Object.keys(patch).length === 0) continue;
+      const patchRes = await fetch(`${SUPABASE_URL}/rest/v1/characters?id=eq.${current.id}`, {
+        method: 'PATCH',
+        headers,
+        body: JSON.stringify(patch),
+      });
+      if (!patchRes.ok) throw new Error('Fill failed: ' + patchRes.status + ' ' + await patchRes.text());
+      filled++;
+    }
+
+    res.status(200).json({ ok: true, added: newRows.length, filled, skipped: rows.length - newRows.length - filled });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
