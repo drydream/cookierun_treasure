@@ -792,13 +792,21 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                       );
                     })}
                   </div>
-                  {((b.purposes && b.purposes.length) || (b.episodes && b.episodes.length) || b.score != null || b.coins != null || b.random_boost) && (
+                  {((b.purposes && b.purposes.length) || (b.episodes && b.episodes.length)) && (
                     <div className="build-tags-row">
                       {(b.purposes || []).map(p => <span key={'p' + p} className="build-tag build-tag-purpose">{t.buildPurpose[p] || p}</span>)}
                       {(b.episodes || []).map(ep => <span key={'e' + ep} className="build-tag build-tag-episode">{t.buildEpisode[ep] || ep}</span>)}
+                    </div>
+                  )}
+                  {(b.score != null || b.coins != null) && (
+                    <div className="build-tags-row">
                       {b.score != null && <span className="build-tag build-tag-stat">{t.buildScore}: {b.score}</span>}
                       {b.coins != null && <span className="build-tag build-tag-stat">{t.buildCoins}: {b.coins}</span>}
-                      {b.random_boost && <span className="build-tag build-tag-random">{t.buildRandomBoostLabel[b.random_boost] || b.random_boost}</span>}
+                    </div>
+                  )}
+                  {b.random_boost && (
+                    <div className="build-tags-row">
+                      <span className="build-tag build-tag-random">{t.buildRandomBoostLabel[b.random_boost] || b.random_boost}</span>
                     </div>
                   )}
                   {b.notes && <div className="effect">{b.notes}</div>}
