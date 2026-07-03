@@ -10,10 +10,13 @@
 //    tags at /build/:id (see vercel.json rewrite), then redirects real
 //    browsers into the SPA. Crawlers read the tags from this initial
 //    response directly — they don't execute JS or follow the redirect.
-//  - PATCH / DELETE (?id=<id>, body {password, ...}): owner self-service
-//    edit/delete, gated by matching the stored password hash. No anon
-//    update/delete RLS policy exists on `builds` (only select), so these are
-//    the only paths that can touch an existing row besides the admin panel.
+//  - PATCH (?id=<id>, body {password, ...}): owner self-service edit, gated
+//    by matching the stored password hash. PATCH with body {like: true}
+//    instead is the public, password-free like-count bump.
+//  - DELETE (?id=<id>, body {password}): owner self-service delete, same
+//    password gate. No anon update/delete RLS policy exists on `builds`
+//    (only select), so these are the only paths that can touch a row
+//    besides the admin panel.
 // Requires env vars: service_role, TURNSTILE_SECRET_KEY.
 import crypto from 'node:crypto';
 
@@ -57,6 +60,10 @@ function validCombi(combi) {
 
 function validStringList(list, allowed) {
   return list === undefined || (Array.isArray(list) && list.every(v => allowed.includes(v)));
+}
+
+function validTagList(list, allowed) {
+  return Array.isArray(list) && list.length > 0 && list.every(v => allowed.includes(v));
 }
 
 function validRandomBoost(v) {
@@ -117,7 +124,9 @@ async function handleBuildPage(req, res) {
       if (char && char.image) image = `${SITE_URL}/${char.image}`;
     }
 
-    const title = `Cookie Run Build — ${PURPOSE_LABEL[build.purpose] || build.purpose} / ${EPISODE_LABEL[build.episode] || build.episode}`;
+    const purposeText = (build.purposes || []).map(p => PURPOSE_LABEL[p] || p).join('/');
+    const episodeText = (build.episodes || []).map(e => EPISODE_LABEL[e] || e).join('/');
+    const title = `Cookie Run Build — ${purposeText} / ${episodeText}`;
     const description = build.combi.map(e => e.name).join(' + ');
 
     res.setHeader('Content-Type', 'text/html');
@@ -147,18 +156,18 @@ function validPassword(pw) {
 }
 
 async function handleSubmit(req, res) {
-  const { purpose, episode, combi, boosts, random_boost, power_effects, score, coins, notes, youtube_link, turnstileToken, password } = req.body;
+  const { purposes, episodes, combi, boosts, random_boost, power_effects, score, coins, notes, youtube_link, turnstileToken, password } = req.body;
 
   if (!validPassword(password)) {
     res.status(400).json({ error: 'Password must be 4-20 characters (needed to edit/delete this build later)' });
     return;
   }
-  if (!PURPOSES.includes(purpose)) {
-    res.status(400).json({ error: 'Invalid purpose' });
+  if (!validTagList(purposes, PURPOSES)) {
+    res.status(400).json({ error: 'Pick at least one purpose' });
     return;
   }
-  if (!EPISODES.includes(episode)) {
-    res.status(400).json({ error: 'Invalid episode' });
+  if (!validTagList(episodes, EPISODES)) {
+    res.status(400).json({ error: 'Pick at least one episode' });
     return;
   }
   if (!validCombi(combi)) {
@@ -206,8 +215,8 @@ async function handleSubmit(req, res) {
       method: 'POST',
       headers: serviceHeaders(),
       body: JSON.stringify([{
-        purpose,
-        episode,
+        purposes,
+        episodes,
         combi,
         boosts: boosts || null,
         random_boost: random_boost || null,
@@ -229,18 +238,18 @@ async function handleSubmit(req, res) {
 
 async function handleEdit(req, res) {
   const id = parseInt(req.query.id);
-  const { password, purpose, episode, combi, boosts, random_boost, power_effects, score, coins, notes, youtube_link } = req.body;
+  const { password, purposes, episodes, combi, boosts, random_boost, power_effects, score, coins, notes, youtube_link } = req.body;
 
   if (!Number.isInteger(id) || !validPassword(password)) {
     res.status(400).json({ error: 'Missing id or password' });
     return;
   }
-  if (purpose !== undefined && !PURPOSES.includes(purpose)) {
-    res.status(400).json({ error: 'Invalid purpose' });
+  if (purposes !== undefined && !validTagList(purposes, PURPOSES)) {
+    res.status(400).json({ error: 'Pick at least one purpose' });
     return;
   }
-  if (episode !== undefined && !EPISODES.includes(episode)) {
-    res.status(400).json({ error: 'Invalid episode' });
+  if (episodes !== undefined && !validTagList(episodes, EPISODES)) {
+    res.status(400).json({ error: 'Pick at least one episode' });
     return;
   }
   if (combi !== undefined && !validCombi(combi)) {
@@ -275,7 +284,7 @@ async function handleEdit(req, res) {
       return;
     }
 
-    const patch = { purpose, episode, combi, boosts, random_boost, power_effects, score, coins, notes, youtube_link };
+    const patch = { purposes, episodes, combi, boosts, random_boost, power_effects, score, coins, notes, youtube_link };
     const putRes = await fetch(`${SUPABASE_URL}/rest/v1/builds?id=eq.${id}`, {
       method: 'PATCH',
       headers: serviceHeaders(),
@@ -284,6 +293,38 @@ async function handleEdit(req, res) {
     if (!putRes.ok) throw new Error('Supabase update failed: ' + putRes.status + ' ' + await putRes.text());
 
     res.status(200).json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+}
+
+// No password needed - anyone can like a build. Liked-state is tracked
+// client-side only (localStorage), same trust level as a fan-site vote
+// button; not meant to resist someone clearing storage and re-liking.
+async function handleLike(req, res) {
+  const id = parseInt(req.query.id);
+  if (!Number.isInteger(id)) {
+    res.status(400).json({ error: 'Missing id' });
+    return;
+  }
+  try {
+    const getRes = await fetch(`${SUPABASE_URL}/rest/v1/builds?id=eq.${id}&select=likes`, {
+      headers: { apikey: process.env.service_role, Authorization: `Bearer ${process.env.service_role}` },
+    });
+    const [row] = await getRes.json();
+    if (!row) {
+      res.status(404).json({ error: 'Not found' });
+      return;
+    }
+    const likes = (row.likes || 0) + 1;
+    const putRes = await fetch(`${SUPABASE_URL}/rest/v1/builds?id=eq.${id}`, {
+      method: 'PATCH',
+      headers: serviceHeaders(),
+      body: JSON.stringify({ likes }),
+    });
+    if (!putRes.ok) throw new Error('Supabase like failed: ' + putRes.status + ' ' + await putRes.text());
+
+    res.status(200).json({ ok: true, likes });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
@@ -320,7 +361,7 @@ async function handleDelete(req, res) {
 export default async function handler(req, res) {
   if (req.method === 'GET') return handleBuildPage(req, res);
   if (req.method === 'POST') return handleSubmit(req, res);
-  if (req.method === 'PATCH') return handleEdit(req, res);
+  if (req.method === 'PATCH') return req.body && req.body.like ? handleLike(req, res) : handleEdit(req, res);
   if (req.method === 'DELETE') return handleDelete(req, res);
   res.status(405).json({ error: 'Method not allowed' });
 }

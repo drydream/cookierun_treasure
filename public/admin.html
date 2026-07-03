@@ -1134,8 +1134,8 @@ function showBuilds() {
 function renderBuilds() {
   document.getElementById('buildRows').innerHTML = builds.map(b => `
     <tr>
-      <td>${escapeHtml(b.purpose)}</td>
-      <td>${escapeHtml(b.episode)}</td>
+      <td>${escapeHtml((b.purposes || []).join(', '))}</td>
+      <td>${escapeHtml((b.episodes || []).join(', '))}</td>
       <td class="build-combi">${b.combi.map(entry => `<img src="${imgSrc(resolveBuildIcon(entry))}" title="${escapeHtml(entry.name)}" loading="lazy">`).join('')}</td>
       <td class="actions"><button data-id="${b.id}">Delete</button></td>
     </tr>

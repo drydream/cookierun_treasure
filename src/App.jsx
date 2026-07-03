@@ -292,11 +292,11 @@ function shareBuildUrl(id) {
 
 // Open to the public (no admin password), but gated by a Cloudflare
 // Turnstile bot check verified server-side in /api/submit-build.
-async function submitBuild(purpose, episode, combi, turnstileToken, extra) {
+async function submitBuild(turnstileToken, fields) {
   const res = await fetch('/api/submit-build', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ purpose, episode, combi, turnstileToken, ...extra }),
+    body: JSON.stringify({ turnstileToken, ...fields }),
   });
   if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || res.status);
 }
@@ -312,6 +312,17 @@ async function editBuild(id, password, fields) {
   if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || res.status);
 }
 
+// Public, password-free - anyone can like a build once (enforced
+// client-side via localStorage, see BuildCreatorPage).
+async function likeBuild(id) {
+  const res = await fetch(`/api/submit-build?id=${id}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ like: true }),
+  });
+  if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || res.status);
+}
+
 async function deleteBuildByOwner(id, password) {
   const res = await fetch(`/api/submit-build?id=${id}`, {
     method: 'DELETE',
@@ -319,6 +330,10 @@ async function deleteBuildByOwner(id, password) {
     body: JSON.stringify({ password }),
   });
   if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || res.status);
+}
+
+function toggleInList(list, setList, value) {
+  setList(list.includes(value) ? list.filter(v => v !== value) : [...list, value]);
 }
 
 function highlight(text, q) {
@@ -665,14 +680,17 @@ function PasswordPrompt({ label, t, onConfirm, onCancel, error }) {
 
 function BuildCreatorPage({ items, characters, t, initialBuildId }) {
   const [view, setView] = useState('browse');
-  const [purpose, setPurpose] = useState('score');
-  const [episode, setEpisode] = useState('ep1');
+  const [purposeFilter, setPurposeFilter] = useState([]);
+  const [episodeFilter, setEpisodeFilter] = useState([]);
   const [builds, setBuilds] = useState([]);
   const [highlightId, setHighlightId] = useState(initialBuildId || null);
   const [copiedId, setCopiedId] = useState(null);
   const [prompt, setPrompt] = useState(null); // { id, action: 'edit' | 'delete' } | null
   const [promptError, setPromptError] = useState('');
   const [editingBuild, setEditingBuild] = useState(null); // { build, password } | null
+  const [likedIds, setLikedIds] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('likedBuilds') || '[]'); } catch { return []; }
+  });
 
   useEffect(() => {
     fetchAllBuilds().then(setBuilds);
@@ -681,14 +699,30 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
   useEffect(() => {
     if (!initialBuildId) return;
     fetchBuildById(initialBuildId).then(b => {
-      if (b) { setPurpose(b.purpose); setEpisode(b.episode); }
+      if (b) { setPurposeFilter(b.purposes || []); setEpisodeFilter(b.episodes || []); }
     });
   }, [initialBuildId]);
 
-  const filtered = useMemo(
-    () => builds.filter(b => b.purpose === purpose && b.episode === episode),
-    [builds, purpose, episode]
-  );
+  const filtered = useMemo(() => {
+    const list = builds.filter(b =>
+      (purposeFilter.length === 0 || (b.purposes || []).some(p => purposeFilter.includes(p))) &&
+      (episodeFilter.length === 0 || (b.episodes || []).some(ep => episodeFilter.includes(ep)))
+    );
+    return list.slice().sort((a, b) => (b.likes || 0) - (a.likes || 0));
+  }, [builds, purposeFilter, episodeFilter]);
+
+  async function handleLike(id) {
+    if (likedIds.includes(id)) return;
+    try {
+      await likeBuild(id);
+      setBuilds(bs => bs.map(b => b.id === id ? { ...b, likes: (b.likes || 0) + 1 } : b));
+      const next = [...likedIds, id];
+      setLikedIds(next);
+      localStorage.setItem('likedBuilds', JSON.stringify(next));
+    } catch {
+      // best-effort - a failed like isn't worth surfacing an error for
+    }
+  }
 
   function backToBrowse() {
     setView('browse');
@@ -727,16 +761,16 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
     <>
       <div className="grade-filter">
         {PURPOSES.map(p => (
-          <button key={p} className={purpose === p ? 'active' : ''} onClick={() => setPurpose(p)}>{t.buildPurpose[p]}</button>
+          <button key={p} className={purposeFilter.includes(p) ? 'active' : ''} onClick={() => toggleInList(purposeFilter, setPurposeFilter, p)}>{t.buildPurpose[p]}</button>
         ))}
       </div>
       <div className="grade-filter">
         {EPISODES.map(ep => (
-          <button key={ep} className={episode === ep ? 'active' : ''} onClick={() => setEpisode(ep)}>{t.buildEpisode[ep]}</button>
+          <button key={ep} className={episodeFilter.includes(ep) ? 'active' : ''} onClick={() => toggleInList(episodeFilter, setEpisodeFilter, ep)}>{t.buildEpisode[ep]}</button>
         ))}
       </div>
       {view === 'add' ? (
-        <BuildAddForm items={items} characters={characters} t={t} purpose={purpose} episode={episode} editing={editingBuild} onDone={backToBrowse} onCancel={() => { setEditingBuild(null); setView('browse'); }} />
+        <BuildAddForm items={items} characters={characters} t={t} editing={editingBuild} onDone={backToBrowse} onCancel={() => { setEditingBuild(null); setView('browse'); }} />
       ) : (
         <>
           <button type="button" className="recipe-btn" onClick={() => setView('add')}>{t.buildAddBtn}</button>
@@ -769,6 +803,9 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                   {b.notes && <div className="effect">{b.notes}</div>}
                   {b.youtube_link && <a className="related-link" href={b.youtube_link} target="_blank" rel="noopener">▶ {t.buildWatchVideo}</a>}
                   <div style={{ display: 'flex', gap: '0.4rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
+                    <button type="button" className="recipe-btn" onClick={() => handleLike(b.id)} disabled={likedIds.includes(b.id)}>
+                      {likedIds.includes(b.id) ? '❤' : '🤍'} {b.likes || 0}
+                    </button>
                     <button type="button" className="recipe-btn" onClick={() => shareBuild(b.id)}>{copiedId === b.id ? t.buildLinkCopied : t.buildShare}</button>
                     <button type="button" className="recipe-btn" onClick={() => { setPrompt({ id: b.id, action: 'edit' }); setPromptError(''); }}>{t.buildEdit}</button>
                     <button type="button" className="recipe-btn" onClick={() => { setPrompt({ id: b.id, action: 'delete' }); setPromptError(''); }}>{t.buildDelete}</button>
@@ -792,7 +829,7 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
   );
 }
 
-function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone, onCancel }) {
+function BuildAddForm({ items, characters, t, editing, onDone, onCancel }) {
   const isEdit = !!editing;
   const seedCombi = isEdit ? editing.build.combi : [];
   const seedEntry = slot => seedCombi.find(e => (e.slot || e.kind) === slot);
@@ -801,6 +838,8 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
     return e ? characters.find(c => c.kind === kind && c.name === e.name) || null : null;
   };
 
+  const [purposes, setPurposes] = useState(() => (isEdit && editing.build.purposes) || []);
+  const [episodes, setEpisodes] = useState(() => (isEdit && editing.build.episodes) || []);
   const [main, setMain] = useState(() => seedChar('main', 'cookie'));
   const [relay, setRelay] = useState(() => seedChar('relay', 'cookie'));
   const [pet, setPet] = useState(() => seedChar('pet', 'pet'));
@@ -846,10 +885,6 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
     };
   }, [isEdit]);
 
-  function toggleInList(list, setList, value) {
-    setList(list.includes(value) ? list.filter(v => v !== value) : [...list, value]);
-  }
-
   function pickSlot(c) {
     if (picker === 'main') setMain(c);
     else if (picker === 'relay') setRelay(c);
@@ -871,14 +906,14 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
     return list;
   }, [main, relay, pet, treasures]);
 
-  const canSubmit = !!main && !!pet && (isEdit ? true : !!turnstileToken && password.length >= 4);
+  const canSubmit = !!main && !!pet && purposes.length > 0 && episodes.length > 0 && (isEdit ? true : !!turnstileToken && password.length >= 4);
 
   async function submit() {
     if (!canSubmit) return;
     setStatus(t.buildSubmitting);
     const fields = {
-      purpose,
-      episode,
+      purposes,
+      episodes,
       combi,
       boosts,
       random_boost: randomBoost,
@@ -893,7 +928,7 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
         await editBuild(editing.build.id, editing.password, fields);
         setStatus(t.buildSaved);
       } else {
-        await submitBuild(purpose, episode, combi, turnstileToken, { ...fields, password });
+        await submitBuild(turnstileToken, { ...fields, password });
         setStatus(t.buildSubmitted);
       }
       setTimeout(onDone, 800);
@@ -917,6 +952,16 @@ function BuildAddForm({ items, characters, t, purpose, episode, editing, onDone,
 
   return (
     <div className="card" style={{ display: 'block', marginTop: '1rem' }}>
+      <div className="grade-filter">
+        {PURPOSES.map(p => (
+          <button key={p} type="button" className={purposes.includes(p) ? 'active' : ''} onClick={() => toggleInList(purposes, setPurposes, p)}>{t.buildPurpose[p]}</button>
+        ))}
+      </div>
+      <div className="grade-filter">
+        {EPISODES.map(ep => (
+          <button key={ep} type="button" className={episodes.includes(ep) ? 'active' : ''} onClick={() => toggleInList(episodes, setEpisodes, ep)}>{t.buildEpisode[ep]}</button>
+        ))}
+      </div>
       <div className="build-slots">
         {slotBox('main', main, setMain)}
         {slotBox('relay', relay, setRelay)}
