@@ -792,6 +792,13 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                       );
                     })}
                   </div>
+                  {((b.purposes && b.purposes.length) || (b.episodes && b.episodes.length)) && (
+                    <div className="meta">
+                      {(b.purposes || []).map(p => t.buildPurpose[p] || p).join(', ')}
+                      {(b.purposes && b.purposes.length) && (b.episodes && b.episodes.length) && ' · '}
+                      {(b.episodes || []).map(ep => t.buildEpisode[ep] || ep).join(', ')}
+                    </div>
+                  )}
                   {(b.score != null || b.coins != null) && (
                     <div className="meta">
                       {b.score != null && `${t.buildScore}: ${b.score}`}
