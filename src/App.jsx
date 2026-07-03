@@ -48,6 +48,7 @@ const i18n = {
     evolvedFrom: 'Evolved from:',
     evolvesTo: 'Evolves to:',
     linkedTreasures: 'Treasure:',
+    comboPet: 'Combi Pet:',
     ingredients: 'Ingredients:',
     noAbility: 'No ability data available yet',
     versionAll: 'All versions',
@@ -134,6 +135,7 @@ const i18n = {
     evolvedFrom: 'วิวัฒนาการมาจาก:',
     evolvesTo: 'วิวัฒนาการเป็น:',
     linkedTreasures: 'ของวิเศษ:',
+    comboPet: 'Combi เพ็ท:',
     ingredients: 'วัตถุดิบ:',
     noAbility: 'ยังไม่มีข้อมูลความสามารถ',
     versionAll: 'ทุกเวอร์ชัน',
@@ -462,7 +464,7 @@ function linkedTreasuresFor(name, treasures) {
   return [...base, ...evolved];
 }
 
-function CharacterListPage({ characters, kind, t, initialQuery, treasures, onJumpToTreasure }) {
+function CharacterListPage({ characters, kind, t, initialQuery, treasures, onJumpToTreasure, comboPetByCookieName, onJumpToPet }) {
   const [query, setQuery] = useState(initialQuery || '');
   const [grade, setGrade] = useState('all');
   const [view, setView] = useState('list');
@@ -499,6 +501,7 @@ function CharacterListPage({ characters, kind, t, initialQuery, treasures, onJum
           <div id="list">
             {filtered.map(c => {
               const linked = kind === 'cookie' && treasures ? linkedTreasuresFor(c.name, treasures) : [];
+              const comboPet = kind === 'cookie' && comboPetByCookieName ? comboPetByCookieName.get(c.name) : null;
               return (
                 <div className="card" key={c.id}>
                   {c.image && <img src={c.image} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
@@ -506,6 +509,12 @@ function CharacterListPage({ characters, kind, t, initialQuery, treasures, onJum
                     <span className="name">{c.name}</span>
                     {c.grade && <span className="grade">{c.grade}-grade</span>}
                     {(c.ability_en || c.ability) && <div className="effect">{c.ability_en || c.ability}</div>}
+                    {comboPet && (
+                      <div className="evolves-to">
+                        <span className="label">{t.comboPet}</span>{' '}
+                        <RelatedItem name={comboPet.name} image={comboPet.image} onJump={onJumpToPet} />
+                      </div>
+                    )}
                     {linked.length > 0 && (
                       <div className="evolves-to">
                         <span className="label">{t.linkedTreasures}</span>{' '}
@@ -1032,6 +1041,31 @@ export default function App() {
     () => new Map(characters.filter(c => c.kind === 'cookie').map(c => [c.name, c.image])),
     [characters]
   );
+  // The Korean-sourced ability text names the combo-bonus pet as
+  // "조합보너스: <이름> (...)" using the same Korean name stored in the pet's
+  // own kr_name (both come from the same source pipeline), so match on that
+  // rather than the separately machine-translated English text, which often
+  // uses a different English rendering for the same pet.
+  const comboPetByCookieName = useMemo(() => {
+    const pets = characters.filter(c => c.kind === 'pet' && c.kr_name);
+    const petByNormKr = new Map(pets.map(p => [p.kr_name.replace(/\s+/g, ''), p]));
+    const map = new Map();
+    characters.filter(c => c.kind === 'cookie' && c.ability).forEach(c => {
+      const m = c.ability.match(/조합보너스\s*:\s*([^\r\n(]+)/);
+      if (!m) return;
+      const raw = m[1].trim();
+      if (!raw || raw === '없음') return;
+      const candidates = raw.split(/[,、]/).map(s => s.replace(/\s+/g, ''));
+      for (const cand of candidates) {
+        if (petByNormKr.has(cand)) { map.set(c.name, petByNormKr.get(cand)); return; }
+      }
+      const firstCand = candidates[0];
+      for (const [normKr, pet] of petByNormKr) {
+        if (normKr && firstCand && firstCand.includes(normKr)) { map.set(c.name, pet); return; }
+      }
+    });
+    return map;
+  }, [characters]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -1064,6 +1098,11 @@ export default function App() {
   const [charJumpQuery, setCharJumpQuery] = useState('');
   function jumpToCookie(name) {
     setPage('cookies');
+    setCharJumpQuery(name);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function jumpToPet(name) {
+    setPage('pets');
     setCharJumpQuery(name);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -1129,7 +1168,7 @@ export default function App() {
         </>
       )}
       {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
-      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage key={charJumpQuery} characters={characters} kind="cookie" t={t} initialQuery={charJumpQuery} treasures={items} onJumpToTreasure={jumpTo} /></>}
+      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage key={charJumpQuery} characters={characters} kind="cookie" t={t} initialQuery={charJumpQuery} treasures={items} onJumpToTreasure={jumpTo} comboPetByCookieName={comboPetByCookieName} onJumpToPet={jumpToPet} /></>}
       {page === 'pets' && <><h1>{t.navPets}</h1><CharacterListPage characters={characters} kind="pet" t={t} /></>}
       {page === 'buildcreator' && <><h1>{t.navBuilds}</h1><BuildCreatorPage items={items} characters={characters} t={t} initialBuildId={initialBuildId} /></>}
     </>
