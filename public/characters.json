@@ -694,12 +694,12 @@
   },
   {
     "kind": "cookie",
-    "name": "연근요괴 Cookie",
+    "name": "Lotus Root Phantom Cookie",
     "kr_name": "연근요괴맛 쿠키",
     "grade": "S",
     "ability": "• 체력 : 140~160\r\n• 능력 : 연근 요괴 변신 1~8단\r\n• 조합보너스 : 연밥 유모 (장애물 통과점수 증가 + 체력감소 12% 느림\r\n• 해금조건 : 연밥 유모 펫 보유",
     "ability_en": "• Stamina: 140~160\r\n• Ability: Lotus Root Yokai Transformation 1~8\r\n• Combination Bonus: Kite Nanny (Increased score for passing obstacles + 12% slower stamina loss)\r\n• Unlock condition: Own a lotus nanny pet",
-    "image": null
+    "image": "images-char/cookies_lotus_root_phantom_cookie.png"
   },
   {
     "kind": "cookie",
