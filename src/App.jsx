@@ -302,7 +302,7 @@ function RelatedItem({ name, image, onJump }) {
   );
 }
 
-function Card({ item, query, t, evolvesTo, imageByName, onJump, isAdmin }) {
+function Card({ item, query, t, evolvesTo, imageByName, onJump, isAdmin, cookieImageMap, onJumpToCookie }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="card">
@@ -322,7 +322,17 @@ function Card({ item, query, t, evolvesTo, imageByName, onJump, isAdmin }) {
         {item.blessedEffect && (
           <div className="blessed"><span className="blessed-label">{t.blessed}</span> {highlight(item.blessedEffect, query)}</div>
         )}
-        <div className="meta">{item.section}{item.extra ? ' — ' + item.extra : ''}</div>
+        <div className="meta">
+          {item.section}
+          {item.extra && (
+            cookieImageMap.has(item.extra) ? (
+              <>
+                {' — '}
+                <RelatedItem name={item.extra} image={cookieImageMap.get(item.extra)} onJump={onJumpToCookie} />
+              </>
+            ) : ' — ' + item.extra
+          )}
+        </div>
         {evolvesTo && (
           <div className="evolves-to">
             <span className="label">{t.evolvesTo}</span>{' '}
@@ -443,8 +453,8 @@ function CharacterTierListPage({ characters, kind, t }) {
   );
 }
 
-function CharacterListPage({ characters, kind, t }) {
-  const [query, setQuery] = useState('');
+function CharacterListPage({ characters, kind, t, initialQuery }) {
+  const [query, setQuery] = useState(initialQuery || '');
   const [grade, setGrade] = useState('all');
   const [view, setView] = useState('list');
   const list = useMemo(() => characters.filter(c => c.kind === kind), [characters, kind]);
@@ -995,6 +1005,10 @@ export default function App() {
     items.forEach(it => { m[it.version + '|' + it.name] = it.localImage; });
     return m;
   }, [items]);
+  const cookieImageMap = useMemo(
+    () => new Map(characters.filter(c => c.kind === 'cookie').map(c => [c.name, c.image])),
+    [characters]
+  );
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -1021,6 +1035,13 @@ export default function App() {
     setTypeFilter('all');
     setVersion('all');
     setTier('all');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  const [charJumpQuery, setCharJumpQuery] = useState('');
+  function jumpToCookie(name) {
+    setPage('cookies');
+    setCharJumpQuery(name);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -1076,7 +1097,7 @@ export default function App() {
           <div id="count">{t.count(filtered.length)}</div>
           <div id="list">
             {visibleItems.map((it, i) => (
-              <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} onJump={jumpTo} isAdmin={isAdmin} />
+              <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} onJump={jumpTo} isAdmin={isAdmin} cookieImageMap={cookieImageMap} onJumpToCookie={jumpToCookie} />
             ))}
           </div>
           {visibleCount < filtered.length && (
@@ -1085,7 +1106,7 @@ export default function App() {
         </>
       )}
       {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
-      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage characters={characters} kind="cookie" t={t} /></>}
+      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage key={charJumpQuery} characters={characters} kind="cookie" t={t} initialQuery={charJumpQuery} /></>}
       {page === 'pets' && <><h1>{t.navPets}</h1><CharacterListPage characters={characters} kind="pet" t={t} /></>}
       {page === 'buildcreator' && <><h1>{t.navBuilds}</h1><BuildCreatorPage items={items} characters={characters} t={t} initialBuildId={initialBuildId} /></>}
     </>
