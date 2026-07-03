@@ -1,1712 +1,1712 @@
 [
- {
-  "kind": "cookie",
-  "name": "Tiger Lily Cookie",
-  "kr_name": "정글전사 쿠키",
-  "grade": "L",
-  "ability": "• 체력 : 165~185\r\n• 능력 : 창 던지기 1~8단 (일정시간마다 장애물을 풀잎으로 변화시키는 창을 던짐, 창이 떨어진 곳에는 창과 함께 곰젤리나 생명물약이 꽂혀있음, 창을 일정 횟수 던지면 버터 호랑이 탑승)(능력 발동 중 소환수 탑승 인정)\r\n• 조합보너스 : 털뭉치 멍뭉이 (정글전사 파괴점수 58,388점 추가)\r\n• 보유효과 : 에피소드 2 \"원시림\"에서 일정한 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커짐)\r\n• 해금조건 : 에피소드 2 유물 특별 보상",
-  "ability_en": "• Stamina: 165~185\r\n• Ability: Spear Throw 1~8 (Throws a spear that changes obstacles into blades of grass at certain intervals. Where the spear lands, there is a bear jelly or life potion with the spear. If you throw the spear a certain number of times, ride a butter tiger) (Summons are allowed to ride while the ability is activated)\r\n• Combination Bonus: Furball Doggo (Jungle Warrior Destruction Points 58,388 added)\r\n• Possession effect: Mystery box is created with a certain probability in Episode 2 “Primitive Forest” (the probability increases as it is upgraded)\r\n• Unlock conditions: Episode 2 artifact special reward",
-  "image": "images-char/cookies_jungle_warrior_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Fire Spirit Cookie",
-  "kr_name": "불꽃정령 쿠키",
-  "grade": "L",
-  "ability": "• 체력 : 165~185\r\n• 능력 : 불꽃 부활 1~8단 (부활할때마다 불꽃으로 변신하여 날아감, 불꽃 변신 중 모든 젤리 점수 추가, 체력 30으로 1~6회 부활)\r\n• 조합보너스 : 없음\r\n• 보유효과 : 에피소드 3 \"용의 협곡\"에서 일정한 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커짐)\r\n• 해금조건 : 에피소드 3 유물 특별 보상",
-  "ability_en": "• Stamina: 165~185\r\n• Ability: Flame Resurrection 1~8 (Every time you resurrect, transform into a flame and fly away, add all jelly points during flame transformation, revive 1~6 times with 30 stamina)\r\n• Combination bonus: None\r\n• Possession effect: Mystery box is created with a certain probability in Episode 3 “Dragon’s Canyon” (the probability increases as it is upgraded)\r\n• Unlock conditions: Episode 3 artifact special reward",
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "Moonlight Cookie",
-  "kr_name": "달빛술사 쿠키",
-  "grade": "L",
-  "ability": "• 체력 : 165~185\r\n• 능력 : 꿈 마법 1~8단\r\n• 조합보너스 : 미니 잭슨 2호 (그믐달 젤리 점수 23,500점 추가)\r\n• 보유효과 : 에피소드 4 \"마법사들의 도시\"에서 일정한 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커짐)\r\n• 해금조건 : 에피소드 4 유물 특별 보상",
-  "ability_en": "• Stamina: 165~185\r\n• Ability: Dream Magic 1~8 levels\r\n• Combination Bonus: Mini Jackson No. 2 (23,500 Old Moon Jelly points added)\r\n• Possession effect: Mystery box is created with a certain probability in Episode 4 “City of Wizards” (the probability increases as it is upgraded)\r\n• Unlock conditions: Episode 4 artifact special reward",
-  "image": "images-char/cookies_moonlight_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Sea Fairy Cookie",
-  "kr_name": "바다요정 쿠키",
-  "grade": "L",
-  "ability": "• 체력 : 165~185\r\n• 능력 : 파도질주 1~8단\r\n• 조합보너스 : 파도방울 (바다결정 젤리 점수 14,500점 추가)\r\n• 보유효과 : 장애물 충돌시 일정확률로 충돌 데미지의 일부를 회복 (업그레이드 될 수록 회복량이 더 커짐)\r\n• 해금조건 : 쿠키들의 따뜻한 마음 100개 획득",
-  "ability_en": "• Stamina: 165~185\r\n• Ability: Wave Dash 1~8\r\n• Combination Bonus: Wave Drop (14,500 Sea Crystal Jelly points added)\r\n• Possession effect: When colliding with an obstacle, some of the collision damage is recovered with a certain probability (the more upgraded, the greater the recovery amount)\r\n• Unlock condition: Acquire 100 Warm Hearts of Cookies",
-  "image": "images-char/cookies_sea_fairy_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Wind Archer Cookie",
-  "kr_name": "바람궁수 쿠키",
-  "grade": "L",
-  "ability": "• 체력 : 165~185\r\n• 능력 : 바람질주 1~8단\r\n• 조합보너스 : 반딧불이 (깃털젤리 5,700점 추가)\r\n• 보유효과 : 에피소드 5 \"디저트 파라다이스\"에서 일정한 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커짐)\r\n• 해금조건 : 에피소드 5 유물 특별 보상",
-  "ability_en": "• Stamina: 165~185\r\n• Ability: Wind Dash 1~8\r\n• Combination Bonus: Firefly (5,700 additional feather jelly points)\r\n• Possession effect: Mystery box is created with a certain probability in Episode 5 “Dessert Paradise” (the probability increases as it is upgraded)\r\n• Unlock conditions: Episode 5 artifact special reward",
-  "image": "images-char/cookies_wind_archer_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Blooming Dancheong Cookie",
-  "kr_name": "매화단청 쿠키",
-  "grade": "L",
-  "ability": "• 체력 : 165~185\r\n• 능력 : 매화단청 용 소환 1~8단 (일정 시간 마다 매화 젤리와 매화 코인을 생성, 게이지가 가득 차면, 매화단청 용을 소환하여 주변 젤리들을 매화 젤리와 매화 코인으로 변환시키고  큰 용을 발사할 때 체력 회복)\r\n• 조합보너스 : 없음\r\n• 보유효과 : 에피소드 6 \"황천의 매화궁\"에서 일정한 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커짐)\r\n• 해금조건 : 에피소드 6 유물 특별 보상",
-  "ability_en": "• Stamina: 165~185\r\n• Ability: Plum Blossom Dancheong Dragon Summoning Levels 1 to 8 (Generates Plum Jelly and Plum Coins at certain intervals. When the gauge is full, summons Plum Blossom Dancheong Dragon, converts surrounding jellies into Plum Jelly and Plum Coins, and recovers stamina when firing a large dragon.)\r\n• Combination bonus: None\r\n• Possession effect: Mystery box is created with a certain probability in Episode 6, “Plum Palace in the Nether” (the probability increases as it is upgraded)\r\n• Unlock conditions: Episode 6 artifact special reward",
-  "image": "images-char/cookies_plum_dancheong_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Princess Bari Cookie",
-  "kr_name": "바리공주맛 쿠키",
-  "grade": "SS",
-  "ability": "• 체력 : 150~170\r\n• 능력 : 천도 1~8단\r\n• 조합보너스 : 꿀떡 영혼 (체력감소 12% 느림 + 꽃젤리 점수 추가)\r\n• 해금조건 : 바리공주맛 쿠키의 영혼석 20개 획득\r\n• 특이사항 : 레벨업시 바리공주맛 쿠키의 영혼석 소모",
-  "ability_en": "• Stamina: 150~170\r\n• Ability: Heavenly Path 1~8 Dan\r\n• Combination Bonus: Honey Rice Cake Soul (12% slower stamina reduction + additional flower jelly points)\r\n• Unlock condition: Obtain 20 Bari Princess Cookie’s Soul Stones\r\n• Special note: When leveling up, the soul stone of Princess Bari Cookie is consumed.",
-  "image": "images-char/cookies_princess_bari_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Admiral Gimbap Cookie",
-  "kr_name": "충무김밥맛 쿠키",
-  "grade": "SS",
-  "ability": "• 체력 : 150~170\r\n• 능력 : 충무돌격 1~8단\r\n• 조합보너스 : 런중일기 (모든젤리 점수 1,200점 추가 + 체력감소 12% 느림)\r\n• 해금조건 : 충무김밥맛 쿠키의 영혼석 20개 획득\r\n• 특이사항 : 레벨업시 충무김밥맛 쿠키의 영혼석 소모",
-  "ability_en": "• Stamina: 150~170\r\n• Ability: Collision Charge 1~8\r\n• Combination Bonus: Running Diary (1,200 points added to all jelly points + 12% slower stamina reduction)\r\n• Unlock condition: Obtain 20 Soul Stones of Chungmu Gimbap Cookie\r\n• Special note: Chungmu Gimbap Cookie’s Soul Stone is consumed when leveling up.",
-  "image": "images-char/cookies_chungmu_gimbap_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Pine Monk Cookie",
-  "kr_name": "금강법사맛 쿠키",
-  "grade": "SS",
-  "ability": "• 체력 : 150~170\r\n• 능력 : 거대 불상 1~8단\r\n• 조합보너스 : 백묭\r\n• 해금조건 : 금강법사맛 쿠키의 영혼석 20개 획득\r\n• 특이사항 : 레벨업시 금강법사맛 쿠키의 영혼석 소모",
-  "ability_en": "• Stamina: 150~170\r\n• Ability: Giant Buddha 1~8 levels\r\n• Combination bonus: 100%\r\n• Unlock condition: Obtain 20 Soulstones of Geumgang Wizard Cookie.\r\n• Special note: Soul stone of Diamond Mage Cookie is consumed when leveling up.",
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "Ninja Cookie",
-  "kr_name": "닌자맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 150~160\r\n • 능력 : 3~10단 점프\r\n • 조합보너스 : 꼬마유령 (2단 점프부터 300점 추가)\r\n • 해금조건 : 점수 600,000점 달성",
-  "ability_en": "• Stamina: 150~160\r\n • Ability: 3 to 10 jumps\r\n • Combination Bonus: Little Ghost (300 points added from 2nd jump)\r\n • Unlock condition: Achieve 600,000 points",
-  "image": "images-char/cookies_ninja_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Angel Cookie",
-  "kr_name": "천사맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 자력 효과 (초미니자력+미니자력과 비슷한 세기)\r\n • 조합보너스 : 천사의 별 (펫 능력으로 부활 시 추가체력 40)\r\n • 해금조건 : 레벨 30 달성",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Magnetic force effect (minimum magnetism + strength similar to mini magnetism)\r\n • Combination Bonus: Angel’s Star (40 additional health when revived with pet ability)\r\n • Unlock condition: Reach level 30",
-  "image": "images-char/cookies_angel_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Pirate Cookie",
-  "kr_name": "해적맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 체력이 다 떨어지면 유령해적 상태(체력 160)로 부활\r\n • 조합보너스 : 해적의 폭탄 (펫 능력 1초 증가)\r\n • 해금조건 : 친구 100명 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: When health runs out, resurrect as a ghost pirate (health 160)\r\n • Combination Bonus: Pirate Bomb (pet ability increases by 1 second)\r\n • Unlock condition: Have 100 friends.",
-  "image": "images-char/cookies_pirate_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Skating Queen Cookie",
-  "kr_name": "피겨여왕맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 연기점수 추가 1~8단 (2단점프, 광속질주, 보너스타임 진입시 추가점수 획득)\r\n • 조합보너스 : 눈꽃송이 (체력감소 10% 느림)\r\n • 해금조건 : 레벨 45 달성",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Additional acting points 1 to 8 (additional points are obtained when jumping 2nd stage, running at the speed of light, and entering bonus time)\r\n • Combination Bonus: Snowflake (10% slower stamina reduction)\r\n • Unlock condition: Reach level 45",
-  "image": "images-char/cookies_skating_queen_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Hero Cookie",
-  "kr_name": "히어로맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 히어로 변신 1~8단 (15.5초마다 5초 동안 자력을 탑재한 히어로 변신)\r\n • 조합보너스 : 젤리코 큐브 (모든젤리 점수 1,900점 추가)\r\n • 해금조건 : 친구 150명 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Hero transformation levels 1 to 8 (Hero transformation with magnetic force for 5 seconds every 15.5 seconds)\r\n • Combination Bonus: Jellico Cube (1,900 points added to all jellies)\r\n • Unlock condition: Have 150 friends.",
-  "image": "images-char/cookies_hero_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Special Force Cookie",
-  "kr_name": "특전사맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 별사탕 사격 1~8단 (별사탕 사격에 맞은 장애물은 일정확률로 파괴됨)\r\n • 조합보너스 : 건빵 보급병 (별사탕 젤리 점수 6,000점 추가)\r\n • 보유효과 : 게임 중 불시에 나타나서 지원사격을 퍼부어 줌\r\n • 해금조건 : 만렙인 쿠키 10종 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Star Candy Shooting 1~8 (Obstacles hit by Star Candy Shooting are destroyed with a certain probability)\r\n • Combination Bonus: Biscuits Supply Unit (6,000 star candy jelly points added)\r\n • Possession effect: Appears unexpectedly during the game and provides support fire.\r\n • Unlock condition: Have 10 types of cookies at max level.",
-  "image": "images-char/cookies_special_forces_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Cheerleader Cookie",
-  "kr_name": "치어리더맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 치어리더 응원단 1~8단 (점프 18회 달성시 응원단이 등장해 장애물을 제거해주며 코인과 젤리를 생성)\r\n • 조합보너스 : 반짝이볼 (체력감소 15% 느림)\r\n • 보유효과 : 게임 중 불시에 나타나서 체력을 30 회복시켜줌 (업그레이드 될 수록 회복량이 더 커짐)\r\n • 해금조건 : 만렙인 펫 12종 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Cheerleader cheerleading tier 1-8 (when you complete 18 jumps, a cheering squad appears, removes obstacles, and creates coins and jelly)\r\n • Combination Bonus: Glitter Ball (15% slower stamina reduction)\r\n • Possession effect: Appears unexpectedly during the game and restores 30 stamina (the more upgraded, the greater the recovery amount)\r\n • Unlock condition: Have 12 pets at max level.",
-  "image": "images-char/cookies_cheerleader_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Devil Cookie",
-  "kr_name": "악마맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 150~160\r\n • 능력 : 슈퍼 악마로 변신 1~8단 (쿠키들의 영혼을 흡수 시 슈퍼 악마로 변신)\r\n • 조합보너스 : 불꽃박쥐 (원혼젤리 점수 30,000점 추가)\r\n • 해금조건 : 레벨 50 달성",
-  "ability_en": "• Stamina: 150~160\r\n • Ability: Transform into a super devil 1~8 (transforms into a super devil when absorbing the souls of cookies)\r\n • Combination Bonus: Flame Bat (Additional 30,000 Ghost Jelly points)\r\n • Unlock condition: Reach level 50",
-  "image": "images-char/cookies_devil_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Ninetales Cookie",
-  "kr_name": "구미호맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 150~160\r\n • 능력 : 구미호 변신 1~8단 (체력이 천천히 줄어들고, 2단점프 9회시 구미호 상태로 변신, 구미호 상태에서 곰젤리(노랑, 분홍, 왕곰젤리)를 유혹하여 추가점수 획득)\r\n • 조합보너스 : 여우구슬 (유혹당한 곰젤리 점수 5000점 추가)\r\n • 해금조건 : 레벨 55 달성",
-  "ability_en": "• Stamina: 150~160\r\n • Ability: Nine-tailed fox transformation levels 1 to 8 (HP slowly decreases, transforms into nine-tailed fox form when jumping 9 times, earns additional points by seducing bear jellies (yellow, pink, big bear jellies) in nine-tailed fox form)\r\n • Combination Bonus: Fox Bead (5000 points added to Tempted Bear Jelly)\r\n • Unlock condition: Reach level 55",
-  "image": "images-char/cookies_kumiho_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Rebel Cookie",
-  "kr_name": "의적맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 160~180\r\n • 능력 : 3~10단 점프 순간이동, 구름 분신 (10단 점프를 하며 공중에서 슬라이드 버튼을 누르면 순간이동 착지, 2단점프부터 2,700점 추가, 구름 분신으로 부활)\r\n • 조합보너스 : 바람이 (펫이 획득한 점수 40% 추가)\r\n • 해금조건 : 친구 120명 보유",
-  "ability_en": "• Stamina: 160~180\r\n • Abilities: 3~10 jump teleportation, cloud clone (when you jump 10 steps and press the slide button in the air, you land teleportation, 2,700 points are added from the 2nd jump, and you are revived as a cloud clone)\r\n • Combination Bonus: Wind (adds 40% to the points earned by the pet)\r\n • Unlock condition: Have 120 friends.",
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "Wizard Cookie",
-  "kr_name": "마법사맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 150~160\r\n • 능력 : 마법 1~8클래스 (매직 미사일 발사, 대마법 발동)\r\n • 조합보너스 : 마법사전 (기본속도 20% 증가), 미니 잭슨 2호 (모든 젤리 점수 1,200점 추가)\r\n • 해금조건 : 만렙인 펫 16종 보유",
-  "ability_en": "• Stamina: 150~160\r\n • Abilities: Magic classes 1 to 8 (firing magic missiles, activating anti-magic)\r\n • Combination bonus: Wizard War (base speed increased by 20%), Mini Jackson No. 2 (all jelly points added by 1,200 points)\r\n • Unlock condition: Own 16 types of pets at max level.",
-  "image": "images-char/cookies_wizard_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Fairy Cookie",
-  "kr_name": "요정맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 160~180\r\n • 능력 : 자력 보호막 생성 1~8단 (천사맛 쿠키 자력보다 근소하게 자력이 약함)\r\n • 조합보너스 : 꽃봉오리 (경험치 15% 보너스)\r\n • 보유효과 : 게임 중 일정한 확률로 보호막 생성\r\n • 해금조건 : +9 강화 보물 5개 보유",
-  "ability_en": "• Stamina: 160~180\r\n • Ability: Magnetic shield creation level 1~8 (Magnetic power is slightly weaker than that of angel-flavored cookies)\r\n • Combination Bonus: Flower Bud (15% experience bonus)\r\n • Possession effect: Creates a shield with a certain probability during the game.\r\n • Unlock condition: Hold 5 +9 enhanced treasures",
-  "image": "images-char/cookies_fairy_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Rockstar Cookie",
-  "kr_name": "락스타맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 슬라이드-업 1~8단 (슬라이드 지속시간에 따라 음표 젤리 발사, 최대 게이지에 도달했을때 음표 발사시 장애물 파괴)\r\n • 조합보너스 : 스포트라이트 (음표젤리 점수 900점 추가)\r\n • 해금조건 : 보물 20개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Slide-Up 1~8 (Fires note jelly depending on the slide duration, destroys obstacles when shooting a note when the maximum gauge is reached)\r\n • Combination Bonus: Spotlight (900 additional note jelly points)\r\n • Unlock condition: Possess 20 treasures",
-  "image": "images-char/cookies_rockstar_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Carol Cookie",
-  "kr_name": "음유시인맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 마법의 노래 1~8단 (7번 이단 점프를 할때마다 생명의 노래(체력 회복)-파괴의 노래(장애물 파괴, 젤리 생성)-풍요의 노래(코인 생성) 순으로 연주가 바뀜)\r\n • 조합보너스 : 통나무 케이크 (체력감소 15% 느림)\r\n • 해금조건 : 레벨 57 달성",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Magic Song 1~8 (Every time you double jump 7 times, the performance changes in the following order: Song of Life (recovers health) - Song of Destruction (destroys obstacles, creates jelly) - Song of Abundance (creates coins).\r\n • Combination Bonus: Log Cake (15% slower stamina reduction)\r\n • Unlock condition: Reach level 57",
-  "image": "images-char/cookies_minstrel_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Cherry Cookie",
-  "kr_name": "체리맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 체리폭탄 1~8단 (체리폭탄을 던져 장애물을 파괴하며 체리젤리를 생성. 속도가 점점 빨라지는데 최대 10%까지 빨라지고, 주기도 짧아진다. 장애물 충돌 시 원래 속도로 돌아간다.)\r\n • 조합보너스 : 로켓폭죽 (체리젤리 점수 2,000점 추가), 스포트라이트 (체리젤리 점수 1,900점 추가)\r\n • 해금조건 : +9 보물 8개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Cherry Bomb 1~8 (Throws a cherry bomb, destroying obstacles and creating cherry jelly. The speed gradually increases, up to 10%, and the cycle becomes shorter. When it collides with an obstacle, it returns to the original speed.)\r\n • Combination Bonus: Rocket Firecracker (2,000 additional Cherry Jelly points), Spotlight (1,900 additional Cherry Jelly points)\r\n • Unlock condition: Hold 8 +9 treasures",
-  "image": "images-char/cookies_cherry_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Snow Sugar Cookie",
-  "kr_name": "눈설탕맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 눈소환수 소환 1~8단 (일정시간마다 장애물을 부수고 눈꽃젤리를 생성하는 스노우콘 소환수를 소환, 눈꽃젤리를 모으면 눈보라를 일으키는 스노우킹 소환수 소환)\r\n • 조합보너스 : 스노우 글로브 (눈꽃젤리 점수 4,200점 추가)\r\n • 해금조건 : S급 보물 12개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Summon Snow Summoner 1~8 (Summons Snowcone Summoner that destroys obstacles and creates snowflake jelly at regular intervals. Summons Snow King Summoner that creates a blizzard when collecting snowflake jelly).\r\n • Combination Bonus: Snow Globe (4,200 Snowflake Jelly points added)\r\n • Unlock condition: Possess 12 S-class treasures",
-  "image": "images-char/cookies_snow_sugar_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Pink Choco Cookie",
-  "kr_name": "핑크초코쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 하트빔 발사 1~8단 (일정시간마다 핑크봉봉 젤리 생성+장애물 파괴)\r\n • 조합보너스 : 핑크캔디 (장애물 파괴점수 3,000점 추가)\r\n • 해금조건 : 친구 160명 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Heart Beam Fire 1~8 (Generates Pink Bonbon Jelly + Destroys Obstacles at certain intervals)\r\n • Combination Bonus: Pink Candy (3,000 additional obstacle destruction points)\r\n • Unlock condition: Have 160 friends.",
-  "image": "images-char/cookies_pink_choco_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Prophet Cookie",
-  "kr_name": "예언자맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 예지력 1~8단 (예언을 하면 예언대로 상황이 바뀜)\r\n • 조합보너스 : 보라보라 향초 (향초 젤리 점수 50점 추가)\r\n • 해금조건 : 만렙인 쿠키 20개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Foresight 1~8 (If you make a prophecy, the situation will change according to the prophecy)\r\n • Combination Bonus: Bora Bora Scented Candle (50 points added to Scented Candle Jelly)\r\n • Unlock condition: Have 20 cookies at max level.",
-  "image": "images-char/cookies_prophet_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Pistachio Cookie",
-  "kr_name": "피스타치오맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 신성한 돌진 1~8단 (일정시간마다 빠른 속도, 무적상태로 돌진, 돌진이 끝난 후 체력 회복, 모든 젤리 점수 700점 추가, 광속질주시 모든 젤리 점수 500점 추가)\r\n • 조합보너스 : 반딧불이 (모든 젤리 점수 1,100점 추가), 토끼사과 (기본속도 25% 증가)\r\n • 해금조건 : 레벨 60 달성",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Holy Charge 1~8 (Charge at high speed and invincibility at certain intervals, recover stamina after charging, add 700 points to all jelly points, add 500 points to all jelly points when sprinting at the speed of light)\r\n • Combination Bonus: Firefly (1,100 points added to all jellies), Rabbit Apple (base speed increased by 25%)\r\n • Unlock condition: Reach level 60",
-  "image": "images-char/cookies_pistachio_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Alchemist Cookie",
-  "kr_name": "연금술사맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 연금술 1~8단 (일정시간마다 연금술 시약을 완성하여 2단점프로 던져 특정한 젤리(곰젤리, 코인, 아이템)들을 생성, 착지할때마다 시약 종류가 바뀜)\r\n • 조합보너스 : 코인저울, 젤리저울 (경험치 20% 보너스)\r\n • 해금조건 : +9 강화 보물 11개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Alchemy levels 1 to 8 (Complete the alchemy reagent at a certain time and throw it in a double jump to create specific jellies (bear jelly, coins, items), and the type of reagent changes each time you land)\r\n • Combination bonus: Coin scale, jelly scale (20% experience bonus)\r\n • Unlock condition: Possess 11 +9 enhanced treasures",
-  "image": "images-char/cookies_alchemist_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Vampire Cookie",
-  "kr_name": "뱀파이어맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 박쥐변신 1~8단 (일정시간마다 포도알 박쥐로 변신하여 장애물을 통과하며 빠르게 날아감, 장애물에서 포도주스 방울을 추출하여 체력을 회복함, 장애물 통과시 67,000점 추가)\r\n • 조합보너스 : 참나무 주스통 (장애물 통과 점수 77,000점 추가)\r\n • 해금조건 : S급 보물 17개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Bat Transformation 1~8 (At certain intervals, it transforms into a grape bat and flies quickly through obstacles. Recovers stamina by extracting drops of grape juice from obstacles. 67,000 points are added when passing an obstacle.)\r\n • Combination Bonus: Oak Juice Canister (77,000 points added for passing obstacles)\r\n • Unlock condition: Possess 17 S-class treasures",
-  "image": "images-char/cookies_vampire_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Apple Cookie",
-  "kr_name": "풋사과맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 알파벳 비눗방울 1~8단 (일정시간마다 알파벳이 들어있는 비눗방울 젤리를 생성, 보너스타임에서 풍선젤리 생성, 체력비례 속도 증가)\r\n • 조합보너스 : 토끼사과 (풍선 젤리 점수 2,300점 추가)\r\n • 해금조건 : 체력 레벨 50 달성",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Alphabet Bubble Level 1~8 (Creates soap bubble jelly containing the alphabet at certain times, creates balloon jelly at bonus time, increases speed in proportion to stamina)\r\n • Combination Bonus: Rabbit Apple (2,300 Balloon Jelly points added)\r\n • Unlock condition: Reach stamina level 50",
-  "image": "images-char/cookies_green_apple_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Cheesecake Cookie",
-  "kr_name": "치즈케이크맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 코인폭죽파티 1~8단 (파티초대장 젤리를 12개 모으면 코인폭죽파티가 시작됨)\r\n • 조합보너스 : 치즈뭉치 고양이 (기본속도 10% 증가), 황금방울 (미니자력 + 코인 15% 보너스), 런중일기(런중일기 펫이 점수 대신 코인을 획득)\r\n • 보유효과 : 게임중 일정한 확률로 코인폭죽파티 발동\r\n • 해금조건 : 펫 24종 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Coin Firecracker Party Level 1~8 (Coin Firecracker Party starts when you collect 12 party invitation jellies)\r\n • Combination bonus: Cheesecake Cat (base speed increased by 10%), Golden Drop (mini magnetism + 15% coin bonus), Run Diary (Run Diary pet earns coins instead of points)\r\n • Possession effect: Coin firework party is activated with a certain probability during the game.\r\n • Unlock condition: Own 24 types of pets",
-  "image": "images-char/cookies_cheesecake_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Soda Cookie",
-  "kr_name": "소다맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 서핑 1~8단 (생명물약을 먹으면 일정시간동안 소다 파도를 일으켜 서핑보드를 타고 질주, 서핑보드 탑승시 장애물을 파괴하고 모든 젤리 점수 1,200점 추가)\r\n• 조합보너스 : 조각레몬 (조각레몬 거품젤리 점수 3,000점 추가)\r\n• 해금조건 : 만렙인 쿠키 25종 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: Surfing 1~8 (When you take a life potion, you can create soda waves for a certain period of time and sprint on the surfboard. When riding the surfboard, destroy obstacles and add 1,200 points to all jelly points)\r\n• Combination Bonus: Slice Lemon (Slice Lemon Bubble Jelly score adds 3,000 points)\r\n• Unlock condition: Have 25 types of cookies at max level.",
-  "image": "images-char/cookies_soda_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Adventurer Cookie",
-  "kr_name": "탐험가맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 잊혀진 유적 탐험 1~8단 (일정 거리마다 바닥에 있는 구멍에 신비한 문을 열어 잊혀진 유적을 탐험, 잊혀진 유적에서 대량의 코인 등장, 낮은 확률로 미스터리 박스 출현)\r\n • 조합보너스 : 배낭이 (코인 10% 보너스)\r\n • 해금조건 : 친구 200명 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Forgotten Ruins Exploration 1~8 (Explore Forgotten Ruins by opening mysterious doors in holes in the floor at certain distances, large amounts of coins appear in Forgotten Ruins, mystery boxes appear with a low probability)\r\n • Combination Bonus: Backpack (10% coin bonus)\r\n • Unlock condition: Have 200 friends.",
-  "image": "images-char/cookies_adventurer_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Blackberry Cookie",
-  "kr_name": "블랙베리맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 원혼 다루기 1~8단 (주위를 감싼 원혼들이 수시로 젤리를 먹으며 블랙베리젤리를 생성하며 일정시간마다 특별한 젤리를 생성함)\r\n • 조합보너스 : 집사 유령 (블랙베리 젤리 점수 4,500점 증가)\r\n • 해금조건 : +9 강화 보물 16개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Dealing with Vengeful Spirits 1~8 (Ghosts surrounding the surroundings frequently eat jelly and create blackberry jelly, and create special jellies at certain times)\r\n • Combination Bonus: Butler Ghost (Blackberry Jelly score increases by 4,500 points)\r\n • Unlock condition: Possess 16 +9 enhanced treasures",
-  "image": "images-char/cookies_blackberry_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Kiwi Biker Cookie",
-  "kr_name": "키위맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 바이크 질주 1~8단 (일정시간마다 오토바이를 타고 질주하며, 질주하는 동안 키위 연료젤리를 먹으면 순간가속하여 더 오래 질주함)\r\n • 조합보너스 : 키위새 (키위젤리 점수 n점 추가+체력감소 13% 느림)\r\n • 해금조건 : S급 보물 25개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Bike Sprint 1~8 (Speed on a motorcycle at certain intervals, and if you eat Kiwi Fuel Jelly while sprinting, you will instantly accelerate and run longer)\r\n • Combination Bonus: Kiwi Bird (kiwi jelly score added n points + stamina reduction slowed by 13%)\r\n • Unlock condition: Possess 25 S-class treasures",
-  "image": "images-char/cookies_kiwi_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Werewolf Cookie",
-  "kr_name": "웨어울프맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 늑대 변신 1~8단 (일정시간마다 늑대로 변신하고, 늑대 상태에서는 장애물을 날려버리고 장애물 파괴점수를 받음 (체력이 적을수록 더 자주 변신함))\r\n • 조합보너스 : 털뭉치 멍뭉이 (늑대 상태에서 파괴점수 25,000점 추가)\r\n • 해금조건 : 만렙인 펫 25종 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Wolf Transformation Level 1~8 (Transforms into a wolf at certain intervals, blows away obstacles while in wolf state and receives obstacle destruction points (the lower the stamina, the more frequently the transformation occurs))\r\n • Combination Bonus: Furball Dog (25,000 additional destruction points in wolf state)\r\n • Unlock condition: Have 25 pets at max level.",
-  "image": "images-char/cookies_werewolf_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Mint Choco Cookie",
-  "kr_name": "민트초코쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 바이올린 연주 1단~8단(바이올린을 연주해 공중에 코인을 생성함)\r\n• 조합보너스 : 미스 도레미(코인 점수 추가), 미스터 파솔라시(코인 12% 보너스), 백금방울(코인 꽃 생성), 런중일기(런중일기 펫이 점수 대신 코인을 획득)\r\n• 해금조건 : 쿠키 40종 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: Play the violin 1st to 8th (play the violin to create coins in the air)\r\n• Combination Bonuses: Miss Doremi (coin points added), Mr. Fasolassi (coin 12% bonus), Platinum Drop (creates coin flower), Run Diary (Run Diary pet earns coins instead of points)\r\n• Unlock condition: Have 40 types of cookies",
-  "image": "images-char/cookies_mint_choco_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Cocoa Cookie",
-  "kr_name": "코코아맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 코코아컵 1~8단\r\n• 조합보너스 : 마시멜로 햄찌 (코코아 마시멜로 점수 5,300점 추가)\r\n• 진화 보물 5개 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: Cocoa Cups 1 to 8\r\n• Combination Bonus: Marshmallow Hamchi (5,300 Cocoa Marshmallow points added)\r\n• Have 5 evolution treasures",
-  "image": "images-char/cookies_cocoa_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Muay Thai Cookie",
-  "kr_name": "홍고추맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 투지 1~8단 (일정시간마다 충돌하는 모든 장애물을 날려버리며, 체력이 다했을때 1회 부활, 장애물 파괴점수 추가, 일정 확률로 충돌무시)\r\n • 조합보너스 : 파프리카 샌드백 (기본속도 20% 증가)\r\n • 해금조건 : S급 보물 30개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Fighting Spirit 1~8 (Blows away all obstacles that collide at certain intervals, revives once when stamina runs out, adds obstacle destruction points, ignores collisions with a certain probability)\r\n • Combination Bonus: Paprika Sandbag (20% increase in base speed)\r\n • Unlock condition: Possess 30 S-class treasures",
-  "image": "images-char/cookies_red_pepper_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Cream Puff Cookie",
-  "kr_name": "슈크림맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_cream_puff_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Gumball Cookie",
-  "kr_name": "버블껌맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_bubble_gum_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Cherry Blossom Cookie",
-  "kr_name": "벚꽃맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_cherry_blossom_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Lemon Cookie",
-  "kr_name": "레몬맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 전기 보호막 1~8단 \r\n • 조합보너스 : 레몬 전지 (번개질주 파괴점수 75,000점 추가)\r\n • 해금조건 : 펫 50종 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Electric Shield Level 1~8 \r\n • Combination Bonus: Lemon Battery (75,000 Lightning Fast destruction points added)\r\n • Unlock condition: Own 50 types of pets",
-  "image": "images-char/cookies_lemon_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Orange Cookie",
-  "kr_name": "오렌지맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140 ~ 160\r\n• 능력 : 파워 테니스 1~8단\r\n• 조합보너스 : 어린쥐 (과즙젤리 점수 추가 + 체력감소 8% 느림)\r\n• 해금조건 : 만렙인 쿠키 42종 보유하기",
-  "ability_en": "• Stamina: 140 ~ 160\r\n• Ability: Power Tennis 1st to 8th Dan\r\n• Combination Bonus: Young Rat (Additional Juice Jelly points + 8% slower stamina reduction)\r\n• Unlock condition: Have 42 types of cookies at max level.",
-  "image": "images-char/cookies_orange_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Lime Cookie",
-  "kr_name": "라임맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140 ~ 160\r\n• 능력 : 슈퍼 비치볼 1~8단\r\n• 조합보너스 : 미스터 삑 (과즙젤리 점수 추가 + 체력감소 8% 느림)\r\n• 해금조건 : s급 보물 60개 보유",
-  "ability_en": "• Stamina: 140 ~ 160\r\n• Ability: Super Beach Ball 1~8\r\n• Combination Bonus: Mr. Beep (Additional juice jelly points + 8% slower stamina reduction)\r\n• Unlock condition: Possess 60 S-class treasures",
-  "image": "images-char/cookies_lime_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Peppermint Cookie",
-  "kr_name": "박하사탕맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_peppermint_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "General Jujube Cookie",
-  "kr_name": "대추맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_jujube_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Peach Cookie",
-  "kr_name": "복숭아맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "Onion Cookie",
-  "kr_name": "양파맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_onion_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Cinnamon Cookie",
-  "kr_name": "시나몬맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_cinnamon_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Macaron Cookie",
-  "kr_name": "마카롱맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 행진 1~8단\r\n• 조합보너스 : 캐스터네츠 (마카롱 젤리 480점 추가)\r\n• 해금조건 : 캐스터네츠 펫 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: March 1st to 8th level\r\n• Combination Bonus: Castanets (Macaron Jelly 480 points added)\r\n• Unlock condition: Own Castanets pet.",
-  "image": "images-char/cookies_macaron_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Red Bean Cookie",
-  "kr_name": "단팥맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_red_bean_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "White Choco Cookie",
-  "kr_name": "화이트초코 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_white_choco_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Herb Cookie",
-  "kr_name": "허브맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_herb_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Dino-sour Cookie",
-  "kr_name": "다이노사워 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_dino_sour_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Cotton Candy Cookie",
-  "kr_name": "솜사탕맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_cotton_candy_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Roll Cake Cookie",
-  "kr_name": "롤케이크맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 로드롤러 탑승 1~8단\r\n• 조합보너스 : 라이트 형제 (장애물 파괴점수 15,000점 추가)\r\n• 해금조건 : 라이트 형제 펫 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: Road roller riding 1st to 8th gear\r\n• Combination Bonus: Wright Brothers (15,000 additional obstacle destruction points)\r\n• Unlock condition: Own a Wright Brothers pet",
-  "image": "images-char/cookies_roll_cake_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Banana Cookie",
-  "kr_name": "바나나맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 서커스 1~8단 (일정 시간마다 훌라후프와 함께 원숭이가 나타남, 원숭이로 훌라후프를 통과한 수치에 따라 코인이 쏟아짐)\r\n • 조합보너스 : 사바나나 사자 (코인 10% 보너스), 젤리저울 (코인점수 추가), 런중일기(런중일기 펫이 점수 대신 코인을 획득)\r\n • 해금조건 : 사바나나 사자 펫 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Circus 1~8 (A monkey appears with a hula hoop at certain times, coins pour out depending on how many times the monkey passes the hula hoop)\r\n • Combination Bonus: Savannah Lion (10% coin bonus), Jelly Scale (coin points added), Run Diary (Run Diary pet earns coins instead of points)\r\n • Unlock condition: Own a savannah or lion pet.",
-  "image": "images-char/cookies_banana_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Pancake Cookie",
-  "kr_name": "팬케이크맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 파닥파닥 1~8단\r\n• 조합보너스 : 팬케이크 원반 (기본속도 20% 증가)\r\n• 해금조건 : 롤케이크맛 쿠키 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: flutter flutter 1~8\r\n• Combination Bonus: Pancake Disk (base speed increased by 20%)\r\n• Unlock condition: Having roll cake flavored cookies",
-  "image": "images-char/cookies_pancake_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Moon Rabbit Cookie",
-  "kr_name": "달토끼맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_moon_rabbit_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Strawberry Shortcake Cookie",
-  "kr_name": "딸기쇼트케이크맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 거대 케이크들개 1~8단 (일정시간마다 개껌젤리가 나타나고 획득 시 네 발로 질주, 개껌젤리를 4개 모으면 거대 케이크들개에 탑승하고 주변의 젤리들을 케이크조각 젤리로 변화시킴)(거대 케이크들개 탑승 중 소환수 탑승 인정)\r\n • 조합보너스 : 작은 케이크들개 (케이크조각 젤리 점수 추가), 코인저울 (코인 15% 보너스)\r\n • 해금조건 : 쫑긋달콤 딸기조각 400개 획득",
-  "ability_en": "• Stamina: 140~160\r\n • Abilities: Giant Cake Dog 1~8 (Dog gum jellies appear at certain times and when acquired, run on all fours. When you collect 4 dog gummies, you ride the giant cake dog and change surrounding jellies into cake piece jellies) (Summons are allowed to ride while riding the giant cake dog)\r\n • Combination bonus: Small cakes (add cake piece jelly points), coin scale (15% coin bonus)\r\n • Unlock conditions: Obtain 400 sweet and juicy strawberry pieces.",
-  "image": "images-char/cookies_strawberry_shortcake_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Gulab Jamun Cookie",
-  "kr_name": "굴랍자문맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_gulab_jamun_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Kaju Katli Cookie",
-  "kr_name": "카주카틀리맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 창술사 1~8단 (일정시간마다 창을 던져 장애물을 파괴하고 그 자리에 카주 카틀리 젤리를 생성, 던진 창을 주우면 광속질주함)\r\n • 조합보너스 : 앵무할아범 (초미니자력 + 체력감소 속도 13% 느림), 스포트라이트 (체력감소 20% 빠름)\r\n • 해금조건 : \tS급 진화 보물 35개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Spearman 1~8th level (Throws a spear at certain intervals to destroy obstacles and creates Kazu Katli jelly in its place. When the thrown spear is picked up, it runs at the speed of light)\r\n • Combination Bonus: Grandpa Parrot (miniature magnetism + 13% slower stamina reduction), Spotlight (20% faster stamina reduction)\r\n • Unlock condition: Possess 35 S-class evolution treasures",
-  "image": "images-char/cookies_kaju_katli_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Marshmallow Bunny Cookie",
-  "kr_name": "멜로우버니 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 신비한 세계 1~8단 (일정 시간마다 토끼굴 포탈을 통하여 체력을 회복하고 질주하면서 코인과 마시멜로 젤리를 획득함, 초대형 토끼굴 포탈 진입시 다단점프+자력 효과 발동과 동시에 많은 코인과 젤리가 생성됨)\r\n • 조합보너스 : 말랑 에그버니 (모든 젤리 1,400점 추가 + 체력감소 8% 느림)\r\n • 해금조건 : 마시멜로 달걀 400개 획득",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Mysterious World 1~8 (Recover your stamina through the rabbit hole portal at certain times and acquire coins and marshmallow jelly while running. When entering a very large rabbit hole portal, multi-stage jump + magnetic effect is activated and many coins and jelly are created)\r\n • Combination Bonus: Soft Egg Bunny (1,400 points added to all jellies + 8% slower stamina reduction)\r\n • Unlock conditions: Obtain 400 marshmallow eggs.",
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "Cucumber Cookie",
-  "kr_name": "오이맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_cucumber_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Sikhye Cookie",
-  "kr_name": "식혜맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 신의 한 수 1~8단\r\n• 조합보너스 : 흑돌흑미선생 (바둑돌젤리 점수 추가 + 체력감소 6% 느림), 백돌백미선생 (미니자력 + 코인 15% 보너스)\r\n• 해금조건 : 만렙인 쿠키를 70개 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: God's Move 1~8\r\n• Combination Bonus: Black Stone Black Rice Teacher (Additional Baduk Stone Jelly points + 6% slower stamina reduction), White Stone White Rice Teacher (mini magnetism + 15% coin bonus)\r\n• Unlock condition: Have 70 cookies at max level.",
-  "image": "images-char/cookies_sikhye_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Sujeonggwa Cookie",
-  "kr_name": "수정과맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 신의 한 수 1~8단\r\n• 조합보너스 : 백돌백미선생 (바둑돌젤리 점수 추가 + 체력감소 6% 느림), 흑돌흑미선생 (미니자력 + 코인 15% 보너스)\r\n• 해금조건 : 백돌백미선생 펫 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: God's Move 1~8\r\n• Combination Bonus: Teacher Baekdol Baekmi (Additional Baduk Jelly points + 6% slower stamina reduction), Teacher Blackdol Blackmi (mini magnetism + 15% coin bonus)\r\n• Unlock condition: Own Baekdol Baekmi teacher’s pet",
-  "image": "images-char/cookies_sujeonggwa_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Barley Sentry Cookie",
-  "kr_name": "보리장수맛 쿠키",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/cookies_barley_merchant_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Potato Salad Cookie",
-  "kr_name": "감자샐러드맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 샐러드폭탄 1~8단 (일정시간마다 다양한 양탄자를 던텨 코인을 코인을 생성, 게이지가 가득 차면 바닥에 삶은 감자와 마요네즈가 깔리고 밟으면 코인이 생성됨(점프시 추가 코인 획득 가능))\r\n • 조합보너스 : 다사라빵 (미니자력 + 거대화시 속도 증가)\r\n • 해금조건 : 다사라빵 펫 보유\r\n\r\n※ 조합보너스의 미니자력은 일반적인 미니자력보다 약함",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Salad Bomb 1~8 (Generates coins by throwing various carpets at certain intervals. When the gauge is full, boiled potatoes and mayonnaise are spread on the floor, and coins are generated when you step on them (additional coins can be obtained when jumping))\r\n • Combination Bonus: Dasara Bread (Mini Magnetism + Speed Increase when Enlarged)\r\n • Unlock condition: Have a Dasara Bread pet.\r\n\r\n※ The mini magnetism of the combination bonus is weaker than the general mini magnetism.",
-  "image": "images-char/cookies_potato_salad_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Scallion Kimchi Cookie",
-  "kr_name": "파김치맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 파김치 1~8단 (일정 시간마다 검기를 일으켜 장애물을 파괴, 게이지를 전부 채우면 질주하면서 장애물을 파괴, 장애물이 파괴된 자리에는 파김치 곰젤리가 생성됨, 장애물 파괴점수 쿠키 단도록으론 만렙 기준 50000점, 파김치 곰젤리 점수는 9999점)\r\n • 조합보너스 : 벌레무당 (장애물 파괴점수 60,000점 + 장애물 통과점수 46,000점 추가)\r\n • 해금조건 : S급 진화 보물 50개 보유",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Green onion kimchi level 1~8 (Destroys obstacles by generating sword energy at certain intervals. When the gauge is fully filled, it destroys obstacles while running. Green onion kimchi bear jelly is created where the obstacle is destroyed. According to the obstacle destruction score cookie level, the maximum level score is 50,000 points, and green onion kimchi bear jelly score is 9999 points.)\r\n • Combination Bonus: Insect Shaman (60,000 points for destroying obstacles + 46,000 points for passing obstacles)\r\n • Unlock condition: Possess 50 S-class evolution treasures",
-  "image": "images-char/cookies_green_onion_kimchi_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "White Kimchi Cookie",
-  "kr_name": "백김치맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 백김치 1~8단 \r\n• 조합보너스 : 깍둑방울 (장애물 통과점수 추가 + 장애물 파괴점수 추가)\r\n• 해금조건 : +9강화 보물 55개 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: 1 to 8 layers of white kimchi \r\n• Combination Bonus: Droplet (Additional points for passing obstacles + Additional points for destroying obstacles)\r\n• Unlock condition: Possess 55 +9 enhanced treasures",
-  "image": "images-char/cookies_white_kimchi_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Manggaetteok Cookie",
-  "kr_name": "망개떡맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 망개잎 활공 1~8단 \r\n• 조합보너스 : 망개잎 달팽이 (거대화시 체력감소 느림 + 거대화시 속도 증가)\r\n• 해금조건 : 쿠키 75개 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: Mangae Leaf Glide 1~8 \r\n• Combination Bonus: Manga Leaf Snail (Slow stamina reduction when gigantic + Speed increases when gigantic)\r\n• Unlock condition: Have 75 cookies.",
-  "image": "images-char/cookies_manggaetteok_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Garaetteok Cookie",
-  "kr_name": "가래떡맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 가래떡 장승 질주 1~8단 \r\n• 조합보너스 : 솟대가족 펫 보유 (체력감소 13% 느림 + 장애물 통과점수 추가)\r\n• 해금조건 : 쿠키 75개 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: Garaetteok Jangseung sprint 1st to 8th dan \r\n• Combination bonus: Having a Sotdae family pet (13% slower stamina reduction + additional obstacle passing points)\r\n• Unlock condition: Have 75 cookies.",
-  "image": "images-char/cookies_garaetteok_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Choco Pistachio Cookie",
-  "kr_name": "두바이 쫀쫀 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 두바이 쫀쫀 젤리 생성 1~8단\r\n• 조합보너스 : 쫀쫀 초코도치 (소환수 탑승시 체력감소 느림 + 모든젤리 점수 추가)\r\n• 해금조건 : 멜로우버니 쿠키, 피스타치오맛 쿠키 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: Create Dubai Jjonjjon Jelly Level 1~8\r\n• Combination Bonus: Choco Dochi (Slow stamina reduction when riding a summoned animal + additional points for all jellies)\r\n• Unlock condition: Have Mellow Bunny cookies and pistachio-flavored cookies.",
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "Dandelion Fairy Cookie",
-  "kr_name": "민들레요정맛 쿠기",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n • 능력 : 민들레 꽃바람 1~8단 (일정 시간마다 폼폼 꽃자루를 휘둘러 민들레 젤리와 폼폼 젤리를 생성, 폼폼 꽃자루를 타고 비행 중 폼폼 홀씨에 닿으면 민들레 홀씨 젤리가 흩날림)\r\n • 조합보너스 : 아기홀씨 (민들레 홀씨 점수 증가 + 체력감소 7% 느림)\r\n • 해금조건 : 민들레 홀씨 400개 획득",
-  "ability_en": "• Stamina: 140~160\r\n • Ability: Dandelion Blossom Wind 1~8 (Swing the pom-pom flower stalk at certain intervals to create dandelion jelly and pom-pom jelly. If you touch a pom-pom seed while flying on the pom-pom flower stalk, the dandelion seed jelly will scatter)\r\n • Combination Bonus: Baby Spore (Dandelion Spore score increases + stamina reduction slows down by 7%)\r\n • Unlock condition: Obtain 400 Dandelion Seeds",
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "Kaymak Cookie",
-  "kr_name": "카이막맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 분신술 1~8단\r\n• 조합보너스 : 꿀 호리병 (장애물 파괴점수 55,000점 추가 + 체력감소 12% 느림)\r\n• 해금조건 : S급 진화보물 60개 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: Clone Art Level 1~8\r\n• Combination Bonus: Honey Vial (55,000 additional obstacle destruction points + 12% slower stamina reduction)\r\n• Unlock condition: Possess 60 S-class evolution treasures",
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "연근요괴 Cookie",
-  "kr_name": "연근요괴맛 쿠키",
-  "grade": "S",
-  "ability": "• 체력 : 140~160\r\n• 능력 : 연근 요괴 변신 1~8단\r\n• 조합보너스 : 연밥 유모 (장애물 통과점수 증가 + 체력감소 12% 느림\r\n• 해금조건 : 연밥 유모 펫 보유",
-  "ability_en": "• Stamina: 140~160\r\n• Ability: Lotus Root Yokai Transformation 1~8\r\n• Combination Bonus: Kite Nanny (Increased score for passing obstacles + 12% slower stamina loss)\r\n• Unlock condition: Own a lotus nanny pet",
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "Princess Cookie",
-  "kr_name": "공주맛 쿠키",
-  "grade": "A",
-  "ability": "• 체력 : 130~150\r\n • 능력 : 충돌피해 30~50% 감소\r\n • 조합보너스 : 공주의 장신구 (펫 쿨타임 10% 감소)\r\n • 해금조건 : 젤리 레벨 15 달성",
-  "ability_en": "• Stamina: 130~150\r\n • Ability: Reduces collision damage by 30-50%.\r\n • Combination Bonus: Princess’s Accessories (Pet cooldown reduced by 10%)\r\n • Unlock condition: Reach jelly level 15",
-  "image": "images-char/cookies_princess_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Muscle Cookie",
-  "kr_name": "근육맛 쿠키",
-  "grade": "A",
-  "ability": "• 체력 : 130~150 \r\n • 능력 : 충돌무시 50~75% \r\n • 조합보너스 : 쌍둥이 덤벨 (충돌무시 20%)\r\n • 해금조건 : 점수 450,000점 달성",
-  "ability_en": "• Stamina: 130~150 \r\n • Ability: Collision ignore 50~75% \r\n • Combination bonus: Twin dumbbells (collision ignore 20%)\r\n • Unlock condition: Achieve 450,000 points",
-  "image": "images-char/cookies_muscle_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Boarder Cookie",
-  "kr_name": "보더맛 쿠키",
-  "grade": "A",
-  "ability": "• 체력 : 130~150\r\n • 능력 : 기본속도 15~35% 빠름\r\n • 조합보너스 : 럭키다이스 형제 (기본속도 20% 증가)\r\n • 해금조건 : 점수 300,000점 달성",
-  "ability_en": "• Stamina: 130~150\r\n • Ability: Base speed 15-35% faster\r\n • Combination Bonus: Lucky Dice Brothers (base speed increased by 20%)\r\n • Unlock condition: Achieve 300,000 points",
-  "image": "images-char/cookies_boarder_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Knight Cookie",
-  "kr_name": "용사맛 쿠키",
-  "grade": "A",
-  "ability": "• 체력 : 130~150\r\n • 능력 : 광속질주 강화 1단~레전드 (광속질주 시간, 속도 40% 증가)(능력 발동 중 소환수 탑승 인정)\r\n • 조합보너스 : 용의 꼬리 (광속질주 속도 20% 증가)\r\n • 해금조건 : 체력 레벨 15 달성",
-  "ability_en": "• Stamina: 130~150\r\n • Ability: Light Speed Enhancement Level 1~Legend (Light Speed Speed Increase time and speed by 40%) (Minions are allowed to ride while the ability is in effect)\r\n • Combination Bonus: Dragon’s Tail (light speed increased by 20%)\r\n • Unlock condition: Reach stamina level 15",
-  "image": "images-char/cookies_knight_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Zombie Cookie",
-  "kr_name": "좀비맛 쿠키",
-  "grade": "A",
-  "ability": "• 체력 : 130~150\r\n • 능력 : 체력 30으로 부활 1회~체력 17로 부활 8회\r\n • 조합보너스 : 브레인껌 (좀비 부활 시 추가체력 10 증가)\r\n • 해금조건 : 친구 50명 보유\r\n\r\n※ 조합보너스는 좀비맛 쿠키의 부활 능력만 적용됨",
-  "ability_en": "• Stamina: 130~150\r\n • Ability: Resurrect once with stamina 30 ~ Resurrect eight times with stamina 17\r\n • Combination Bonus: Brain Gum (Additional health increases by 10 when zombies are revived)\r\n • Unlock condition: Have 50 friends.\r\n\r\n※ The combination bonus only applies to the resurrection ability of zombie-flavored cookies.",
-  "image": "images-char/cookies_zombie_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Coffee Cookie",
-  "kr_name": "커피맛 쿠키",
-  "grade": "A",
-  "ability": "• 체력 : 130~150 \r\n • 능력 : 회복량 20~29% 증가 \r\n • 조합보너스 : 생크림 모카커피 (펫 쿨타임 30% 감소)\r\n • 해금조건 : 레벨 15 달성",
-  "ability_en": "• Stamina: 130~150 \r\n • Ability: Increases recovery by 20-29% \r\n • Combination Bonus: Whipped Cream Mocha Coffee (Pet cooldown reduced by 30%)\r\n • Unlock condition: Reach level 15",
-  "image": "images-char/cookies_coffee_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Ginger Claus",
-  "kr_name": "산타맛 쿠키",
-  "grade": "A",
-  "ability": "• 체력 : 110~160 \r\n • 능력 : 코인 13~20%, 경험치 3~10% 추가획득 \r\n • 조합보너스 : 산타모자 (펫 쿨타임 35% 감소), 산타양말 (기본속도 10% 증가)\r\n • 해금조건 : 친구 125명 보유",
-  "ability_en": "• Stamina: 110~160 \r\n • Ability: Gain 13-20% additional coins and 3-10% additional experience. \r\n • Combination bonus: Santa hat (pet cool time reduced by 35%), Santa socks (base speed increased by 10%)\r\n • Unlock condition: Have 125 friends.",
-  "image": "images-char/cookies_santa_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Cloud Cookie",
-  "kr_name": "구름맛 쿠키",
-  "grade": "B",
-  "ability": "• 체력 : 100~135\r\n • 능력 : 아이템지속 15~35% 증가\r\n • 조합보너스 : 구름사탕 (시작 시 보너스타임 발동)\r\n • 해금조건 : 펫 5종 보유",
-  "ability_en": "• Stamina: 100~135\r\n • Ability: Increases item duration by 15-35%.\r\n • Combination Bonus: Cloud Candy (Bonus time activated at start)\r\n • Unlock condition: Own 5 types of pets",
-  "image": "images-char/cookies_cloud_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Strawberry Cookie",
-  "kr_name": "딸기맛 쿠키",
-  "grade": "B",
-  "ability": "• 체력 : 100~135\r\n • 능력 : 추가 보너스타임 1~5초\r\n • 조합보너스 : 플라워콥터 (경험치 15% 보너스)\r\n • 해금조건 : 친구 3명 보유",
-  "ability_en": "• Stamina: 100~135\r\n • Ability: Additional bonus time 1~5 seconds\r\n • Combination Bonus: Flower Copter (15% experience bonus)\r\n • Unlock condition: Have 3 friends",
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "Buttercream Choco Cookie",
-  "kr_name": "버터크림 초코쿠키",
-  "grade": "B",
-  "ability": "• 체력 : 100~135\r\n • 능력 : 코인보너스 5~25%\r\n • 조합보너스 : 뭉치 유니콘 (펫 쿨타임 20% 감소)\r\n • 해금조건 : 점수 180,000점 달성",
-  "ability_en": "• Stamina: 100~135\r\n • Ability: Coin bonus 5~25%\r\n • Combination Bonus: Bundle of Unicorns (Pet cooldown reduced by 20%)\r\n • Unlock condition: Achieve 180,000 points",
-  "image": "images-char/cookies_buttercream_choco_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "Cream Cookie",
-  "kr_name": "쿠키앤크림 쿠키",
-  "grade": "B",
-  "ability": "• 체력 : 100~135\r\n • 능력 : 체력감소 10~17% 느림\r\n • 조합보너스 : 포근실타래 (추가체력 20 보너스)\r\n • 해금조건 : 레벨 8 달성",
-  "ability_en": "• Stamina: 100~135\r\n • Ability: Stamina decreases 10-17% slower.\r\n • Combination Bonus: Cozy Thread (20 additional health bonus)\r\n • Unlock condition: Reach level 8",
-  "image": "images-char/cookies_cookies_and_cream_cookie.png"
- },
- {
-  "kind": "cookie",
-  "name": "GingerBrave",
-  "kr_name": "용감한 쿠키군",
-  "grade": "C",
-  "ability": "• 체력 : 100~110\r\n• 능력 : 용감함~짱짱 용감함\r\n• 조합보너스 : 초코방울 (추가체력 5 보너스)\r\n• 해금조건 : 기본 해금",
-  "ability_en": "• Stamina: 100~110\r\n• Ability: Brave~Very brave\r\n• Combination Bonus: Chocolate Drop (5 additional health bonus)\r\n• Unlock conditions: Basic unlock",
-  "image": null
- },
- {
-  "kind": "cookie",
-  "name": "GingerBright",
-  "kr_name": "명랑한 쿠키양",
-  "grade": "C",
-  "ability": "• 체력 : 100~110\r\n • 능력 : 경험치 추가 5~12%\r\n • 조합보너스 : 치즈방울 (추가체력 40 보너스)\r\n • 해금조건 : 점수 30,000점 달성",
-  "ability_en": "• Stamina: 100~110\r\n • Ability: Experience added by 5~12%\r\n • Combination Bonus: Cheese Drop (40 additional health bonus)\r\n • Unlock condition: Achieve 30,000 points",
-  "image": null
- },
- {
-  "kind": "pet",
-  "name": "Bean Drop Duo",
-  "kr_name": "방울방울 콩콩이",
-  "grade": "E",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_bouncing_bean.png"
- },
- {
-  "kind": "pet",
-  "name": "King Choco Drop",
-  "kr_name": "초코 왕방울",
-  "grade": "L",
-  "ability": "• 능력 : 호위하며 젤리 생성\r\n호위 1~8단\r\n• 조합보너스 : 없음\r\n• 보유효과 : 에피소드 1 \"오븐 탈출\"에서 일정 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커진다)\r\n\r\n※ 에피소드1 유물 특별 보상",
-  "ability_en": "• Ability: Escort and create jelly\r\nEscort ranks 1 to 8\r\n• Combination bonus: None\r\n• Possession effect: Mystery box is created with a certain probability in Episode 1 “Escape from the Oven” (the probability increases as it is upgraded)\r\n\r\n※ Episode 1 artifact special reward",
-  "image": "images-char/pets_choco_king_drop.png"
- },
- {
-  "kind": "pet",
-  "name": "Enchanted Locket",
-  "kr_name": "공주의 장신구",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_princess_jewelry.png"
- },
- {
-  "kind": "pet",
-  "name": "Ginger Ghost",
-  "kr_name": "꼬마유령",
-  "grade": "S",
-  "ability": "• 능력 : 구출 1~8회\r\n • 조합보너스 : 닌자맛 쿠키",
-  "ability_en": "• Ability: Rescue 1~8 times\r\n • Combination Bonus: Ninja Flavored Cookie",
-  "image": "images-char/pets_little_ghost.png"
- },
- {
-  "kind": "pet",
-  "name": "Pirate's Bomb",
-  "kr_name": "해적의 폭탄",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_pirate_bomb.png"
- },
- {
-  "kind": "pet",
-  "name": "Snow Blossom",
-  "kr_name": "눈꽃송이",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_snowflake.png"
- },
- {
-  "kind": "pet",
-  "name": "Jellyco Cube",
-  "kr_name": "젤리코 큐브",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_jellyco_cube.png"
- },
- {
-  "kind": "pet",
-  "name": "AWOL Cracker",
-  "kr_name": "건빵 보급병",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_hardtack_supply.png"
- },
- {
-  "kind": "pet",
-  "name": "Glitter Ball",
-  "kr_name": "반짝이볼",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_twinkle_ball.png"
- },
- {
-  "kind": "pet",
-  "name": "Gold Drop",
-  "kr_name": "황금방울",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_gold_drop.png"
- },
- {
-  "kind": "pet",
-  "name": "Flame Bat",
-  "kr_name": "불꽃박쥐",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_flame_bat.png"
- },
- {
-  "kind": "pet",
-  "name": "Windy",
-  "kr_name": "바람이",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_windy.png"
- },
- {
-  "kind": "pet",
-  "name": "Foxy Bead",
-  "kr_name": "여우구슬",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_fox_bead.png"
- },
- {
-  "kind": "pet",
-  "name": "Book of Wizdom",
-  "kr_name": "마법사전",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_magic_dictionary.png"
- },
- {
-  "kind": "pet",
-  "name": "Magic Pod",
-  "kr_name": "꽃봉오리",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_flower_bud.png"
- },
- {
-  "kind": "pet",
-  "name": "Spotlight Fan",
-  "kr_name": "스포트라이트",
-  "grade": "S",
-  "ability": "• 능력 : 27~13초마다 4초 동안 스포트라이트 효과 발동(체력감소 90% 느림, 자력 효과, 장애물 충돌 무시)\r\n • 조합보너스 : 락스타맛 쿠키 (음표 젤리 점수 추가), 카주카틀리맛 쿠키(체력감소 20% 빠름)",
-  "ability_en": "• Ability: Spotlight effect activates for 4 seconds every 27 to 13 seconds (slows health reduction by 90%, ignores magnetic effects and obstacle collisions)\r\n • Combination bonus: Rockstar-flavored cookies (added musical note jelly points), Kaju Katli-flavored cookies (health reduction 20% faster)",
-  "image": "images-char/pets_spotlight.png"
- },
- {
-  "kind": "pet",
-  "name": "Rocket Firecracker",
-  "kr_name": "로켓폭죽",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_rocket_firecracker.png"
- },
- {
-  "kind": "pet",
-  "name": "Yule Log Cake",
-  "kr_name": "통나무케이크",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_log_cake.png"
- },
- {
-  "kind": "pet",
-  "name": "Snow Globe",
-  "kr_name": "스노우 글로브",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_snow_globe.png"
- },
- {
-  "kind": "pet",
-  "name": "Lucky Pouch",
-  "kr_name": "복주머니",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_lucky_pouch.png"
- },
- {
-  "kind": "pet",
-  "name": "Pink Candy",
-  "kr_name": "핑크캔디",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_pink_candy.png"
- },
- {
-  "kind": "pet",
-  "name": "Purple Candle",
-  "kr_name": "보라보라 향초",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_purple_candle.png"
- },
- {
-  "kind": "pet",
-  "name": "Pistachio Firefly",
-  "kr_name": "반딧불이",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_firefly.png"
- },
- {
-  "kind": "pet",
-  "name": "Jelly Scale",
-  "kr_name": "젤리저울",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_jelly_scale.png"
- },
- {
-  "kind": "pet",
-  "name": "Coin Scale",
-  "kr_name": "코인저울",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_coin_scale.png"
- },
- {
-  "kind": "pet",
-  "name": "Oak Barrel",
-  "kr_name": "참나무 주스통",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_oak_juice_barrel.png"
- },
- {
-  "kind": "pet",
-  "name": "Green Apple Rabbit",
-  "kr_name": "토끼사과",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_rabbit_apple.png"
- },
- {
-  "kind": "pet",
-  "name": "Fluffy Cheese Cat",
-  "kr_name": "치즈뭉치 고양이",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_cheese_cat.png"
- },
- {
-  "kind": "pet",
-  "name": "Lemon Slice",
-  "kr_name": "조각레몬",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_lemon_slice.png"
- },
- {
-  "kind": "pet",
-  "name": "Backpacky",
-  "kr_name": "배낭이",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_backpacky.png"
- },
- {
-  "kind": "pet",
-  "name": "Ghost Butler",
-  "kr_name": "집사 유령",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_butler_ghost.png"
- },
- {
-  "kind": "pet",
-  "name": "Kiwi Bird",
-  "kr_name": "키위새",
-  "grade": "S",
-  "ability": "• 능력 : 28~14초마다 키위맛 거대화 아이템 생성\r\n • 조합보너스 : 키위맛 쿠키 (키위젤리 점수 추가 + 체력감소 13% 느림)",
-  "ability_en": "• Ability: Creates a kiwi-flavored giant item every 28 to 14 seconds.\r\n • Combination bonus: Kiwi flavor cookie (kiwi jelly points added + stamina loss slowed by 13%)",
-  "image": "images-char/pets_kiwi_bird.png"
- },
- {
-  "kind": "pet",
-  "name": "Furball Pup",
-  "kr_name": "털뭉치 멍뭉이",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_fluffy_pup.png"
- },
- {
-  "kind": "pet",
-  "name": "Ms. Do-Re-Mi",
-  "kr_name": "미스 도레미",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_miss_doremi.png"
- },
- {
-  "kind": "pet",
-  "name": "Mr. Fa-Sol-La-Si",
-  "kr_name": "미스터 파솔라시",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_mr_fasollasi.png"
- },
- {
-  "kind": "pet",
-  "name": "Marshmallow Hamster",
-  "kr_name": "마시멜로 햄찌",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_marshmallow_hamster.png"
- },
- {
-  "kind": "pet",
-  "name": "Paprika Punching Bag",
-  "kr_name": "파프리카 샌드백",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_paprika_punching_bag.png"
- },
- {
-  "kind": "pet",
-  "name": "Owlcorn",
-  "kr_name": "도토리 부엉이",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_acorn_owl.png"
- },
- {
-  "kind": "pet",
-  "name": "Mini Jackson 2",
-  "kr_name": "미니 잭슨 2호",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_mini_jackson_2.png"
- },
- {
-  "kind": "pet",
-  "name": "Tea Cup",
-  "kr_name": "홍차 찻잔",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_black_tea_cup.png"
- },
- {
-  "kind": "pet",
-  "name": "Elctro Lemon",
-  "kr_name": "레몬 전지",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_lemon_battery.png"
- },
- {
-  "kind": "pet",
-  "name": "Mini Orange Mouse",
-  "kr_name": "어린쥐",
-  "grade": "S",
-  "ability": "• 능력 : 24~14초마다 광속질주 아이템 제작 + 속도 점수 1~8단\r\n• 조합보너스 : 오렌지맛 쿠키 (과즙젤리 점수 추가 + 체력감소 8% 느림)",
-  "ability_en": "• Ability: Create light speed item every 24~14 seconds + speed score 1~8\r\n• Combination Bonus: Orange Flavored Cookie (Additional Juice Jelly Points + 8% slower stamina reduction)",
-  "image": "images-char/pets_orange_mouse.png"
- },
- {
-  "kind": "pet",
-  "name": "White Gold Drop",
-  "kr_name": "백금방울",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_platinum_drop.png"
- },
- {
-  "kind": "pet",
-  "name": "Mr. Squeak",
-  "kr_name": "미스터 삑",
-  "grade": "S",
-  "ability": "• 능력 : 구출/부활 체력 40 3회 + 이어달리기 체력 160 증가\r\n• 조합보너스 : 라임맛 쿠키 (과즙젤리 점수 추가 + 체력감소 8% 느림)",
-  "ability_en": "• Ability: Rescue/resurrection stamina 40 3 times + continuous run stamina increased by 160\r\n• Combination Bonus: Lime Flavored Cookie (Additional Juice Jelly Points + 8% slower stamina reduction)",
-  "image": "images-char/pets_mr_squeak.png"
- },
- {
-  "kind": "pet",
-  "name": "Paper Boat Sailor",
-  "kr_name": "종이배 선원",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_paper_boat_sailor.png"
- },
- {
-  "kind": "pet",
-  "name": "Panda Dumpling",
-  "kr_name": "판다 만두",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_panda_dumpling.png"
- },
- {
-  "kind": "pet",
-  "name": "Uncooling Teacup",
-  "kr_name": "식지 않는 찻잔",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_warm_teacup.png"
- },
- {
-  "kind": "pet",
-  "name": "Onion Fish",
-  "kr_name": "양파 물고기",
-  "grade": "S",
-  "ability": "• 능력 : 양파즙 뿌리기 1단 ~ 양파즙 뿌리기 8단\r\n• 조합보너스 : 양파맛 쿠키 (장애물 통과점수 15,200점 추가)",
-  "ability_en": "• Abilities: Onion Juice Spray Level 1 ~ Onion Juice Spray Level 8\r\n• Combination Bonus: Onion-flavored Cookies (15,200 points added for passing obstacles)",
-  "image": "images-char/pets_onion_fish.png"
- },
- {
-  "kind": "pet",
-  "name": "Cinnamon Bunny",
-  "kr_name": "시나몬롤 토끼",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_cinnamon_roll_bunny.png"
- },
- {
-  "kind": "pet",
-  "name": "Frozen Wave Drop",
-  "kr_name": "파도방울",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_wave_drop.png"
- },
- {
-  "kind": "pet",
-  "name": "Castanets",
-  "kr_name": "캐스터네츠",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_castanets.png"
- },
- {
-  "kind": "pet",
-  "name": "Sweet Rice Seal",
-  "kr_name": "찹쌀 하프물범",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_sticky_rice_seal.png"
- },
- {
-  "kind": "pet",
-  "name": "Pocket Watch Referee",
-  "kr_name": "회중시계 심판",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_pocket_watch_referee.png"
- },
- {
-  "kind": "pet",
-  "name": "Herb Teapot",
-  "kr_name": "허브티팟",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_herb_teapot.png"
- },
- {
-  "kind": "pet",
-  "name": "Dino Egg",
-  "kr_name": "팝핑 용알",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_popping_dragon_egg.png"
- },
- {
-  "kind": "pet",
-  "name": "Cotton Candy Dove",
-  "kr_name": "솜사탕 비둘기",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_cotton_candy_dove.png"
- },
- {
-  "kind": "pet",
-  "name": "Light Bros",
-  "kr_name": "라이트 형제",
-  "grade": "S",
-  "ability": "• 능력 : 24~17초 마다 광속질주 + 체력감소 15% 느림\r\n • 조합보너스 : 롤케이크맛 쿠키 (장애물 파괴점수 15,000점 추가)",
-  "ability_en": "• Ability: Speed of light every 24~17 seconds + 15% slower stamina reduction\r\n • Combination Bonus: Roll Cake Flavored Cookie (15,000 additional obstacle destruction points)",
-  "image": "images-char/pets_light_brothers.png"
- },
- {
-  "kind": "pet",
-  "name": "Savannahna Lion",
-  "kr_name": "사바나나 사자",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_savabana_lion.png"
- },
- {
-  "kind": "pet",
-  "name": "Pancake Frisbee",
-  "kr_name": "팬케이크 원반",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_pancake_frisbee.png"
- },
- {
-  "kind": "pet",
-  "name": "Moon Mortar",
-  "kr_name": "달절구",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_moon_mortar.png"
- },
- {
-  "kind": "pet",
-  "name": "Tiny Cake Hound",
-  "kr_name": "작은 케이크 들개",
-  "grade": "S",
-  "ability": "• 능력 : 속도 점수, 딸기 생명물약 생성\r\n• 조합보너스 : 딸기쇼트케이크맛 쿠키 (케이크조각 젤리 점수추가)\r\n\r\n※ 친구 10명 초대 또는 패키지 구매로 획득가능",
-  "ability_en": "• Abilities: Speed score, create strawberry life potion\r\n• Combination bonus: Strawberry shortcake flavor cookie (cake piece jelly score added)\r\n\r\n※ Can be obtained by inviting 10 friends or purchasing a package",
-  "image": "images-char/pets_little_cake_hound.png"
- },
- {
-  "kind": "pet",
-  "name": "Tiny Tabla",
-  "kr_name": "꼬마북",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_little_drum.png"
- },
- {
-  "kind": "pet",
-  "name": "Parrot Dada",
-  "kr_name": "앵무할아범",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_grandpa_parrot.png"
- },
- {
-  "kind": "pet",
-  "name": "Soft Egg Bunny",
-  "kr_name": "말랑 에그버니",
-  "grade": "S",
-  "ability": "• 능력 : 23~16초마다 장애물 파괴, 생명물약/젤리 생성(물약을 5번 나눠서 생성)\r\n• 조합보너스 : 멜로우버니 쿠키(모든 젤리 1,400점 추가 + 체력감소 8% 느림)\r\n\r\n※ 친구 15명 초대 또는 패키지 구매로 획득가능",
-  "ability_en": "• Ability: Destroys obstacles every 23 to 16 seconds, creates life potion/jelly (produces potion 5 times)\r\n• Combination Bonus: Mellow Bunny Cookie (1,400 points added to all jellies + 8% slower stamina reduction)\r\n\r\n※ Can be obtained by inviting 15 friends or purchasing a package",
-  "image": "images-char/pets_soft_egg_bunny.png"
- },
- {
-  "kind": "pet",
-  "name": "Cucu-dding",
-  "kr_name": "오이푸딩 개구리",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_cucumber_pudding_frog.png"
- },
- {
-  "kind": "pet",
-  "name": "Elder Black Rice",
-  "kr_name": "흑돌 흑미 선생",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_black_rice_stone_master.png"
- },
- {
-  "kind": "pet",
-  "name": "Elder White Rice",
-  "kr_name": "백돌 백미 선생",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_white_rice_stone_master.png"
- },
- {
-  "kind": "pet",
-  "name": "Pegaplush",
-  "kr_name": "용마 인형",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_dragon_horse_doll.png"
- },
- {
-  "kind": "pet",
-  "name": "Ghoul Cake",
-  "kr_name": "꿀떡 영혼",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_honey_rice_cake_soul.png"
- },
- {
-  "kind": "pet",
-  "name": "Tater Trader",
-  "kr_name": "다사라 빵",
-  "grade": "S",
-  "ability": "• 능력 : 약 15초마다 거대화 아이템과 코인 생성 + 이동속도 비례 코인 획득\r\n • 조합보너스 : 감자샐러드맛 쿠키 (미니자력 + 거대화시 속도증가)\r\n\r\n※ 조합보너스의 미니자력은 일반적인 미니자력보다 약함",
-  "ability_en": "• Ability: Create giant items and coins approximately every 15 seconds + acquire coins proportional to movement speed\r\n • Combination Bonus: Potato Salad Flavor Cookie (Mini Magnetism + Speed Increase when Enlarged)\r\n\r\n※ The mini magnetism of the combination bonus is weaker than the general mini magnetism.",
-  "image": "images-char/pets_dasara_bread.png"
- },
- {
-  "kind": "pet",
-  "name": "Lady Mudang",
-  "kr_name": "벌레무당",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_ladybug_shaman.png"
- },
- {
-  "kind": "pet",
-  "name": "Kimchi Bell",
-  "kr_name": "깍둑방울",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_cube_drop.png"
- },
- {
-  "kind": "pet",
-  "name": "Choronicles of Run",
-  "kr_name": "런중일기",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_run_diary.png"
- },
- {
-  "kind": "pet",
-  "name": "Choco Hedgehog",
-  "kr_name": "쫀쫀 초코도치",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": null
- },
- {
-  "kind": "pet",
-  "name": "Sotdae Flock",
-  "kr_name": "솟대가족",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": null
- },
- {
-  "kind": "pet",
-  "name": "Manggae Snail",
-  "kr_name": "망개잎 달팽이",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": null
- },
- {
-  "kind": "pet",
-  "name": "Baby Spore",
-  "kr_name": "아기홀씨",
-  "grade": "S",
-  "ability": "• 능력 : 23~16초마다 꽃잎을 타고 앞으로 날아가고, 지나간 자리에는 봄꽃 젤리들과 날개달린 생명물약이 생성됨\r\n• 조합보너스 : 민들레요정맛 쿠키 (민들레 홀씨 점수 증가 + 체력감소 7% 느림)\r\n\r\n※ 친구 20명 초대 또는 패키지 구매로 획득가능",
-  "ability_en": "• Ability: Fly forward on the petals every 23 to 16 seconds, and spring flower jellies and winged life potions are created where you pass.\r\n• Combination Bonus: Dandelion Fairy Flavor Cookie (Dandelion Seed Score Increase + Stamina Decrease 7% Slow)\r\n\r\n※ Can be obtained by inviting 20 friends or purchasing a package",
-  "image": null
- },
- {
-  "kind": "pet",
-  "name": "Honey Gourd",
-  "kr_name": "꿀 호리병",
-  "grade": "S",
-  "ability": "• 능력 : 21~14초마다 광속질주 꿀젤리 파티 아이템 생성\r\n• 조합보너스 : 카이막맛 쿠키 (장애물 파괴점수 55,000점 추가 + 체력감소 12% 느림)",
-  "ability_en": "• Ability: Creates a speed-of-light honey jelly party item every 21 to 14 seconds.\r\n• Combination Bonus: Kaimak Flavored Cookie (Additional 55,000 obstacle destruction points + 12% slower stamina reduction)",
-  "image": null
- },
- {
-  "kind": "pet",
-  "name": "White Dragon Horsie",
-  "kr_name": "백묭",
-  "grade": "S",
-  "ability": null,
-  "ability_en": null,
-  "image": null
- },
- {
-  "kind": "pet",
-  "name": "Lotus Sitter",
-  "kr_name": "연밥 유모",
-  "grade": "S",
-  "ability": "• 능력 : 연꽃방울 젤리 생성 21~14초 (주변 장애물들을 통과상태로 만듦)\r\n• 조합보너스 : 연근요괴맛 쿠키 (장애물 통과점수 증가 + 체력감소 12% 느림)",
-  "ability_en": "• Ability: Create lotus drop jelly in 21~14 seconds (makes surrounding obstacles passable)\r\n• Combination Bonus: Lotus Root Yokai Flavored Cookie (Increased obstacle passing score + 12% slower stamina loss)",
-  "image": null
- },
- {
-  "kind": "pet",
-  "name": "Lucky Dice Bros",
-  "kr_name": "럭키다이스 형제",
-  "grade": "A",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_lucky_dice_bros.png"
- },
- {
-  "kind": "pet",
-  "name": "Brain Gum",
-  "kr_name": "브레인껌",
-  "grade": "A",
-  "ability": "• 능력 : 체력감소 10~15% 느림\r\n • 조합보너스 : 좀비맛 쿠키(좀비 부활시 체력 10 증가)\r\n\r\n※ 조합보너스는 좀비맛 쿠키의 부활 능력만 적용됨",
-  "ability_en": "• Ability: Slows down health by 10-15%.\r\n • Combination Bonus: Zombie-flavored cookies (strength increases by 10 when zombies are revived)\r\n\r\n※ The combination bonus only applies to the resurrection ability of zombie-flavored cookies.",
-  "image": "images-char/pets_brain_gum.png"
- },
- {
-  "kind": "pet",
-  "name": "Dragon's Tail",
-  "kr_name": "용의 꼬리",
-  "grade": "A",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_dragon_tail.png"
- },
- {
-  "kind": "pet",
-  "name": "Wishing Star",
-  "kr_name": "천사의 별",
-  "grade": "A",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_angel_star.png"
- },
- {
-  "kind": "pet",
-  "name": "Flowercopter",
-  "kr_name": "플라워콥터",
-  "grade": "A",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_flower_copter.png"
- },
- {
-  "kind": "pet",
-  "name": "Luck o' Lantern",
-  "kr_name": "빛나는 럭키 호박",
-  "grade": "A",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_shining_lucky_pumpkin.png"
- },
- {
-  "kind": "pet",
-  "name": "Dust Unicorn",
-  "kr_name": "뭉치유니콘",
-  "grade": "B",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_fluffy_unicorn.png"
- },
- {
-  "kind": "pet",
-  "name": "Hat of Santa",
-  "kr_name": "산타모자",
-  "grade": "B",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_santa_hat.png"
- },
- {
-  "kind": "pet",
-  "name": "Mocha Delight",
-  "kr_name": "생크림 모카커피",
-  "grade": "B",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_whipped_cream_mocha.png"
- },
- {
-  "kind": "pet",
-  "name": "Witty Dumbell",
-  "kr_name": "쌍둥이 덤벨",
-  "grade": "B",
-  "ability": "• 능력 : 29~15초마다 거대화 아이템 제작\r\n • 조합보너스 : 근육맛 쿠키 (충돌무시 확률 +20%)",
-  "ability_en": "• Ability: Create giant items every 29 to 15 seconds.\r\n • Combination Bonus: Muscle Cookie (Collision Ignore Chance +20%)",
-  "image": "images-char/pets_twin_dumbbell.png"
- },
- {
-  "kind": "pet",
-  "name": "Cozy Yarn",
-  "kr_name": "포근실타래",
-  "grade": "B",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_cozy_yarn.png"
- },
- {
-  "kind": "pet",
-  "name": "Rare Garlic",
-  "kr_name": "안깐 마늘",
-  "grade": "B",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_unpeeled_garlic.png"
- },
- {
-  "kind": "pet",
-  "name": "Electric Beat",
-  "kr_name": "테크노볼",
-  "grade": "B",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_techno_ball.png"
- },
- {
-  "kind": "pet",
-  "name": "Drop of Choco",
-  "kr_name": "초코방울",
-  "grade": "C",
-  "ability": "• 능력 : 10~3초마다 곰젤리 제작\r\n • 조합보너스 : 용감한 쿠키군 (추가체력 5 보너스)",
-  "ability_en": "• Ability: Create bear jelly every 10 to 3 seconds.\r\n • Combination Bonus: Brave Cookie (5 additional stamina bonus)",
-  "image": "images-char/pets_choco_drop.png"
- },
- {
-  "kind": "pet",
-  "name": "Cheeseberry",
-  "kr_name": "치즈방울",
-  "grade": "C",
-  "ability": "• 능력 : 5~1초마다 놓친 젤리 먹기\r\n • 조합보너스 : 명랑한 쿠키양 (시작시 체력 40 추가)",
-  "ability_en": "• Ability: Eat missed jelly every 5 to 1 second.\r\n • Combination Bonus: Cheerful Cookie (40 additional stamina at start)",
-  "image": "images-char/pets_cheese_drop.png"
- },
- {
-  "kind": "pet",
-  "name": "Air Drop",
-  "kr_name": "구름사탕",
-  "grade": "C",
-  "ability": "• 능력 : 보너스타임에서 덩치가 2~4배로 커짐\r\n • 조합보너스 : 구름맛 쿠키 (시작시 보너스타임 발동)",
-  "ability_en": "• Ability: Size increases 2 to 4 times during bonus time.\r\n • Combination Bonus: Cloud-flavored Cookie (Bonus time activated at start)",
-  "image": "images-char/pets_cloud_candy.png"
- },
- {
-  "kind": "pet",
-  "name": "Forgotten Stocking",
-  "kr_name": "산타양말",
-  "grade": "C",
-  "ability": "• 능력 : 기본속도가 3~10% 빨라짐\r\n • 조합보너스 : 산타맛 쿠키 (기본속도 10% 증가)",
-  "ability_en": "• Ability: Base speed increases by 3~10%\r\n • Combination Bonus: Santa-flavored Cookie (base speed increased by 10%)",
-  "image": "images-char/pets_santa_sock.png"
- },
- {
-  "kind": "pet",
-  "name": "Joraengi Jelly",
-  "kr_name": "조랭이젤리",
-  "grade": "C",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_joraengi_jelly.png"
- },
- {
-  "kind": "pet",
-  "name": "Hand of Liker",
-  "kr_name": "좋은손",
-  "grade": "C",
-  "ability": null,
-  "ability_en": null,
-  "image": "images-char/pets_good_hand.png"
- }
+  {
+    "kind": "cookie",
+    "name": "Tiger Lily Cookie",
+    "kr_name": "정글전사 쿠키",
+    "grade": "L",
+    "ability": "• 체력 : 165~185\r\n• 능력 : 창 던지기 1~8단 (일정시간마다 장애물을 풀잎으로 변화시키는 창을 던짐, 창이 떨어진 곳에는 창과 함께 곰젤리나 생명물약이 꽂혀있음, 창을 일정 횟수 던지면 버터 호랑이 탑승)(능력 발동 중 소환수 탑승 인정)\r\n• 조합보너스 : 털뭉치 멍뭉이 (정글전사 파괴점수 58,388점 추가)\r\n• 보유효과 : 에피소드 2 \"원시림\"에서 일정한 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커짐)\r\n• 해금조건 : 에피소드 2 유물 특별 보상",
+    "ability_en": "• Stamina: 165~185\r\n• Ability: Spear Throw 1~8 (Throws a spear that changes obstacles into blades of grass at certain intervals. Where the spear lands, there is a bear jelly or life potion with the spear. If you throw the spear a certain number of times, ride a butter tiger) (Summons are allowed to ride while the ability is activated)\r\n• Combination Bonus: Furball Doggo (Jungle Warrior Destruction Points 58,388 added)\r\n• Possession effect: Mystery box is created with a certain probability in Episode 2 “Primitive Forest” (the probability increases as it is upgraded)\r\n• Unlock conditions: Episode 2 artifact special reward",
+    "image": "images-char/cookies_jungle_warrior_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Fire Spirit Cookie",
+    "kr_name": "불꽃정령 쿠키",
+    "grade": "L",
+    "ability": "• 체력 : 165~185\r\n• 능력 : 불꽃 부활 1~8단 (부활할때마다 불꽃으로 변신하여 날아감, 불꽃 변신 중 모든 젤리 점수 추가, 체력 30으로 1~6회 부활)\r\n• 조합보너스 : 없음\r\n• 보유효과 : 에피소드 3 \"용의 협곡\"에서 일정한 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커짐)\r\n• 해금조건 : 에피소드 3 유물 특별 보상",
+    "ability_en": "• Stamina: 165~185\r\n• Ability: Flame Resurrection 1~8 (Every time you resurrect, transform into a flame and fly away, add all jelly points during flame transformation, revive 1~6 times with 30 stamina)\r\n• Combination bonus: None\r\n• Possession effect: Mystery box is created with a certain probability in Episode 3 “Dragon’s Canyon” (the probability increases as it is upgraded)\r\n• Unlock conditions: Episode 3 artifact special reward",
+    "image": "images-char/cookies_fire_spirit_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Moonlight Cookie",
+    "kr_name": "달빛술사 쿠키",
+    "grade": "L",
+    "ability": "• 체력 : 165~185\r\n• 능력 : 꿈 마법 1~8단\r\n• 조합보너스 : 미니 잭슨 2호 (그믐달 젤리 점수 23,500점 추가)\r\n• 보유효과 : 에피소드 4 \"마법사들의 도시\"에서 일정한 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커짐)\r\n• 해금조건 : 에피소드 4 유물 특별 보상",
+    "ability_en": "• Stamina: 165~185\r\n• Ability: Dream Magic 1~8 levels\r\n• Combination Bonus: Mini Jackson No. 2 (23,500 Old Moon Jelly points added)\r\n• Possession effect: Mystery box is created with a certain probability in Episode 4 “City of Wizards” (the probability increases as it is upgraded)\r\n• Unlock conditions: Episode 4 artifact special reward",
+    "image": "images-char/cookies_moonlight_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Sea Fairy Cookie",
+    "kr_name": "바다요정 쿠키",
+    "grade": "L",
+    "ability": "• 체력 : 165~185\r\n• 능력 : 파도질주 1~8단\r\n• 조합보너스 : 파도방울 (바다결정 젤리 점수 14,500점 추가)\r\n• 보유효과 : 장애물 충돌시 일정확률로 충돌 데미지의 일부를 회복 (업그레이드 될 수록 회복량이 더 커짐)\r\n• 해금조건 : 쿠키들의 따뜻한 마음 100개 획득",
+    "ability_en": "• Stamina: 165~185\r\n• Ability: Wave Dash 1~8\r\n• Combination Bonus: Wave Drop (14,500 Sea Crystal Jelly points added)\r\n• Possession effect: When colliding with an obstacle, some of the collision damage is recovered with a certain probability (the more upgraded, the greater the recovery amount)\r\n• Unlock condition: Acquire 100 Warm Hearts of Cookies",
+    "image": "images-char/cookies_sea_fairy_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Wind Archer Cookie",
+    "kr_name": "바람궁수 쿠키",
+    "grade": "L",
+    "ability": "• 체력 : 165~185\r\n• 능력 : 바람질주 1~8단\r\n• 조합보너스 : 반딧불이 (깃털젤리 5,700점 추가)\r\n• 보유효과 : 에피소드 5 \"디저트 파라다이스\"에서 일정한 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커짐)\r\n• 해금조건 : 에피소드 5 유물 특별 보상",
+    "ability_en": "• Stamina: 165~185\r\n• Ability: Wind Dash 1~8\r\n• Combination Bonus: Firefly (5,700 additional feather jelly points)\r\n• Possession effect: Mystery box is created with a certain probability in Episode 5 “Dessert Paradise” (the probability increases as it is upgraded)\r\n• Unlock conditions: Episode 5 artifact special reward",
+    "image": "images-char/cookies_wind_archer_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Blooming Dancheong Cookie",
+    "kr_name": "매화단청 쿠키",
+    "grade": "L",
+    "ability": "• 체력 : 165~185\r\n• 능력 : 매화단청 용 소환 1~8단 (일정 시간 마다 매화 젤리와 매화 코인을 생성, 게이지가 가득 차면, 매화단청 용을 소환하여 주변 젤리들을 매화 젤리와 매화 코인으로 변환시키고  큰 용을 발사할 때 체력 회복)\r\n• 조합보너스 : 없음\r\n• 보유효과 : 에피소드 6 \"황천의 매화궁\"에서 일정한 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커짐)\r\n• 해금조건 : 에피소드 6 유물 특별 보상",
+    "ability_en": "• Stamina: 165~185\r\n• Ability: Plum Blossom Dancheong Dragon Summoning Levels 1 to 8 (Generates Plum Jelly and Plum Coins at certain intervals. When the gauge is full, summons Plum Blossom Dancheong Dragon, converts surrounding jellies into Plum Jelly and Plum Coins, and recovers stamina when firing a large dragon.)\r\n• Combination bonus: None\r\n• Possession effect: Mystery box is created with a certain probability in Episode 6, “Plum Palace in the Nether” (the probability increases as it is upgraded)\r\n• Unlock conditions: Episode 6 artifact special reward",
+    "image": "images-char/cookies_plum_dancheong_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Princess Bari Cookie",
+    "kr_name": "바리공주맛 쿠키",
+    "grade": "SS",
+    "ability": "• 체력 : 150~170\r\n• 능력 : 천도 1~8단\r\n• 조합보너스 : 꿀떡 영혼 (체력감소 12% 느림 + 꽃젤리 점수 추가)\r\n• 해금조건 : 바리공주맛 쿠키의 영혼석 20개 획득\r\n• 특이사항 : 레벨업시 바리공주맛 쿠키의 영혼석 소모",
+    "ability_en": "• Stamina: 150~170\r\n• Ability: Heavenly Path 1~8 Dan\r\n• Combination Bonus: Honey Rice Cake Soul (12% slower stamina reduction + additional flower jelly points)\r\n• Unlock condition: Obtain 20 Bari Princess Cookie’s Soul Stones\r\n• Special note: When leveling up, the soul stone of Princess Bari Cookie is consumed.",
+    "image": "images-char/cookies_princess_bari_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Admiral Gimbap Cookie",
+    "kr_name": "충무김밥맛 쿠키",
+    "grade": "SS",
+    "ability": "• 체력 : 150~170\r\n• 능력 : 충무돌격 1~8단\r\n• 조합보너스 : 런중일기 (모든젤리 점수 1,200점 추가 + 체력감소 12% 느림)\r\n• 해금조건 : 충무김밥맛 쿠키의 영혼석 20개 획득\r\n• 특이사항 : 레벨업시 충무김밥맛 쿠키의 영혼석 소모",
+    "ability_en": "• Stamina: 150~170\r\n• Ability: Collision Charge 1~8\r\n• Combination Bonus: Running Diary (1,200 points added to all jelly points + 12% slower stamina reduction)\r\n• Unlock condition: Obtain 20 Soul Stones of Chungmu Gimbap Cookie\r\n• Special note: Chungmu Gimbap Cookie’s Soul Stone is consumed when leveling up.",
+    "image": "images-char/cookies_chungmu_gimbap_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Pine Monk Cookie",
+    "kr_name": "금강법사맛 쿠키",
+    "grade": "SS",
+    "ability": "• 체력 : 150~170\r\n• 능력 : 거대 불상 1~8단\r\n• 조합보너스 : 백묭\r\n• 해금조건 : 금강법사맛 쿠키의 영혼석 20개 획득\r\n• 특이사항 : 레벨업시 금강법사맛 쿠키의 영혼석 소모",
+    "ability_en": "• Stamina: 150~170\r\n• Ability: Giant Buddha 1~8 levels\r\n• Combination bonus: 100%\r\n• Unlock condition: Obtain 20 Soulstones of Geumgang Wizard Cookie.\r\n• Special note: Soul stone of Diamond Mage Cookie is consumed when leveling up.",
+    "image": null
+  },
+  {
+    "kind": "cookie",
+    "name": "Ninja Cookie",
+    "kr_name": "닌자맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 150~160\r\n • 능력 : 3~10단 점프\r\n • 조합보너스 : 꼬마유령 (2단 점프부터 300점 추가)\r\n • 해금조건 : 점수 600,000점 달성",
+    "ability_en": "• Stamina: 150~160\r\n • Ability: 3 to 10 jumps\r\n • Combination Bonus: Little Ghost (300 points added from 2nd jump)\r\n • Unlock condition: Achieve 600,000 points",
+    "image": "images-char/cookies_ninja_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Angel Cookie",
+    "kr_name": "천사맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 자력 효과 (초미니자력+미니자력과 비슷한 세기)\r\n • 조합보너스 : 천사의 별 (펫 능력으로 부활 시 추가체력 40)\r\n • 해금조건 : 레벨 30 달성",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Magnetic force effect (minimum magnetism + strength similar to mini magnetism)\r\n • Combination Bonus: Angel’s Star (40 additional health when revived with pet ability)\r\n • Unlock condition: Reach level 30",
+    "image": "images-char/cookies_angel_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Pirate Cookie",
+    "kr_name": "해적맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 체력이 다 떨어지면 유령해적 상태(체력 160)로 부활\r\n • 조합보너스 : 해적의 폭탄 (펫 능력 1초 증가)\r\n • 해금조건 : 친구 100명 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: When health runs out, resurrect as a ghost pirate (health 160)\r\n • Combination Bonus: Pirate Bomb (pet ability increases by 1 second)\r\n • Unlock condition: Have 100 friends.",
+    "image": "images-char/cookies_pirate_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Skating Queen Cookie",
+    "kr_name": "피겨여왕맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 연기점수 추가 1~8단 (2단점프, 광속질주, 보너스타임 진입시 추가점수 획득)\r\n • 조합보너스 : 눈꽃송이 (체력감소 10% 느림)\r\n • 해금조건 : 레벨 45 달성",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Additional acting points 1 to 8 (additional points are obtained when jumping 2nd stage, running at the speed of light, and entering bonus time)\r\n • Combination Bonus: Snowflake (10% slower stamina reduction)\r\n • Unlock condition: Reach level 45",
+    "image": "images-char/cookies_skating_queen_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Hero Cookie",
+    "kr_name": "히어로맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 히어로 변신 1~8단 (15.5초마다 5초 동안 자력을 탑재한 히어로 변신)\r\n • 조합보너스 : 젤리코 큐브 (모든젤리 점수 1,900점 추가)\r\n • 해금조건 : 친구 150명 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Hero transformation levels 1 to 8 (Hero transformation with magnetic force for 5 seconds every 15.5 seconds)\r\n • Combination Bonus: Jellico Cube (1,900 points added to all jellies)\r\n • Unlock condition: Have 150 friends.",
+    "image": "images-char/cookies_hero_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Special Force Cookie",
+    "kr_name": "특전사맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 별사탕 사격 1~8단 (별사탕 사격에 맞은 장애물은 일정확률로 파괴됨)\r\n • 조합보너스 : 건빵 보급병 (별사탕 젤리 점수 6,000점 추가)\r\n • 보유효과 : 게임 중 불시에 나타나서 지원사격을 퍼부어 줌\r\n • 해금조건 : 만렙인 쿠키 10종 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Star Candy Shooting 1~8 (Obstacles hit by Star Candy Shooting are destroyed with a certain probability)\r\n • Combination Bonus: Biscuits Supply Unit (6,000 star candy jelly points added)\r\n • Possession effect: Appears unexpectedly during the game and provides support fire.\r\n • Unlock condition: Have 10 types of cookies at max level.",
+    "image": "images-char/cookies_special_forces_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cheerleader Cookie",
+    "kr_name": "치어리더맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 치어리더 응원단 1~8단 (점프 18회 달성시 응원단이 등장해 장애물을 제거해주며 코인과 젤리를 생성)\r\n • 조합보너스 : 반짝이볼 (체력감소 15% 느림)\r\n • 보유효과 : 게임 중 불시에 나타나서 체력을 30 회복시켜줌 (업그레이드 될 수록 회복량이 더 커짐)\r\n • 해금조건 : 만렙인 펫 12종 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Cheerleader cheerleading tier 1-8 (when you complete 18 jumps, a cheering squad appears, removes obstacles, and creates coins and jelly)\r\n • Combination Bonus: Glitter Ball (15% slower stamina reduction)\r\n • Possession effect: Appears unexpectedly during the game and restores 30 stamina (the more upgraded, the greater the recovery amount)\r\n • Unlock condition: Have 12 pets at max level.",
+    "image": "images-char/cookies_cheerleader_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Devil Cookie",
+    "kr_name": "악마맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 150~160\r\n • 능력 : 슈퍼 악마로 변신 1~8단 (쿠키들의 영혼을 흡수 시 슈퍼 악마로 변신)\r\n • 조합보너스 : 불꽃박쥐 (원혼젤리 점수 30,000점 추가)\r\n • 해금조건 : 레벨 50 달성",
+    "ability_en": "• Stamina: 150~160\r\n • Ability: Transform into a super devil 1~8 (transforms into a super devil when absorbing the souls of cookies)\r\n • Combination Bonus: Flame Bat (Additional 30,000 Ghost Jelly points)\r\n • Unlock condition: Reach level 50",
+    "image": "images-char/cookies_devil_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Ninetales Cookie",
+    "kr_name": "구미호맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 150~160\r\n • 능력 : 구미호 변신 1~8단 (체력이 천천히 줄어들고, 2단점프 9회시 구미호 상태로 변신, 구미호 상태에서 곰젤리(노랑, 분홍, 왕곰젤리)를 유혹하여 추가점수 획득)\r\n • 조합보너스 : 여우구슬 (유혹당한 곰젤리 점수 5000점 추가)\r\n • 해금조건 : 레벨 55 달성",
+    "ability_en": "• Stamina: 150~160\r\n • Ability: Nine-tailed fox transformation levels 1 to 8 (HP slowly decreases, transforms into nine-tailed fox form when jumping 9 times, earns additional points by seducing bear jellies (yellow, pink, big bear jellies) in nine-tailed fox form)\r\n • Combination Bonus: Fox Bead (5000 points added to Tempted Bear Jelly)\r\n • Unlock condition: Reach level 55",
+    "image": "images-char/cookies_kumiho_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Rebel Cookie",
+    "kr_name": "의적맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 160~180\r\n • 능력 : 3~10단 점프 순간이동, 구름 분신 (10단 점프를 하며 공중에서 슬라이드 버튼을 누르면 순간이동 착지, 2단점프부터 2,700점 추가, 구름 분신으로 부활)\r\n • 조합보너스 : 바람이 (펫이 획득한 점수 40% 추가)\r\n • 해금조건 : 친구 120명 보유",
+    "ability_en": "• Stamina: 160~180\r\n • Abilities: 3~10 jump teleportation, cloud clone (when you jump 10 steps and press the slide button in the air, you land teleportation, 2,700 points are added from the 2nd jump, and you are revived as a cloud clone)\r\n • Combination Bonus: Wind (adds 40% to the points earned by the pet)\r\n • Unlock condition: Have 120 friends.",
+    "image": "images-char/cookies_rebel_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Wizard Cookie",
+    "kr_name": "마법사맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 150~160\r\n • 능력 : 마법 1~8클래스 (매직 미사일 발사, 대마법 발동)\r\n • 조합보너스 : 마법사전 (기본속도 20% 증가), 미니 잭슨 2호 (모든 젤리 점수 1,200점 추가)\r\n • 해금조건 : 만렙인 펫 16종 보유",
+    "ability_en": "• Stamina: 150~160\r\n • Abilities: Magic classes 1 to 8 (firing magic missiles, activating anti-magic)\r\n • Combination bonus: Wizard War (base speed increased by 20%), Mini Jackson No. 2 (all jelly points added by 1,200 points)\r\n • Unlock condition: Own 16 types of pets at max level.",
+    "image": "images-char/cookies_wizard_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Fairy Cookie",
+    "kr_name": "요정맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 160~180\r\n • 능력 : 자력 보호막 생성 1~8단 (천사맛 쿠키 자력보다 근소하게 자력이 약함)\r\n • 조합보너스 : 꽃봉오리 (경험치 15% 보너스)\r\n • 보유효과 : 게임 중 일정한 확률로 보호막 생성\r\n • 해금조건 : +9 강화 보물 5개 보유",
+    "ability_en": "• Stamina: 160~180\r\n • Ability: Magnetic shield creation level 1~8 (Magnetic power is slightly weaker than that of angel-flavored cookies)\r\n • Combination Bonus: Flower Bud (15% experience bonus)\r\n • Possession effect: Creates a shield with a certain probability during the game.\r\n • Unlock condition: Hold 5 +9 enhanced treasures",
+    "image": "images-char/cookies_fairy_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Rockstar Cookie",
+    "kr_name": "락스타맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 슬라이드-업 1~8단 (슬라이드 지속시간에 따라 음표 젤리 발사, 최대 게이지에 도달했을때 음표 발사시 장애물 파괴)\r\n • 조합보너스 : 스포트라이트 (음표젤리 점수 900점 추가)\r\n • 해금조건 : 보물 20개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Slide-Up 1~8 (Fires note jelly depending on the slide duration, destroys obstacles when shooting a note when the maximum gauge is reached)\r\n • Combination Bonus: Spotlight (900 additional note jelly points)\r\n • Unlock condition: Possess 20 treasures",
+    "image": "images-char/cookies_rockstar_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Carol Cookie",
+    "kr_name": "음유시인맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 마법의 노래 1~8단 (7번 이단 점프를 할때마다 생명의 노래(체력 회복)-파괴의 노래(장애물 파괴, 젤리 생성)-풍요의 노래(코인 생성) 순으로 연주가 바뀜)\r\n • 조합보너스 : 통나무 케이크 (체력감소 15% 느림)\r\n • 해금조건 : 레벨 57 달성",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Magic Song 1~8 (Every time you double jump 7 times, the performance changes in the following order: Song of Life (recovers health) - Song of Destruction (destroys obstacles, creates jelly) - Song of Abundance (creates coins).\r\n • Combination Bonus: Log Cake (15% slower stamina reduction)\r\n • Unlock condition: Reach level 57",
+    "image": "images-char/cookies_minstrel_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cherry Cookie",
+    "kr_name": "체리맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 체리폭탄 1~8단 (체리폭탄을 던져 장애물을 파괴하며 체리젤리를 생성. 속도가 점점 빨라지는데 최대 10%까지 빨라지고, 주기도 짧아진다. 장애물 충돌 시 원래 속도로 돌아간다.)\r\n • 조합보너스 : 로켓폭죽 (체리젤리 점수 2,000점 추가), 스포트라이트 (체리젤리 점수 1,900점 추가)\r\n • 해금조건 : +9 보물 8개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Cherry Bomb 1~8 (Throws a cherry bomb, destroying obstacles and creating cherry jelly. The speed gradually increases, up to 10%, and the cycle becomes shorter. When it collides with an obstacle, it returns to the original speed.)\r\n • Combination Bonus: Rocket Firecracker (2,000 additional Cherry Jelly points), Spotlight (1,900 additional Cherry Jelly points)\r\n • Unlock condition: Hold 8 +9 treasures",
+    "image": "images-char/cookies_cherry_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Snow Sugar Cookie",
+    "kr_name": "눈설탕맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 눈소환수 소환 1~8단 (일정시간마다 장애물을 부수고 눈꽃젤리를 생성하는 스노우콘 소환수를 소환, 눈꽃젤리를 모으면 눈보라를 일으키는 스노우킹 소환수 소환)\r\n • 조합보너스 : 스노우 글로브 (눈꽃젤리 점수 4,200점 추가)\r\n • 해금조건 : S급 보물 12개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Summon Snow Summoner 1~8 (Summons Snowcone Summoner that destroys obstacles and creates snowflake jelly at regular intervals. Summons Snow King Summoner that creates a blizzard when collecting snowflake jelly).\r\n • Combination Bonus: Snow Globe (4,200 Snowflake Jelly points added)\r\n • Unlock condition: Possess 12 S-class treasures",
+    "image": "images-char/cookies_snow_sugar_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Pink Choco Cookie",
+    "kr_name": "핑크초코쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 하트빔 발사 1~8단 (일정시간마다 핑크봉봉 젤리 생성+장애물 파괴)\r\n • 조합보너스 : 핑크캔디 (장애물 파괴점수 3,000점 추가)\r\n • 해금조건 : 친구 160명 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Heart Beam Fire 1~8 (Generates Pink Bonbon Jelly + Destroys Obstacles at certain intervals)\r\n • Combination Bonus: Pink Candy (3,000 additional obstacle destruction points)\r\n • Unlock condition: Have 160 friends.",
+    "image": "images-char/cookies_pink_choco_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Prophet Cookie",
+    "kr_name": "예언자맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 예지력 1~8단 (예언을 하면 예언대로 상황이 바뀜)\r\n • 조합보너스 : 보라보라 향초 (향초 젤리 점수 50점 추가)\r\n • 해금조건 : 만렙인 쿠키 20개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Foresight 1~8 (If you make a prophecy, the situation will change according to the prophecy)\r\n • Combination Bonus: Bora Bora Scented Candle (50 points added to Scented Candle Jelly)\r\n • Unlock condition: Have 20 cookies at max level.",
+    "image": "images-char/cookies_prophet_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Pistachio Cookie",
+    "kr_name": "피스타치오맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 신성한 돌진 1~8단 (일정시간마다 빠른 속도, 무적상태로 돌진, 돌진이 끝난 후 체력 회복, 모든 젤리 점수 700점 추가, 광속질주시 모든 젤리 점수 500점 추가)\r\n • 조합보너스 : 반딧불이 (모든 젤리 점수 1,100점 추가), 토끼사과 (기본속도 25% 증가)\r\n • 해금조건 : 레벨 60 달성",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Holy Charge 1~8 (Charge at high speed and invincibility at certain intervals, recover stamina after charging, add 700 points to all jelly points, add 500 points to all jelly points when sprinting at the speed of light)\r\n • Combination Bonus: Firefly (1,100 points added to all jellies), Rabbit Apple (base speed increased by 25%)\r\n • Unlock condition: Reach level 60",
+    "image": "images-char/cookies_pistachio_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Alchemist Cookie",
+    "kr_name": "연금술사맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 연금술 1~8단 (일정시간마다 연금술 시약을 완성하여 2단점프로 던져 특정한 젤리(곰젤리, 코인, 아이템)들을 생성, 착지할때마다 시약 종류가 바뀜)\r\n • 조합보너스 : 코인저울, 젤리저울 (경험치 20% 보너스)\r\n • 해금조건 : +9 강화 보물 11개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Alchemy levels 1 to 8 (Complete the alchemy reagent at a certain time and throw it in a double jump to create specific jellies (bear jelly, coins, items), and the type of reagent changes each time you land)\r\n • Combination bonus: Coin scale, jelly scale (20% experience bonus)\r\n • Unlock condition: Possess 11 +9 enhanced treasures",
+    "image": "images-char/cookies_alchemist_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Vampire Cookie",
+    "kr_name": "뱀파이어맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 박쥐변신 1~8단 (일정시간마다 포도알 박쥐로 변신하여 장애물을 통과하며 빠르게 날아감, 장애물에서 포도주스 방울을 추출하여 체력을 회복함, 장애물 통과시 67,000점 추가)\r\n • 조합보너스 : 참나무 주스통 (장애물 통과 점수 77,000점 추가)\r\n • 해금조건 : S급 보물 17개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Bat Transformation 1~8 (At certain intervals, it transforms into a grape bat and flies quickly through obstacles. Recovers stamina by extracting drops of grape juice from obstacles. 67,000 points are added when passing an obstacle.)\r\n • Combination Bonus: Oak Juice Canister (77,000 points added for passing obstacles)\r\n • Unlock condition: Possess 17 S-class treasures",
+    "image": "images-char/cookies_vampire_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Apple Cookie",
+    "kr_name": "풋사과맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 알파벳 비눗방울 1~8단 (일정시간마다 알파벳이 들어있는 비눗방울 젤리를 생성, 보너스타임에서 풍선젤리 생성, 체력비례 속도 증가)\r\n • 조합보너스 : 토끼사과 (풍선 젤리 점수 2,300점 추가)\r\n • 해금조건 : 체력 레벨 50 달성",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Alphabet Bubble Level 1~8 (Creates soap bubble jelly containing the alphabet at certain times, creates balloon jelly at bonus time, increases speed in proportion to stamina)\r\n • Combination Bonus: Rabbit Apple (2,300 Balloon Jelly points added)\r\n • Unlock condition: Reach stamina level 50",
+    "image": "images-char/cookies_green_apple_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cheesecake Cookie",
+    "kr_name": "치즈케이크맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 코인폭죽파티 1~8단 (파티초대장 젤리를 12개 모으면 코인폭죽파티가 시작됨)\r\n • 조합보너스 : 치즈뭉치 고양이 (기본속도 10% 증가), 황금방울 (미니자력 + 코인 15% 보너스), 런중일기(런중일기 펫이 점수 대신 코인을 획득)\r\n • 보유효과 : 게임중 일정한 확률로 코인폭죽파티 발동\r\n • 해금조건 : 펫 24종 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Coin Firecracker Party Level 1~8 (Coin Firecracker Party starts when you collect 12 party invitation jellies)\r\n • Combination bonus: Cheesecake Cat (base speed increased by 10%), Golden Drop (mini magnetism + 15% coin bonus), Run Diary (Run Diary pet earns coins instead of points)\r\n • Possession effect: Coin firework party is activated with a certain probability during the game.\r\n • Unlock condition: Own 24 types of pets",
+    "image": "images-char/cookies_cheesecake_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Soda Cookie",
+    "kr_name": "소다맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 서핑 1~8단 (생명물약을 먹으면 일정시간동안 소다 파도를 일으켜 서핑보드를 타고 질주, 서핑보드 탑승시 장애물을 파괴하고 모든 젤리 점수 1,200점 추가)\r\n• 조합보너스 : 조각레몬 (조각레몬 거품젤리 점수 3,000점 추가)\r\n• 해금조건 : 만렙인 쿠키 25종 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: Surfing 1~8 (When you take a life potion, you can create soda waves for a certain period of time and sprint on the surfboard. When riding the surfboard, destroy obstacles and add 1,200 points to all jelly points)\r\n• Combination Bonus: Slice Lemon (Slice Lemon Bubble Jelly score adds 3,000 points)\r\n• Unlock condition: Have 25 types of cookies at max level.",
+    "image": "images-char/cookies_soda_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Adventurer Cookie",
+    "kr_name": "탐험가맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 잊혀진 유적 탐험 1~8단 (일정 거리마다 바닥에 있는 구멍에 신비한 문을 열어 잊혀진 유적을 탐험, 잊혀진 유적에서 대량의 코인 등장, 낮은 확률로 미스터리 박스 출현)\r\n • 조합보너스 : 배낭이 (코인 10% 보너스)\r\n • 해금조건 : 친구 200명 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Forgotten Ruins Exploration 1~8 (Explore Forgotten Ruins by opening mysterious doors in holes in the floor at certain distances, large amounts of coins appear in Forgotten Ruins, mystery boxes appear with a low probability)\r\n • Combination Bonus: Backpack (10% coin bonus)\r\n • Unlock condition: Have 200 friends.",
+    "image": "images-char/cookies_adventurer_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Blackberry Cookie",
+    "kr_name": "블랙베리맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 원혼 다루기 1~8단 (주위를 감싼 원혼들이 수시로 젤리를 먹으며 블랙베리젤리를 생성하며 일정시간마다 특별한 젤리를 생성함)\r\n • 조합보너스 : 집사 유령 (블랙베리 젤리 점수 4,500점 증가)\r\n • 해금조건 : +9 강화 보물 16개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Dealing with Vengeful Spirits 1~8 (Ghosts surrounding the surroundings frequently eat jelly and create blackberry jelly, and create special jellies at certain times)\r\n • Combination Bonus: Butler Ghost (Blackberry Jelly score increases by 4,500 points)\r\n • Unlock condition: Possess 16 +9 enhanced treasures",
+    "image": "images-char/cookies_blackberry_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Kiwi Biker Cookie",
+    "kr_name": "키위맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 바이크 질주 1~8단 (일정시간마다 오토바이를 타고 질주하며, 질주하는 동안 키위 연료젤리를 먹으면 순간가속하여 더 오래 질주함)\r\n • 조합보너스 : 키위새 (키위젤리 점수 n점 추가+체력감소 13% 느림)\r\n • 해금조건 : S급 보물 25개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Bike Sprint 1~8 (Speed on a motorcycle at certain intervals, and if you eat Kiwi Fuel Jelly while sprinting, you will instantly accelerate and run longer)\r\n • Combination Bonus: Kiwi Bird (kiwi jelly score added n points + stamina reduction slowed by 13%)\r\n • Unlock condition: Possess 25 S-class treasures",
+    "image": "images-char/cookies_kiwi_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Werewolf Cookie",
+    "kr_name": "웨어울프맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 늑대 변신 1~8단 (일정시간마다 늑대로 변신하고, 늑대 상태에서는 장애물을 날려버리고 장애물 파괴점수를 받음 (체력이 적을수록 더 자주 변신함))\r\n • 조합보너스 : 털뭉치 멍뭉이 (늑대 상태에서 파괴점수 25,000점 추가)\r\n • 해금조건 : 만렙인 펫 25종 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Wolf Transformation Level 1~8 (Transforms into a wolf at certain intervals, blows away obstacles while in wolf state and receives obstacle destruction points (the lower the stamina, the more frequently the transformation occurs))\r\n • Combination Bonus: Furball Dog (25,000 additional destruction points in wolf state)\r\n • Unlock condition: Have 25 pets at max level.",
+    "image": "images-char/cookies_werewolf_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Mint Choco Cookie",
+    "kr_name": "민트초코쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 바이올린 연주 1단~8단(바이올린을 연주해 공중에 코인을 생성함)\r\n• 조합보너스 : 미스 도레미(코인 점수 추가), 미스터 파솔라시(코인 12% 보너스), 백금방울(코인 꽃 생성), 런중일기(런중일기 펫이 점수 대신 코인을 획득)\r\n• 해금조건 : 쿠키 40종 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: Play the violin 1st to 8th (play the violin to create coins in the air)\r\n• Combination Bonuses: Miss Doremi (coin points added), Mr. Fasolassi (coin 12% bonus), Platinum Drop (creates coin flower), Run Diary (Run Diary pet earns coins instead of points)\r\n• Unlock condition: Have 40 types of cookies",
+    "image": "images-char/cookies_mint_choco_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cocoa Cookie",
+    "kr_name": "코코아맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 코코아컵 1~8단\r\n• 조합보너스 : 마시멜로 햄찌 (코코아 마시멜로 점수 5,300점 추가)\r\n• 진화 보물 5개 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: Cocoa Cups 1 to 8\r\n• Combination Bonus: Marshmallow Hamchi (5,300 Cocoa Marshmallow points added)\r\n• Have 5 evolution treasures",
+    "image": "images-char/cookies_cocoa_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Muay Thai Cookie",
+    "kr_name": "홍고추맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 투지 1~8단 (일정시간마다 충돌하는 모든 장애물을 날려버리며, 체력이 다했을때 1회 부활, 장애물 파괴점수 추가, 일정 확률로 충돌무시)\r\n • 조합보너스 : 파프리카 샌드백 (기본속도 20% 증가)\r\n • 해금조건 : S급 보물 30개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Fighting Spirit 1~8 (Blows away all obstacles that collide at certain intervals, revives once when stamina runs out, adds obstacle destruction points, ignores collisions with a certain probability)\r\n • Combination Bonus: Paprika Sandbag (20% increase in base speed)\r\n • Unlock condition: Possess 30 S-class treasures",
+    "image": "images-char/cookies_red_pepper_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cream Puff Cookie",
+    "kr_name": "슈크림맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Performs small magic tricks for a set period of time. She starts running with a low probability of triggering a big magic trick that increases whenever she fails to trigger one. When successful, the probability gauge will reset. (With upgrades, she can do big magic tricks more often)",
+    "image": "images-char/cookies_cream_puff_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Gumball Cookie",
+    "kr_name": "버블껌맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "He loads Gumballs while jumping and shoots while sliding. The shots destroy obstacles and receives shot points. Consecutive shots increase points! Gumball can be loaded up to 20 times. (More shot points are received with upgrades).",
+    "image": "images-char/cookies_bubble_gum_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cherry Blossom Cookie",
+    "kr_name": "벚꽃맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Creates Cherry Blossom Jellies while flying at a given interval. Cherry Blossom Jelly Party is created at bonus time. (More frequent flies with upgrades).",
+    "image": "images-char/cookies_cherry_blossom_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Lemon Cookie",
+    "kr_name": "레몬맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 전기 보호막 1~8단 \r\n • 조합보너스 : 레몬 전지 (번개질주 파괴점수 75,000점 추가)\r\n • 해금조건 : 펫 50종 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Electric Shield Level 1~8 \r\n • Combination Bonus: Lemon Battery (75,000 Lightning Fast destruction points added)\r\n • Unlock condition: Own 50 types of pets",
+    "image": "images-char/cookies_lemon_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Orange Cookie",
+    "kr_name": "오렌지맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140 ~ 160\r\n• 능력 : 파워 테니스 1~8단\r\n• 조합보너스 : 어린쥐 (과즙젤리 점수 추가 + 체력감소 8% 느림)\r\n• 해금조건 : 만렙인 쿠키 42종 보유하기",
+    "ability_en": "• Stamina: 140 ~ 160\r\n• Ability: Power Tennis 1st to 8th Dan\r\n• Combination Bonus: Young Rat (Additional Juice Jelly points + 8% slower stamina reduction)\r\n• Unlock condition: Have 42 types of cookies at max level.",
+    "image": "images-char/cookies_orange_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Lime Cookie",
+    "kr_name": "라임맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140 ~ 160\r\n• 능력 : 슈퍼 비치볼 1~8단\r\n• 조합보너스 : 미스터 삑 (과즙젤리 점수 추가 + 체력감소 8% 느림)\r\n• 해금조건 : s급 보물 60개 보유",
+    "ability_en": "• Stamina: 140 ~ 160\r\n• Ability: Super Beach Ball 1~8\r\n• Combination Bonus: Mr. Beep (Additional juice jelly points + 8% slower stamina reduction)\r\n• Unlock condition: Possess 60 S-class treasures",
+    "image": "images-char/cookies_lime_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Peppermint Cookie",
+    "kr_name": "박하사탕맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Blows conch shell to call upon the Peppermint Whale, which takes Peppermint Cookie on its back and create Sea Bubble Jellies. Dolphins are called upon, instead of jumping or sliding, to eat the Jellies while riding. (More frequent Peppermint Whale appearances with upgrades)",
+    "image": "images-char/cookies_peppermint_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "General Jujube Cookie",
+    "kr_name": "대추맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Rides his Red Jujube Horse and destroy obstacles and arrows flying his way at a given interval. A Candy Scimitar button replaces the Slide button during skill trigger, pressing it will turn obstacles into Jujube Slice Jellies. (More frequent skill trigger with upgrades.) (Horseback riding counts as a Ride.)",
+    "image": "images-char/cookies_jujube_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Peach Cookie",
+    "kr_name": "복숭아맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Enter Bamboo Forest and fights Bamboo Assasins at a given interval. Receive points for fighting Bamboo Assasins, and even more points for continuous attacks. In the Bamboo Forest, 5 Step Jumps are possible due to some kind of mystical energy. (More Destruction Points with upgrades)",
+    "image": "images-char/cookies_peach_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Onion Cookie",
+    "kr_name": "양파맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Enters Haunted House and goes through obstacles at a given interval. Extra points for going through obstacles. (More frequent visit to the Haunted House with upgrades.)",
+    "image": "images-char/cookies_onion_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cinnamon Cookie",
+    "kr_name": "시나몬맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Performs various Card Tricks at a given interval. Surprises with Revival Magic one time. (More frequent Card Tricks with upgrades.)",
+    "image": "images-char/cookies_cinnamon_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Macaron Cookie",
+    "kr_name": "마카롱맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 행진 1~8단\r\n• 조합보너스 : 캐스터네츠 (마카롱 젤리 480점 추가)\r\n• 해금조건 : 캐스터네츠 펫 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: March 1st to 8th level\r\n• Combination Bonus: Castanets (Macaron Jelly 480 points added)\r\n• Unlock condition: Own Castanets pet.",
+    "image": "images-char/cookies_macaron_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Red Bean Cookie",
+    "kr_name": "단팥맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Collects Fish Treat jelly while running. Rides Penguin Sled at a given interval, depending on the number of collected Fish Treat Jellies, the faster the sled. (Penguin Sled counts as a Ride.)",
+    "image": "images-char/cookies_red_bean_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "White Choco Cookie",
+    "kr_name": "화이트초코 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Slide for a given amount of time and stand up to destroy obstacles. When the small gauge fills up, the Cookie will destroy nearby obstacles. When the large gauge fills up, the Cookie will Blast a short distance. When the Blast is over, large amounts of obstacles are destroyed. All obstacles destroyed by White Choco Cookie turn into White Choco Jelly. Faster speed will fill up the small gauge more quickly.",
+    "image": "images-char/cookies_white_choco_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Herb Cookie",
+    "kr_name": "허브맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Rain Jelly and Sun Jelly will appear at a given interval. Collect Rain Jelly to fill the Raindrop Gauge. When Raindrop Gauge is full, no more raindrops can be saved. Collect Sun Jelly to bring out the Sun. The Sun uses the collected raindrops to turn regular Jelly into Sprout Jelly. (More frequent Rain Jelly and Sun Jelly with upgrades.)",
+    "image": "images-char/cookies_herb_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Dino-sour Cookie",
+    "kr_name": "다이노사워 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/cookies_dino_sour_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cotton Candy Cookie",
+    "kr_name": "솜사탕맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Collects unusual alphabets and goes to a special Bonus Time. Send a love letter through Bird Post during Bonus Time to create Heart Jellies. Throws away unfinished love letters, which destroys obstacles and creates Cotton Candy Jellies. (Alphabet Jellies occasionally appear in between regular Jellies)",
+    "image": "images-char/cookies_cotton_candy_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Roll Cake Cookie",
+    "kr_name": "롤케이크맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 로드롤러 탑승 1~8단\r\n• 조합보너스 : 라이트 형제 (장애물 파괴점수 15,000점 추가)\r\n• 해금조건 : 라이트 형제 펫 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: Road roller riding 1st to 8th gear\r\n• Combination Bonus: Wright Brothers (15,000 additional obstacle destruction points)\r\n• Unlock condition: Own a Wright Brothers pet",
+    "image": "images-char/cookies_roll_cake_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Banana Cookie",
+    "kr_name": "바나나맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 서커스 1~8단 (일정 시간마다 훌라후프와 함께 원숭이가 나타남, 원숭이로 훌라후프를 통과한 수치에 따라 코인이 쏟아짐)\r\n • 조합보너스 : 사바나나 사자 (코인 10% 보너스), 젤리저울 (코인점수 추가), 런중일기(런중일기 펫이 점수 대신 코인을 획득)\r\n • 해금조건 : 사바나나 사자 펫 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Circus 1~8 (A monkey appears with a hula hoop at certain times, coins pour out depending on how many times the monkey passes the hula hoop)\r\n • Combination Bonus: Savannah Lion (10% coin bonus), Jelly Scale (coin points added), Run Diary (Run Diary pet earns coins instead of points)\r\n • Unlock condition: Own a savannah or lion pet.",
+    "image": "images-char/cookies_banana_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Pancake Cookie",
+    "kr_name": "팬케이크맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 파닥파닥 1~8단\r\n• 조합보너스 : 팬케이크 원반 (기본속도 20% 증가)\r\n• 해금조건 : 롤케이크맛 쿠키 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: flutter flutter 1~8\r\n• Combination Bonus: Pancake Disk (base speed increased by 20%)\r\n• Unlock condition: Having roll cake flavored cookies",
+    "image": "images-char/cookies_pancake_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Moon Rabbit Cookie",
+    "kr_name": "달토끼맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Transforms into giant Rice Cake Bunny at given intervals. Giant Rice Cake Bunny's landings create Honey Rice Cake jellies. Giant Rice Cake Bunny's size gets bigger and jumps become higher as time goes by.",
+    "image": "images-char/cookies_moon_rabbit_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Strawberry Shortcake Cookie",
+    "kr_name": "딸기쇼트케이크맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 거대 케이크들개 1~8단 (일정시간마다 개껌젤리가 나타나고 획득 시 네 발로 질주, 개껌젤리를 4개 모으면 거대 케이크들개에 탑승하고 주변의 젤리들을 케이크조각 젤리로 변화시킴)(거대 케이크들개 탑승 중 소환수 탑승 인정)\r\n • 조합보너스 : 작은 케이크들개 (케이크조각 젤리 점수 추가), 코인저울 (코인 15% 보너스)\r\n • 해금조건 : 쫑긋달콤 딸기조각 400개 획득",
+    "ability_en": "• Stamina: 140~160\r\n • Abilities: Giant Cake Dog 1~8 (Dog gum jellies appear at certain times and when acquired, run on all fours. When you collect 4 dog gummies, you ride the giant cake dog and change surrounding jellies into cake piece jellies) (Summons are allowed to ride while riding the giant cake dog)\r\n • Combination bonus: Small cakes (add cake piece jelly points), coin scale (15% coin bonus)\r\n • Unlock conditions: Obtain 400 sweet and juicy strawberry pieces.",
+    "image": "images-char/cookies_strawberry_shortcake_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Gulab Jamun Cookie",
+    "kr_name": "굴랍자문맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "At certain intervals, starts a festival, dancing to the music and splashing colors to create Gulab Jamun Jellies and Coins. When the skill ends, sets off a bigger color splash proportional to the number of Gulab Jamun Jellies collected.",
+    "image": "images-char/cookies_gulab_jamun_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Kaju Katli Cookie",
+    "kr_name": "카주카틀리맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 창술사 1~8단 (일정시간마다 창을 던져 장애물을 파괴하고 그 자리에 카주 카틀리 젤리를 생성, 던진 창을 주우면 광속질주함)\r\n • 조합보너스 : 앵무할아범 (초미니자력 + 체력감소 속도 13% 느림), 스포트라이트 (체력감소 20% 빠름)\r\n • 해금조건 : \tS급 진화 보물 35개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Spearman 1~8th level (Throws a spear at certain intervals to destroy obstacles and creates Kazu Katli jelly in its place. When the thrown spear is picked up, it runs at the speed of light)\r\n • Combination Bonus: Grandpa Parrot (miniature magnetism + 13% slower stamina reduction), Spotlight (20% faster stamina reduction)\r\n • Unlock condition: Possess 35 S-class evolution treasures",
+    "image": "images-char/cookies_kaju_katli_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Marshmallow Bunny Cookie",
+    "kr_name": "멜로우버니 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 신비한 세계 1~8단 (일정 시간마다 토끼굴 포탈을 통하여 체력을 회복하고 질주하면서 코인과 마시멜로 젤리를 획득함, 초대형 토끼굴 포탈 진입시 다단점프+자력 효과 발동과 동시에 많은 코인과 젤리가 생성됨)\r\n • 조합보너스 : 말랑 에그버니 (모든 젤리 1,400점 추가 + 체력감소 8% 느림)\r\n • 해금조건 : 마시멜로 달걀 400개 획득",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Mysterious World 1~8 (Recover your stamina through the rabbit hole portal at certain times and acquire coins and marshmallow jelly while running. When entering a very large rabbit hole portal, multi-stage jump + magnetic effect is activated and many coins and jelly are created)\r\n • Combination Bonus: Soft Egg Bunny (1,400 points added to all jellies + 8% slower stamina reduction)\r\n • Unlock conditions: Obtain 400 marshmallow eggs.",
+    "image": "images-char/cookies_marshmallow_bunny_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cucumber Cookie",
+    "kr_name": "오이맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "Casts the fishing rod at certain intervals, destroying obstacles and reeling in Fish Jellies. Occasionally rides on a lotus leaf to catch three types of Big Fish Jellies. Big Fish Jellies restore Health and give more Fish Jellies. While riding the lotus leaf, the energy drain is slowed down.",
+    "image": "images-char/cookies_cucumber_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Sikhye Cookie",
+    "kr_name": "식혜맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 신의 한 수 1~8단\r\n• 조합보너스 : 흑돌흑미선생 (바둑돌젤리 점수 추가 + 체력감소 6% 느림), 백돌백미선생 (미니자력 + 코인 15% 보너스)\r\n• 해금조건 : 만렙인 쿠키를 70개 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: God's Move 1~8\r\n• Combination Bonus: Black Stone Black Rice Teacher (Additional Baduk Stone Jelly points + 6% slower stamina reduction), White Stone White Rice Teacher (mini magnetism + 15% coin bonus)\r\n• Unlock condition: Have 70 cookies at max level.",
+    "image": "images-char/cookies_sikhye_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Sujeonggwa Cookie",
+    "kr_name": "수정과맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 신의 한 수 1~8단\r\n• 조합보너스 : 백돌백미선생 (바둑돌젤리 점수 추가 + 체력감소 6% 느림), 흑돌흑미선생 (미니자력 + 코인 15% 보너스)\r\n• 해금조건 : 백돌백미선생 펫 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: God's Move 1~8\r\n• Combination Bonus: Teacher Baekdol Baekmi (Additional Baduk Jelly points + 6% slower stamina reduction), Teacher Blackdol Blackmi (mini magnetism + 15% coin bonus)\r\n• Unlock condition: Own Baekdol Baekmi teacher’s pet",
+    "image": "images-char/cookies_sujeonggwa_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Barley Sentry Cookie",
+    "kr_name": "보리장수맛 쿠키",
+    "grade": "S",
+    "ability": null,
+    "ability_en": "While shielded, gains Magnetic Aura and bonus points for all Jellies. Grows more when collecting Barley Jellies, and in a grown state, speed increases. When a certain amount of Barley Jellies are collected, transforms into a warrior and dashes. While dashing, destroys obstacles and creates Barley Jellies, then restores a little Energy at the end of dash.",
+    "image": "images-char/cookies_barley_merchant_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Potato Salad Cookie",
+    "kr_name": "감자샐러드맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 샐러드폭탄 1~8단 (일정시간마다 다양한 양탄자를 던텨 코인을 코인을 생성, 게이지가 가득 차면 바닥에 삶은 감자와 마요네즈가 깔리고 밟으면 코인이 생성됨(점프시 추가 코인 획득 가능))\r\n • 조합보너스 : 다사라빵 (미니자력 + 거대화시 속도 증가)\r\n • 해금조건 : 다사라빵 펫 보유\r\n\r\n※ 조합보너스의 미니자력은 일반적인 미니자력보다 약함",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Salad Bomb 1~8 (Generates coins by throwing various carpets at certain intervals. When the gauge is full, boiled potatoes and mayonnaise are spread on the floor, and coins are generated when you step on them (additional coins can be obtained when jumping))\r\n • Combination Bonus: Dasara Bread (Mini Magnetism + Speed Increase when Enlarged)\r\n • Unlock condition: Have a Dasara Bread pet.\r\n\r\n※ The mini magnetism of the combination bonus is weaker than the general mini magnetism.",
+    "image": "images-char/cookies_potato_salad_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Scallion Kimchi Cookie",
+    "kr_name": "파김치맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 파김치 1~8단 (일정 시간마다 검기를 일으켜 장애물을 파괴, 게이지를 전부 채우면 질주하면서 장애물을 파괴, 장애물이 파괴된 자리에는 파김치 곰젤리가 생성됨, 장애물 파괴점수 쿠키 단도록으론 만렙 기준 50000점, 파김치 곰젤리 점수는 9999점)\r\n • 조합보너스 : 벌레무당 (장애물 파괴점수 60,000점 + 장애물 통과점수 46,000점 추가)\r\n • 해금조건 : S급 진화 보물 50개 보유",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Green onion kimchi level 1~8 (Destroys obstacles by generating sword energy at certain intervals. When the gauge is fully filled, it destroys obstacles while running. Green onion kimchi bear jelly is created where the obstacle is destroyed. According to the obstacle destruction score cookie level, the maximum level score is 50,000 points, and green onion kimchi bear jelly score is 9999 points.)\r\n • Combination Bonus: Insect Shaman (60,000 points for destroying obstacles + 46,000 points for passing obstacles)\r\n • Unlock condition: Possess 50 S-class evolution treasures",
+    "image": "images-char/cookies_green_onion_kimchi_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "White Kimchi Cookie",
+    "kr_name": "백김치맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 백김치 1~8단 \r\n• 조합보너스 : 깍둑방울 (장애물 통과점수 추가 + 장애물 파괴점수 추가)\r\n• 해금조건 : +9강화 보물 55개 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: 1 to 8 layers of white kimchi \r\n• Combination Bonus: Droplet (Additional points for passing obstacles + Additional points for destroying obstacles)\r\n• Unlock condition: Possess 55 +9 enhanced treasures",
+    "image": "images-char/cookies_white_kimchi_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Manggaetteok Cookie",
+    "kr_name": "망개떡맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 망개잎 활공 1~8단 \r\n• 조합보너스 : 망개잎 달팽이 (거대화시 체력감소 느림 + 거대화시 속도 증가)\r\n• 해금조건 : 쿠키 75개 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: Mangae Leaf Glide 1~8 \r\n• Combination Bonus: Manga Leaf Snail (Slow stamina reduction when gigantic + Speed increases when gigantic)\r\n• Unlock condition: Have 75 cookies.",
+    "image": "images-char/cookies_manggaetteok_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Garaetteok Cookie",
+    "kr_name": "가래떡맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 가래떡 장승 질주 1~8단 \r\n• 조합보너스 : 솟대가족 펫 보유 (체력감소 13% 느림 + 장애물 통과점수 추가)\r\n• 해금조건 : 쿠키 75개 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: Garaetteok Jangseung sprint 1st to 8th dan \r\n• Combination bonus: Having a Sotdae family pet (13% slower stamina reduction + additional obstacle passing points)\r\n• Unlock condition: Have 75 cookies.",
+    "image": "images-char/cookies_garaetteok_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Choco Pistachio Cookie",
+    "kr_name": "두바이 쫀쫀 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 두바이 쫀쫀 젤리 생성 1~8단\r\n• 조합보너스 : 쫀쫀 초코도치 (소환수 탑승시 체력감소 느림 + 모든젤리 점수 추가)\r\n• 해금조건 : 멜로우버니 쿠키, 피스타치오맛 쿠키 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: Create Dubai Jjonjjon Jelly Level 1~8\r\n• Combination Bonus: Choco Dochi (Slow stamina reduction when riding a summoned animal + additional points for all jellies)\r\n• Unlock condition: Have Mellow Bunny cookies and pistachio-flavored cookies.",
+    "image": null
+  },
+  {
+    "kind": "cookie",
+    "name": "Dandelion Fairy Cookie",
+    "kr_name": "민들레요정맛 쿠기",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n • 능력 : 민들레 꽃바람 1~8단 (일정 시간마다 폼폼 꽃자루를 휘둘러 민들레 젤리와 폼폼 젤리를 생성, 폼폼 꽃자루를 타고 비행 중 폼폼 홀씨에 닿으면 민들레 홀씨 젤리가 흩날림)\r\n • 조합보너스 : 아기홀씨 (민들레 홀씨 점수 증가 + 체력감소 7% 느림)\r\n • 해금조건 : 민들레 홀씨 400개 획득",
+    "ability_en": "• Stamina: 140~160\r\n • Ability: Dandelion Blossom Wind 1~8 (Swing the pom-pom flower stalk at certain intervals to create dandelion jelly and pom-pom jelly. If you touch a pom-pom seed while flying on the pom-pom flower stalk, the dandelion seed jelly will scatter)\r\n • Combination Bonus: Baby Spore (Dandelion Spore score increases + stamina reduction slows down by 7%)\r\n • Unlock condition: Obtain 400 Dandelion Seeds",
+    "image": null
+  },
+  {
+    "kind": "cookie",
+    "name": "Kaymak Cookie",
+    "kr_name": "카이막맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 분신술 1~8단\r\n• 조합보너스 : 꿀 호리병 (장애물 파괴점수 55,000점 추가 + 체력감소 12% 느림)\r\n• 해금조건 : S급 진화보물 60개 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: Clone Art Level 1~8\r\n• Combination Bonus: Honey Vial (55,000 additional obstacle destruction points + 12% slower stamina reduction)\r\n• Unlock condition: Possess 60 S-class evolution treasures",
+    "image": null
+  },
+  {
+    "kind": "cookie",
+    "name": "연근요괴 Cookie",
+    "kr_name": "연근요괴맛 쿠키",
+    "grade": "S",
+    "ability": "• 체력 : 140~160\r\n• 능력 : 연근 요괴 변신 1~8단\r\n• 조합보너스 : 연밥 유모 (장애물 통과점수 증가 + 체력감소 12% 느림\r\n• 해금조건 : 연밥 유모 펫 보유",
+    "ability_en": "• Stamina: 140~160\r\n• Ability: Lotus Root Yokai Transformation 1~8\r\n• Combination Bonus: Kite Nanny (Increased score for passing obstacles + 12% slower stamina loss)\r\n• Unlock condition: Own a lotus nanny pet",
+    "image": null
+  },
+  {
+    "kind": "cookie",
+    "name": "Princess Cookie",
+    "kr_name": "공주맛 쿠키",
+    "grade": "A",
+    "ability": "• 체력 : 130~150\r\n • 능력 : 충돌피해 30~50% 감소\r\n • 조합보너스 : 공주의 장신구 (펫 쿨타임 10% 감소)\r\n • 해금조건 : 젤리 레벨 15 달성",
+    "ability_en": "• Stamina: 130~150\r\n • Ability: Reduces collision damage by 30-50%.\r\n • Combination Bonus: Princess’s Accessories (Pet cooldown reduced by 10%)\r\n • Unlock condition: Reach jelly level 15",
+    "image": "images-char/cookies_princess_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Muscle Cookie",
+    "kr_name": "근육맛 쿠키",
+    "grade": "A",
+    "ability": "• 체력 : 130~150 \r\n • 능력 : 충돌무시 50~75% \r\n • 조합보너스 : 쌍둥이 덤벨 (충돌무시 20%)\r\n • 해금조건 : 점수 450,000점 달성",
+    "ability_en": "• Stamina: 130~150 \r\n • Ability: Collision ignore 50~75% \r\n • Combination bonus: Twin dumbbells (collision ignore 20%)\r\n • Unlock condition: Achieve 450,000 points",
+    "image": "images-char/cookies_muscle_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Boarder Cookie",
+    "kr_name": "보더맛 쿠키",
+    "grade": "A",
+    "ability": "• 체력 : 130~150\r\n • 능력 : 기본속도 15~35% 빠름\r\n • 조합보너스 : 럭키다이스 형제 (기본속도 20% 증가)\r\n • 해금조건 : 점수 300,000점 달성",
+    "ability_en": "• Stamina: 130~150\r\n • Ability: Base speed 15-35% faster\r\n • Combination Bonus: Lucky Dice Brothers (base speed increased by 20%)\r\n • Unlock condition: Achieve 300,000 points",
+    "image": "images-char/cookies_boarder_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Knight Cookie",
+    "kr_name": "용사맛 쿠키",
+    "grade": "A",
+    "ability": "• 체력 : 130~150\r\n • 능력 : 광속질주 강화 1단~레전드 (광속질주 시간, 속도 40% 증가)(능력 발동 중 소환수 탑승 인정)\r\n • 조합보너스 : 용의 꼬리 (광속질주 속도 20% 증가)\r\n • 해금조건 : 체력 레벨 15 달성",
+    "ability_en": "• Stamina: 130~150\r\n • Ability: Light Speed Enhancement Level 1~Legend (Light Speed Speed Increase time and speed by 40%) (Minions are allowed to ride while the ability is in effect)\r\n • Combination Bonus: Dragon’s Tail (light speed increased by 20%)\r\n • Unlock condition: Reach stamina level 15",
+    "image": "images-char/cookies_knight_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Zombie Cookie",
+    "kr_name": "좀비맛 쿠키",
+    "grade": "A",
+    "ability": "• 체력 : 130~150\r\n • 능력 : 체력 30으로 부활 1회~체력 17로 부활 8회\r\n • 조합보너스 : 브레인껌 (좀비 부활 시 추가체력 10 증가)\r\n • 해금조건 : 친구 50명 보유\r\n\r\n※ 조합보너스는 좀비맛 쿠키의 부활 능력만 적용됨",
+    "ability_en": "• Stamina: 130~150\r\n • Ability: Resurrect once with stamina 30 ~ Resurrect eight times with stamina 17\r\n • Combination Bonus: Brain Gum (Additional health increases by 10 when zombies are revived)\r\n • Unlock condition: Have 50 friends.\r\n\r\n※ The combination bonus only applies to the resurrection ability of zombie-flavored cookies.",
+    "image": "images-char/cookies_zombie_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Coffee Cookie",
+    "kr_name": "커피맛 쿠키",
+    "grade": "A",
+    "ability": "• 체력 : 130~150 \r\n • 능력 : 회복량 20~29% 증가 \r\n • 조합보너스 : 생크림 모카커피 (펫 쿨타임 30% 감소)\r\n • 해금조건 : 레벨 15 달성",
+    "ability_en": "• Stamina: 130~150 \r\n • Ability: Increases recovery by 20-29% \r\n • Combination Bonus: Whipped Cream Mocha Coffee (Pet cooldown reduced by 30%)\r\n • Unlock condition: Reach level 15",
+    "image": "images-char/cookies_coffee_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Ginger Claus",
+    "kr_name": "산타맛 쿠키",
+    "grade": "A",
+    "ability": "• 체력 : 110~160 \r\n • 능력 : 코인 13~20%, 경험치 3~10% 추가획득 \r\n • 조합보너스 : 산타모자 (펫 쿨타임 35% 감소), 산타양말 (기본속도 10% 증가)\r\n • 해금조건 : 친구 125명 보유",
+    "ability_en": "• Stamina: 110~160 \r\n • Ability: Gain 13-20% additional coins and 3-10% additional experience. \r\n • Combination bonus: Santa hat (pet cool time reduced by 35%), Santa socks (base speed increased by 10%)\r\n • Unlock condition: Have 125 friends.",
+    "image": "images-char/cookies_santa_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cloud Cookie",
+    "kr_name": "구름맛 쿠키",
+    "grade": "B",
+    "ability": "• 체력 : 100~135\r\n • 능력 : 아이템지속 15~35% 증가\r\n • 조합보너스 : 구름사탕 (시작 시 보너스타임 발동)\r\n • 해금조건 : 펫 5종 보유",
+    "ability_en": "• Stamina: 100~135\r\n • Ability: Increases item duration by 15-35%.\r\n • Combination Bonus: Cloud Candy (Bonus time activated at start)\r\n • Unlock condition: Own 5 types of pets",
+    "image": "images-char/cookies_cloud_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Strawberry Cookie",
+    "kr_name": "딸기맛 쿠키",
+    "grade": "B",
+    "ability": "• 체력 : 100~135\r\n • 능력 : 추가 보너스타임 1~5초\r\n • 조합보너스 : 플라워콥터 (경험치 15% 보너스)\r\n • 해금조건 : 친구 3명 보유",
+    "ability_en": "• Stamina: 100~135\r\n • Ability: Additional bonus time 1~5 seconds\r\n • Combination Bonus: Flower Copter (15% experience bonus)\r\n • Unlock condition: Have 3 friends",
+    "image": "images-char/cookies_strawberry_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Buttercream Choco Cookie",
+    "kr_name": "버터크림 초코쿠키",
+    "grade": "B",
+    "ability": "• 체력 : 100~135\r\n • 능력 : 코인보너스 5~25%\r\n • 조합보너스 : 뭉치 유니콘 (펫 쿨타임 20% 감소)\r\n • 해금조건 : 점수 180,000점 달성",
+    "ability_en": "• Stamina: 100~135\r\n • Ability: Coin bonus 5~25%\r\n • Combination Bonus: Bundle of Unicorns (Pet cooldown reduced by 20%)\r\n • Unlock condition: Achieve 180,000 points",
+    "image": "images-char/cookies_buttercream_choco_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "Cream Cookie",
+    "kr_name": "쿠키앤크림 쿠키",
+    "grade": "B",
+    "ability": "• 체력 : 100~135\r\n • 능력 : 체력감소 10~17% 느림\r\n • 조합보너스 : 포근실타래 (추가체력 20 보너스)\r\n • 해금조건 : 레벨 8 달성",
+    "ability_en": "• Stamina: 100~135\r\n • Ability: Stamina decreases 10-17% slower.\r\n • Combination Bonus: Cozy Thread (20 additional health bonus)\r\n • Unlock condition: Reach level 8",
+    "image": "images-char/cookies_cookies_and_cream_cookie.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "GingerBrave",
+    "kr_name": "용감한 쿠키군",
+    "grade": "C",
+    "ability": "• 체력 : 100~110\r\n• 능력 : 용감함~짱짱 용감함\r\n• 조합보너스 : 초코방울 (추가체력 5 보너스)\r\n• 해금조건 : 기본 해금",
+    "ability_en": "• Stamina: 100~110\r\n• Ability: Brave~Very brave\r\n• Combination Bonus: Chocolate Drop (5 additional health bonus)\r\n• Unlock conditions: Basic unlock",
+    "image": "images-char/cookies_gingerbrave.png"
+  },
+  {
+    "kind": "cookie",
+    "name": "GingerBright",
+    "kr_name": "명랑한 쿠키양",
+    "grade": "C",
+    "ability": "• 체력 : 100~110\r\n • 능력 : 경험치 추가 5~12%\r\n • 조합보너스 : 치즈방울 (추가체력 40 보너스)\r\n • 해금조건 : 점수 30,000점 달성",
+    "ability_en": "• Stamina: 100~110\r\n • Ability: Experience added by 5~12%\r\n • Combination Bonus: Cheese Drop (40 additional health bonus)\r\n • Unlock condition: Achieve 30,000 points",
+    "image": "images-char/cookies_gingerbright.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Bean Drop Duo",
+    "kr_name": "방울방울 콩콩이",
+    "grade": "E",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_bouncing_bean.png"
+  },
+  {
+    "kind": "pet",
+    "name": "King Choco Drop",
+    "kr_name": "초코 왕방울",
+    "grade": "L",
+    "ability": "• 능력 : 호위하며 젤리 생성\r\n호위 1~8단\r\n• 조합보너스 : 없음\r\n• 보유효과 : 에피소드 1 \"오븐 탈출\"에서 일정 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커진다)\r\n\r\n※ 에피소드1 유물 특별 보상",
+    "ability_en": "• Ability: Escort and create jelly\r\nEscort ranks 1 to 8\r\n• Combination bonus: None\r\n• Possession effect: Mystery box is created with a certain probability in Episode 1 “Escape from the Oven” (the probability increases as it is upgraded)\r\n\r\n※ Episode 1 artifact special reward",
+    "image": "images-char/pets_choco_king_drop.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Enchanted Locket",
+    "kr_name": "공주의 장신구",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_princess_jewelry.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Ginger Ghost",
+    "kr_name": "꼬마유령",
+    "grade": "S",
+    "ability": "• 능력 : 구출 1~8회\r\n • 조합보너스 : 닌자맛 쿠키",
+    "ability_en": "• Ability: Rescue 1~8 times\r\n • Combination Bonus: Ninja Flavored Cookie",
+    "image": "images-char/pets_little_ghost.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Pirate's Bomb",
+    "kr_name": "해적의 폭탄",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_pirate_bomb.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Snow Blossom",
+    "kr_name": "눈꽃송이",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_snowflake.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Jellyco Cube",
+    "kr_name": "젤리코 큐브",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_jellyco_cube.png"
+  },
+  {
+    "kind": "pet",
+    "name": "AWOL Cracker",
+    "kr_name": "건빵 보급병",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_hardtack_supply.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Glitter Ball",
+    "kr_name": "반짝이볼",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_twinkle_ball.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Gold Drop",
+    "kr_name": "황금방울",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_gold_drop.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Flame Bat",
+    "kr_name": "불꽃박쥐",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_flame_bat.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Windy",
+    "kr_name": "바람이",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_windy.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Foxy Bead",
+    "kr_name": "여우구슬",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_fox_bead.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Book of Wizdom",
+    "kr_name": "마법사전",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_magic_dictionary.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Magic Pod",
+    "kr_name": "꽃봉오리",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_flower_bud.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Spotlight Fan",
+    "kr_name": "스포트라이트",
+    "grade": "S",
+    "ability": "• 능력 : 27~13초마다 4초 동안 스포트라이트 효과 발동(체력감소 90% 느림, 자력 효과, 장애물 충돌 무시)\r\n • 조합보너스 : 락스타맛 쿠키 (음표 젤리 점수 추가), 카주카틀리맛 쿠키(체력감소 20% 빠름)",
+    "ability_en": "• Ability: Spotlight effect activates for 4 seconds every 27 to 13 seconds (slows health reduction by 90%, ignores magnetic effects and obstacle collisions)\r\n • Combination bonus: Rockstar-flavored cookies (added musical note jelly points), Kaju Katli-flavored cookies (health reduction 20% faster)",
+    "image": "images-char/pets_spotlight.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Rocket Firecracker",
+    "kr_name": "로켓폭죽",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_rocket_firecracker.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Yule Log Cake",
+    "kr_name": "통나무케이크",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_log_cake.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Snow Globe",
+    "kr_name": "스노우 글로브",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_snow_globe.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Lucky Pouch",
+    "kr_name": "복주머니",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_lucky_pouch.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Pink Candy",
+    "kr_name": "핑크캔디",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_pink_candy.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Purple Candle",
+    "kr_name": "보라보라 향초",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_purple_candle.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Pistachio Firefly",
+    "kr_name": "반딧불이",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_firefly.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Jelly Scale",
+    "kr_name": "젤리저울",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_jelly_scale.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Coin Scale",
+    "kr_name": "코인저울",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_coin_scale.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Oak Barrel",
+    "kr_name": "참나무 주스통",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_oak_juice_barrel.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Green Apple Rabbit",
+    "kr_name": "토끼사과",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_rabbit_apple.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Fluffy Cheese Cat",
+    "kr_name": "치즈뭉치 고양이",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_cheese_cat.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Lemon Slice",
+    "kr_name": "조각레몬",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_lemon_slice.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Backpacky",
+    "kr_name": "배낭이",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_backpacky.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Ghost Butler",
+    "kr_name": "집사 유령",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_butler_ghost.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Kiwi Bird",
+    "kr_name": "키위새",
+    "grade": "S",
+    "ability": "• 능력 : 28~14초마다 키위맛 거대화 아이템 생성\r\n • 조합보너스 : 키위맛 쿠키 (키위젤리 점수 추가 + 체력감소 13% 느림)",
+    "ability_en": "• Ability: Creates a kiwi-flavored giant item every 28 to 14 seconds.\r\n • Combination bonus: Kiwi flavor cookie (kiwi jelly points added + stamina loss slowed by 13%)",
+    "image": "images-char/pets_kiwi_bird.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Furball Pup",
+    "kr_name": "털뭉치 멍뭉이",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_fluffy_pup.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Ms. Do-Re-Mi",
+    "kr_name": "미스 도레미",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_miss_doremi.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Mr. Fa-Sol-La-Si",
+    "kr_name": "미스터 파솔라시",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_mr_fasollasi.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Marshmallow Hamster",
+    "kr_name": "마시멜로 햄찌",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_marshmallow_hamster.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Paprika Punching Bag",
+    "kr_name": "파프리카 샌드백",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_paprika_punching_bag.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Owlcorn",
+    "kr_name": "도토리 부엉이",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_acorn_owl.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Mini Jackson 2",
+    "kr_name": "미니 잭슨 2호",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_mini_jackson_2.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Tea Cup",
+    "kr_name": "홍차 찻잔",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_black_tea_cup.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Elctro Lemon",
+    "kr_name": "레몬 전지",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_lemon_battery.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Mini Orange Mouse",
+    "kr_name": "어린쥐",
+    "grade": "S",
+    "ability": "• 능력 : 24~14초마다 광속질주 아이템 제작 + 속도 점수 1~8단\r\n• 조합보너스 : 오렌지맛 쿠키 (과즙젤리 점수 추가 + 체력감소 8% 느림)",
+    "ability_en": "• Ability: Create light speed item every 24~14 seconds + speed score 1~8\r\n• Combination Bonus: Orange Flavored Cookie (Additional Juice Jelly Points + 8% slower stamina reduction)",
+    "image": "images-char/pets_orange_mouse.png"
+  },
+  {
+    "kind": "pet",
+    "name": "White Gold Drop",
+    "kr_name": "백금방울",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_platinum_drop.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Mr. Squeak",
+    "kr_name": "미스터 삑",
+    "grade": "S",
+    "ability": "• 능력 : 구출/부활 체력 40 3회 + 이어달리기 체력 160 증가\r\n• 조합보너스 : 라임맛 쿠키 (과즙젤리 점수 추가 + 체력감소 8% 느림)",
+    "ability_en": "• Ability: Rescue/resurrection stamina 40 3 times + continuous run stamina increased by 160\r\n• Combination Bonus: Lime Flavored Cookie (Additional Juice Jelly Points + 8% slower stamina reduction)",
+    "image": "images-char/pets_mr_squeak.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Paper Boat Sailor",
+    "kr_name": "종이배 선원",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_paper_boat_sailor.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Panda Dumpling",
+    "kr_name": "판다 만두",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_panda_dumpling.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Uncooling Teacup",
+    "kr_name": "식지 않는 찻잔",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_warm_teacup.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Onion Fish",
+    "kr_name": "양파 물고기",
+    "grade": "S",
+    "ability": "• 능력 : 양파즙 뿌리기 1단 ~ 양파즙 뿌리기 8단\r\n• 조합보너스 : 양파맛 쿠키 (장애물 통과점수 15,200점 추가)",
+    "ability_en": "• Abilities: Onion Juice Spray Level 1 ~ Onion Juice Spray Level 8\r\n• Combination Bonus: Onion-flavored Cookies (15,200 points added for passing obstacles)",
+    "image": "images-char/pets_onion_fish.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Cinnamon Bunny",
+    "kr_name": "시나몬롤 토끼",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_cinnamon_roll_bunny.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Frozen Wave Drop",
+    "kr_name": "파도방울",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_wave_drop.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Castanets",
+    "kr_name": "캐스터네츠",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_castanets.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Sweet Rice Seal",
+    "kr_name": "찹쌀 하프물범",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_sticky_rice_seal.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Pocket Watch Referee",
+    "kr_name": "회중시계 심판",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_pocket_watch_referee.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Herb Teapot",
+    "kr_name": "허브티팟",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_herb_teapot.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Dino Egg",
+    "kr_name": "팝핑 용알",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_popping_dragon_egg.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Cotton Candy Dove",
+    "kr_name": "솜사탕 비둘기",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_cotton_candy_dove.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Light Bros",
+    "kr_name": "라이트 형제",
+    "grade": "S",
+    "ability": "• 능력 : 24~17초 마다 광속질주 + 체력감소 15% 느림\r\n • 조합보너스 : 롤케이크맛 쿠키 (장애물 파괴점수 15,000점 추가)",
+    "ability_en": "• Ability: Speed of light every 24~17 seconds + 15% slower stamina reduction\r\n • Combination Bonus: Roll Cake Flavored Cookie (15,000 additional obstacle destruction points)",
+    "image": "images-char/pets_light_brothers.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Savannahna Lion",
+    "kr_name": "사바나나 사자",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_savabana_lion.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Pancake Frisbee",
+    "kr_name": "팬케이크 원반",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_pancake_frisbee.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Moon Mortar",
+    "kr_name": "달절구",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_moon_mortar.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Tiny Cake Hound",
+    "kr_name": "작은 케이크 들개",
+    "grade": "S",
+    "ability": "• 능력 : 속도 점수, 딸기 생명물약 생성\r\n• 조합보너스 : 딸기쇼트케이크맛 쿠키 (케이크조각 젤리 점수추가)\r\n\r\n※ 친구 10명 초대 또는 패키지 구매로 획득가능",
+    "ability_en": "• Abilities: Speed score, create strawberry life potion\r\n• Combination bonus: Strawberry shortcake flavor cookie (cake piece jelly score added)\r\n\r\n※ Can be obtained by inviting 10 friends or purchasing a package",
+    "image": "images-char/pets_little_cake_hound.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Tiny Tabla",
+    "kr_name": "꼬마북",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_little_drum.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Parrot Dada",
+    "kr_name": "앵무할아범",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_grandpa_parrot.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Soft Egg Bunny",
+    "kr_name": "말랑 에그버니",
+    "grade": "S",
+    "ability": "• 능력 : 23~16초마다 장애물 파괴, 생명물약/젤리 생성(물약을 5번 나눠서 생성)\r\n• 조합보너스 : 멜로우버니 쿠키(모든 젤리 1,400점 추가 + 체력감소 8% 느림)\r\n\r\n※ 친구 15명 초대 또는 패키지 구매로 획득가능",
+    "ability_en": "• Ability: Destroys obstacles every 23 to 16 seconds, creates life potion/jelly (produces potion 5 times)\r\n• Combination Bonus: Mellow Bunny Cookie (1,400 points added to all jellies + 8% slower stamina reduction)\r\n\r\n※ Can be obtained by inviting 15 friends or purchasing a package",
+    "image": "images-char/pets_soft_egg_bunny.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Cucu-dding",
+    "kr_name": "오이푸딩 개구리",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_cucumber_pudding_frog.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Elder Black Rice",
+    "kr_name": "흑돌 흑미 선생",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_black_rice_stone_master.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Elder White Rice",
+    "kr_name": "백돌 백미 선생",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_white_rice_stone_master.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Pegaplush",
+    "kr_name": "용마 인형",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_dragon_horse_doll.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Ghoul Cake",
+    "kr_name": "꿀떡 영혼",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_honey_rice_cake_soul.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Tater Trader",
+    "kr_name": "다사라 빵",
+    "grade": "S",
+    "ability": "• 능력 : 약 15초마다 거대화 아이템과 코인 생성 + 이동속도 비례 코인 획득\r\n • 조합보너스 : 감자샐러드맛 쿠키 (미니자력 + 거대화시 속도증가)\r\n\r\n※ 조합보너스의 미니자력은 일반적인 미니자력보다 약함",
+    "ability_en": "• Ability: Create giant items and coins approximately every 15 seconds + acquire coins proportional to movement speed\r\n • Combination Bonus: Potato Salad Flavor Cookie (Mini Magnetism + Speed Increase when Enlarged)\r\n\r\n※ The mini magnetism of the combination bonus is weaker than the general mini magnetism.",
+    "image": "images-char/pets_dasara_bread.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Lady Mudang",
+    "kr_name": "벌레무당",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_ladybug_shaman.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Kimchi Bell",
+    "kr_name": "깍둑방울",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_cube_drop.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Choronicles of Run",
+    "kr_name": "런중일기",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_run_diary.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Choco Hedgehog",
+    "kr_name": "쫀쫀 초코도치",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": null
+  },
+  {
+    "kind": "pet",
+    "name": "Sotdae Flock",
+    "kr_name": "솟대가족",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": null
+  },
+  {
+    "kind": "pet",
+    "name": "Manggae Snail",
+    "kr_name": "망개잎 달팽이",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": null
+  },
+  {
+    "kind": "pet",
+    "name": "Baby Spore",
+    "kr_name": "아기홀씨",
+    "grade": "S",
+    "ability": "• 능력 : 23~16초마다 꽃잎을 타고 앞으로 날아가고, 지나간 자리에는 봄꽃 젤리들과 날개달린 생명물약이 생성됨\r\n• 조합보너스 : 민들레요정맛 쿠키 (민들레 홀씨 점수 증가 + 체력감소 7% 느림)\r\n\r\n※ 친구 20명 초대 또는 패키지 구매로 획득가능",
+    "ability_en": "• Ability: Fly forward on the petals every 23 to 16 seconds, and spring flower jellies and winged life potions are created where you pass.\r\n• Combination Bonus: Dandelion Fairy Flavor Cookie (Dandelion Seed Score Increase + Stamina Decrease 7% Slow)\r\n\r\n※ Can be obtained by inviting 20 friends or purchasing a package",
+    "image": null
+  },
+  {
+    "kind": "pet",
+    "name": "Honey Gourd",
+    "kr_name": "꿀 호리병",
+    "grade": "S",
+    "ability": "• 능력 : 21~14초마다 광속질주 꿀젤리 파티 아이템 생성\r\n• 조합보너스 : 카이막맛 쿠키 (장애물 파괴점수 55,000점 추가 + 체력감소 12% 느림)",
+    "ability_en": "• Ability: Creates a speed-of-light honey jelly party item every 21 to 14 seconds.\r\n• Combination Bonus: Kaimak Flavored Cookie (Additional 55,000 obstacle destruction points + 12% slower stamina reduction)",
+    "image": null
+  },
+  {
+    "kind": "pet",
+    "name": "White Dragon Horsie",
+    "kr_name": "백묭",
+    "grade": "S",
+    "ability": null,
+    "ability_en": null,
+    "image": null
+  },
+  {
+    "kind": "pet",
+    "name": "Lotus Sitter",
+    "kr_name": "연밥 유모",
+    "grade": "S",
+    "ability": "• 능력 : 연꽃방울 젤리 생성 21~14초 (주변 장애물들을 통과상태로 만듦)\r\n• 조합보너스 : 연근요괴맛 쿠키 (장애물 통과점수 증가 + 체력감소 12% 느림)",
+    "ability_en": "• Ability: Create lotus drop jelly in 21~14 seconds (makes surrounding obstacles passable)\r\n• Combination Bonus: Lotus Root Yokai Flavored Cookie (Increased obstacle passing score + 12% slower stamina loss)",
+    "image": null
+  },
+  {
+    "kind": "pet",
+    "name": "Lucky Dice Bros",
+    "kr_name": "럭키다이스 형제",
+    "grade": "A",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_lucky_dice_bros.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Brain Gum",
+    "kr_name": "브레인껌",
+    "grade": "A",
+    "ability": "• 능력 : 체력감소 10~15% 느림\r\n • 조합보너스 : 좀비맛 쿠키(좀비 부활시 체력 10 증가)\r\n\r\n※ 조합보너스는 좀비맛 쿠키의 부활 능력만 적용됨",
+    "ability_en": "• Ability: Slows down health by 10-15%.\r\n • Combination Bonus: Zombie-flavored cookies (strength increases by 10 when zombies are revived)\r\n\r\n※ The combination bonus only applies to the resurrection ability of zombie-flavored cookies.",
+    "image": "images-char/pets_brain_gum.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Dragon's Tail",
+    "kr_name": "용의 꼬리",
+    "grade": "A",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_dragon_tail.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Wishing Star",
+    "kr_name": "천사의 별",
+    "grade": "A",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_angel_star.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Flowercopter",
+    "kr_name": "플라워콥터",
+    "grade": "A",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_flower_copter.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Luck o' Lantern",
+    "kr_name": "빛나는 럭키 호박",
+    "grade": "A",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_shining_lucky_pumpkin.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Dust Unicorn",
+    "kr_name": "뭉치유니콘",
+    "grade": "B",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_fluffy_unicorn.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Hat of Santa",
+    "kr_name": "산타모자",
+    "grade": "B",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_santa_hat.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Mocha Delight",
+    "kr_name": "생크림 모카커피",
+    "grade": "B",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_whipped_cream_mocha.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Witty Dumbell",
+    "kr_name": "쌍둥이 덤벨",
+    "grade": "B",
+    "ability": "• 능력 : 29~15초마다 거대화 아이템 제작\r\n • 조합보너스 : 근육맛 쿠키 (충돌무시 확률 +20%)",
+    "ability_en": "• Ability: Create giant items every 29 to 15 seconds.\r\n • Combination Bonus: Muscle Cookie (Collision Ignore Chance +20%)",
+    "image": "images-char/pets_twin_dumbbell.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Cozy Yarn",
+    "kr_name": "포근실타래",
+    "grade": "B",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_cozy_yarn.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Rare Garlic",
+    "kr_name": "안깐 마늘",
+    "grade": "B",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_unpeeled_garlic.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Electric Beat",
+    "kr_name": "테크노볼",
+    "grade": "B",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_techno_ball.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Drop of Choco",
+    "kr_name": "초코방울",
+    "grade": "C",
+    "ability": "• 능력 : 10~3초마다 곰젤리 제작\r\n • 조합보너스 : 용감한 쿠키군 (추가체력 5 보너스)",
+    "ability_en": "• Ability: Create bear jelly every 10 to 3 seconds.\r\n • Combination Bonus: Brave Cookie (5 additional stamina bonus)",
+    "image": "images-char/pets_choco_drop.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Cheeseberry",
+    "kr_name": "치즈방울",
+    "grade": "C",
+    "ability": "• 능력 : 5~1초마다 놓친 젤리 먹기\r\n • 조합보너스 : 명랑한 쿠키양 (시작시 체력 40 추가)",
+    "ability_en": "• Ability: Eat missed jelly every 5 to 1 second.\r\n • Combination Bonus: Cheerful Cookie (40 additional stamina at start)",
+    "image": "images-char/pets_cheese_drop.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Air Drop",
+    "kr_name": "구름사탕",
+    "grade": "C",
+    "ability": "• 능력 : 보너스타임에서 덩치가 2~4배로 커짐\r\n • 조합보너스 : 구름맛 쿠키 (시작시 보너스타임 발동)",
+    "ability_en": "• Ability: Size increases 2 to 4 times during bonus time.\r\n • Combination Bonus: Cloud-flavored Cookie (Bonus time activated at start)",
+    "image": "images-char/pets_cloud_candy.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Forgotten Stocking",
+    "kr_name": "산타양말",
+    "grade": "C",
+    "ability": "• 능력 : 기본속도가 3~10% 빨라짐\r\n • 조합보너스 : 산타맛 쿠키 (기본속도 10% 증가)",
+    "ability_en": "• Ability: Base speed increases by 3~10%\r\n • Combination Bonus: Santa-flavored Cookie (base speed increased by 10%)",
+    "image": "images-char/pets_santa_sock.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Joraengi Jelly",
+    "kr_name": "조랭이젤리",
+    "grade": "C",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_joraengi_jelly.png"
+  },
+  {
+    "kind": "pet",
+    "name": "Hand of Liker",
+    "kr_name": "좋은손",
+    "grade": "C",
+    "ability": null,
+    "ability_en": null,
+    "image": "images-char/pets_good_hand.png"
+  }
 ]
