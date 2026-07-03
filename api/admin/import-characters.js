@@ -28,6 +28,15 @@ export default async function handler(req, res) {
   try {
     const rows = await fetch(`${base}/characters.json`).then(r => r.json());
 
+    // The re-import wipes and rebuilds the whole table from the static JSON,
+    // which has no `tier` data. Save existing tier assignments (set by hand
+    // via the admin Tier Builder) so they survive the re-import.
+    const existing = await fetch(
+      `${SUPABASE_URL}/rest/v1/characters?tier=not.is.null&select=kind,name,tier`,
+      { headers }
+    ).then(r => r.json());
+    const tierByKey = new Map(existing.map(c => [`${c.kind}:${c.name}`, c.tier]));
+
     const delRes = await fetch(`${SUPABASE_URL}/rest/v1/characters?id=gt.0`, { method: 'DELETE', headers });
     if (!delRes.ok) throw new Error('Wipe failed: ' + await delRes.text());
 
@@ -42,7 +51,15 @@ export default async function handler(req, res) {
       if (!insRes.ok) throw new Error('Insert failed: ' + insRes.status + ' ' + await insRes.text());
     }
 
-    res.status(200).json({ ok: true, imported: rows.length });
+    for (const [key, tier] of tierByKey) {
+      const [kind, name] = key.split(':');
+      await fetch(
+        `${SUPABASE_URL}/rest/v1/characters?kind=eq.${encodeURIComponent(kind)}&name=eq.${encodeURIComponent(name)}`,
+        { method: 'PATCH', headers, body: JSON.stringify({ tier }) }
+      );
+    }
+
+    res.status(200).json({ ok: true, imported: rows.length, tiersRestored: tierByKey.size });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
