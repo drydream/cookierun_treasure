@@ -1,7 +1,9 @@
-// One-time (re-runnable) import: reads the current public/treasures.json and
-// public/treasures-kr.json from the live deployment, applies the same
-// LINE-priority dedup as the old client-side merge, and replaces the
-// contents of the Supabase `treasures` table. Password-gated like save.js.
+// Re-runnable import: reads the current public/treasures.json and
+// public/treasures-kr.json, applies the same LINE-priority dedup as the old
+// client-side merge, and adds any treasure not already in the Supabase
+// `treasures` table (matched by source + name). It never deletes or edits
+// existing rows - admin edits (tier, manual add/edit/delete) are never
+// touched by this endpoint. Password-gated like save.js.
 // Requires env vars: SUPABASE_URL (or derived below), service_role, ADMIN_PASSWORD.
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
 
@@ -52,10 +54,7 @@ export default async function handler(req, res) {
       fetchAllExisting(serviceKey),
     ]);
 
-    // Import wipes and rebuilds the whole table, but tier ranks are set by
-    // hand with no JSON backing, so carry them over by matching source+name.
-    const tierByKey = {};
-    existing.forEach(it => { if (it.tier) tierByKey[it.source + '|' + it.name] = it.tier; });
+    const existingKeys = new Set(existing.map(it => it.source + '|' + it.name));
 
     const idToName = {};
     krRaw.forEach(it => { idToName[it.id] = it.englishName; });
@@ -76,25 +75,27 @@ export default async function handler(req, res) {
       if (cands.length === 1) excludedKrIds.add(cands[0].id);
     });
 
-    const lineRows = lineItems.map(it => ({
-      source: 'line',
-      name: it.name,
-      kr_name: null,
-      grade: it.grade,
-      category: it.section,
-      effect: it.effect || null,
-      kr_ability: null,
-      extra: it.extra || null,
-      image: it.localImage || null,
-      type: it.type,
-      base_item_name: it.baseItem || null,
-      ingredients: it.ingredients || null,
-      blessed_effect: it.blessedEffect || null,
-      tier: tierByKey['line|' + it.name] || null,
-    }));
+    const lineRows = lineItems
+      .filter(it => !existingKeys.has('line|' + it.name))
+      .map(it => ({
+        source: 'line',
+        name: it.name,
+        kr_name: null,
+        grade: it.grade,
+        category: it.section,
+        effect: it.effect || null,
+        kr_ability: null,
+        extra: it.extra || null,
+        image: it.localImage || null,
+        type: it.type,
+        base_item_name: it.baseItem || null,
+        ingredients: it.ingredients || null,
+        blessed_effect: it.blessedEffect || null,
+        tier: null,
+      }));
 
     const krRows = krRaw
-      .filter(it => !excludedKrIds.has(it.id))
+      .filter(it => !excludedKrIds.has(it.id) && !existingKeys.has('kr|' + it.englishName))
       .map(it => ({
         source: 'kr',
         name: it.englishName,
@@ -109,28 +110,10 @@ export default async function handler(req, res) {
         base_item_name: it.evolvedFromId ? (idToName[it.evolvedFromId] || null) : null,
         ingredients: null,
         blessed_effect: null,
-        tier: tierByKey['kr|' + it.englishName] || null,
+        tier: null,
       }));
 
-    // Items added by hand via the admin "+ Add new" button have no JSON
-    // backing at all, so carry those over unchanged too (minus their old id,
-    // which gets replaced on insert).
-    const coveredKeys = new Set([
-      ...lineRows.map(r => r.source + '|' + r.name),
-      ...krRows.map(r => r.source + '|' + r.name),
-    ]);
-    const manualRows = existing
-      .filter(it => !coveredKeys.has(it.source + '|' + it.name))
-      .map(({ id, ...rest }) => rest);
-
-    const rows = [...lineRows, ...krRows, ...manualRows];
-
-    // Clear existing rows so this endpoint is safely re-runnable.
-    const delRes = await fetch(`${SUPABASE_URL}/rest/v1/treasures?id=gt.0`, {
-      method: 'DELETE',
-      headers,
-    });
-    if (!delRes.ok) throw new Error('Supabase delete failed: ' + delRes.status + ' ' + await delRes.text());
+    const rows = [...lineRows, ...krRows];
 
     // Insert in chunks to stay well under request size limits.
     const CHUNK = 200;
@@ -144,7 +127,7 @@ export default async function handler(req, res) {
       if (!insRes.ok) throw new Error('Supabase insert failed: ' + insRes.status + ' ' + await insRes.text());
     }
 
-    res.status(200).json({ ok: true, imported: rows.length });
+    res.status(200).json({ ok: true, added: rows.length, skipped: existing.length });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
