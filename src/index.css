@@ -40,6 +40,12 @@ h1 { text-align: center; }
 .card .tier-tag { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.3rem; background: #7a4fa3; color: #fff; }
 .admin-edit-link { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.3rem; background: #e8f5e9; color: #2e7d32; text-decoration: none; }
 .admin-edit-link:hover { background: #c8e6c9; }
+.build-tags-row { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.4rem; }
+.build-tag { display: inline-block; font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 4px; }
+.build-tag-purpose { background: #eaf2f8; color: #3a6b8a; }
+.build-tag-episode { background: #eee; color: #555; }
+.build-tag-stat { background: #f0c419; color: #4a2e1e; }
+.build-tag-random { background: #7a4fa3; color: #fff; }
 .card .effect { margin: 0.3rem 0 0; white-space: pre-line; }
 .card .effect.muted { color: #aaa; font-style: italic; }
 .card .blessed { margin: 0.3rem 0 0; white-space: pre-line; color: #7a4fa3; }

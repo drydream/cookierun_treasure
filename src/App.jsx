@@ -792,21 +792,15 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                       );
                     })}
                   </div>
-                  {((b.purposes && b.purposes.length) || (b.episodes && b.episodes.length)) && (
-                    <div className="meta">
-                      {(b.purposes || []).map(p => t.buildPurpose[p] || p).join(', ')}
-                      {(b.purposes && b.purposes.length) && (b.episodes && b.episodes.length) && ' · '}
-                      {(b.episodes || []).map(ep => t.buildEpisode[ep] || ep).join(', ')}
+                  {((b.purposes && b.purposes.length) || (b.episodes && b.episodes.length) || b.score != null || b.coins != null || b.random_boost) && (
+                    <div className="build-tags-row">
+                      {(b.purposes || []).map(p => <span key={'p' + p} className="build-tag build-tag-purpose">{t.buildPurpose[p] || p}</span>)}
+                      {(b.episodes || []).map(ep => <span key={'e' + ep} className="build-tag build-tag-episode">{t.buildEpisode[ep] || ep}</span>)}
+                      {b.score != null && <span className="build-tag build-tag-stat">{t.buildScore}: {b.score}</span>}
+                      {b.coins != null && <span className="build-tag build-tag-stat">{t.buildCoins}: {b.coins}</span>}
+                      {b.random_boost && <span className="build-tag build-tag-random">{t.buildRandomBoostLabel[b.random_boost] || b.random_boost}</span>}
                     </div>
                   )}
-                  {(b.score != null || b.coins != null) && (
-                    <div className="meta">
-                      {b.score != null && `${t.buildScore}: ${b.score}`}
-                      {b.score != null && b.coins != null && ' · '}
-                      {b.coins != null && `${t.buildCoins}: ${b.coins}`}
-                    </div>
-                  )}
-                  {b.random_boost && <div className="meta">{t.buildRandomBoost}: {t.buildRandomBoostLabel[b.random_boost] || b.random_boost}</div>}
                   {b.notes && <div className="effect">{b.notes}</div>}
                   {b.youtube_link && <a className="related-link" href={b.youtube_link} target="_blank" rel="noopener">▶ {t.buildWatchVideo}</a>}
                   <div style={{ display: 'flex', gap: '0.4rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
