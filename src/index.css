@@ -45,7 +45,9 @@ h1 { text-align: center; }
 .build-tag-purpose { background: #eaf2f8; color: #3a6b8a; }
 .build-tag-episode { background: #eee; color: #555; }
 .build-tag-stat { background: #f0c419; color: #4a2e1e; }
+.build-tag-boost { background: #d4edda; color: #2e7d32; }
 .build-tag-random { background: #7a4fa3; color: #fff; }
+.build-tag-power { background: #ffe0b2; color: #8a4b00; }
 .card .effect { margin: 0.3rem 0 0; white-space: pre-line; }
 .card .effect.muted { color: #aaa; font-style: italic; }
 .card .blessed { margin: 0.3rem 0 0; white-space: pre-line; color: #7a4fa3; }

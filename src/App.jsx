@@ -804,9 +804,15 @@ function BuildCreatorPage({ items, characters, t, initialBuildId }) {
                       {b.coins != null && <span className="build-tag build-tag-stat">{t.buildCoins}: {b.coins}</span>}
                     </div>
                   )}
-                  {b.random_boost && (
+                  {((b.boosts && b.boosts.length) || b.random_boost) && (
                     <div className="build-tags-row">
-                      <span className="build-tag build-tag-random">{t.buildRandomBoostLabel[b.random_boost] || b.random_boost}</span>
+                      {(b.boosts || []).map(bo => <span key={'bo' + bo} className="build-tag build-tag-boost">{t.buildBoostLabel[bo] || bo}</span>)}
+                      {b.random_boost && <span className="build-tag build-tag-random">{t.buildRandomBoostLabel[b.random_boost] || b.random_boost}</span>}
+                    </div>
+                  )}
+                  {b.power_effects && b.power_effects.length > 0 && (
+                    <div className="build-tags-row">
+                      {b.power_effects.map(pe => <span key={'pe' + pe} className="build-tag build-tag-power">{t.buildPowerEffectLabel[pe] || pe}</span>)}
                     </div>
                   )}
                   {b.notes && <div className="effect">{b.notes}</div>}
