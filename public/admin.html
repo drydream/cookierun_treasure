@@ -145,6 +145,8 @@
   <datalist id="evolvesToList"></datalist>
   <label class="field">Effect text</label>
   <textarea id="effectInput" placeholder="No effect text in source for this item"></textarea>
+  <label class="field">Effect text (Thai)</label>
+  <textarea id="effectThInput" placeholder="No Thai text yet"></textarea>
   <div class="nav">
     <button id="prev">&larr; Prev</button>
     <button id="save">Save</button>
@@ -489,6 +491,7 @@ function renderEdit() {
   document.getElementById('categoryInput').value = it.category || '';
   document.getElementById('tierInput').value = it.tier || '';
   document.getElementById('effectInput').value = it.effect || '';
+  document.getElementById('effectThInput').value = it.effect_th || '';
   document.getElementById('evolvedFromInput').value = it.base_item_name || '';
   const child = isNew ? null : items.find(x => x.base_item_name === it.name);
   document.getElementById('evolvesToInput').value = child ? child.name : '';
@@ -517,6 +520,7 @@ async function save() {
   const category = document.getElementById('categoryInput').value.trim();
   const tier = document.getElementById('tierInput').value || null;
   const effect = document.getElementById('effectInput').value.trim();
+  const effectTh = document.getElementById('effectThInput').value.trim();
   const baseItemName = document.getElementById('evolvedFromInput').value.trim();
   const statusEl = document.getElementById('status');
   statusEl.className = '';
@@ -548,7 +552,7 @@ async function save() {
   const res = await fetch('/api/admin/save', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ password, id: it.id, name, source, grade, category, tier, effect, image, evolvesTo, baseItemName }),
+    body: JSON.stringify({ password, id: it.id, name, source, grade, category, tier, effect, effectTh, image, evolvesTo, baseItemName }),
   });
   if (res.ok) {
     const oldChild = items.find(x => x.base_item_name === it.name);
@@ -566,6 +570,7 @@ async function save() {
     it.category = category;
     it.tier = tier;
     it.effect = effect;
+    it.effect_th = effectTh;
     renderDatalist();
     statusEl.textContent = 'Saved';
     setTimeout(() => statusEl.textContent = '', 1500);

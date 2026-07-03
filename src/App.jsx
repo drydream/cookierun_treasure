@@ -353,7 +353,7 @@ function RelatedItem({ name, image, onJump }) {
   );
 }
 
-function Card({ item, query, t, evolvesTo, imageByName, onJump, isAdmin, cookieImageMap, onJumpToCookie }) {
+function Card({ item, query, t, lang, evolvesTo, imageByName, onJump, isAdmin, cookieImageMap, onJumpToCookie }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="card">
@@ -365,7 +365,9 @@ function Card({ item, query, t, evolvesTo, imageByName, onJump, isAdmin, cookieI
         {item.type === 'evolved' && <span className="evolved-tag">{t.evolved}</span>}
         {item.tier && <span className="tier-tag">{item.tier}</span>}
         {isAdmin && <a className="admin-edit-link" href={`admin.html?edit=${item.id}`} target="_blank" rel="noopener">{t.editBtn}</a>}
-        {item.effect ? (
+        {(lang === 'th' && item.effectTh) ? (
+          <div className="effect">{highlight(item.effectTh, query)}</div>
+        ) : item.effect ? (
           <div className="effect">{highlight(item.effect, query)}</div>
         ) : (
           <div className="effect muted">{t.noAbility}</div>
@@ -1125,6 +1127,7 @@ export default function App() {
         grade: row.grade,
         section: row.category,
         effect: row.effect,
+        effectTh: row.effect_th,
         extra: row.extra,
         localImage: row.image,
         type: row.type,
@@ -1272,7 +1275,7 @@ export default function App() {
           <div id="count">{t.count(filtered.length)}</div>
           <div id="list">
             {visibleItems.map((it, i) => (
-              <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} onJump={jumpTo} isAdmin={isAdmin} cookieImageMap={cookieImageMap} onJumpToCookie={jumpToCookie} />
+              <Card key={it.version + it.name + i} item={it} query={query.trim().toLowerCase()} t={t} lang={lang} evolvesTo={evolvesIntoMap[it.version + '|' + it.name]} imageByName={imageByName} onJump={jumpTo} isAdmin={isAdmin} cookieImageMap={cookieImageMap} onJumpToCookie={jumpToCookie} />
             ))}
           </div>
           {visibleCount < filtered.length && (

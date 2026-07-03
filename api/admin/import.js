@@ -7,7 +7,7 @@
 // carries) is never overwritten. Password-gated like save.js.
 // Requires env vars: SUPABASE_URL (or derived below), service_role, ADMIN_PASSWORD.
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
-const FILLABLE_FIELDS = ['name', 'grade', 'category', 'effect', 'kr_ability', 'extra', 'image', 'type', 'base_item_name', 'ingredients', 'blessed_effect'];
+const FILLABLE_FIELDS = ['name', 'grade', 'category', 'effect', 'effect_th', 'kr_ability', 'extra', 'image', 'type', 'base_item_name', 'ingredients', 'blessed_effect'];
 
 function isEmpty(v) {
   return v === null || v === undefined || (typeof v === 'string' && !v.trim());
@@ -92,6 +92,7 @@ export default async function handler(req, res) {
       grade: it.grade,
       category: it.section,
       effect: it.effect || null,
+      effect_th: it.effect_th || null,
       kr_ability: null,
       extra: it.extra || null,
       image: it.localImage || null,
@@ -111,6 +112,7 @@ export default async function handler(req, res) {
         grade: it.grade,
         category: it.category,
         effect: it.abilityEn || null,
+        effect_th: it.effect_th || null,
         kr_ability: it.ability || null,
         extra: null,
         image: it.localImage || null,

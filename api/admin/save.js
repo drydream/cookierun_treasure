@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { password, id, name, category, tier, effect, source, grade, image, evolvesTo, baseItemName, extra } = req.body;
+  const { password, id, name, category, tier, effect, effectTh, source, grade, image, evolvesTo, baseItemName, extra } = req.body;
 
   if (!process.env.ADMIN_PASSWORD || password !== process.env.ADMIN_PASSWORD) {
     res.status(401).json({ error: 'Wrong password' });
@@ -38,7 +38,7 @@ export default async function handler(req, res) {
     const [before] = await beforeRes.json();
     const prevName = before && before.name;
 
-    const patch = { name, category, tier, effect, source, grade, image, extra };
+    const patch = { name, category, tier, effect, effect_th: effectTh, source, grade, image, extra };
 
     // baseItemName is only sent by the full edit form; callers that just
     // want to change one field (e.g. the tier drag-and-drop builder) omit
