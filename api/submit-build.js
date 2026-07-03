@@ -186,7 +186,7 @@ async function handleSubmit(req, res) {
     });
     const verify = await verifyRes.json();
     if (!verify.success) {
-      res.status(400).json({ error: 'Bot check failed' });
+      res.status(400).json({ error: 'Bot check failed: ' + ((verify['error-codes'] || []).join(', ') || 'unknown') });
       return;
     }
 
