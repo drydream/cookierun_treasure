@@ -47,6 +47,7 @@ const i18n = {
     recipeBtn: 'Evolution recipe',
     evolvedFrom: 'Evolved from:',
     evolvesTo: 'Evolves to:',
+    linkedTreasures: 'Treasure:',
     ingredients: 'Ingredients:',
     noAbility: 'No ability data available yet',
     versionAll: 'All versions',
@@ -132,6 +133,7 @@ const i18n = {
     recipeBtn: 'สูตรวิวัฒนาการ',
     evolvedFrom: 'วิวัฒนาการมาจาก:',
     evolvesTo: 'วิวัฒนาการเป็น:',
+    linkedTreasures: 'ของวิเศษ:',
     ingredients: 'วัตถุดิบ:',
     noAbility: 'ยังไม่มีข้อมูลความสามารถ',
     versionAll: 'ทุกเวอร์ชัน',
@@ -453,7 +455,14 @@ function CharacterTierListPage({ characters, kind, t }) {
   );
 }
 
-function CharacterListPage({ characters, kind, t, initialQuery }) {
+function linkedTreasuresFor(name, treasures) {
+  const base = treasures.filter(it => it.extra === name);
+  const baseNames = new Set(base.map(it => it.name));
+  const evolved = treasures.filter(it => baseNames.has(it.baseItem));
+  return [...base, ...evolved];
+}
+
+function CharacterListPage({ characters, kind, t, initialQuery, treasures, onJumpToTreasure }) {
   const [query, setQuery] = useState(initialQuery || '');
   const [grade, setGrade] = useState('all');
   const [view, setView] = useState('list');
@@ -488,16 +497,30 @@ function CharacterListPage({ characters, kind, t, initialQuery }) {
           </div>
           <div id="count">{t.charCount(filtered.length)}</div>
           <div id="list">
-            {filtered.map(c => (
-              <div className="card" key={c.id}>
-                {c.image && <img src={c.image} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
-                <div className="body">
-                  <span className="name">{c.name}</span>
-                  {c.grade && <span className="grade">{c.grade}-grade</span>}
-                  {(c.ability_en || c.ability) && <div className="effect">{c.ability_en || c.ability}</div>}
+            {filtered.map(c => {
+              const linked = kind === 'cookie' && treasures ? linkedTreasuresFor(c.name, treasures) : [];
+              return (
+                <div className="card" key={c.id}>
+                  {c.image && <img src={c.image} alt="" loading="lazy" onError={e => { e.target.style.visibility = 'hidden'; }} />}
+                  <div className="body">
+                    <span className="name">{c.name}</span>
+                    {c.grade && <span className="grade">{c.grade}-grade</span>}
+                    {(c.ability_en || c.ability) && <div className="effect">{c.ability_en || c.ability}</div>}
+                    {linked.length > 0 && (
+                      <div className="evolves-to">
+                        <span className="label">{t.linkedTreasures}</span>{' '}
+                        {linked.map((it, i) => (
+                          <span key={it.name}>
+                            {i > 0 && ', '}
+                            <RelatedItem name={it.name} image={it.localImage} onJump={onJumpToTreasure} />
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </>
       )}
@@ -1106,7 +1129,7 @@ export default function App() {
         </>
       )}
       {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
-      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage key={charJumpQuery} characters={characters} kind="cookie" t={t} initialQuery={charJumpQuery} /></>}
+      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage key={charJumpQuery} characters={characters} kind="cookie" t={t} initialQuery={charJumpQuery} treasures={items} onJumpToTreasure={jumpTo} /></>}
       {page === 'pets' && <><h1>{t.navPets}</h1><CharacterListPage characters={characters} kind="pet" t={t} /></>}
       {page === 'buildcreator' && <><h1>{t.navBuilds}</h1><BuildCreatorPage items={items} characters={characters} t={t} initialBuildId={initialBuildId} /></>}
     </>

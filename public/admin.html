@@ -92,7 +92,7 @@
     <button id="addBtn" style="font-size:13px;padding:4px 10px">+ Add new</button>
     <button id="tierBuilderBtn" style="font-size:13px;padding:4px 10px">Tier Builder</button>
     <button id="dedupeBtn" style="font-size:13px;padding:4px 10px">Merge duplicates</button>
-    <button id="importBtn" style="font-size:13px;padding:4px 10px">Import/reset from JSON files</button>
+    <button id="importBtn" style="font-size:13px;padding:4px 10px">Import new from JSON files</button>
     <button id="importCharsBtn" style="font-size:13px;padding:4px 10px">Import Cookies &amp; Pets</button>
     <div id="summary"></div>
   </div>
@@ -196,6 +196,8 @@
   <textarea id="charAbilityEnInput"></textarea>
   <label class="field">Tier list</label>
   <select id="charTierInput"></select>
+  <label class="field">Linked treasures</label>
+  <div id="charLinkedTreasures"></div>
   <div class="nav">
     <button id="charPrev">&larr; Prev</button>
     <button id="charSave">Save</button>
@@ -643,7 +645,7 @@ document.getElementById('dedupeBtn').onclick = async () => {
 };
 
 document.getElementById('importBtn').onclick = async () => {
-  if (!confirm('This replaces all rows in the treasures table from public/treasures.json + treasures-kr.json. Continue?')) return;
+  if (!confirm('This adds any treasure from public/treasures.json + treasures-kr.json not already in the table. Existing rows are never touched. Continue?')) return;
   document.getElementById('importBtn').textContent = 'Importing...';
   const res = await fetch('/api/admin/import', {
     method: 'POST',
@@ -651,9 +653,9 @@ document.getElementById('importBtn').onclick = async () => {
     body: JSON.stringify({ password }),
   });
   const data = await res.json().catch(() => ({}));
-  document.getElementById('importBtn').textContent = 'Import/reset from JSON files';
+  document.getElementById('importBtn').textContent = 'Import new from JSON files';
   if (res.ok) {
-    alert('Imported ' + data.imported + ' rows.');
+    alert('Added ' + data.added + ' new, filled in ' + data.filled + ' existing.');
     items = await loadItems();
     renderDatalist();
     renderList();
@@ -663,7 +665,7 @@ document.getElementById('importBtn').onclick = async () => {
 };
 
 document.getElementById('importCharsBtn').onclick = async () => {
-  if (!confirm('This replaces all rows in the characters table from cookierunhub.com. Continue?')) return;
+  if (!confirm('This adds any cookie/pet from public/characters.json not already in the table, and fills in blank fields on existing ones. Existing non-empty fields are never touched. Continue?')) return;
   document.getElementById('importCharsBtn').textContent = 'Importing...';
   const res = await fetch('/api/admin/import-characters', {
     method: 'POST',
@@ -673,7 +675,7 @@ document.getElementById('importCharsBtn').onclick = async () => {
   const data = await res.json().catch(() => ({}));
   document.getElementById('importCharsBtn').textContent = 'Import Cookies & Pets';
   if (res.ok) {
-    alert('Imported ' + data.imported + ' cookies/pets.');
+    alert('Added ' + data.added + ' new, filled in ' + data.filled + ' existing.');
     characters = await loadCharacters();
   } else {
     alert('Error: ' + (data.error || res.status));
@@ -793,6 +795,41 @@ function charBackToList() {
   renderCharList();
 }
 
+// A treasure is "linked" to a cookie when its base version's `extra` field
+// names that cookie (set by the LINE data pipeline); the treasure it evolves
+// into counts too, since it shares the same owner.
+function linkedTreasuresFor(name) {
+  const base = items.filter(it => it.extra === name);
+  const baseNames = new Set(base.map(it => it.name));
+  const evolved = items.filter(it => baseNames.has(it.base_item_name));
+  return [...base, ...evolved];
+}
+
+function renderCharLinkedTreasures(c) {
+  const el = document.getElementById('charLinkedTreasures');
+  const linked = c.kind === 'cookie' ? linkedTreasuresFor(c.name) : [];
+  if (linked.length === 0) {
+    el.innerHTML = '<div style="color:#999;font-size:13px">(none)</div>';
+    return;
+  }
+  el.innerHTML = linked.map(it => `
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <img src="${imgSrc(it.image)}" loading="lazy" style="width:32px;height:32px;object-fit:contain;flex-shrink:0">
+      <span style="flex:1">${escapeHtml(it.name)}${it.type === 'evolved' ? ' (Evolved)' : ''}</span>
+      <button type="button" data-name="${escapeHtml(it.name)}" style="font-size:13px;padding:4px 10px">Edit</button>
+    </div>
+  `).join('');
+  el.querySelectorAll('button[data-name]').forEach(btn => {
+    btn.onclick = () => {
+      const i = items.findIndex(it => it.name === btn.dataset.name);
+      if (i === -1) return;
+      hideAllViews();
+      setActiveTab('tabTreasures');
+      openEdit(i);
+    };
+  });
+}
+
 function renderCharEdit() {
   const c = charIsNew ? charBlankDraft() : characters[charIdx];
   document.getElementById('charImg').src = imgSrc(c.image);
@@ -803,6 +840,7 @@ function renderCharEdit() {
   document.getElementById('charKr').textContent = c.ability || '(no ability text in source)';
   document.getElementById('charAbilityEnInput').value = c.ability_en || '';
   document.getElementById('charTierInput').value = c.tier || '';
+  renderCharLinkedTreasures(c);
   document.getElementById('charSave').textContent = charIsNew ? 'Add' : 'Save';
   document.getElementById('charPrev').style.display = charIsNew ? 'none' : '';
   document.getElementById('charSkip').style.display = charIsNew ? 'none' : '';
