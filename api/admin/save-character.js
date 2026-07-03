@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const { password, id, name, kr_name, grade, ability_en, image, tier } = req.body;
+  const { password, id, name, kr_name, grade, ability_en, ability_th, image, tier } = req.body;
 
   if (!process.env.ADMIN_PASSWORD || password !== process.env.ADMIN_PASSWORD) {
     res.status(401).json({ error: 'Wrong password' });
@@ -30,7 +30,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
         Prefer: 'return=minimal',
       },
-      body: JSON.stringify({ name, kr_name, grade, ability_en, image, tier }),
+      body: JSON.stringify({ name, kr_name, grade, ability_en, ability_th, image, tier }),
     });
     if (!putRes.ok) {
       const err = await putRes.text();

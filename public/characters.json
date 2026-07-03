@@ -825,7 +825,8 @@
     "grade": "E",
     "ability": null,
     "ability_en": "Creates 2 Bean Jellies at a given interval. Lifts 2 times and Revives 2 times with 22 Energy. (Revival is applied again for Relay Cookie).",
-    "image": "images-char/pets_bouncing_bean.png"
+    "image": "images-char/pets_bouncing_bean.png",
+    "ability_th": "สร้าง Bean Jelly 2 ชิ้นเป็นระยะ มอบ Pit Lift 2 ครั้ง และรีไวฟ์ 2 ครั้งด้วย 22 HP ให้กับคุกกี้แต่ละตัว"
   },
   {
     "kind": "pet",
@@ -834,7 +835,8 @@
     "grade": "L",
     "ability": "• 능력 : 호위하며 젤리 생성\r\n호위 1~8단\r\n• 조합보너스 : 없음\r\n• 보유효과 : 에피소드 1 \"오븐 탈출\"에서 일정 확률로 미스터리 박스 생성 (업그레이드될수록 확률이 더 커진다)\r\n\r\n※ 에피소드1 유물 특별 보상",
     "ability_en": "• Ability: Escort and create jelly\r\nEscort ranks 1 to 8\r\n• Combination bonus: None\r\n• Possession effect: Mystery box is created with a certain probability in Episode 1 “Escape from the Oven” (the probability increases as it is upgraded)\r\n\r\n※ Episode 1 artifact special reward",
-    "image": "images-char/pets_choco_king_drop.png"
+    "image": "images-char/pets_choco_king_drop.png",
+    "ability_th": "เป็นระยะจะพุ่งไปข้างหน้าเพื่อทำลายสิ่งกีดขวางและกระจายเยลลี่และไอเทมหลากหลายชนิด ปูพรมแดงให้คุกกี้ ทำให้สามารถข้ามหลุมได้อย่างปลอดภัย"
   },
   {
     "kind": "pet",
@@ -843,7 +845,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Mini Energy Potions (worth 15 Energy).",
-    "image": "images-char/pets_princess_jewelry.png"
+    "image": "images-char/pets_princess_jewelry.png",
+    "ability_th": "สร้างยาพลังงานขนาดเล็ก (มูลค่า 15 พลังงาน)"
   },
   {
     "kind": "pet",
@@ -852,7 +855,8 @@
     "grade": "S",
     "ability": "• 능력 : 구출 1~8회\r\n • 조합보너스 : 닌자맛 쿠키",
     "ability_en": "• Ability: Rescue 1~8 times\r\n • Combination Bonus: Ninja Flavored Cookie",
-    "image": "images-char/pets_little_ghost.png"
+    "image": "images-char/pets_little_ghost.png",
+    "ability_th": "• ความสามารถ: ช่วยเหลือ 1~8 ครั้ง\r\n • โบนัสรวม: คุกกี้รสนินจา"
   },
   {
     "kind": "pet",
@@ -870,7 +874,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Ice Bridges over holes.",
-    "image": "images-char/pets_snowflake.png"
+    "image": "images-char/pets_snowflake.png",
+    "ability_th": "มีโอกาสสร้างสะพานน้ำแข็งข้ามหลุม"
   },
   {
     "kind": "pet",
@@ -879,7 +884,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Releases Jellyco missiles.",
-    "image": "images-char/pets_jellyco_cube.png"
+    "image": "images-char/pets_jellyco_cube.png",
+    "ability_th": "ยิงขีปนาวุธ Jellyco เป็นระยะๆ"
   },
   {
     "kind": "pet",
@@ -888,7 +894,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Makes snacks that make Cookies giant and give a small dose of Energy.",
-    "image": "images-char/pets_hardtack_supply.png"
+    "image": "images-char/pets_hardtack_supply.png",
+    "ability_th": "สร้าง Hardtack Jelly เป็นระยะๆ ที่ให้สถานะยักษ์และฟื้นฟู HP เล็กน้อย"
   },
   {
     "kind": "pet",
@@ -897,7 +904,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Spreads Star Jellies and Coins.",
-    "image": "images-char/pets_twinkle_ball.png"
+    "image": "images-char/pets_twinkle_ball.png",
+    "ability_th": "พุ่งไปข้างหน้าเป็นระยะๆ เพื่อโปรย Colorful Star Jellies"
   },
   {
     "kind": "pet",
@@ -906,7 +914,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Makes Giant Gold Coins (worth 100 regular coins).",
-    "image": "images-char/pets_gold_drop.png"
+    "image": "images-char/pets_gold_drop.png",
+    "ability_th": "สร้างเหรียญทองคำขนาดยักษ์ (มูลค่า 100 เหรียญปกติ)"
   },
   {
     "kind": "pet",
@@ -915,7 +924,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Catches Spirit Jellies one at a time. Each Spirit Jelly gives a small dose of Energy.",
-    "image": "images-char/pets_flame_bat.png"
+    "image": "images-char/pets_flame_bat.png",
+    "ability_th": "ดูดซับ Spirit Jellies ทีละดวง ฟื้นฟู HP เล็กน้อยทุกครั้งที่ดูดซับได้"
   },
   {
     "kind": "pet",
@@ -924,7 +934,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Flies ahead and collect Jellies. (Does not collect Jellies that are not attracted to Magnetic Effect.) It will not be able to collect winged jellies and Dark Moon Jellies.",
-    "image": "images-char/pets_windy.png"
+    "image": "images-char/pets_windy.png",
+    "ability_th": "เคลื่อนที่นำหน้าเพื่อเก็บเยลลี่ (ไม่สามารถเก็บเยลลี่ที่ไม่ได้รับผลกระทบจากแม่เหล็กได้)"
   },
   {
     "kind": "pet",
@@ -933,7 +944,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Giant Blast Beads (The Cookie becomes giant and blasts forward).",
-    "image": "images-char/pets_fox_bead.png"
+    "image": "images-char/pets_fox_bead.png",
+    "ability_th": "สร้างลูกปัดระเบิดยักษ์ (คุกกี้กลายเป็นยักษ์และระเบิดไปข้างหน้า)"
   },
   {
     "kind": "pet",
@@ -942,7 +954,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Extra points for running faster. More points with each upgrade.",
-    "image": "images-char/pets_magic_dictionary.png"
+    "image": "images-char/pets_magic_dictionary.png",
+    "ability_th": "มอบ Speed Points ตามความเร็วในการวิ่ง"
   },
   {
     "kind": "pet",
@@ -960,7 +973,8 @@
     "grade": "S",
     "ability": "• 능력 : 27~13초마다 4초 동안 스포트라이트 효과 발동(체력감소 90% 느림, 자력 효과, 장애물 충돌 무시)\r\n • 조합보너스 : 락스타맛 쿠키 (음표 젤리 점수 추가), 카주카틀리맛 쿠키(체력감소 20% 빠름)",
     "ability_en": "• Ability: Spotlight effect activates for 4 seconds every 27 to 13 seconds (slows health reduction by 90%, ignores magnetic effects and obstacle collisions)\r\n • Combination bonus: Rockstar-flavored cookies (added musical note jelly points), Kaju Katli-flavored cookies (health reduction 20% faster)",
-    "image": "images-char/pets_spotlight.png"
+    "image": "images-char/pets_spotlight.png",
+    "ability_th": "เป็นระยะจะส่องสปอตไลท์ใส่คุกกี้ ทำให้ได้รับ Magnet ทำลายสิ่งกีดขวางเมื่อชน และลดอัตราการเสีย HP (Magnet นี้ไม่สแตกกับเอฟเฟกต์แม่เหล็กอื่น)"
   },
   {
     "kind": "pet",
@@ -969,7 +983,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "At given intervals, it can lift the Cookie from a hole with a blast.",
-    "image": "images-char/pets_rocket_firecracker.png"
+    "image": "images-char/pets_rocket_firecracker.png",
+    "ability_th": "ทำ Pit Lift ให้เมื่อคุกกี้ตกลงไปในหลุม จะชาร์จพลังใหม่หลังผ่านไปสักพัก"
   },
   {
     "kind": "pet",
@@ -978,7 +993,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Makes Giant Jellies, which also give Alphabet Jellies (gives the letters that you don't have)",
-    "image": "images-char/pets_log_cake.png"
+    "image": "images-char/pets_log_cake.png",
+    "ability_th": "เป็นระยะจะสร้าง Alphabet Giant Jelly ที่ทำให้ได้รับสถานะ Giant และเยลลี่ Alphabet โบนัสไทม์แบบสุ่มที่ยังขาดอยู่หนึ่งตัว"
   },
   {
     "kind": "pet",
@@ -987,7 +1003,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Makes flying Energy Potions accompanied by Snow Flower Jellies.",
-    "image": "images-char/pets_snow_globe.png"
+    "image": "images-char/pets_snow_globe.png",
+    "ability_th": "เป็นระยะจะสร้าง HP Potion ที่ลอยได้ พร้อมด้วย Snow Flower Jelly"
   },
   {
     "kind": "pet",
@@ -996,7 +1013,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Generates Coins (1 Coin at fixed intervals).",
-    "image": "images-char/pets_lucky_pouch.png"
+    "image": "images-char/pets_lucky_pouch.png",
+    "ability_th": "เป็นระยะจะสร้าง Gold Coin โดยมีโอกาสเล็กน้อยที่จะได้ Giant Gold Coin"
   },
   {
     "kind": "pet",
@@ -1005,7 +1023,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Royal Bear Jelly shooting star will fall at fixed intervals.",
-    "image": "images-char/pets_pink_candy.png"
+    "image": "images-char/pets_pink_candy.png",
+    "ability_th": "เป็นระยะจะเรียก Royal Bear Jelly Meteor ตกลงมาจากท้องฟ้า ซึ่งจะสร้าง Pink Candy Jelly เมื่อตกกระทบพื้น"
   },
   {
     "kind": "pet",
@@ -1014,7 +1033,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Lights fires at fixed intervals that reveal hidden Jellies. Obstacles set on fire can be passed through.",
-    "image": "images-char/pets_purple_candle.png"
+    "image": "images-char/pets_purple_candle.png",
+    "ability_th": "เป็นระยะจะเพิ่มความสว่างของเปลวไฟเพื่อเผยเยลลี่ที่ซ่อนอยู่ สิ่งกีดขวางที่ถูกไฟลุกไหม้จะสามารถผ่านได้"
   },
   {
     "kind": "pet",
@@ -1023,7 +1043,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates energy recovery / blast potion (Gives 20 energy and blasts at the same time)",
-    "image": "images-char/pets_firefly.png"
+    "image": "images-char/pets_firefly.png",
+    "ability_th": "สร้าง Blast HP Item: ฟื้นฟู HP และเข้าสู่ Blast Mode ไปพร้อมกัน"
   },
   {
     "kind": "pet",
@@ -1032,7 +1053,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Converts Coins into Points at regular intervals. (There is a limit to the amount he can convert at any one time.) Upgrades will make the conversion rate faster.",
-    "image": "images-char/pets_jelly_scale.png"
+    "image": "images-char/pets_jelly_scale.png",
+    "ability_th": "เป็นระยะจะแปลงคอยน์เป็นคะแนน (จำนวนที่แปลงได้ในแต่ละครั้งมีจำกัด)"
   },
   {
     "kind": "pet",
@@ -1041,7 +1063,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Converts Points into Coins at regular intervals. (There is a limit to the amount he can convert at any one time.) Upgrades will make the conversion rate faster.",
-    "image": "images-char/pets_coin_scale.png"
+    "image": "images-char/pets_coin_scale.png",
+    "ability_th": "เป็นระยะจะแปลงคะแนนเป็นคอยน์ (จำนวนที่แปลงได้ในแต่ละครั้งมีจำกัด)"
   },
   {
     "kind": "pet",
@@ -1050,7 +1073,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "It produces Potions with over-ripened grapes at regular intervals. (When the Juicy Potion is taken, some energy is recovered and because the cookie gets a little bit excited because of the overwhelming flavour of the juice, it makes them sprint. It also decreases energy loss when hitting obstacles.)",
-    "image": "images-char/pets_oak_juice_barrel.png"
+    "image": "images-char/pets_oak_juice_barrel.png",
+    "ability_th": "เป็นระยะจะสร้าง Ripe Potion ที่ฟื้นฟู HP เพิ่มความเร็วในการวิ่ง และลดความเสียหายจากสิ่งกีดขวางเป็นเวลาสั้น ๆ"
   },
   {
     "kind": "pet",
@@ -1059,7 +1083,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Extra points during Blast Speed and slows down Energy Drain.",
-    "image": "images-char/pets_rabbit_apple.png"
+    "image": "images-char/pets_rabbit_apple.png",
+    "ability_th": "มอบ Speed Point และลดอัตราการเสีย HP"
   },
   {
     "kind": "pet",
@@ -1068,7 +1093,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates 20 Cat Coins after a set period of time. The production rate increases with upgrades. The Fluffy Cheese Cat will only put Cat Coins on regular Jellies. All other Jelly types will not work. However, if a Jelly has been turned into a Bear Jelly with an All-Bear Jelly, it will still work.",
-    "image": "images-char/pets_cheese_cat.png"
+    "image": "images-char/pets_cheese_cat.png",
+    "ability_th": "เป็นระยะจะสร้าง Cat Coin มูลค่า 20 คอยน์ ความถี่จะค่อย ๆ เพิ่มขึ้นตามเวลา"
   },
   {
     "kind": "pet",
@@ -1077,7 +1103,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Makes Lemon Soda Potions. One sip turns obstacles into Jellies.",
-    "image": "images-char/pets_lemon_slice.png"
+    "image": "images-char/pets_lemon_slice.png",
+    "ability_th": "เป็นระยะจะสร้าง Lemon Soda Potion ที่เปลี่ยนสิ่งกีดขวางให้กลายเป็น Bubble Jelly"
   },
   {
     "kind": "pet",
@@ -1086,7 +1113,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "For a set period of time, produces each type of Jellies.",
-    "image": "images-char/pets_backpacky.png"
+    "image": "images-char/pets_backpacky.png",
+    "ability_th": "เป็นระยะจะทำ Power Burp ปล่อยเยลลี่หลากหลายชนิดออกมาเป็นรูปกรวย"
   },
   {
     "kind": "pet",
@@ -1095,7 +1123,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Jellies in precise order.",
-    "image": "images-char/pets_butler_ghost.png"
+    "image": "images-char/pets_butler_ghost.png",
+    "ability_th": "สร้าง Power Jelly ตามคิวที่กำหนดไว้อย่างเคร่งครัดเป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1104,7 +1133,8 @@
     "grade": "S",
     "ability": "• 능력 : 28~14초마다 키위맛 거대화 아이템 생성\r\n • 조합보너스 : 키위맛 쿠키 (키위젤리 점수 추가 + 체력감소 13% 느림)",
     "ability_en": "• Ability: Creates a kiwi-flavored giant item every 28 to 14 seconds.\r\n • Combination bonus: Kiwi flavor cookie (kiwi jelly points added + stamina loss slowed by 13%)",
-    "image": "images-char/pets_kiwi_bird.png"
+    "image": "images-char/pets_kiwi_bird.png",
+    "ability_th": "สร้าง Kiwi Giant Jelly ที่เปลี่ยนสิ่งกีดขวางให้กลายเป็น Kiwi Jelly เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1113,7 +1143,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Potions to help the cookie recover energy. (It can also be used with the Relay Cookie and restores up to 60 energy per revive)",
-    "image": "images-char/pets_fluffy_pup.png"
+    "image": "images-char/pets_fluffy_pup.png",
+    "ability_th": "นำ HP Potion มาให้เมื่อล้มลง เพื่อมอบการรีไวฟ์สูงสุด 4 ครั้งให้กับคุกกี้แต่ละตัว"
   },
   {
     "kind": "pet",
@@ -1122,7 +1153,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Takes 180 Coins and creates Star Fireworks Potions at a given interval (Stops when there are not enough Coins)\nPossession Effect: She sings a heart-felt love song that recovers your Energy (Effect will occur only once even with the additional possession of Mr. Fa-Sol-La-Si)",
-    "image": "images-char/pets_miss_doremi.png"
+    "image": "images-char/pets_miss_doremi.png",
+    "ability_th": "สร้าง Star Fireworks Potion ราคา 330 คอยน์เป็นระยะ (เฉพาะเมื่อมีคอยน์เพียงพอ)"
   },
   {
     "kind": "pet",
@@ -1131,7 +1163,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Royal Blast Dash Coins at regular intervals.\nPower+: He sings a heart-felt love song that recovers your Energy. (Effect will occur only once even with the additional possession of Ms. Do-Re-Mi)",
-    "image": "images-char/pets_mr_fasollasi.png"
+    "image": "images-char/pets_mr_fasollasi.png",
+    "ability_th": "สร้าง Royal Blast Coin เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1140,7 +1173,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "It moves forward for a set period of time and eats Jellies and creates Cocoa Marshmallow Jellies.",
-    "image": "images-char/pets_marshmallow_hamster.png"
+    "image": "images-char/pets_marshmallow_hamster.png",
+    "ability_th": "พุ่งเข้าไปดูดเยลลี่เป็นระยะ จากนั้นพ่น Cocoa Marshmallow Jelly และ HP Potion ออกมา"
   },
   {
     "kind": "pet",
@@ -1149,7 +1183,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Giant Coin Jellies. Creates Giant Potions with Coins inside. After getting a Giant Potion he goes into Giant Mode and gains Coins.",
-    "image": "images-char/pets_paprika_punching_bag.png"
+    "image": "images-char/pets_paprika_punching_bag.png",
+    "ability_th": "สร้าง Giant Jelly Gold Coin มูลค่า 100 คอยน์ และมอบสถานะยักษ์เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1158,7 +1193,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates All-Bear Jelly Party Potions at regular intervals. Pink Bear Jellies appear with a fixed probability in the All-Bear Jelly Party created by the Owlcorn.",
-    "image": "images-char/pets_acorn_owl.png"
+    "image": "images-char/pets_acorn_owl.png",
+    "ability_th": "สร้าง Bear Jelly Party Potion เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1176,7 +1212,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Alphabet Potion. It gives you one random alphabet (Jelly) that you do not already have.",
-    "image": "images-char/pets_black_tea_cup.png"
+    "image": "images-char/pets_black_tea_cup.png",
+    "ability_th": "สร้าง Alphabet Potion ที่มอบ Bonus Time Alphabet Jelly ตัวที่ขาดแบบสุ่มหนึ่งตัว"
   },
   {
     "kind": "pet",
@@ -1194,7 +1231,8 @@
     "grade": "S",
     "ability": "• 능력 : 24~14초마다 광속질주 아이템 제작 + 속도 점수 1~8단\r\n• 조합보너스 : 오렌지맛 쿠키 (과즙젤리 점수 추가 + 체력감소 8% 느림)",
     "ability_en": "• Ability: Create light speed item every 24~14 seconds + speed score 1~8\r\n• Combination Bonus: Orange Flavored Cookie (Additional Juice Jelly Points + 8% slower stamina reduction)",
-    "image": "images-char/pets_orange_mouse.png"
+    "image": "images-char/pets_orange_mouse.png",
+    "ability_th": "สร้าง Blast Jelly เป็นระยะ มอบ Speed Points ตามความเร็วในการวิ่ง"
   },
   {
     "kind": "pet",
@@ -1203,7 +1241,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Giant White Gold Coin at a given interval and Lifts from hole 1 time.",
-    "image": "images-char/pets_platinum_drop.png"
+    "image": "images-char/pets_platinum_drop.png",
+    "ability_th": "สร้างเหรียญทองคำขาวขนาดยักษ์ในช่วงเวลาที่กำหนด และยกขึ้นจากหลุม 1 ครั้ง"
   },
   {
     "kind": "pet",
@@ -1212,7 +1251,8 @@
     "grade": "S",
     "ability": "• 능력 : 구출/부활 체력 40 3회 + 이어달리기 체력 160 증가\r\n• 조합보너스 : 라임맛 쿠키 (과즙젤리 점수 추가 + 체력감소 8% 느림)",
     "ability_en": "• Ability: Rescue/resurrection stamina 40 3 times + continuous run stamina increased by 160\r\n• Combination Bonus: Lime Flavored Cookie (Additional Juice Jelly Points + 8% slower stamina reduction)",
-    "image": "images-char/pets_mr_squeak.png"
+    "image": "images-char/pets_mr_squeak.png",
+    "ability_th": "• ความสามารถ: ความแข็งแกร่งในการกู้ภัย/ฟื้นคืนชีพ 40 3 ครั้ง + ความแข็งแกร่งในการวิ่งต่อเนื่องเพิ่มขึ้น 160\r\n• โบนัสรวม: คุกกี้รสมะนาว (คะแนนเจลลี่น้ำผลไม้เพิ่มเติม + ลดความแข็งแกร่งช้าลง 8%)"
   },
   {
     "kind": "pet",
@@ -1221,7 +1261,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "At a given interval, destroys obstacles by shooting Sea Bubble Jellies. Creates Potions with every first shot.",
-    "image": "images-char/pets_paper_boat_sailor.png"
+    "image": "images-char/pets_paper_boat_sailor.png",
+    "ability_th": "ยิง Sea Bubble Jelly เป็นระยะเพื่อทำลายสิ่งกีดขวาง การยิงครั้งแรกในแต่ละรอบจะสร้าง HP Potion"
   },
   {
     "kind": "pet",
@@ -1230,7 +1271,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Dumpling Jelly at a given interval, as well as earning extra Coins. Obstacles hit by Dumpling Jellies are destroyed.",
-    "image": "images-char/pets_panda_dumpling.png"
+    "image": "images-char/pets_panda_dumpling.png",
+    "ability_th": "ขว้าง Dumpling Jellies เป็นระยะ ได้รับคอยน์เพิ่มจากการขว้างแต่ละครั้ง สิ่งกีดขวางที่โดน Dumpling Jellies จะถูกทำลาย"
   },
   {
     "kind": "pet",
@@ -1239,7 +1281,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Earns extra points for destroying obstacles. Slower Energy drain.",
-    "image": "images-char/pets_warm_teacup.png"
+    "image": "images-char/pets_warm_teacup.png",
+    "ability_th": "ได้รับ Crush Points เมื่อทำลายสิ่งกีดขวาง ลดอัตราการลด HP"
   },
   {
     "kind": "pet",
@@ -1248,7 +1291,8 @@
     "grade": "S",
     "ability": "• 능력 : 양파즙 뿌리기 1단 ~ 양파즙 뿌리기 8단\r\n• 조합보너스 : 양파맛 쿠키 (장애물 통과점수 15,200점 추가)",
     "ability_en": "• Abilities: Onion Juice Spray Level 1 ~ Onion Juice Spray Level 8\r\n• Combination Bonus: Onion-flavored Cookies (15,200 points added for passing obstacles)",
-    "image": "images-char/pets_onion_fish.png"
+    "image": "images-char/pets_onion_fish.png",
+    "ability_th": "ฉีด Onion Juice เป็นระยะ และสร้าง Tear Jellies กับ Tear Jelly Potions สิ่งกีดขวางที่โดน Onion Juice จะกลายเป็นโปร่งใสและสามารถวิ่งผ่านได้"
   },
   {
     "kind": "pet",
@@ -1257,7 +1301,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Throws Cinnamon Bomb, destroying obstacles and creating Cinnamon Bunnies at a given interval. Strawberry Cinnamon Bun Jelly recovers Energy.",
-    "image": "images-char/pets_cinnamon_roll_bunny.png"
+    "image": "images-char/pets_cinnamon_roll_bunny.png",
+    "ability_th": "ขว้าง Cinnamon Bombs เป็นระยะ ทำลายสิ่งกีดขวางและสร้าง Cinnamon Bun Jellies โดย Strawberry Cinnamon Bun Jellies จะฟื้นฟู HP เล็กน้อย"
   },
   {
     "kind": "pet",
@@ -1266,7 +1311,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": null,
-    "image": "images-char/pets_wave_drop.png"
+    "image": "images-char/pets_wave_drop.png",
+    "ability_th": "สร้าง Frozen Bear Jelly Party Potion เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1275,7 +1321,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Performs and creates 'Christmas Macaron Jelly' and an additional Power Jelly at a given interval.",
-    "image": "images-char/pets_castanets.png"
+    "image": "images-char/pets_castanets.png",
+    "ability_th": "เริ่มการแสดงเป็นระยะเพื่อสร้าง Christmas Macaron Jellies พร้อมกับ Power Jelly เพิ่มเติมท่ามกลางเยลลี่เหล่านั้น"
   },
   {
     "kind": "pet",
@@ -1284,7 +1331,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Rolls its body and earns points after collecting a certain number of Jellies",
-    "image": "images-char/pets_sticky_rice_seal.png"
+    "image": "images-char/pets_sticky_rice_seal.png",
+    "ability_th": "กลิ้งไปมาและได้รับคะแนนหลังจากเก็บเยลลี่ครบตามจำนวนที่กำหนด"
   },
   {
     "kind": "pet",
@@ -1293,7 +1341,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Magnetic Blast item at a given interval.",
-    "image": "images-char/pets_pocket_watch_referee.png"
+    "image": "images-char/pets_pocket_watch_referee.png",
+    "ability_th": "สร้าง Magnet Blast Jelly เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1302,7 +1351,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Sprinkles water and grows Jelly Flower, destroying obstacles.",
-    "image": "images-char/pets_herb_teapot.png"
+    "image": "images-char/pets_herb_teapot.png",
+    "ability_th": "รดน้ำเป็นระยะและปลูก Jelly Flowers เพื่อทำลายสิ่งกีดขวาง"
   },
   {
     "kind": "pet",
@@ -1311,7 +1361,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Dino-Candy Giant item at a given interval. Eating this item will make Dino-Candy Jelly POP! POP!",
-    "image": "images-char/pets_popping_dragon_egg.png"
+    "image": "images-char/pets_popping_dragon_egg.png",
+    "ability_th": "สร้าง Dino-Pop Giant Jelly เป็นระยะ ซึ่งทำให้กลุ่ม Dino-Candy Jelly แตกออก"
   },
   {
     "kind": "pet",
@@ -1320,7 +1371,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "It will create Alphabet Blast Jellies that will add one letter you don't have while entering Blast Mode.",
-    "image": "images-char/pets_cotton_candy_dove.png"
+    "image": "images-char/pets_cotton_candy_dove.png",
+    "ability_th": "มันจะสร้าง Alphabet Blast Jellies ซึ่งจะเพิ่มตัวอักษรหนึ่งตัวที่คุณไม่มีขณะเข้าสู่โหมด Blast"
   },
   {
     "kind": "pet",
@@ -1329,7 +1381,8 @@
     "grade": "S",
     "ability": "• 능력 : 24~17초 마다 광속질주 + 체력감소 15% 느림\r\n • 조합보너스 : 롤케이크맛 쿠키 (장애물 파괴점수 15,000점 추가)",
     "ability_en": "• Ability: Speed of light every 24~17 seconds + 15% slower stamina reduction\r\n • Combination Bonus: Roll Cake Flavored Cookie (15,000 additional obstacle destruction points)",
-    "image": "images-char/pets_light_brothers.png"
+    "image": "images-char/pets_light_brothers.png",
+    "ability_th": "กระตุ้น Blast เป็นระยะ และลดอัตราการลด HP ในช่วงเวลาที่เหลือ"
   },
   {
     "kind": "pet",
@@ -1338,7 +1391,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Launches Banana Face at a given interval and destroys obstacles. Banana Face leaves traces of Coins behind.",
-    "image": "images-char/pets_savabana_lion.png"
+    "image": "images-char/pets_savabana_lion.png",
+    "ability_th": "เปิดตัว Banana Face ในช่วงเวลาที่กำหนดและทำลายสิ่งกีดขวาง Banana Face ทิ้งร่องรอยของเหรียญไว้เบื้องหลัง"
   },
   {
     "kind": "pet",
@@ -1347,7 +1401,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Throws delicious pancake frisbee, destroying obstacles and creating Maple Syrup Jelly.",
-    "image": "images-char/pets_pancake_frisbee.png"
+    "image": "images-char/pets_pancake_frisbee.png",
+    "ability_th": "ขว้าง Pancake Frisbee เป็นระยะ ทำลายสิ่งกีดขวางและสร้าง Maple Syrup Jellies ตลอดเส้นทาง"
   },
   {
     "kind": "pet",
@@ -1356,7 +1411,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Collects Jellies at given intervals. Uses the collected Jellies to make Full Moon Rice Cake Jellies. (Full Moon Rice Cake Jellies are not affected by magnets)",
-    "image": "images-char/pets_moon_mortar.png"
+    "image": "images-char/pets_moon_mortar.png",
+    "ability_th": "เคลื่อนที่นำหน้าเป็นระยะเพื่อเก็บเยลลี่ให้คุกกี้ จากนั้นตำเยลลี่ที่เก็บได้ให้กลายเป็น Full Moon Rice Cake Jelly ขนาดยักษ์ที่ฟื้นฟู HP เล็กน้อย (Full Moon Rice Cake Jelly ไม่ได้รับผลจากเอฟเฟกต์แม่เหล็ก)"
   },
   {
     "kind": "pet",
@@ -1365,7 +1421,8 @@
     "grade": "S",
     "ability": "• 능력 : 속도 점수, 딸기 생명물약 생성\r\n• 조합보너스 : 딸기쇼트케이크맛 쿠키 (케이크조각 젤리 점수추가)\r\n\r\n※ 친구 10명 초대 또는 패키지 구매로 획득가능",
     "ability_en": "• Abilities: Speed score, create strawberry life potion\r\n• Combination bonus: Strawberry shortcake flavor cookie (cake piece jelly score added)\r\n\r\n※ Can be obtained by inviting 10 friends or purchasing a package",
-    "image": "images-char/pets_little_cake_hound.png"
+    "image": "images-char/pets_little_cake_hound.png",
+    "ability_th": "ได้รับ Speed Points ตามความเร็วในการวิ่ง และสร้าง Strawberry Potion เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1374,7 +1431,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Sits in the center of the screen for a set period of time, destroying all obstacles and transforming all Jellies",
-    "image": "images-char/pets_little_drum.png"
+    "image": "images-char/pets_little_drum.png",
+    "ability_th": "เคลื่อนที่ไปข้างหน้าเป็นระยะเพื่อทำลายสิ่งกีดขวางและเปลี่ยนเยลลี่ที่อยู่ใกล้เคียงให้กลายเป็น Honey Bun Jellies ลดอัตราการลด HP ระหว่างที่สกิลทำงาน"
   },
   {
     "kind": "pet",
@@ -1383,7 +1441,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Gives bonus points for higher speed and creates goodies at given intervals.",
-    "image": "images-char/pets_grandpa_parrot.png"
+    "image": "images-char/pets_grandpa_parrot.png",
+    "ability_th": "มอบ Speed Points ตามความเร็วในการวิ่ง สร้าง Blast Jelly เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1392,7 +1451,8 @@
     "grade": "S",
     "ability": "• 능력 : 23~16초마다 장애물 파괴, 생명물약/젤리 생성(물약을 5번 나눠서 생성)\r\n• 조합보너스 : 멜로우버니 쿠키(모든 젤리 1,400점 추가 + 체력감소 8% 느림)\r\n\r\n※ 친구 15명 초대 또는 패키지 구매로 획득가능",
     "ability_en": "• Ability: Destroys obstacles every 23 to 16 seconds, creates life potion/jelly (produces potion 5 times)\r\n• Combination Bonus: Mellow Bunny Cookie (1,400 points added to all jellies + 8% slower stamina reduction)\r\n\r\n※ Can be obtained by inviting 15 friends or purchasing a package",
-    "image": "images-char/pets_soft_egg_bunny.png"
+    "image": "images-char/pets_soft_egg_bunny.png",
+    "ability_th": "พุ่งไปข้างหน้าเป็นระยะเพื่อทำลายสิ่งกีดขวางและสร้าง Egg Jellies กับ HP Egg Jellies"
   },
   {
     "kind": "pet",
@@ -1401,7 +1461,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Sings a song at certain intervals to call the frog family. The frog family destroys obstacles and create Duckweed Jellies.",
-    "image": "images-char/pets_cucumber_pudding_frog.png"
+    "image": "images-char/pets_cucumber_pudding_frog.png",
+    "ability_th": "ร้องเพลงเป็นระยะเพื่อเรียก Frog Family ออกมา Frog Family จะทำลายสิ่งกีดขวางและสร้าง Duckweed Jellies"
   },
   {
     "kind": "pet",
@@ -1410,7 +1471,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates Black Stone Power Jellies at regular intervals. When collected, restores Energy and converts Jellies into Black Stone Jellies.",
-    "image": "images-char/pets_black_rice_stone_master.png"
+    "image": "images-char/pets_black_rice_stone_master.png",
+    "ability_th": "สร้าง Black Rice Bowl Jelly เป็นระยะ ซึ่งจะฟื้นฟู HP และเปลี่ยนเยลลี่ทั่วไปให้กลายเป็น Black Stone Jellies"
   },
   {
     "kind": "pet",
@@ -1419,7 +1481,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Creates White Stone Power Jellies at regular intervals. When collected, restores Energy and converts Jellies into White Stone Jellies.",
-    "image": "images-char/pets_white_rice_stone_master.png"
+    "image": "images-char/pets_white_rice_stone_master.png",
+    "ability_th": "สร้าง White Rice Bowl Jelly เป็นระยะ ซึ่งจะฟื้นฟู HP และเปลี่ยนเยลลี่ทั่วไปให้กลายเป็น White Stone Jellies"
   },
   {
     "kind": "pet",
@@ -1428,7 +1491,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Earns extra Points for running faster, and rescues from holes or revive Cookies. Rescue or revive applies to both the main and relay Cookies. Rescue or revives (38 Energy) 3 times.",
-    "image": "images-char/pets_dragon_horse_doll.png"
+    "image": "images-char/pets_dragon_horse_doll.png",
+    "ability_th": "มอบ Speed Points ตามความเร็วในการวิ่ง มอบ Pit Lift 3 ครั้ง หรือฟื้นคืนชีพด้วย HP 38 ให้กับคุกกี้แต่ละตัว"
   },
   {
     "kind": "pet",
@@ -1437,7 +1501,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Sheds tears at regular intervals. Tear Jellies and Honey Tear Jellies will pour down from the sky. Honey Tear Jellies restore Energy. Honey Tear Jellies are not considered as Life Potions.",
-    "image": "images-char/pets_honey_rice_cake_soul.png"
+    "image": "images-char/pets_honey_rice_cake_soul.png",
+    "ability_th": "หลั่งน้ำตาเป็นระยะ ทำให้ Tear Jellies และ Honey Tear Jellies ร่วงหล่นลงมาจากฟากฟ้า การเก็บ Honey Tear Jellies จะฟื้นฟู HP โดย Honey Tear Jellies ไม่นับเป็น HP Potion"
   },
   {
     "kind": "pet",
@@ -1446,7 +1511,8 @@
     "grade": "S",
     "ability": "• 능력 : 약 15초마다 거대화 아이템과 코인 생성 + 이동속도 비례 코인 획득\r\n • 조합보너스 : 감자샐러드맛 쿠키 (미니자력 + 거대화시 속도증가)\r\n\r\n※ 조합보너스의 미니자력은 일반적인 미니자력보다 약함",
     "ability_en": "• Ability: Create giant items and coins approximately every 15 seconds + acquire coins proportional to movement speed\r\n • Combination Bonus: Potato Salad Flavor Cookie (Mini Magnetism + Speed Increase when Enlarged)\r\n\r\n※ The mini magnetism of the combination bonus is weaker than the general mini magnetism.",
-    "image": "images-char/pets_dasara_bread.png"
+    "image": "images-char/pets_dasara_bread.png",
+    "ability_th": "สร้าง Giant Jelly ที่ล้อมรอบด้วยคอยน์เป็นระยะ มอบคอยน์โบนัสตามความเร็ว"
   },
   {
     "kind": "pet",
@@ -1455,7 +1521,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "At certain intervals, Dashes quickly, breaking Obstacles, earning Destruction Points. Generates Green Onion Kimchi Jellies from destroyed obstacles and a Life Potion when it lands.",
-    "image": "images-char/pets_ladybug_shaman.png"
+    "image": "images-char/pets_ladybug_shaman.png",
+    "ability_th": "บินขึ้นและพุ่งชนพื้นเป็นระยะ ทำลายสิ่งกีดขวางเพื่อรับ Crush Points ทิ้ง Scallion Kimchi Bear Jellies ไว้แทนที่สิ่งกีดขวางที่ถูกทำลาย และ HP Potion ตรงจุดที่พุ่งชน โรยเครื่องปรุงเพื่อมอบการฟื้นคืนชีพ 1 ครั้งเมื่อล้มลง"
   },
   {
     "kind": "pet",
@@ -1464,7 +1531,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "At Certain Intervals, sends a wave forward to pickle obstacles in salt, turning them into a passable state. This effectively allows the cookie to ignore and safely pass through obstacles. While the skill is active, the cookie's energy drain rate slows down. When the cookie runs out of energy, Cubed Bell sprinkles salt and revives the cookie 1 time",
-    "image": "images-char/pets_cube_drop.png"
+    "image": "images-char/pets_cube_drop.png",
+    "ability_th": "เคลื่อนที่ไปข้างหน้าเป็นระยะ ดองสิ่งกีดขวางด้วยเกลือเพื่อให้ผ่านไปได้ ลดอัตราการลด HP ระหว่างที่สกิลทำงาน โรยเกลือเพื่อฟื้นคืนชีพให้คุกกี้หนึ่งครั้งเมื่อล้มลง"
   },
   {
     "kind": "pet",
@@ -1473,7 +1541,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "At regular intervals, writes a journal entry that gives extra points proportionate to the Cookie's earned score, and creates a Yellow Bear Jelly Party. After completing the journal entry, restores the Cookie's energy. When the Cookie stops running, gives the total points of the top five entries throughout the run.",
-    "image": "images-char/pets_run_diary.png"
+    "image": "images-char/pets_run_diary.png",
+    "ability_th": "เขียนบันทึกประจำวันเป็นประจำโดยให้คะแนนพิเศษตามสัดส่วนคะแนนที่คุกกี้ได้รับ และสร้างปาร์ตี้เยลลี่หมีเหลือง หลังจากเสร็จสิ้นการป้อนข้อมูลบันทึก จะฟื้นพลังงานของคุกกี้ เมื่อคุกกี้หยุดทำงาน จะให้คะแนนรวมของรายการห้าอันดับแรกตลอดการแข่งขัน"
   },
   {
     "kind": "pet",
@@ -1482,7 +1551,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": null,
-    "image": null
+    "image": null,
+    "ability_th": "พุ่งไปข้างหน้าเป็นระยะ กระเด้งชนสิ่งกีดขวางและโปรยผงโกโก้ พื้นที่ที่ปกคลุมด้วยผงโกโก้จะกลายเป็น Cocoa Ground และสร้าง Chewy Choco Jellies ขณะอยู่บน Cocoa Ground อัตราการลด HP จะช้าลง"
   },
   {
     "kind": "pet",
@@ -1491,7 +1561,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Periodically drops Sotdae poles from the sky to create Almond Slice Jellies. Obstacles hit by the poles become transparent and passable.",
-    "image": "images-char/pets_sotdae_flock.png"
+    "image": "images-char/pets_sotdae_flock.png",
+    "ability_th": "หย่อนเสา Sotdae ลงมาจากท้องฟ้าเป็นระยะเพื่อสร้าง Almond Slice Jelly สิ่งกีดขวางที่โดนเสาจะกลายเป็นโปร่งใสและผ่านทะลุได้"
   },
   {
     "kind": "pet",
@@ -1500,7 +1571,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Periodically creates a Snail Slime Jelly that grants Giant and Magnet for a short time, and creates Dew Jellies that crush obstacles.",
-    "image": "images-char/pets_manggae_snail.png"
+    "image": "images-char/pets_manggae_snail.png",
+    "ability_th": "สร้าง Snail Slime Jelly เป็นระยะ ซึ่งจะมอบสถานะ Giant และ Magnet ในช่วงเวลาสั้น ๆ พร้อมสร้าง Dew Jellies ที่ทำลายสิ่งกีดขวาง"
   },
   {
     "kind": "pet",
@@ -1509,7 +1581,8 @@
     "grade": "S",
     "ability": "• 능력 : 23~16초마다 꽃잎을 타고 앞으로 날아가고, 지나간 자리에는 봄꽃 젤리들과 날개달린 생명물약이 생성됨\r\n• 조합보너스 : 민들레요정맛 쿠키 (민들레 홀씨 점수 증가 + 체력감소 7% 느림)\r\n\r\n※ 친구 20명 초대 또는 패키지 구매로 획득가능",
     "ability_en": "• Ability: Fly forward on the petals every 23 to 16 seconds, and spring flower jellies and winged life potions are created where you pass.\r\n• Combination Bonus: Dandelion Fairy Flavor Cookie (Dandelion Seed Score Increase + Stamina Decrease 7% Slow)\r\n\r\n※ Can be obtained by inviting 20 friends or purchasing a package",
-    "image": "images-char/pets_baby_spore.png"
+    "image": "images-char/pets_baby_spore.png",
+    "ability_th": "บินไปข้างหน้าบนกลีบดอกไม้เป็นระยะ สร้าง Spring Flower Jellies และ HP Potion มีปีกบนเส้นทาง"
   },
   {
     "kind": "pet",
@@ -1518,7 +1591,8 @@
     "grade": "S",
     "ability": "• 능력 : 21~14초마다 광속질주 꿀젤리 파티 아이템 생성\r\n• 조합보너스 : 카이막맛 쿠키 (장애물 파괴점수 55,000점 추가 + 체력감소 12% 느림)",
     "ability_en": "• Ability: Creates a speed-of-light honey jelly party item every 21 to 14 seconds.\r\n• Combination Bonus: Kaimak Flavored Cookie (Additional 55,000 obstacle destruction points + 12% slower stamina reduction)",
-    "image": "images-char/pets_honey_gourd.png"
+    "image": "images-char/pets_honey_gourd.png",
+    "ability_th": "• ความสามารถ: สร้างไอเท็มปาร์ตี้เยลลี่น้ำผึ้งความเร็วแสงทุกๆ 21 ถึง 14 วินาที\r\n• โบนัสรวม: คุกกี้รสไคมัค (คะแนนการทำลายอุปสรรคเพิ่มเติม 55,000 คะแนน + ลดความแข็งแกร่งช้าลง 12%)"
   },
   {
     "kind": "pet",
@@ -1527,7 +1601,8 @@
     "grade": "S",
     "ability": null,
     "ability_en": "Periodically transforms into its true form as a dragon, turning nearby jellies into pine pollen jellies, and restores the cookie's health.",
-    "image": "images-char/pets_white_dragon_horsie.png"
+    "image": "images-char/pets_white_dragon_horsie.png",
+    "ability_th": "แปลงร่างเป็นมังกรเป็นระยะและพุ่งไปข้างหน้า เปลี่ยนเยลลี่ให้กลายเป็น Pine Powder Jelly พร้อมฟื้นฟู HP"
   },
   {
     "kind": "pet",
@@ -1536,7 +1611,8 @@
     "grade": "S",
     "ability": "• 능력 : 연꽃방울 젤리 생성 21~14초 (주변 장애물들을 통과상태로 만듦)\r\n• 조합보너스 : 연근요괴맛 쿠키 (장애물 통과점수 증가 + 체력감소 12% 느림)",
     "ability_en": "• Ability: Create lotus drop jelly in 21~14 seconds (makes surrounding obstacles passable)\r\n• Combination Bonus: Lotus Root Yokai Flavored Cookie (Increased obstacle passing score + 12% slower stamina loss)",
-    "image": null
+    "image": null,
+    "ability_th": "สร้าง Lotus Drop Jelly เป็นระยะ ซึ่งเมื่อแตกออกจะทำให้สิ่งกีดขวางใกล้เคียงผ่านทะลุได้"
   },
   {
     "kind": "pet",
@@ -1545,7 +1621,8 @@
     "grade": "A",
     "ability": null,
     "ability_en": "Makes random Power Jellies.",
-    "image": "images-char/pets_lucky_dice_bros.png"
+    "image": "images-char/pets_lucky_dice_bros.png",
+    "ability_th": "สร้างไอเทมสุ่มเป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1554,7 +1631,8 @@
     "grade": "A",
     "ability": "• 능력 : 체력감소 10~15% 느림\r\n • 조합보너스 : 좀비맛 쿠키(좀비 부활시 체력 10 증가)\r\n\r\n※ 조합보너스는 좀비맛 쿠키의 부활 능력만 적용됨",
     "ability_en": "• Ability: Slows down health by 10-15%.\r\n • Combination Bonus: Zombie-flavored cookies (strength increases by 10 when zombies are revived)\r\n\r\n※ The combination bonus only applies to the resurrection ability of zombie-flavored cookies.",
-    "image": "images-char/pets_brain_gum.png"
+    "image": "images-char/pets_brain_gum.png",
+    "ability_th": "ลดอัตราการลดลงของ HP"
   },
   {
     "kind": "pet",
@@ -1563,7 +1641,8 @@
     "grade": "A",
     "ability": null,
     "ability_en": "Summons Dragon's spirit that destroys obstacles.",
-    "image": "images-char/pets_dragon_tail.png"
+    "image": "images-char/pets_dragon_tail.png",
+    "ability_th": "สามารถอัญเชิญ Guardian Dragon เป็นระยะๆ เพื่อทำลายสิ่งกีดขวางที่ขวางทาง"
   },
   {
     "kind": "pet",
@@ -1572,7 +1651,8 @@
     "grade": "A",
     "ability": null,
     "ability_en": "Revives Cookies that run out of Energy.",
-    "image": "images-char/pets_angel_star.png"
+    "image": "images-char/pets_angel_star.png",
+    "ability_th": "ฟื้นคืนชีพให้คุกกี้เมื่อล้มลง"
   },
   {
     "kind": "pet",
@@ -1581,7 +1661,8 @@
     "grade": "A",
     "ability": null,
     "ability_en": "Speeds up Bonus Time.",
-    "image": "images-char/pets_flower_copter.png"
+    "image": "images-char/pets_flower_copter.png",
+    "ability_th": "เพิ่มความเร็วในการบินระหว่างโบนัสไทม์"
   },
   {
     "kind": "pet",
@@ -1590,7 +1671,8 @@
     "grade": "A",
     "ability": null,
     "ability_en": "Gives random goodies, better than any other pet.",
-    "image": "images-char/pets_shining_lucky_pumpkin.png"
+    "image": "images-char/pets_shining_lucky_pumpkin.png",
+    "ability_th": "ให้สารพัดแบบสุ่ม ดีกว่าสัตว์เลี้ยงตัวอื่น"
   },
   {
     "kind": "pet",
@@ -1599,7 +1681,8 @@
     "grade": "B",
     "ability": null,
     "ability_en": "Creates a Gold Coin worth 10 regular Coins",
-    "image": "images-char/pets_fluffy_unicorn.png"
+    "image": "images-char/pets_fluffy_unicorn.png",
+    "ability_th": "สร้าง Gold Coin มูลค่าเท่ากับ 10 คอยน์ปกติเป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1608,7 +1691,8 @@
     "grade": "B",
     "ability": null,
     "ability_en": "Creates a Silver Coin worth 5 regular Coins.",
-    "image": "images-char/pets_santa_hat.png"
+    "image": "images-char/pets_santa_hat.png",
+    "ability_th": "สร้างเหรียญเงินมูลค่า 5 เหรียญปกติ"
   },
   {
     "kind": "pet",
@@ -1617,7 +1701,8 @@
     "grade": "B",
     "ability": null,
     "ability_en": "Makes Alphabet Jellies.",
-    "image": "images-char/pets_whipped_cream_mocha.png"
+    "image": "images-char/pets_whipped_cream_mocha.png",
+    "ability_th": "สร้าง Alphabet Jelly เป็นระยะๆ"
   },
   {
     "kind": "pet",
@@ -1626,7 +1711,8 @@
     "grade": "B",
     "ability": "• 능력 : 29~15초마다 거대화 아이템 제작\r\n • 조합보너스 : 근육맛 쿠키 (충돌무시 확률 +20%)",
     "ability_en": "• Ability: Create giant items every 29 to 15 seconds.\r\n • Combination Bonus: Muscle Cookie (Collision Ignore Chance +20%)",
-    "image": "images-char/pets_twin_dumbbell.png"
+    "image": "images-char/pets_twin_dumbbell.png",
+    "ability_th": "• ความสามารถ: สร้างไอเท็มขนาดยักษ์ทุกๆ 29 ถึง 15 วินาที\r\n • โบนัสการรวมกัน: คุกกี้กล้ามเนื้อ (โอกาสไม่สนใจการชน +20%)"
   },
   {
     "kind": "pet",
@@ -1635,7 +1721,8 @@
     "grade": "B",
     "ability": null,
     "ability_en": "Creates Jellies that send you into Bonus Time.",
-    "image": "images-char/pets_cozy_yarn.png"
+    "image": "images-char/pets_cozy_yarn.png",
+    "ability_th": "สร้าง Bonus Time Jelly เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1644,7 +1731,8 @@
     "grade": "B",
     "ability": null,
     "ability_en": "Makes Blast Jellies.",
-    "image": "images-char/pets_unpeeled_garlic.png"
+    "image": "images-char/pets_unpeeled_garlic.png",
+    "ability_th": "สร้าง Blast Jelly เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1653,7 +1741,8 @@
     "grade": "B",
     "ability": null,
     "ability_en": "Makes Magnet Jellies",
-    "image": "images-char/pets_techno_ball.png"
+    "image": "images-char/pets_techno_ball.png",
+    "ability_th": "สร้าง Magnet Jelly เป็นระยะ"
   },
   {
     "kind": "pet",
@@ -1662,7 +1751,8 @@
     "grade": "C",
     "ability": "• 능력 : 10~3초마다 곰젤리 제작\r\n • 조합보너스 : 용감한 쿠키군 (추가체력 5 보너스)",
     "ability_en": "• Ability: Create bear jelly every 10 to 3 seconds.\r\n • Combination Bonus: Brave Cookie (5 additional stamina bonus)",
-    "image": "images-char/pets_choco_drop.png"
+    "image": "images-char/pets_choco_drop.png",
+    "ability_th": "• ความสามารถ: สร้างเยลลี่หมีทุกๆ 10 ถึง 3 วินาที\r\n • โบนัสรวม: Brave Cookie (โบนัสความแข็งแกร่งเพิ่มเติม 5 อัน)"
   },
   {
     "kind": "pet",
@@ -1671,7 +1761,8 @@
     "grade": "C",
     "ability": "• 능력 : 5~1초마다 놓친 젤리 먹기\r\n • 조합보너스 : 명랑한 쿠키양 (시작시 체력 40 추가)",
     "ability_en": "• Ability: Eat missed jelly every 5 to 1 second.\r\n • Combination Bonus: Cheerful Cookie (40 additional stamina at start)",
-    "image": "images-char/pets_cheese_drop.png"
+    "image": "images-char/pets_cheese_drop.png",
+    "ability_th": "• ความสามารถ: กินเยลลี่ที่ไม่ได้รับทุกๆ 5 ถึง 1 วินาที\r\n • โบนัสรวม: คุกกี้ร่าเริง (เพิ่มความแข็งแกร่ง 40 หน่วยเมื่อเริ่มต้น)"
   },
   {
     "kind": "pet",
@@ -1680,7 +1771,8 @@
     "grade": "C",
     "ability": "• 능력 : 보너스타임에서 덩치가 2~4배로 커짐\r\n • 조합보너스 : 구름맛 쿠키 (시작시 보너스타임 발동)",
     "ability_en": "• Ability: Size increases 2 to 4 times during bonus time.\r\n • Combination Bonus: Cloud-flavored Cookie (Bonus time activated at start)",
-    "image": "images-char/pets_cloud_candy.png"
+    "image": "images-char/pets_cloud_candy.png",
+    "ability_th": "• ความสามารถ: ขนาดเพิ่มขึ้น 2 ถึง 4 เท่าในช่วงเวลาโบนัส\r\n • โบนัสรวม: คุกกี้รสคลาวด์ (เวลาโบนัสเปิดใช้งานเมื่อเริ่มต้น)"
   },
   {
     "kind": "pet",
@@ -1689,7 +1781,8 @@
     "grade": "C",
     "ability": "• 능력 : 기본속도가 3~10% 빨라짐\r\n • 조합보너스 : 산타맛 쿠키 (기본속도 10% 증가)",
     "ability_en": "• Ability: Base speed increases by 3~10%\r\n • Combination Bonus: Santa-flavored Cookie (base speed increased by 10%)",
-    "image": "images-char/pets_santa_sock.png"
+    "image": "images-char/pets_santa_sock.png",
+    "ability_th": "• ความสามารถ: ความเร็วพื้นฐานเพิ่มขึ้น 3~10%\r\n • โบนัสรวม: คุกกี้รสซานต้า (ความเร็วพื้นฐานเพิ่มขึ้น 10%)"
   },
   {
     "kind": "pet",
@@ -1707,6 +1800,7 @@
     "grade": "C",
     "ability": null,
     "ability_en": "Creates a Silver Coin worth 5 Coins.",
-    "image": "images-char/pets_good_hand.png"
+    "image": "images-char/pets_good_hand.png",
+    "ability_th": "สร้าง Silver Coin มูลค่าเท่ากับ 5 คอยน์ปกติเป็นระยะ"
   }
 ]

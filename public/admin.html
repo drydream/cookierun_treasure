@@ -205,6 +205,8 @@
   </div>
   <label class="field">Ability text (EN)</label>
   <textarea id="charAbilityEnInput"></textarea>
+  <label class="field">Ability text (Thai)</label>
+  <textarea id="charAbilityThInput" placeholder="No Thai text yet"></textarea>
   <label class="field">Tier list</label>
   <select id="charTierInput"></select>
   <div id="charLinkedTreasuresBlock">
@@ -940,6 +942,7 @@ function renderCharEdit() {
   document.getElementById('charKrNameInput').value = c.kr_name || '';
   document.getElementById('charKr').textContent = c.ability || '(no ability text in source)';
   document.getElementById('charAbilityEnInput').value = c.ability_en || '';
+  document.getElementById('charAbilityThInput').value = c.ability_th || '';
   document.getElementById('charTierInput').value = c.tier || '';
   document.getElementById('charLinkedTreasuresBlock').style.display = charIsNew ? 'none' : '';
   if (!charIsNew) renderCharLinkedTreasures(c);
@@ -963,6 +966,7 @@ async function saveCharacter() {
   const image = document.getElementById('charImageInput').value.trim();
   const kr_name = document.getElementById('charKrNameInput').value.trim();
   const ability_en = document.getElementById('charAbilityEnInput').value.trim();
+  const ability_th = document.getElementById('charAbilityThInput').value.trim();
   const tier = document.getElementById('charTierInput').value || null;
   const statusEl = document.getElementById('charStatus');
   statusEl.className = '';
@@ -992,10 +996,10 @@ async function saveCharacter() {
   const res = await fetch('/api/admin/save-character', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ password, id: c.id, name, kr_name, grade, ability_en, image, tier }),
+    body: JSON.stringify({ password, id: c.id, name, kr_name, grade, ability_en, ability_th, image, tier }),
   });
   if (res.ok) {
-    Object.assign(c, { name, kr_name, grade, ability_en, image, tier });
+    Object.assign(c, { name, kr_name, grade, ability_en, ability_th, image, tier });
     statusEl.textContent = 'Saved';
     setTimeout(() => statusEl.textContent = '', 1500);
   } else {

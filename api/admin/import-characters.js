@@ -6,7 +6,7 @@
 // the admin has already set (including `tier`, which the JSON never carries)
 // is never overwritten. Password-gated like save.js.
 const SUPABASE_URL = 'https://mcdhsnynllzoitbolngd.supabase.co';
-const FILLABLE_FIELDS = ['name', 'grade', 'ability', 'ability_en', 'image'];
+const FILLABLE_FIELDS = ['name', 'grade', 'ability', 'ability_en', 'ability_th', 'image'];
 
 function isEmpty(v) {
   return v === null || v === undefined || (typeof v === 'string' && !v.trim());
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
     const rows = await fetch(`${base}/characters.json`).then(r => r.json());
 
     const existing = await fetch(
-      `${SUPABASE_URL}/rest/v1/characters?select=id,kind,kr_name,name,grade,ability,ability_en,image`,
+      `${SUPABASE_URL}/rest/v1/characters?select=id,kind,kr_name,name,grade,ability,ability_en,ability_th,image`,
       { headers }
     ).then(r => r.json());
     const existingByKey = new Map(existing.map(c => [`${c.kind}:${c.kr_name}`, c]));

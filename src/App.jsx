@@ -513,7 +513,7 @@ function linkedTreasuresFor(name, treasures) {
   return [...base, ...evolved];
 }
 
-function CharacterListPage({ characters, kind, t, initialQuery, treasures, onJumpToTreasure, comboPetByCookieName, onJumpToPet }) {
+function CharacterListPage({ characters, kind, t, lang, initialQuery, treasures, onJumpToTreasure, comboPetByCookieName, onJumpToPet }) {
   const [query, setQuery] = useState(initialQuery || '');
   const [grade, setGrade] = useState('all');
   const [view, setView] = useState('list');
@@ -557,7 +557,11 @@ function CharacterListPage({ characters, kind, t, initialQuery, treasures, onJum
                   <div className="body">
                     <span className="name">{c.name}</span>
                     {c.grade && <span className="grade">{c.grade}-grade</span>}
-                    {(c.ability_en || c.ability) && <div className="effect">{c.ability_en || c.ability}</div>}
+                    {(lang === 'th' && c.ability_th) ? (
+                      <div className="effect">{c.ability_th}</div>
+                    ) : (c.ability_en || c.ability) ? (
+                      <div className="effect">{c.ability_en || c.ability}</div>
+                    ) : null}
                     {comboPet && (
                       <div className="evolves-to">
                         <span className="label">{t.comboPet}</span>{' '}
@@ -1284,8 +1288,8 @@ export default function App() {
         </>
       )}
       {page === 'tierlist' && <TierListPage items={items} t={t} onSelect={jumpTo} />}
-      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage key={charJump.kind === 'cookie' ? charJump.query : ''} characters={characters} kind="cookie" t={t} initialQuery={charJump.kind === 'cookie' ? charJump.query : ''} treasures={items} onJumpToTreasure={jumpTo} comboPetByCookieName={comboPetByCookieName} onJumpToPet={jumpToPet} /></>}
-      {page === 'pets' && <><h1>{t.navPets}</h1><CharacterListPage key={charJump.kind === 'pet' ? charJump.query : ''} characters={characters} kind="pet" t={t} initialQuery={charJump.kind === 'pet' ? charJump.query : ''} /></>}
+      {page === 'cookies' && <><h1>{t.navCookies}</h1><CharacterListPage key={charJump.kind === 'cookie' ? charJump.query : ''} characters={characters} kind="cookie" t={t} lang={lang} initialQuery={charJump.kind === 'cookie' ? charJump.query : ''} treasures={items} onJumpToTreasure={jumpTo} comboPetByCookieName={comboPetByCookieName} onJumpToPet={jumpToPet} /></>}
+      {page === 'pets' && <><h1>{t.navPets}</h1><CharacterListPage key={charJump.kind === 'pet' ? charJump.query : ''} characters={characters} kind="pet" t={t} lang={lang} initialQuery={charJump.kind === 'pet' ? charJump.query : ''} /></>}
       {page === 'buildcreator' && <><h1>{t.navBuilds}</h1><BuildCreatorPage items={items} characters={characters} t={t} initialBuildId={initialBuildId} /></>}
     </>
   );
