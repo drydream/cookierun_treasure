@@ -824,7 +824,7 @@
     "kr_name": "방울방울 콩콩이",
     "grade": "E",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates 2 Bean Jellies at a given interval. Lifts 2 times and Revives 2 times with 22 Energy. (Revival is applied again for Relay Cookie).",
     "image": "images-char/pets_bouncing_bean.png"
   },
   {
@@ -842,7 +842,7 @@
     "kr_name": "공주의 장신구",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Mini Energy Potions (worth 15 Energy).",
     "image": "images-char/pets_princess_jewelry.png"
   },
   {
@@ -869,7 +869,7 @@
     "kr_name": "눈꽃송이",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Ice Bridges over holes.",
     "image": "images-char/pets_snowflake.png"
   },
   {
@@ -878,7 +878,7 @@
     "kr_name": "젤리코 큐브",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Releases Jellyco missiles.",
     "image": "images-char/pets_jellyco_cube.png"
   },
   {
@@ -887,7 +887,7 @@
     "kr_name": "건빵 보급병",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Makes snacks that make Cookies giant and give a small dose of Energy.",
     "image": "images-char/pets_hardtack_supply.png"
   },
   {
@@ -896,7 +896,7 @@
     "kr_name": "반짝이볼",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Spreads Star Jellies and Coins.",
     "image": "images-char/pets_twinkle_ball.png"
   },
   {
@@ -905,7 +905,7 @@
     "kr_name": "황금방울",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Makes Giant Gold Coins (worth 100 regular coins).",
     "image": "images-char/pets_gold_drop.png"
   },
   {
@@ -914,7 +914,7 @@
     "kr_name": "불꽃박쥐",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Catches Spirit Jellies one at a time. Each Spirit Jelly gives a small dose of Energy.",
     "image": "images-char/pets_flame_bat.png"
   },
   {
@@ -923,7 +923,7 @@
     "kr_name": "바람이",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Flies ahead and collect Jellies. (Does not collect Jellies that are not attracted to Magnetic Effect.) It will not be able to collect winged jellies and Dark Moon Jellies.",
     "image": "images-char/pets_windy.png"
   },
   {
@@ -932,7 +932,7 @@
     "kr_name": "여우구슬",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Giant Blast Beads (The Cookie becomes giant and blasts forward).",
     "image": "images-char/pets_fox_bead.png"
   },
   {
@@ -941,7 +941,7 @@
     "kr_name": "마법사전",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Extra points for running faster. More points with each upgrade.",
     "image": "images-char/pets_magic_dictionary.png"
   },
   {
@@ -968,7 +968,7 @@
     "kr_name": "로켓폭죽",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "At given intervals, it can lift the Cookie from a hole with a blast.",
     "image": "images-char/pets_rocket_firecracker.png"
   },
   {
@@ -977,7 +977,7 @@
     "kr_name": "통나무케이크",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Makes Giant Jellies, which also give Alphabet Jellies (gives the letters that you don't have)",
     "image": "images-char/pets_log_cake.png"
   },
   {
@@ -986,7 +986,7 @@
     "kr_name": "스노우 글로브",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Makes flying Energy Potions accompanied by Snow Flower Jellies.",
     "image": "images-char/pets_snow_globe.png"
   },
   {
@@ -995,7 +995,7 @@
     "kr_name": "복주머니",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Generates Coins (1 Coin at fixed intervals).",
     "image": "images-char/pets_lucky_pouch.png"
   },
   {
@@ -1004,7 +1004,7 @@
     "kr_name": "핑크캔디",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Royal Bear Jelly shooting star will fall at fixed intervals.",
     "image": "images-char/pets_pink_candy.png"
   },
   {
@@ -1013,7 +1013,7 @@
     "kr_name": "보라보라 향초",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Lights fires at fixed intervals that reveal hidden Jellies. Obstacles set on fire can be passed through.",
     "image": "images-char/pets_purple_candle.png"
   },
   {
@@ -1022,7 +1022,7 @@
     "kr_name": "반딧불이",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates energy recovery / blast potion (Gives 20 energy and blasts at the same time)",
     "image": "images-char/pets_firefly.png"
   },
   {
@@ -1031,7 +1031,7 @@
     "kr_name": "젤리저울",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Converts Coins into Points at regular intervals. (There is a limit to the amount he can convert at any one time.) Upgrades will make the conversion rate faster.",
     "image": "images-char/pets_jelly_scale.png"
   },
   {
@@ -1040,7 +1040,7 @@
     "kr_name": "코인저울",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Converts Points into Coins at regular intervals. (There is a limit to the amount he can convert at any one time.) Upgrades will make the conversion rate faster.",
     "image": "images-char/pets_coin_scale.png"
   },
   {
@@ -1049,7 +1049,7 @@
     "kr_name": "참나무 주스통",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "It produces Potions with over-ripened grapes at regular intervals. (When the Juicy Potion is taken, some energy is recovered and because the cookie gets a little bit excited because of the overwhelming flavour of the juice, it makes them sprint. It also decreases energy loss when hitting obstacles.)",
     "image": "images-char/pets_oak_juice_barrel.png"
   },
   {
@@ -1058,7 +1058,7 @@
     "kr_name": "토끼사과",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Extra points during Blast Speed and slows down Energy Drain.",
     "image": "images-char/pets_rabbit_apple.png"
   },
   {
@@ -1067,7 +1067,7 @@
     "kr_name": "치즈뭉치 고양이",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates 20 Cat Coins after a set period of time. The production rate increases with upgrades. The Fluffy Cheese Cat will only put Cat Coins on regular Jellies. All other Jelly types will not work. However, if a Jelly has been turned into a Bear Jelly with an All-Bear Jelly, it will still work.",
     "image": "images-char/pets_cheese_cat.png"
   },
   {
@@ -1076,7 +1076,7 @@
     "kr_name": "조각레몬",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Makes Lemon Soda Potions. One sip turns obstacles into Jellies.",
     "image": "images-char/pets_lemon_slice.png"
   },
   {
@@ -1085,7 +1085,7 @@
     "kr_name": "배낭이",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "For a set period of time, produces each type of Jellies.",
     "image": "images-char/pets_backpacky.png"
   },
   {
@@ -1094,7 +1094,7 @@
     "kr_name": "집사 유령",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Jellies in precise order.",
     "image": "images-char/pets_butler_ghost.png"
   },
   {
@@ -1112,7 +1112,7 @@
     "kr_name": "털뭉치 멍뭉이",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Potions to help the cookie recover energy. (It can also be used with the Relay Cookie and restores up to 60 energy per revive)",
     "image": "images-char/pets_fluffy_pup.png"
   },
   {
@@ -1121,7 +1121,7 @@
     "kr_name": "미스 도레미",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Takes 180 Coins and creates Star Fireworks Potions at a given interval (Stops when there are not enough Coins)\nPossession Effect: She sings a heart-felt love song that recovers your Energy (Effect will occur only once even with the additional possession of Mr. Fa-Sol-La-Si)",
     "image": "images-char/pets_miss_doremi.png"
   },
   {
@@ -1130,7 +1130,7 @@
     "kr_name": "미스터 파솔라시",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Royal Blast Dash Coins at regular intervals.\nPower+: He sings a heart-felt love song that recovers your Energy. (Effect will occur only once even with the additional possession of Ms. Do-Re-Mi)",
     "image": "images-char/pets_mr_fasollasi.png"
   },
   {
@@ -1139,7 +1139,7 @@
     "kr_name": "마시멜로 햄찌",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "It moves forward for a set period of time and eats Jellies and creates Cocoa Marshmallow Jellies.",
     "image": "images-char/pets_marshmallow_hamster.png"
   },
   {
@@ -1148,7 +1148,7 @@
     "kr_name": "파프리카 샌드백",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Giant Coin Jellies. Creates Giant Potions with Coins inside. After getting a Giant Potion he goes into Giant Mode and gains Coins.",
     "image": "images-char/pets_paprika_punching_bag.png"
   },
   {
@@ -1157,7 +1157,7 @@
     "kr_name": "도토리 부엉이",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates All-Bear Jelly Party Potions at regular intervals. Pink Bear Jellies appear with a fixed probability in the All-Bear Jelly Party created by the Owlcorn.",
     "image": "images-char/pets_acorn_owl.png"
   },
   {
@@ -1175,7 +1175,7 @@
     "kr_name": "홍차 찻잔",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Alphabet Potion. It gives you one random alphabet (Jelly) that you do not already have.",
     "image": "images-char/pets_black_tea_cup.png"
   },
   {
@@ -1202,7 +1202,7 @@
     "kr_name": "백금방울",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Giant White Gold Coin at a given interval and Lifts from hole 1 time.",
     "image": "images-char/pets_platinum_drop.png"
   },
   {
@@ -1220,7 +1220,7 @@
     "kr_name": "종이배 선원",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "At a given interval, destroys obstacles by shooting Sea Bubble Jellies. Creates Potions with every first shot.",
     "image": "images-char/pets_paper_boat_sailor.png"
   },
   {
@@ -1229,7 +1229,7 @@
     "kr_name": "판다 만두",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Dumpling Jelly at a given interval, as well as earning extra Coins. Obstacles hit by Dumpling Jellies are destroyed.",
     "image": "images-char/pets_panda_dumpling.png"
   },
   {
@@ -1238,7 +1238,7 @@
     "kr_name": "식지 않는 찻잔",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Earns extra points for destroying obstacles. Slower Energy drain.",
     "image": "images-char/pets_warm_teacup.png"
   },
   {
@@ -1256,7 +1256,7 @@
     "kr_name": "시나몬롤 토끼",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Throws Cinnamon Bomb, destroying obstacles and creating Cinnamon Bunnies at a given interval. Strawberry Cinnamon Bun Jelly recovers Energy.",
     "image": "images-char/pets_cinnamon_roll_bunny.png"
   },
   {
@@ -1274,7 +1274,7 @@
     "kr_name": "캐스터네츠",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Performs and creates 'Christmas Macaron Jelly' and an additional Power Jelly at a given interval.",
     "image": "images-char/pets_castanets.png"
   },
   {
@@ -1283,7 +1283,7 @@
     "kr_name": "찹쌀 하프물범",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Rolls its body and earns points after collecting a certain number of Jellies",
     "image": "images-char/pets_sticky_rice_seal.png"
   },
   {
@@ -1292,7 +1292,7 @@
     "kr_name": "회중시계 심판",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Magnetic Blast item at a given interval.",
     "image": "images-char/pets_pocket_watch_referee.png"
   },
   {
@@ -1301,7 +1301,7 @@
     "kr_name": "허브티팟",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Sprinkles water and grows Jelly Flower, destroying obstacles.",
     "image": "images-char/pets_herb_teapot.png"
   },
   {
@@ -1310,7 +1310,7 @@
     "kr_name": "팝핑 용알",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Dino-Candy Giant item at a given interval. Eating this item will make Dino-Candy Jelly POP! POP!",
     "image": "images-char/pets_popping_dragon_egg.png"
   },
   {
@@ -1319,7 +1319,7 @@
     "kr_name": "솜사탕 비둘기",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "It will create Alphabet Blast Jellies that will add one letter you don't have while entering Blast Mode.",
     "image": "images-char/pets_cotton_candy_dove.png"
   },
   {
@@ -1337,7 +1337,7 @@
     "kr_name": "사바나나 사자",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Launches Banana Face at a given interval and destroys obstacles. Banana Face leaves traces of Coins behind.",
     "image": "images-char/pets_savabana_lion.png"
   },
   {
@@ -1346,7 +1346,7 @@
     "kr_name": "팬케이크 원반",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Throws delicious pancake frisbee, destroying obstacles and creating Maple Syrup Jelly.",
     "image": "images-char/pets_pancake_frisbee.png"
   },
   {
@@ -1355,7 +1355,7 @@
     "kr_name": "달절구",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Collects Jellies at given intervals. Uses the collected Jellies to make Full Moon Rice Cake Jellies. (Full Moon Rice Cake Jellies are not affected by magnets)",
     "image": "images-char/pets_moon_mortar.png"
   },
   {
@@ -1373,7 +1373,7 @@
     "kr_name": "꼬마북",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Sits in the center of the screen for a set period of time, destroying all obstacles and transforming all Jellies",
     "image": "images-char/pets_little_drum.png"
   },
   {
@@ -1382,7 +1382,7 @@
     "kr_name": "앵무할아범",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Gives bonus points for higher speed and creates goodies at given intervals.",
     "image": "images-char/pets_grandpa_parrot.png"
   },
   {
@@ -1400,7 +1400,7 @@
     "kr_name": "오이푸딩 개구리",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Sings a song at certain intervals to call the frog family. The frog family destroys obstacles and create Duckweed Jellies.",
     "image": "images-char/pets_cucumber_pudding_frog.png"
   },
   {
@@ -1409,7 +1409,7 @@
     "kr_name": "흑돌 흑미 선생",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Black Stone Power Jellies at regular intervals. When collected, restores Energy and converts Jellies into Black Stone Jellies.",
     "image": "images-char/pets_black_rice_stone_master.png"
   },
   {
@@ -1418,7 +1418,7 @@
     "kr_name": "백돌 백미 선생",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates White Stone Power Jellies at regular intervals. When collected, restores Energy and converts Jellies into White Stone Jellies.",
     "image": "images-char/pets_white_rice_stone_master.png"
   },
   {
@@ -1427,7 +1427,7 @@
     "kr_name": "용마 인형",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Earns extra Points for running faster, and rescues from holes or revive Cookies. Rescue or revive applies to both the main and relay Cookies. Rescue or revives (38 Energy) 3 times.",
     "image": "images-char/pets_dragon_horse_doll.png"
   },
   {
@@ -1436,7 +1436,7 @@
     "kr_name": "꿀떡 영혼",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Sheds tears at regular intervals. Tear Jellies and Honey Tear Jellies will pour down from the sky. Honey Tear Jellies restore Energy. Honey Tear Jellies are not considered as Life Potions.",
     "image": "images-char/pets_honey_rice_cake_soul.png"
   },
   {
@@ -1454,7 +1454,7 @@
     "kr_name": "벌레무당",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "At certain intervals, Dashes quickly, breaking Obstacles, earning Destruction Points. Generates Green Onion Kimchi Jellies from destroyed obstacles and a Life Potion when it lands.",
     "image": "images-char/pets_ladybug_shaman.png"
   },
   {
@@ -1463,7 +1463,7 @@
     "kr_name": "깍둑방울",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "At Certain Intervals, sends a wave forward to pickle obstacles in salt, turning them into a passable state. This effectively allows the cookie to ignore and safely pass through obstacles. While the skill is active, the cookie's energy drain rate slows down. When the cookie runs out of energy, Cubed Bell sprinkles salt and revives the cookie 1 time",
     "image": "images-char/pets_cube_drop.png"
   },
   {
@@ -1472,7 +1472,7 @@
     "kr_name": "런중일기",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "At regular intervals, writes a journal entry that gives extra points proportionate to the Cookie's earned score, and creates a Yellow Bear Jelly Party. After completing the journal entry, restores the Cookie's energy. When the Cookie stops running, gives the total points of the top five entries throughout the run.",
     "image": "images-char/pets_run_diary.png"
   },
   {
@@ -1490,8 +1490,8 @@
     "kr_name": "솟대가족",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
-    "image": null
+    "ability_en": "Periodically drops Sotdae poles from the sky to create Almond Slice Jellies. Obstacles hit by the poles become transparent and passable.",
+    "image": "images-char/pets_sotdae_flock.png"
   },
   {
     "kind": "pet",
@@ -1499,8 +1499,8 @@
     "kr_name": "망개잎 달팽이",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
-    "image": null
+    "ability_en": "Periodically creates a Snail Slime Jelly that grants Giant and Magnet for a short time, and creates Dew Jellies that crush obstacles.",
+    "image": "images-char/pets_manggae_snail.png"
   },
   {
     "kind": "pet",
@@ -1509,7 +1509,7 @@
     "grade": "S",
     "ability": "• 능력 : 23~16초마다 꽃잎을 타고 앞으로 날아가고, 지나간 자리에는 봄꽃 젤리들과 날개달린 생명물약이 생성됨\r\n• 조합보너스 : 민들레요정맛 쿠키 (민들레 홀씨 점수 증가 + 체력감소 7% 느림)\r\n\r\n※ 친구 20명 초대 또는 패키지 구매로 획득가능",
     "ability_en": "• Ability: Fly forward on the petals every 23 to 16 seconds, and spring flower jellies and winged life potions are created where you pass.\r\n• Combination Bonus: Dandelion Fairy Flavor Cookie (Dandelion Seed Score Increase + Stamina Decrease 7% Slow)\r\n\r\n※ Can be obtained by inviting 20 friends or purchasing a package",
-    "image": null
+    "image": "images-char/pets_baby_spore.png"
   },
   {
     "kind": "pet",
@@ -1518,7 +1518,7 @@
     "grade": "S",
     "ability": "• 능력 : 21~14초마다 광속질주 꿀젤리 파티 아이템 생성\r\n• 조합보너스 : 카이막맛 쿠키 (장애물 파괴점수 55,000점 추가 + 체력감소 12% 느림)",
     "ability_en": "• Ability: Creates a speed-of-light honey jelly party item every 21 to 14 seconds.\r\n• Combination Bonus: Kaimak Flavored Cookie (Additional 55,000 obstacle destruction points + 12% slower stamina reduction)",
-    "image": null
+    "image": "images-char/pets_honey_gourd.png"
   },
   {
     "kind": "pet",
@@ -1526,8 +1526,8 @@
     "kr_name": "백묭",
     "grade": "S",
     "ability": null,
-    "ability_en": null,
-    "image": null
+    "ability_en": "Periodically transforms into its true form as a dragon, turning nearby jellies into pine pollen jellies, and restores the cookie's health.",
+    "image": "images-char/pets_white_dragon_horsie.png"
   },
   {
     "kind": "pet",
@@ -1544,7 +1544,7 @@
     "kr_name": "럭키다이스 형제",
     "grade": "A",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Makes random Power Jellies.",
     "image": "images-char/pets_lucky_dice_bros.png"
   },
   {
@@ -1562,7 +1562,7 @@
     "kr_name": "용의 꼬리",
     "grade": "A",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Summons Dragon's spirit that destroys obstacles.",
     "image": "images-char/pets_dragon_tail.png"
   },
   {
@@ -1571,7 +1571,7 @@
     "kr_name": "천사의 별",
     "grade": "A",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Revives Cookies that run out of Energy.",
     "image": "images-char/pets_angel_star.png"
   },
   {
@@ -1580,7 +1580,7 @@
     "kr_name": "플라워콥터",
     "grade": "A",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Speeds up Bonus Time.",
     "image": "images-char/pets_flower_copter.png"
   },
   {
@@ -1589,7 +1589,7 @@
     "kr_name": "빛나는 럭키 호박",
     "grade": "A",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Gives random goodies, better than any other pet.",
     "image": "images-char/pets_shining_lucky_pumpkin.png"
   },
   {
@@ -1598,7 +1598,7 @@
     "kr_name": "뭉치유니콘",
     "grade": "B",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates a Gold Coin worth 10 regular Coins",
     "image": "images-char/pets_fluffy_unicorn.png"
   },
   {
@@ -1607,7 +1607,7 @@
     "kr_name": "산타모자",
     "grade": "B",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates a Silver Coin worth 5 regular Coins.",
     "image": "images-char/pets_santa_hat.png"
   },
   {
@@ -1616,7 +1616,7 @@
     "kr_name": "생크림 모카커피",
     "grade": "B",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Makes Alphabet Jellies.",
     "image": "images-char/pets_whipped_cream_mocha.png"
   },
   {
@@ -1634,7 +1634,7 @@
     "kr_name": "포근실타래",
     "grade": "B",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates Jellies that send you into Bonus Time.",
     "image": "images-char/pets_cozy_yarn.png"
   },
   {
@@ -1643,7 +1643,7 @@
     "kr_name": "안깐 마늘",
     "grade": "B",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Makes Blast Jellies.",
     "image": "images-char/pets_unpeeled_garlic.png"
   },
   {
@@ -1652,7 +1652,7 @@
     "kr_name": "테크노볼",
     "grade": "B",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Makes Magnet Jellies",
     "image": "images-char/pets_techno_ball.png"
   },
   {
@@ -1706,7 +1706,7 @@
     "kr_name": "좋은손",
     "grade": "C",
     "ability": null,
-    "ability_en": null,
+    "ability_en": "Creates a Silver Coin worth 5 Coins.",
     "image": "images-char/pets_good_hand.png"
   }
 ]
